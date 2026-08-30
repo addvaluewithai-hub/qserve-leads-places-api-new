@@ -1,4 +1,4 @@
-name: Export premium October cafes
+name: Export non-cheap October leads
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
       - ".github/workflows/export-premium-october-cafes.yml"
 
 jobs:
-  export-premium-cafes:
+  export-noncheap-leads:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -28,12 +28,12 @@ jobs:
             exit 2
           fi
 
-      - name: Export premium cafe leads
+      - name: Export non-cheap cafe and restaurant leads
         run: python3 export_premium_cafes.py
 
       - name: Upload leads artifact
         uses: actions/upload-artifact@v4
         with:
-          name: premium-october-cafes
+          name: noncheap-october-leads
           path: out/
           if-no-files-found: error
