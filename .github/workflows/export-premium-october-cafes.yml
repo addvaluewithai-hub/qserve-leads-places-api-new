@@ -7,6 +7,9 @@ on:
       - "export_premium_cafes.py"
       - ".github/workflows/export-premium-october-cafes.yml"
 
+permissions:
+  contents: write
+
 jobs:
   export-noncheap-leads:
     runs-on: ubuntu-latest
@@ -19,6 +22,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Verify secret exists
         shell: bash
@@ -30,6 +35,22 @@ jobs:
 
       - name: Export non-cheap cafe and restaurant leads
         run: python3 export_premium_cafes.py
+
+      - name: Publish static leads for Cloudflare Pages
+        shell: bash
+        run: |
+          mkdir -p public
+          cp out/noncheap_october_leads.json public/noncheap_october_leads.json
+          cp out/noncheap_october_leads.csv public/noncheap_october_leads.csv
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/noncheap_october_leads.json public/noncheap_october_leads.csv
+          if git diff --cached --quiet; then
+            echo "No lead file changes to commit."
+          else
+            git commit -m "Update non-cheap October leads data"
+            git push
+          fi
 
       - name: Upload leads artifact
         uses: actions/upload-artifact@v4
