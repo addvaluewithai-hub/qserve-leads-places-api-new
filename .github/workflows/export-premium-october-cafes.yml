@@ -1,0 +1,39 @@
+name: Export premium October cafes
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "export_premium_cafes.py"
+      - ".github/workflows/export-premium-october-cafes.yml"
+
+jobs:
+  export-premium-cafes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      TARGET_LIMIT: "100"
+      OUT_DIR: "out"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify secret exists
+        shell: bash
+        run: |
+          if [ -z "$GOOGLE_API_KEY" ]; then
+            echo "GOOGLE_API_KEY secret is not configured for this repository."
+            exit 2
+          fi
+
+      - name: Export premium cafe leads
+        run: python3 export_premium_cafes.py
+
+      - name: Upload leads artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: premium-october-cafes
+          path: out/
+          if-no-files-found: error
