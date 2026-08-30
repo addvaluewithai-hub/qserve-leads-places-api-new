@@ -8,7 +8,8 @@ The script performs:
 1. A baseline cafe Text Search to verify the API key/API are working.
 2. A filtered cafe Text Search for PRICE_LEVEL_VERY_EXPENSIVE ($$$$).
 
-It never prints the API key.
+It never prints the API key. GitHub Actions reads GOOGLE_API_KEY from the
+repository's Actions secret with the same name.
 """
 
 from __future__ import annotations
