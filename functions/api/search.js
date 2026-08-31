@@ -19,6 +19,10 @@ const FIELD_MASK = [
   'places.googleMapsUri',
   'places.businessStatus',
   'places.location',
+  'places.primaryType',
+  'places.types',
+  'places.regularOpeningHours',
+  'places.photos',
 ].join(',');
 
 function json(data, status = 200) {
@@ -104,5 +108,5 @@ export async function onRequestPost(context) {
 }
 
 export async function onRequestGet() {
-  return json({ ok: true, endpoint: 'POST /api/search' });
+  return json({ ok: true, endpoint: 'POST /api/search', includes: ['photos', 'primaryType', 'types', 'openingHours'] });
 }
