@@ -106,14 +106,13 @@ def download_photo(photo_name: str, target_stem: Path):
 
 def main():
     # Mirror the CRM lead-score idea so "first two cafes" means our strongest
-    # cafe/coffee-shop leads, not arbitrary database insertion order.
+    # true cafe/coffee-shop leads, not arbitrary insertion order or restaurants
+    # that merely include cafe in their secondary Google types.
     rows = d1_query('''
       SELECT id, name, primary_type, price_level, rating, user_rating_count, phone,
              website, google_maps_url
       FROM leads
       WHERE lower(COALESCE(primary_type, '')) IN ('cafe', 'coffee_shop')
-         OR lower(COALESCE(types, '')) LIKE '%cafe%'
-         OR lower(COALESCE(types, '')) LIKE '%coffee_shop%'
       ORDER BY (
         COALESCE(rating, 0) * 20
         + MIN(COALESCE(user_rating_count, 0), 3000) / 40.0
