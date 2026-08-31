@@ -1,0 +1,39 @@
+name: Test Cloudflare D1 connection
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/test_d1_connection.py"
+      - ".github/workflows/test-d1.yml"
+
+jobs:
+  test-d1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      D1_DATABASE_NAME: ${{ secrets.D1_DATABASE_NAME }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify D1 secrets exist
+        shell: bash
+        run: |
+          missing=0
+          for name in CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID D1_DATABASE_NAME; do
+            if [ -z "${!name}" ]; then
+              echo "$name is missing"
+              missing=1
+            else
+              echo "$name is set"
+            fi
+          done
+          exit $missing
+
+      - name: Run D1 read/write smoke test
+        run: python3 scripts/test_d1_connection.py
