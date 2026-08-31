@@ -1,0 +1,49 @@
+name: Refresh and sync QServe leads to D1
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "schema.sql"
+      - "scripts/sync_leads_to_d1.py"
+      - ".github/workflows/sync-leads-d1.yml"
+
+jobs:
+  sync-leads:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      D1_DATABASE_NAME: ${{ secrets.D1_DATABASE_NAME }}
+      TARGET_LIMIT: "100"
+      OUT_DIR: "out"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required secrets
+        shell: bash
+        run: |
+          for name in GOOGLE_API_KEY CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID D1_DATABASE_NAME; do
+            if [ -z "${!name}" ]; then
+              echo "$name is missing"
+              exit 2
+            fi
+          done
+
+      - name: Fetch fresh Google Places leads
+        run: python3 export_premium_cafes.py
+
+      - name: Merge old and fresh leads into D1
+        run: python3 scripts/sync_leads_to_d1.py
+
+      - name: Upload fresh result snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: d1-sync-fresh-leads
+          path: out/
+          if-no-files-found: error
