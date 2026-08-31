@@ -1,0 +1,52 @@
+name: Test Google photo enrichment on two cafes
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/test_google_photo_enrichment.py"
+      - "functions/api/search.js"
+      - ".github/workflows/test-google-photo-enrichment.yml"
+
+jobs:
+  enrich-two-cafes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      OUT_DIR: out
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=0
+          for name in GOOGLE_API_KEY CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID; do
+            if [ -z "${!name}" ]; then
+              echo "$name is missing"
+              missing=1
+            else
+              echo "$name is set"
+            fi
+          done
+          exit $missing
+
+      - name: Enrich first two cafe leads with Google Place photos
+        run: python3 scripts/test_google_photo_enrichment.py
+
+      - name: Show generated files
+        run: find out/google-photo-enrichment -maxdepth 2 -type f -printf '%p\n' | sort
+
+      - name: Upload enrichment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-photo-enrichment-two-cafes
+          path: out/google-photo-enrichment/
+          if-no-files-found: error
