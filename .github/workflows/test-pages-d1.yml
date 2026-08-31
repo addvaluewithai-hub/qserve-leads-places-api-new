@@ -1,0 +1,46 @@
+name: Test deployed Pages D1 API
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "functions/api/leads.js"
+      - "functions/api/leads/**"
+
+jobs:
+  test-pages-api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Wait for Cloudflare Pages deploy
+        run: sleep 75
+
+      - name: Verify GET /api/leads reads D1
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error \
+            https://qserve-leads-places-api-new.pages.dev/api/leads \
+            -o /tmp/leads.json
+          python3 - <<'PY'
+          import json
+          data=json.load(open('/tmp/leads.json'))
+          leads=data.get('leads', [])
+          print('Deployed API lead count:', len(leads))
+          if len(leads) < 100:
+              raise SystemExit(f'Expected at least 100 leads, got {len(leads)}')
+          print('GET /api/leads passed.')
+          PY
+
+      - name: Verify PATCH route reaches D1
+        shell: bash
+        run: |
+          code=$(curl --silent --show-error -o /tmp/patch.json -w '%{http_code}' \
+            -X PATCH \
+            -H 'Content-Type: application/json' \
+            --data '{"status":"New"}' \
+            https://qserve-leads-places-api-new.pages.dev/api/leads/__d1_smoke_missing__)
+          cat /tmp/patch.json
+          test "$code" = "404"
+          echo 'PATCH route reached D1 and correctly returned 404 for a missing lead.'
