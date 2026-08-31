@@ -1,22 +1,28 @@
-name: Export non-cheap October leads
+name: Refresh and sync October leads to D1
 
 on:
   workflow_dispatch:
   push:
     paths:
       - "export_premium_cafes.py"
+      - "scripts/sync_leads_to_d1.py"
+      - "schema.sql"
       - ".github/workflows/export-premium-october-cafes.yml"
 
 permissions:
   contents: write
 
 jobs:
-  export-noncheap-leads:
+  refresh-and-sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     env:
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-      TARGET_LIMIT: "100"
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      D1_DATABASE_NAME: ${{ secrets.D1_DATABASE_NAME }}
+      TARGET_LIMIT: "140"
       OUT_DIR: "out"
 
     steps:
@@ -25,18 +31,22 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Verify secret exists
+      - name: Verify secrets
         shell: bash
         run: |
-          if [ -z "$GOOGLE_API_KEY" ]; then
-            echo "GOOGLE_API_KEY secret is not configured for this repository."
-            exit 2
-          fi
+          missing=0
+          for name in GOOGLE_API_KEY CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID D1_DATABASE_NAME; do
+            if [ -z "${!name}" ]; then echo "$name is missing"; missing=1; else echo "$name is set"; fi
+          done
+          exit $missing
 
-      - name: Export non-cheap cafe and restaurant leads
+      - name: Fetch fresh non-cheap leads from Google Places
         run: python3 export_premium_cafes.py
 
-      - name: Publish static leads for Cloudflare Pages
+      - name: Import legacy JSON and fresh Google results into D1
+        run: python3 scripts/sync_leads_to_d1.py
+
+      - name: Publish latest snapshot for backup
         shell: bash
         run: |
           mkdir -p public
@@ -46,15 +56,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/noncheap_october_leads.json public/noncheap_october_leads.csv
           if git diff --cached --quiet; then
-            echo "No lead file changes to commit."
+            echo "No snapshot changes to commit."
           else
-            git commit -m "Update non-cheap October leads data"
+            git commit -m "Update latest October lead snapshot"
             git push
           fi
 
       - name: Upload leads artifact
         uses: actions/upload-artifact@v4
         with:
-          name: noncheap-october-leads
+          name: d1-synced-october-leads
           path: out/
           if-no-files-found: error
