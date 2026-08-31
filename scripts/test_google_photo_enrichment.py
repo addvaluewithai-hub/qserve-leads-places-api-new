@@ -105,9 +105,6 @@ def download_photo(photo_name: str, target_stem: Path):
 
 
 def main():
-    # Mirror the CRM lead-score idea so "first two cafes" means our strongest
-    # true cafe/coffee-shop leads, not arbitrary insertion order or restaurants
-    # that merely include cafe in their secondary Google types.
     rows = d1_query('''
       SELECT id, name, primary_type, price_level, rating, user_rating_count, phone,
              website, google_maps_url
@@ -150,7 +147,7 @@ def main():
 
         downloaded = []
         errors = []
-        for photo_index, photo in enumerate(photos[:8], 1):
+        for photo_index, photo in enumerate(photos[:10], 1):
             photo_name = photo.get('name')
             if not photo_name:
                 continue
