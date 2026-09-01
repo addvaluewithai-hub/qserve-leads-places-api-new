@@ -1,15 +1,21 @@
 {
   "venue": "1980 Coffee",
-  "status": "partial_menu_found",
-  "confidence": 0.78,
+  "status": "partial_menu_found_with_verified_price",
+  "confidence": 0.86,
   "currency": "EGP",
-  "notes": "The brand clearly has a large current menu in its official app/ordering experience, but a machine-readable current price list was not exposed by the sources tested. The experiment therefore stores verified menu structure and items while leaving uncertain prices null.",
+  "notes": "The current official app exposes a broad menu and App Store screenshots reveal real menu UI, categories, descriptions and at least one current price. A full machine-readable current price list still was not exposed, so only directly evidenced prices are populated.",
   "sources": [
     {
       "type": "official_app",
       "url": "https://apps.apple.com/eg/app/1980-coffee/id6748482358",
       "label": "1980 Coffee official app by Prepit",
       "confidence": 0.99
+    },
+    {
+      "type": "official_app_store_screenshots",
+      "url": "https://mwm.ai/apps/1980-coffee/6748482358",
+      "label": "Screenshots sourced from the official App Store listing",
+      "confidence": 0.97
     },
     {
       "type": "delivery_listing",
@@ -39,6 +45,8 @@
   "known_menu_scope": [
     "specialty coffee",
     "breakfast plates",
+    "benedict",
+    "rolled omelettes",
     "sandwiches",
     "mains",
     "desserts",
@@ -60,15 +68,22 @@
     {
       "name": "Breakfast & Brunch",
       "items": [
-        {"name": "Salmon Benedict", "price": null, "confidence": 0.82},
+        {
+          "name": "Salmon",
+          "price": 422,
+          "confidence": 0.98,
+          "evidence": "Official App Store screenshot shows the item in the menu UI at EGP 422; screenshot text describes poached eggs on smoked salmon with creamy cheese and greens."
+        },
+        {"name": "Salmon Benedict", "price": null, "confidence": 0.86},
         {"name": "Mushroom Toast", "price": null, "confidence": 0.74},
-        {"name": "Omelette", "price": null, "confidence": 0.7},
+        {"name": "Rolled Omelettes", "price": null, "confidence": 0.85, "is_category_or_family": true},
         {"name": "Poached Egg with Salmon and Turkey", "price": null, "confidence": 0.72}
       ]
     },
     {
       "name": "Food & Desserts",
       "items": [
+        {"name": "Marry Me Chicken", "price": null, "confidence": 0.9},
         {"name": "Chicken Caesar Bagel", "price": null, "confidence": 0.95},
         {"name": "Philly Cheese", "price": null, "confidence": 0.7},
         {"name": "Pistachio Croffle", "price": null, "confidence": 0.78},
@@ -80,7 +95,7 @@
   ],
   "demo_recommendation": {
     "ready": true,
-    "use_prices": false,
-    "strategy": "Build a high-fidelity branded QServe demo with a representative menu and omit prices until a high-confidence current menu source is captured from the official ordering app, a sharper menu photo, or a current menu PDF."
+    "use_prices": "only_verified_prices",
+    "strategy": "Build a high-fidelity branded QServe demo using verified menu families and items. Show a price only when directly visible in a current official source; otherwise omit it until the agent captures the official ordering menu or a sharper current menu image."
   }
 }
