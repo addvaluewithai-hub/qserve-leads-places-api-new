@@ -1,0 +1,65 @@
+{
+  "venue": "Koffee Kulture",
+  "status": "strong_menu_found",
+  "confidence": 0.96,
+  "currency": "EGP",
+  "notes": "A current third-party menu listing updated June 2026 exposes 138 items across 18 categories, while the brand's official Linktree also publishes location-specific menu PDFs including KAIRO. This sample intentionally keeps only a representative subset for the demo experiment.",
+  "sources": [
+    {
+      "type": "official_menu_index",
+      "url": "https://linktr.ee/Koffee.kulture",
+      "label": "Koffee Kulture official Linktree",
+      "confidence": 0.99
+    },
+    {
+      "type": "current_menu_listing",
+      "url": "https://www.egmenus.com/restaurant/koffee-kulture",
+      "label": "EGMenus Sheikh Zayed menu, updated June 2026",
+      "confidence": 0.9
+    },
+    {
+      "type": "official_brand_site",
+      "url": "https://koffee-kulture.com/",
+      "label": "Official Koffee Kulture site",
+      "confidence": 0.99
+    }
+  ],
+  "categories": [
+    {
+      "name": "Hot Koffee",
+      "items": [
+        {"name": "Amerikano", "price": 90, "confidence": 0.92},
+        {"name": "Kappuccino", "price": 115, "confidence": 0.92},
+        {"name": "Flat White", "price": 100, "confidence": 0.92},
+        {"name": "KK Latte", "price": 120, "confidence": 0.92},
+        {"name": "Spanish Latte", "price": 125, "confidence": 0.92},
+        {"name": "Pistachio Latte", "price": 165, "confidence": 0.92}
+      ]
+    },
+    {
+      "name": "Sandwiches & Bagels",
+      "items": [
+        {"name": "Sub Out", "price": 290, "confidence": 0.92},
+        {"name": "The Everything Club", "price": 350, "confidence": 0.92},
+        {"name": "Philly Cheese Steak Sandwich", "price": 400, "confidence": 0.92},
+        {"name": "Spicy Tunacado", "price": 310, "confidence": 0.92},
+        {"name": "Cream Cheese Bagel", "price": 170, "confidence": 0.92},
+        {"name": "Chicken Caesar-style Lunch Bagel", "price": 285, "confidence": 0.9}
+      ]
+    },
+    {
+      "name": "Desserts & Drinks",
+      "items": [
+        {"name": "Chocolate Cake", "price": 175, "confidence": 0.92},
+        {"name": "San Sebastian Cheesecake", "price": 195, "confidence": 0.92},
+        {"name": "Passion Mojito", "price": 140, "confidence": 0.92},
+        {"name": "Peach Ice Tea", "price": 120, "confidence": 0.92}
+      ]
+    }
+  ],
+  "demo_recommendation": {
+    "ready": true,
+    "use_prices": true,
+    "strategy": "Use a representative menu subset for the personalized QServe demo, link evidence to sources, and only expand to the full menu if needed for a qualified lead."
+  }
+}
