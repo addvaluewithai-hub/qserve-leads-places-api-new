@@ -1,0 +1,86 @@
+{
+  "venue": "1980 Coffee",
+  "status": "partial_menu_found",
+  "confidence": 0.78,
+  "currency": "EGP",
+  "notes": "The brand clearly has a large current menu in its official app/ordering experience, but a machine-readable current price list was not exposed by the sources tested. The experiment therefore stores verified menu structure and items while leaving uncertain prices null.",
+  "sources": [
+    {
+      "type": "official_app",
+      "url": "https://apps.apple.com/eg/app/1980-coffee/id6748482358",
+      "label": "1980 Coffee official app by Prepit",
+      "confidence": 0.99
+    },
+    {
+      "type": "delivery_listing",
+      "url": "https://www.talabat.com/egypt/restaurant/1102546/1980-coffee-6th-of-october-beta-gardens?aid=7923",
+      "label": "Talabat 6th of October listing",
+      "confidence": 0.9
+    },
+    {
+      "type": "menu_photo",
+      "url": "https://restaurantguru.com/1980-Coffee-Maadi-Egypt/menu",
+      "label": "User-uploaded 1980 Coffee Maadi menu image",
+      "confidence": 0.75
+    },
+    {
+      "type": "editorial_current_item",
+      "url": "https://sceneeats.com/Fresh/1980-Coffee-Adds-Chicken-Caesar-Bagel-to-the-Menu",
+      "label": "Scene Eats, April 2026",
+      "confidence": 0.9
+    },
+    {
+      "type": "review_evidence",
+      "url": "https://wanderlog.com/place/details/12075601/1980-coffee",
+      "label": "Recent visitor/menu item evidence",
+      "confidence": 0.7
+    }
+  ],
+  "known_menu_scope": [
+    "specialty coffee",
+    "breakfast plates",
+    "sandwiches",
+    "mains",
+    "desserts",
+    "seasonal items"
+  ],
+  "categories": [
+    {
+      "name": "Coffee & Drinks",
+      "items": [
+        {"name": "Spanish Latte", "price": null, "confidence": 0.88},
+        {"name": "Caramel Latte", "price": null, "confidence": 0.82},
+        {"name": "Flat White", "price": null, "confidence": 0.82},
+        {"name": "Turkish Coffee", "price": null, "confidence": 0.76},
+        {"name": "Matcha Latte", "price": null, "confidence": 0.76},
+        {"name": "Caramel Frappe", "price": null, "confidence": 0.72},
+        {"name": "Mojito", "price": null, "confidence": 0.68}
+      ]
+    },
+    {
+      "name": "Breakfast & Brunch",
+      "items": [
+        {"name": "Salmon Benedict", "price": null, "confidence": 0.82},
+        {"name": "Mushroom Toast", "price": null, "confidence": 0.74},
+        {"name": "Omelette", "price": null, "confidence": 0.7},
+        {"name": "Poached Egg with Salmon and Turkey", "price": null, "confidence": 0.72}
+      ]
+    },
+    {
+      "name": "Food & Desserts",
+      "items": [
+        {"name": "Chicken Caesar Bagel", "price": null, "confidence": 0.95},
+        {"name": "Philly Cheese", "price": null, "confidence": 0.7},
+        {"name": "Pistachio Croffle", "price": null, "confidence": 0.78},
+        {"name": "Chocolate Cake", "price": null, "confidence": 0.82},
+        {"name": "Tiramisu", "price": null, "confidence": 0.76},
+        {"name": "Tres Leches", "price": null, "confidence": 0.68}
+      ]
+    }
+  ],
+  "demo_recommendation": {
+    "ready": true,
+    "use_prices": false,
+    "strategy": "Build a high-fidelity branded QServe demo with a representative menu and omit prices until a high-confidence current menu source is captured from the official ordering app, a sharper menu photo, or a current menu PDF."
+  }
+}
