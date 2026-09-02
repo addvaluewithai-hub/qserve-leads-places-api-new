@@ -1,0 +1,95 @@
+{
+  "campaign_id": "lawyers-us",
+  "version": 2,
+  "description": "State-prioritized ZIP coverage plan. ZIP rows are generated from pgeocode/GeoNames into D1; D1 is the dynamic coverage source of truth.",
+  "zip_source": {
+    "provider": "pgeocode",
+    "country": "us",
+    "notes": [
+      "ZIP centroid/place-name data is used only to construct a search viewport and management queue.",
+      "Accepted Google results must still report addressComponents postal_code equal to the target ZIP."
+    ]
+  },
+  "selection_policy": {
+    "target_net_new_domains_per_run": 1000,
+    "queued_before_revisit": true,
+    "retry_failed_after_days": 7,
+    "revisit_covered_after_days": 180,
+    "max_pages_per_zip": 3,
+    "page_size": 20,
+    "first_page_pagination_raw_floor": 20,
+    "first_page_pagination_exact_zip_floor": 5,
+    "location_restriction_half_span_km": 25.0,
+    "monthly_enterprise_request_budget": 900
+  },
+  "phases": [
+    {
+      "phase": "priority_south_and_growth",
+      "priority": 10,
+      "states": [
+        {"state": "TX", "preferred_cities": ["Houston", "Dallas", "Austin", "San Antonio", "Fort Worth", "El Paso", "Arlington", "Plano", "Irving", "Frisco", "McKinney"]},
+        {"state": "FL", "preferred_cities": ["Miami", "Tampa", "Orlando", "Jacksonville", "Fort Lauderdale", "West Palm Beach", "Sarasota", "Fort Myers", "Tallahassee"]},
+        {"state": "GA", "preferred_cities": ["Atlanta", "Savannah", "Augusta", "Marietta", "Alpharetta"]},
+        {"state": "NC", "preferred_cities": ["Charlotte", "Raleigh", "Greensboro", "Durham", "Wilmington", "Asheville"]},
+        {"state": "TN", "preferred_cities": ["Nashville", "Memphis", "Knoxville", "Chattanooga", "Franklin"]},
+        {"state": "AZ", "preferred_cities": ["Phoenix", "Scottsdale", "Mesa", "Tempe", "Chandler", "Tucson"]},
+        {"state": "NV", "preferred_cities": ["Las Vegas", "Henderson", "Reno"]},
+        {"state": "CO", "preferred_cities": ["Denver", "Colorado Springs", "Aurora", "Fort Collins", "Boulder"]}
+      ]
+    },
+    {
+      "phase": "large_markets",
+      "priority": 20,
+      "states": [
+        {"state": "CA", "preferred_cities": ["Los Angeles", "San Diego", "San Jose", "Sacramento", "Fresno", "Oakland", "Long Beach", "Irvine", "Bakersfield"]},
+        {"state": "NY", "preferred_cities": ["New York", "Buffalo", "Rochester", "Albany", "Syracuse"]},
+        {"state": "NJ", "preferred_cities": ["Newark", "Jersey City", "Trenton", "Edison", "Morristown"]},
+        {"state": "PA", "preferred_cities": ["Philadelphia", "Pittsburgh", "Allentown", "Harrisburg"]},
+        {"state": "IL", "preferred_cities": ["Chicago", "Naperville", "Rockford", "Springfield"]},
+        {"state": "OH", "preferred_cities": ["Columbus", "Cleveland", "Cincinnati", "Toledo", "Dayton"]},
+        {"state": "MI", "preferred_cities": ["Detroit", "Grand Rapids", "Ann Arbor", "Lansing"]},
+        {"state": "VA", "preferred_cities": ["Virginia Beach", "Richmond", "Norfolk", "Arlington", "Alexandria", "Roanoke"]},
+        {"state": "MA", "preferred_cities": ["Boston", "Worcester", "Springfield", "Cambridge"]},
+        {"state": "MD", "preferred_cities": ["Baltimore", "Bethesda", "Rockville", "Silver Spring", "Annapolis"]}
+      ]
+    },
+    {
+      "phase": "national_expansion",
+      "priority": 30,
+      "states": [
+        {"state": "WA", "preferred_cities": ["Seattle", "Tacoma", "Spokane", "Bellevue"]},
+        {"state": "OR", "preferred_cities": ["Portland", "Eugene", "Salem"]},
+        {"state": "MO", "preferred_cities": ["Kansas City", "St. Louis", "Springfield"]},
+        {"state": "IN", "preferred_cities": ["Indianapolis", "Fort Wayne", "Evansville"]},
+        {"state": "WI", "preferred_cities": ["Milwaukee", "Madison", "Green Bay"]},
+        {"state": "MN", "preferred_cities": ["Minneapolis", "Saint Paul", "Duluth"]},
+        {"state": "SC", "preferred_cities": ["Charleston", "Columbia", "Greenville"]},
+        {"state": "AL", "preferred_cities": ["Birmingham", "Huntsville", "Montgomery", "Mobile"]},
+        {"state": "LA", "preferred_cities": ["New Orleans", "Baton Rouge", "Shreveport"]},
+        {"state": "OK", "preferred_cities": ["Oklahoma City", "Tulsa"]},
+        {"state": "KS", "preferred_cities": ["Wichita", "Overland Park", "Topeka"]},
+        {"state": "UT", "preferred_cities": ["Salt Lake City", "Provo", "Ogden"]},
+        {"state": "NM", "preferred_cities": ["Albuquerque", "Santa Fe", "Las Cruces"]},
+        {"state": "ID", "preferred_cities": ["Boise", "Idaho Falls", "Coeur d'Alene"]},
+        {"state": "IA", "preferred_cities": ["Des Moines", "Cedar Rapids", "Davenport"]},
+        {"state": "NE", "preferred_cities": ["Omaha", "Lincoln"]},
+        {"state": "AR", "preferred_cities": ["Little Rock", "Fayetteville"]},
+        {"state": "MS", "preferred_cities": ["Jackson", "Gulfport"]},
+        {"state": "KY", "preferred_cities": ["Louisville", "Lexington"]},
+        {"state": "CT", "preferred_cities": ["Hartford", "New Haven", "Stamford"]},
+        {"state": "RI", "preferred_cities": ["Providence"]},
+        {"state": "NH", "preferred_cities": ["Manchester", "Nashua"]},
+        {"state": "ME", "preferred_cities": ["Portland", "Bangor"]},
+        {"state": "DE", "preferred_cities": ["Wilmington", "Dover"]},
+        {"state": "WV", "preferred_cities": ["Charleston", "Morgantown"]},
+        {"state": "AK", "preferred_cities": ["Anchorage", "Fairbanks"]},
+        {"state": "HI", "preferred_cities": ["Honolulu"]},
+        {"state": "VT", "preferred_cities": ["Burlington"]},
+        {"state": "WY", "preferred_cities": ["Cheyenne", "Casper"]},
+        {"state": "MT", "preferred_cities": ["Billings", "Missoula", "Bozeman"]},
+        {"state": "ND", "preferred_cities": ["Fargo", "Bismarck"]},
+        {"state": "SD", "preferred_cities": ["Sioux Falls", "Rapid City"]}
+      ]
+    }
+  ]
+}
