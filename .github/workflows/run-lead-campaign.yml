@@ -75,7 +75,7 @@ jobs:
           python -m json.tool campaigns/dentists-tx.json >/dev/null
           python -m json.tool campaigns/cafes-eg.json >/dev/null
 
-      - name: Detect website crawl requirement
+      - name: Detect homepage link collection requirement
         shell: bash
         run: |
           enabled=$(python - <<'PY'
@@ -86,7 +86,7 @@ jobs:
           PY
           )
           echo "CRAWL_ENABLED=$enabled" >> "$GITHUB_ENV"
-          echo "Website crawl enabled: $enabled"
+          echo "Homepage link collection enabled: $enabled"
 
       - name: Build CRM frontend
         run: |
@@ -107,7 +107,7 @@ jobs:
       - name: Discover and score leads
         run: python scripts/run_campaign.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT" --max-pages "$MAX_PAGES"
 
-      - name: Crawl qualified lead websites
+      - name: Collect homepage internal links
         if: env.CRAWL_ENABLED == 'true'
         run: python scripts/crawl_campaign_websites.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT"
 
