@@ -2,10 +2,6 @@ name: Build 1000 lawyer working set
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "scripts/build_1000_lawyers.py"
-      - ".github/workflows/build-1000-lawyers.yml"
 
 permissions:
   contents: read
