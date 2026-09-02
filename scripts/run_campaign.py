@@ -6,6 +6,7 @@ import csv
 import json
 import math
 import os
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -80,10 +81,51 @@ def days_since(value: str | None):
     return max(0, int((datetime.now(timezone.utc) - dt.astimezone(timezone.utc)).total_seconds() // 86400))
 
 
-def normalize_place(place: dict, area: str, query: str, term: str) -> dict:
+def normalized_domain(url: str | None) -> str | None:
+    if not url:
+        return None
+    try:
+        parsed = urllib.parse.urlparse(url if "://" in url else f"https://{url}")
+        host = (parsed.hostname or "").lower().strip(".")
+        if host.startswith("www."):
+            host = host[4:]
+        return host or None
+    except ValueError:
+        return None
+
+
+def normalized_phone(value: str | None) -> str | None:
+    digits = re.sub(r"\D", "", value or "")
+    if not digits:
+        return None
+    return digits[-10:] if len(digits) >= 10 else digits
+
+
+def area_matches(address: str | None, area: dict) -> bool:
+    text = (address or "").lower()
+    if not text:
+        return False
+    explicit = area.get("match_any") or []
+    tokens = [str(x).strip().lower() for x in explicit if str(x).strip()]
+    if not tokens:
+        label = str(area.get("label") or "").strip()
+        city = label.split(",", 1)[0].strip().lower()
+        if city:
+            tokens.append(city)
+        for term in area.get("terms") or []:
+            term = str(term).strip().lower()
+            if re.fullmatch(r"\d{5}", term):
+                tokens.append(term)
+    return any(token in text for token in tokens)
+
+
+def normalize_place(place: dict, area: dict, query: str, term: str) -> dict:
     location = place.get("location") or {}
     opening = place.get("regularOpeningHours") or {}
     display = place.get("displayName") or {}
+    address = place.get("formattedAddress")
+    website = place.get("websiteUri")
+    phone = place.get("nationalPhoneNumber")
     return {
         "id": place.get("id"),
         "name": display.get("text") or "Unnamed business",
@@ -91,24 +133,29 @@ def normalize_place(place: dict, area: str, query: str, term: str) -> dict:
         "rating": place.get("rating"),
         "user_rating_count": place.get("userRatingCount") or 0,
         "business_status": place.get("businessStatus"),
-        "phone": place.get("nationalPhoneNumber"),
-        "website": place.get("websiteUri"),
+        "phone": phone,
+        "website": website,
+        "website_domain": normalized_domain(website),
+        "normalized_phone": normalized_phone(phone),
         "google_maps_url": place.get("googleMapsUri"),
-        "address": place.get("formattedAddress"),
+        "address": address,
         "latitude": location.get("latitude"),
         "longitude": location.get("longitude"),
         "primary_type": place.get("primaryType"),
         "types": json.dumps(place.get("types") or [], ensure_ascii=False),
         "opening_hours": json.dumps(opening, ensure_ascii=False),
-        "source_area": area,
+        "source_area": area.get("label"),
         "source_query": query,
         "source_term": term,
+        "location_matched": area_matches(address, area),
         "discovered_at": datetime.now(timezone.utc).isoformat(),
     }
 
 
 def coarse_pass(row: dict, quality: dict) -> tuple[bool, list[str]]:
     reasons = []
+    if quality.get("enforce_area_match") and not row.get("location_matched"):
+        reasons.append("outside_target_area")
     allowed = quality.get("allowed_business_statuses") or []
     if allowed and row.get("business_status") not in allowed:
         reasons.append("business_not_operational")
@@ -189,7 +236,7 @@ def search_campaign(campaign: dict, api_key: str, limit: int, max_pages: int) ->
     google = campaign["google"]
     quality = campaign.get("quality") or {}
     seen: dict[str, dict] = {}
-    stop_after = max(limit * 4, limit + 20)
+    stop_after = max(limit * 5, limit + 30)
 
     for area in google.get("areas") or []:
         label = area["label"]
@@ -212,7 +259,7 @@ def search_campaign(campaign: dict, api_key: str, limit: int, max_pages: int) ->
                         place_id = place.get("id")
                         if not place_id:
                             continue
-                        row = normalize_place(place, label, query, term)
+                        row = normalize_place(place, area, query, term)
                         passed, coarse_reasons = coarse_pass(row, quality)
                         row["coarse_qualified"] = passed
                         row["coarse_reasons"] = coarse_reasons
@@ -232,6 +279,36 @@ def search_campaign(campaign: dict, api_key: str, limit: int, max_pages: int) ->
     return list(seen.values())
 
 
+def dedupe_qualified(rows: list[dict], campaign: dict, limit: int) -> list[dict]:
+    quality = campaign.get("quality") or {}
+    use_domain = bool(quality.get("dedupe_by_domain"))
+    use_phone = bool(quality.get("dedupe_by_phone"))
+    ranked = sorted([r for r in rows if r.get("qualified")], key=lambda r: r.get("quality_score", 0), reverse=True)
+    selected = []
+    domains: set[str] = set()
+    phones: set[str] = set()
+    for row in ranked:
+        domain = row.get("website_domain")
+        phone = row.get("normalized_phone")
+        duplicate_reason = None
+        if use_domain and domain and domain in domains:
+            duplicate_reason = "duplicate_website_domain"
+        elif use_phone and phone and phone in phones:
+            duplicate_reason = "duplicate_phone"
+        if duplicate_reason:
+            row["qualified"] = False
+            row["qualification_reason"] = duplicate_reason
+            continue
+        selected.append(row)
+        if domain:
+            domains.add(domain)
+        if phone:
+            phones.add(phone)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
 def write_outputs(campaign: dict, rows: list[dict], out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     qualified = [r for r in rows if r.get("qualified")]
@@ -239,8 +316,8 @@ def write_outputs(campaign: dict, rows: list[dict], out_dir: Path) -> None:
     (out_dir / "leads.json").write_text(json.dumps(qualified, ensure_ascii=False, indent=2), encoding="utf-8")
     (out_dir / "campaign.json").write_text(json.dumps(campaign, ensure_ascii=False, indent=2), encoding="utf-8")
     fields = [
-        "id", "name", "rating", "user_rating_count", "business_status", "phone", "website",
-        "google_maps_url", "address", "primary_type", "source_area", "source_query", "source_term",
+        "id", "name", "rating", "user_rating_count", "business_status", "phone", "website", "website_domain",
+        "google_maps_url", "address", "primary_type", "source_area", "source_query", "source_term", "location_matched",
         "quality_score", "latest_sampled_review_at", "latest_sampled_review_age_days",
         "sampled_review_count", "recent_sampled_reviews", "sampled_review_avg", "qualification_reason",
     ]
@@ -251,6 +328,7 @@ def write_outputs(campaign: dict, rows: list[dict], out_dir: Path) -> None:
     summary = {
         "campaign": campaign["id"],
         "discovered": len(rows),
+        "location_matched": sum(1 for r in rows if r.get("location_matched")),
         "coarse_qualified": sum(1 for r in rows if r.get("coarse_qualified")),
         "qualified": len(qualified),
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -276,7 +354,7 @@ def main() -> None:
     coarse = [r for r in rows if r.get("coarse_qualified")]
     coarse.sort(key=lambda r: (float(r.get("rating") or 0), int(r.get("user_rating_count") or 0)), reverse=True)
     for index, row in enumerate(coarse):
-        if index >= max(args.limit * 2, args.limit + 10):
+        if index >= max(args.limit * 3, args.limit + 20):
             break
         try:
             enrich_reviews(row, api_key, campaign.get("quality") or {})
@@ -299,12 +377,13 @@ def main() -> None:
             row["qualified"] = False
             row["qualification_reason"] = ",".join(row.get("coarse_reasons") or ["not_enriched"])
 
-    qualified = sorted([r for r in rows if r.get("qualified")], key=lambda r: r.get("quality_score", 0), reverse=True)[: args.limit]
-    qualified_ids = {r["id"] for r in qualified}
+    selected = dedupe_qualified(rows, campaign, max(1, args.limit))
+    selected_ids = {r["id"] for r in selected}
     for row in rows:
-        row["qualified"] = row.get("id") in qualified_ids
-        if row.get("coarse_qualified") and row.get("id") not in qualified_ids and row.get("qualification_reason") == "qualified":
-            row["qualification_reason"] = "qualified_but_below_campaign_limit"
+        if row.get("qualified") and row.get("id") not in selected_ids:
+            row["qualified"] = False
+            if row.get("qualification_reason") == "qualified":
+                row["qualification_reason"] = "qualified_but_below_campaign_limit"
 
     out_dir = Path(args.out_dir) if args.out_dir else ROOT / "out" / campaign["id"]
     write_outputs(campaign, rows, out_dir)
