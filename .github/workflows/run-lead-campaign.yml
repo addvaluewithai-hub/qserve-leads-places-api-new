@@ -1,0 +1,90 @@
+name: Run lead campaign
+
+on:
+  workflow_dispatch:
+    inputs:
+      campaign:
+        description: Campaign config to run
+        required: true
+        type: choice
+        default: lawyers-tx
+        options:
+          - lawyers-tx
+          - dentists-tx
+          - cafes-eg
+      target_limit:
+        description: Maximum qualified leads to keep
+        required: true
+        default: "100"
+      max_pages:
+        description: Maximum Google Text Search pages per query
+        required: true
+        default: "2"
+      sync_d1:
+        description: Sync results into Cloudflare D1
+        required: true
+        type: boolean
+        default: true
+  push:
+    paths:
+      - "campaigns/**"
+      - "scripts/run_campaign.py"
+      - "scripts/sync_campaign_to_d1.py"
+      - "schema.sql"
+      - "functions/api/**"
+      - "src/**"
+      - ".github/workflows/run-lead-campaign.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  campaign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      CAMPAIGN: ${{ github.event.inputs.campaign || 'lawyers-tx' }}
+      TARGET_LIMIT: ${{ github.event.inputs.target_limit || '10' }}
+      MAX_PAGES: ${{ github.event.inputs.max_pages || '1' }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate campaign engine
+        run: |
+          python -m py_compile scripts/run_campaign.py scripts/sync_campaign_to_d1.py
+          python -m json.tool campaigns/lawyers-tx.json >/dev/null
+          python -m json.tool campaigns/dentists-tx.json >/dev/null
+          python -m json.tool campaigns/cafes-eg.json >/dev/null
+
+      - name: Verify Google Places secret
+        run: |
+          test -n "$GOOGLE_API_KEY" || (echo "GOOGLE_API_KEY is missing" && exit 1)
+
+      - name: Discover and score leads
+        run: python scripts/run_campaign.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT" --max-pages "$MAX_PAGES"
+
+      - name: Sync campaign to D1
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.sync_d1 == 'true'
+        run: |
+          for name in CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID; do
+            test -n "${!name}" || (echo "$name is missing" && exit 1)
+          done
+          python scripts/sync_campaign_to_d1.py --campaign "$CAMPAIGN"
+
+      - name: Upload campaign artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.CAMPAIGN }}-lead-results
+          path: out/${{ env.CAMPAIGN }}/
+          if-no-files-found: error
