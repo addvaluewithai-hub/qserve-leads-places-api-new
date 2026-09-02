@@ -1,0 +1,33 @@
+name: Build 1000 lawyer working set
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/build_1000_lawyers.py"
+      - ".github/workflows/build-1000-lawyers.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests
+      - name: Build 1000-lawyer working set
+        run: python scripts/build_1000_lawyers.py
+      - name: Upload working set artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-1000-working-set
+          path: out/lawyers-1000-working-set/
+          if-no-files-found: error
