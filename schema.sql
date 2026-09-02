@@ -85,6 +85,54 @@ CREATE TABLE IF NOT EXISTS lead_signals (
   PRIMARY KEY (campaign_id, lead_id)
 );
 
+CREATE TABLE IF NOT EXISTS lead_domains (
+  lead_id TEXT PRIMARY KEY,
+  website_domain TEXT NOT NULL,
+  verified INTEGER NOT NULL DEFAULT 0,
+  source TEXT NOT NULL DEFAULT '',
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS market_coverage (
+  campaign_id TEXT NOT NULL,
+  market_key TEXT NOT NULL,
+  market_label TEXT NOT NULL,
+  state_code TEXT,
+  tier INTEGER NOT NULL DEFAULT 1,
+  priority INTEGER NOT NULL DEFAULT 100,
+  phase TEXT NOT NULL DEFAULT '',
+  status TEXT NOT NULL DEFAULT 'queued',
+  search_count INTEGER NOT NULL DEFAULT 0,
+  raw_places INTEGER NOT NULL DEFAULT 0,
+  net_new_place_ids INTEGER NOT NULL DEFAULT 0,
+  grounding_calls INTEGER NOT NULL DEFAULT 0,
+  quality_passes INTEGER NOT NULL DEFAULT 0,
+  net_new_domains INTEGER NOT NULL DEFAULT 0,
+  last_yield_per_search REAL NOT NULL DEFAULT 0,
+  first_searched_at TEXT,
+  last_searched_at TEXT,
+  last_run_id TEXT,
+  notes TEXT NOT NULL DEFAULT '',
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (campaign_id, market_key)
+);
+
+CREATE TABLE IF NOT EXISTS market_run_history (
+  id TEXT PRIMARY KEY,
+  campaign_id TEXT NOT NULL,
+  run_id TEXT NOT NULL,
+  market_key TEXT NOT NULL,
+  market_label TEXT NOT NULL,
+  searched_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  raw_places INTEGER NOT NULL DEFAULT 0,
+  net_new_place_ids INTEGER NOT NULL DEFAULT 0,
+  grounding_calls INTEGER NOT NULL DEFAULT 0,
+  quality_passes INTEGER NOT NULL DEFAULT 0,
+  net_new_domains INTEGER NOT NULL DEFAULT 0,
+  status_after TEXT NOT NULL DEFAULT '',
+  note TEXT NOT NULL DEFAULT ''
+);
+
 CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status);
 CREATE INDEX IF NOT EXISTS idx_leads_priority ON leads(priority);
 CREATE INDEX IF NOT EXISTS idx_leads_price ON leads(price_level);
@@ -97,3 +145,8 @@ CREATE INDEX IF NOT EXISTS idx_campaign_leads_campaign ON campaign_leads(campaig
 CREATE INDEX IF NOT EXISTS idx_campaign_leads_status ON campaign_leads(campaign_id, status);
 CREATE INDEX IF NOT EXISTS idx_campaign_leads_seen ON campaign_leads(campaign_id, last_seen_at);
 CREATE INDEX IF NOT EXISTS idx_lead_signals_freshness ON lead_signals(campaign_id, latest_sampled_review_age_days);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_lead_domains_domain ON lead_domains(website_domain);
+CREATE INDEX IF NOT EXISTS idx_market_coverage_next ON market_coverage(campaign_id, status, priority, tier, last_searched_at);
+CREATE INDEX IF NOT EXISTS idx_market_coverage_state ON market_coverage(campaign_id, state_code, status);
+CREATE INDEX IF NOT EXISTS idx_market_history_campaign ON market_run_history(campaign_id, searched_at);
+CREATE INDEX IF NOT EXISTS idx_market_history_market ON market_run_history(campaign_id, market_key, searched_at);
