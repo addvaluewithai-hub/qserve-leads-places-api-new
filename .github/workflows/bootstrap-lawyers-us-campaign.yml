@@ -1,0 +1,41 @@
+name: Bootstrap lawyers-us campaign
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: "GitHub Actions run containing lawyers-1000-working-set artifact"
+        required: true
+        default: "33604156200"
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+      GH_TOKEN: ${{ github.token }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download validated first 1000 working set
+        run: |
+          mkdir -p input
+          gh run download "$SOURCE_RUN_ID" -n lawyers-1000-working-set -D input
+          test -f input/lawyers_1000.csv
+          test -f input/summary.json
+          test -f input/search_log.json
+      - name: Bootstrap campaign + market coverage into D1
+        run: |
+          python scripts/bootstrap_lawyers_us_campaign.py \
+            --campaign lawyers-us \
+            --input-dir input
