@@ -1,0 +1,46 @@
+{
+  "id": "dentists-tx",
+  "name": "Texas Dentists",
+  "vertical": "dental",
+  "description": "Find active Texas dental practices with strong Google reputation, recent review signals, a website, and a phone number.",
+  "google": {
+    "included_type": "dentist",
+    "strict_type_filtering": true,
+    "region_code": "US",
+    "language_code": "en",
+    "queries": ["dentist", "cosmetic dentist", "family dentist", "dental clinic"],
+    "areas": [
+      {"label": "Sherman, TX", "terms": ["Sherman, TX", "75090", "75092"]},
+      {"label": "Gainesville, TX", "terms": ["Gainesville, TX", "76240"]},
+      {"label": "Wichita Falls, TX", "terms": ["Wichita Falls, TX", "76301", "76308"]},
+      {"label": "Tyler, TX", "terms": ["Tyler, TX", "75701", "75703"]},
+      {"label": "Longview, TX", "terms": ["Longview, TX", "75601", "75605"]},
+      {"label": "Lufkin, TX", "terms": ["Lufkin, TX", "75901", "75904"]},
+      {"label": "Temple, TX", "terms": ["Temple, TX", "76501", "76502"]},
+      {"label": "Victoria, TX", "terms": ["Victoria, TX", "77901", "77904"]}
+    ]
+  },
+  "quality": {
+    "allowed_business_statuses": ["OPERATIONAL"],
+    "min_rating": 4.4,
+    "min_reviews": 25,
+    "require_phone": true,
+    "require_website": true,
+    "review_recency_days": 180,
+    "min_recent_sampled_reviews": 1
+  },
+  "scoring": {
+    "rating_weight": 40,
+    "review_volume_weight": 20,
+    "review_freshness_weight": 20,
+    "recent_review_sample_weight": 10,
+    "website_weight": 5,
+    "phone_weight": 5
+  },
+  "enrichment": {
+    "website_crawl_required": true,
+    "target_services": ["cosmetic dentistry", "implants", "invisalign", "veneers", "emergency dentistry"],
+    "decision_maker_required": false,
+    "direct_email_required": false
+  }
+}
