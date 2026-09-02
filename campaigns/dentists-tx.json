@@ -10,14 +10,14 @@
     "language_code": "en",
     "queries": ["dentist", "cosmetic dentist", "family dentist", "dental clinic"],
     "areas": [
-      {"label": "Sherman, TX", "terms": ["Sherman, TX", "75090", "75092"]},
-      {"label": "Gainesville, TX", "terms": ["Gainesville, TX", "76240"]},
-      {"label": "Wichita Falls, TX", "terms": ["Wichita Falls, TX", "76301", "76308"]},
-      {"label": "Tyler, TX", "terms": ["Tyler, TX", "75701", "75703"]},
-      {"label": "Longview, TX", "terms": ["Longview, TX", "75601", "75605"]},
-      {"label": "Lufkin, TX", "terms": ["Lufkin, TX", "75901", "75904"]},
-      {"label": "Temple, TX", "terms": ["Temple, TX", "76501", "76502"]},
-      {"label": "Victoria, TX", "terms": ["Victoria, TX", "77901", "77904"]}
+      {"label": "Sherman, TX", "terms": ["Sherman, TX", "75090", "75092"], "match_any": ["sherman, tx", "75090", "75092"]},
+      {"label": "Gainesville, TX", "terms": ["Gainesville, TX", "76240"], "match_any": ["gainesville, tx", "76240"]},
+      {"label": "Wichita Falls, TX", "terms": ["Wichita Falls, TX", "76301", "76308"], "match_any": ["wichita falls, tx", "76301", "76308"]},
+      {"label": "Tyler, TX", "terms": ["Tyler, TX", "75701", "75703"], "match_any": ["tyler, tx", "75701", "75703"]},
+      {"label": "Longview, TX", "terms": ["Longview, TX", "75601", "75605"], "match_any": ["longview, tx", "75601", "75605"]},
+      {"label": "Lufkin, TX", "terms": ["Lufkin, TX", "75901", "75904"], "match_any": ["lufkin, tx", "75901", "75904"]},
+      {"label": "Temple, TX", "terms": ["Temple, TX", "76501", "76502"], "match_any": ["temple, tx", "76501", "76502"]},
+      {"label": "Victoria, TX", "terms": ["Victoria, TX", "77901", "77904"], "match_any": ["victoria, tx", "77901", "77904"]}
     ]
   },
   "quality": {
