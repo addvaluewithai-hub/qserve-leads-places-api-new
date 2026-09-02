@@ -1,0 +1,34 @@
+name: Maps Grounding Lite probe
+
+on:
+  push:
+    paths:
+      - "scripts/probe_maps_grounding_lite.py"
+      - ".github/workflows/maps-grounding-probe.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install MCP client
+        run: |
+          python -m pip install --upgrade pip
+          pip install "mcp>=1.20" httpx2
+      - name: Probe Maps Grounding Lite raw response
+        run: python scripts/probe_maps_grounding_lite.py
+      - name: Upload probe artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: maps-grounding-lite-probe
+          path: out/maps-grounding-probe/
+          if-no-files-found: error
