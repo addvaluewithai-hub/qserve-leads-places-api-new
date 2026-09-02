@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   benchmark:
-    if: github.event.issue.title == 'BENCH-QSERVE-ZIP-RELAX-10-20260902'
+    if: github.event.issue.title == 'BENCH-QSERVE-ZIP-RELAX-10-20260902-RETRY2'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -30,10 +30,13 @@ jobs:
           pip install -r requirements-crawl.txt
           crawl4ai-setup
       - name: Static compile check
-        run: python -m py_compile scripts/benchmark_zip_relaxation_ab.py
+        run: |
+          python -m py_compile \
+            scripts/benchmark_zip_relaxation_ab.py \
+            scripts/benchmark_zip_relaxation_ab_v2.py
       - name: Run 10-request read-only A/B
         run: |
-          python scripts/benchmark_zip_relaxation_ab.py \
+          python scripts/benchmark_zip_relaxation_ab_v2.py \
             --campaign lawyers-us \
             --state TX \
             --requests 10 \
