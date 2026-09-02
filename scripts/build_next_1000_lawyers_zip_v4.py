@@ -3,12 +3,8 @@ from __future__ import annotations
 
 """ZIP V4 production wrapper.
 
-Fixes a territory-order bug in V3: states inside the same phase shared the same
-numeric priority, so SQL ordering could drift toward alphabetical state order
-instead of the explicit order in market_plans/lawyers-us-zips.json.
-
-V4 makes the market-plan state order executable, and ensures enough ZIP rows
-from the first priority state are materialized before discovery.
+Fixes territory ordering so the explicit state order in the market plan is
+executable, and preserves city_priority=0 for the first preferred city.
 """
 
 import zip_manager
@@ -20,6 +16,10 @@ PRIORITY_STATE_ZIP_WINDOW = 1200
 _original_load_zip_universe = zip_manager.load_zip_universe
 _original_sync_zip_plan = zip_manager.sync_zip_plan
 _original_next_zips = zip_manager.next_zips
+
+
+def _int_or_default(value, default: int) -> int:
+    return default if value is None else int(value)
 
 
 def _state_rank(plan: dict) -> dict[str, tuple[int, int, int]]:
@@ -41,7 +41,7 @@ def _ordered_universe(plan: dict) -> list[dict]:
         rows,
         key=lambda row: (
             ranks.get(str(row.get("state_code") or "").upper(), fallback),
-            int(row.get("city_priority") or 1000),
+            _int_or_default(row.get("city_priority"), 1000),
             str(row.get("city") or ""),
             str(row.get("zip_code") or ""),
         ),
@@ -60,8 +60,6 @@ def _priority_state_code(plan: dict) -> str | None:
 
 
 def _sync_with_priority_state_window(query, campaign: dict, plan: dict) -> dict:
-    # First run the normal sliding-queue sync, but with the universe ordered by
-    # explicit market-plan state order.
     result = _original_sync_zip_plan(query, campaign, plan)
 
     priority_state = _priority_state_code(plan)
@@ -87,8 +85,6 @@ def _sync_with_priority_state_window(query, campaign: dict, plan: dict) -> dict:
 
 
 def _ordered_next_zips(query, campaign: dict, plan: dict, limit: int) -> list[dict]:
-    # Ask for the full materialized candidate window, then apply the explicit
-    # state order in Python. Current production calls use max_zips=5000.
     rows = _original_next_zips(query, campaign, plan, max(int(limit), 5000))
     ranks = _state_rank(plan)
     fallback = (999999, 999999, 999999)
@@ -96,14 +92,13 @@ def _ordered_next_zips(query, campaign: dict, plan: dict, limit: int) -> list[di
         key=lambda row: (
             0 if row.get("status") == "queued" else 1 if row.get("status") == "partial" else 2,
             ranks.get(str(row.get("state_code") or "").upper(), fallback),
-            int(row.get("city_priority") or 1000),
+            _int_or_default(row.get("city_priority"), 1000),
             str(row.get("zip_code") or ""),
         )
     )
     return rows[: int(limit)]
 
 
-# Patch the functions resolved by the existing production core at runtime.
 zip_manager.load_zip_universe = _ordered_universe
 v3.hardened.core.sync_zip_plan = _sync_with_priority_state_window
 v3.hardened.core.next_zips = _ordered_next_zips
