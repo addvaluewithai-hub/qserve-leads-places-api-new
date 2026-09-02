@@ -1,0 +1,42 @@
+{
+  "id": "cafes-eg",
+  "name": "Premium Cafes - October & Sheikh Zayed",
+  "vertical": "hospitality",
+  "description": "Legacy QServe cafe campaign represented as a reusable campaign config.",
+  "google": {
+    "included_type": "cafe",
+    "strict_type_filtering": true,
+    "region_code": "EG",
+    "language_code": "en",
+    "queries": ["cafe", "coffee shop", "specialty coffee"],
+    "areas": [
+      {"label": "6th of October City", "terms": ["6th of October City, Egypt", "October City, Egypt"]},
+      {"label": "Sheikh Zayed City", "terms": ["Sheikh Zayed City, Egypt", "Sheikh Zayed, Giza, Egypt"]}
+    ]
+  },
+  "quality": {
+    "allowed_business_statuses": ["OPERATIONAL"],
+    "min_rating": 4.2,
+    "min_reviews": 75,
+    "require_phone": true,
+    "require_website": false,
+    "allowed_price_levels": ["PRICE_LEVEL_MODERATE", "PRICE_LEVEL_EXPENSIVE", "PRICE_LEVEL_VERY_EXPENSIVE"],
+    "review_recency_days": 180,
+    "min_recent_sampled_reviews": 1
+  },
+  "scoring": {
+    "rating_weight": 35,
+    "review_volume_weight": 25,
+    "review_freshness_weight": 15,
+    "recent_review_sample_weight": 10,
+    "website_weight": 5,
+    "phone_weight": 5,
+    "price_weight": 5
+  },
+  "enrichment": {
+    "website_crawl_required": false,
+    "target_services": [],
+    "decision_maker_required": false,
+    "direct_email_required": false
+  }
+}
