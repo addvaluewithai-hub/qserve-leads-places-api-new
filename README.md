@@ -1,20 +1,21 @@
 # Multi-Campaign Lead Engine + CRM
 
-A reusable lead-discovery, website-validation, enrichment, and outreach CRM built around Google Places API (New), Maps Grounding Lite, Crawl4AI, GitHub Actions, Cloudflare Pages, and Cloudflare D1.
+A reusable lead-discovery, website-validation, enrichment, and outreach system built around Google Places API (New), Maps Grounding Lite, Crawl4AI, GitHub Actions, Cloudflare Pages, and Cloudflare D1.
 
-The repository supports multiple verticals and campaigns. The most mature production workflow is the **large-scale lawyer service-gap pipeline**, which has been validated on a 1,000-domain working set.
+The repository supports multiple verticals. The most mature production workflow is the **large-scale lawyer service-gap pipeline**.
 
 ---
 
-## Start here
+## Start here — lawyer production workflow
 
-For the current lawyer production workflow, read these in order:
+Read these in order:
 
-1. `docs/FINAL_LEAD_ENGINE_ARCHITECTURE.md` — architecture/source-of-truth decision.
-2. `docs/AGENT_1_DISCOVERY_CAMPAIGN_RUNBOOK.md` — how an agent creates the next 1,000 net-new working leads, adds them to a campaign, and collects homepage links.
-3. `docs/AGENT_2_VALIDATE_ENRICH_QUALIFY_RUNBOOK.md` — how an agent validates the real service gap, then finds the owner/direct public email and performs final qualification.
+1. `docs/FINAL_LEAD_ENGINE_ARCHITECTURE.md` — architecture/source-of-truth.
+2. `docs/MARKET_COVERAGE_MANAGEMENT.md` — how we decide where to search next and track territory coverage.
+3. `docs/AGENT_1_DISCOVERY_CAMPAIGN_RUNBOOK.md` — how Agent 1 creates the next net-new working set and collects homepage links.
+4. `docs/AGENT_2_VALIDATE_ENRICH_QUALIFY_RUNBOOK.md` — how Agent 2 confirms the real service gap, finds the owner/direct public email, and performs final qualification.
 
-Supporting benchmark/history docs include:
+Supporting benchmark/history docs:
 
 - `docs/BENCHMARK_10_REQUESTS_2026-09-02.md`
 - `docs/BUILD_1000_LAWYERS_2026-09-02.md`
@@ -23,37 +24,41 @@ Supporting benchmark/history docs include:
 
 ---
 
-# Current production architecture — lawyers
+# Current lawyer architecture
 
 ```text
 Agent 1
 
-Google Places Text Search Pro
-(minimal identity fields only)
+Managed market queue
+market_plans/lawyers-us.json
++ D1 market_coverage/history
         ↓
-Place ID + business name + address + business status
+Google Places Text Search Pro
+minimal identity fields only
+        ↓
+Place ID + name + address + business status
         ↓
 Maps Grounding Lite
-(name + address → official website + rating + review count)
+name + address → website + rating + review count
         ↓
 Place-ID identity match
-+ quality gate
-+ existing-lead exclusion
++ 4.7 rating / 20+ review gate
++ existing Place-ID/domain exclusion
 + domain dedupe
         ↓
-1,000 NET-NEW unique law-firm domains
+NET-NEW unique law-firm domains
         ↓
-Campaign / D1 membership
-status = Ready for Validation
+D1 campaign membership
 qualified = 0
+status = Ready for Validation
         ↓
 Crawl4AI homepage only
         ↓
-all visible same-domain homepage/header/footer/nav links
+visible same-domain homepage/header/footer/nav links
         ↓
 Agent 2
 
-Inspect Crawl4AI links
+inspect Crawl4AI evidence
         ↓
 MANDATORY website double-check
         ↓
@@ -68,13 +73,13 @@ find DIRECT PUBLIC email for that exact person
 Qualified
 ```
 
-A business is **not Qualified during discovery**. Google quality creates a working set; qualification happens only after service-gap and contact evidence are complete.
+A Google-quality business is **not Qualified** at discovery time.
 
 ---
 
 # Two-agent operating model
 
-## Agent 1 — Discovery, Campaign Build, Homepage Collection
+## Agent 1 — Discovery + market management + campaign build + homepage collection
 
 Runbook:
 
@@ -84,25 +89,18 @@ docs/AGENT_1_DISCOVERY_CAMPAIGN_RUNBOOK.md
 
 Agent 1 owns:
 
-- campaign setup,
-- exclusion of existing Place IDs/domains,
-- generic lawyer discovery,
-- Maps Grounding Lite enrichment,
-- rating/review-count quality gate,
-- official website resolution,
+- next-market selection,
+- Google discovery,
+- Grounding Lite enrichment,
+- quality gate,
 - cross-run Place-ID/domain dedupe,
-- collecting exactly the requested number of **net-new domains**,
-- normalizing/inserting campaign records,
-- homepage-only Crawl4AI collection,
-- handoff to Agent 2.
+- D1/campaign insertion,
+- homepage-only Crawl4AI,
+- Agent 2 handoff.
 
-Agent 1 does **not**:
+Agent 1 never validates a gap and never searches owner emails.
 
-- classify service gaps,
-- search for owner emails,
-- mark discovery candidates Qualified.
-
-## Agent 2 — Gap Validation, Contact Enrichment, Final Qualification
+## Agent 2 — Gap validation + contact enrichment + qualification
 
 Runbook:
 
@@ -115,95 +113,262 @@ Agent 2 works lead-by-lead:
 ```text
 Crawl links
 → website double-check
-→ confirm real gap
-→ only then find owner
-→ only then find direct public owner email
+→ confirm gap
+→ identify owner
+→ find direct public owner email
 → Qualified
 ```
 
-If there is no confirmed gap, Agent 2 stops before email research.
+If no gap exists, stop before contact enrichment.
 
 ---
 
-# Lawyer qualification rule
+# Market / location management
 
-The final rule is deliberately strict:
+We do not manage coverage with notes like "Texas done".
+
+Static plan:
 
 ```text
-Real service offered
-+
-No dedicated exact-service internal page after double-check
-+
-Owner / decision maker identified
-+
-Direct public email for that exact person
-=
-QUALIFIED
+market_plans/lawyers-us.json
 ```
 
-## Exact-service page rule
+Dynamic D1 state:
 
-A general page such as:
+```text
+market_coverage
+market_run_history
+```
+
+Current market statuses:
+
+```text
+queued
+partial
+covered_once
+exhausted
+cooling
+```
+
+The first validated 1,000-domain build used 92 markets and stopped at **New Haven, CT**. It stopped before the remaining primary queue including the original Texas primary metros. Texas is therefore not considered exhausted.
+
+See current coverage / next markets:
+
+```bash
+python scripts/market_manager.py status --campaign lawyers-us --next 25
+```
+
+Show only next markets:
+
+```bash
+python scripts/market_manager.py next --campaign lawyers-us --next 25
+```
+
+Full rules:
+
+```text
+docs/MARKET_COVERAGE_MANAGEMENT.md
+```
+
+---
+
+# Bootstrap the historical first 1,000
+
+Before running "next 1,000", seed the validated first 1,000 into D1 once so cross-run dedupe is authoritative.
+
+```bash
+python scripts/bootstrap_lawyers_us_campaign.py \
+  --campaign lawyers-us \
+  --input-dir <first-1000-artifact-directory>
+```
+
+This makes zero Google calls.
+
+GitHub workflow:
+
+```text
+.github/workflows/bootstrap-lawyers-us-campaign.yml
+```
+
+---
+
+# Build the next 1,000 net-new lawyers
+
+After bootstrap:
+
+```bash
+export GOOGLE_API_KEY=...
+export CLOUDFLARE_ACCOUNT_ID=...
+export CLOUDFLARE_API_TOKEN=...
+export D1_DATABASE_ID=...
+
+python scripts/build_next_1000_lawyers.py \
+  --campaign lawyers-us \
+  --target 1000
+```
+
+The builder automatically:
+
+1. loads existing campaign Place IDs/domains from D1,
+2. reads next eligible markets from the managed queue,
+3. performs minimal Text Search Pro discovery,
+4. excludes old Place IDs before Grounding,
+5. resolves website/rating/review count through Grounding Lite,
+6. applies quality and identity gates,
+7. excludes existing/duplicate domains,
+8. records market yield/history after every market,
+9. continues until the target net-new domain count is reached,
+10. inserts accepted working-set leads into D1 as `Ready for Validation`, `qualified=0`.
+
+GitHub workflow:
+
+```text
+.github/workflows/build-next-1000-lawyers.yml
+```
+
+All live discovery workflows are **manual-dispatch only**.
+
+---
+
+# Google discovery economics — lawyers
+
+Current scalable production discovery requests only:
+
+```text
+places.id
+places.displayName
+places.formattedAddress
+places.businessStatus
+```
+
+Search request:
+
+```text
+textQuery = lawyer in <market>
+includedType = lawyer
+strictTypeFiltering = true
+minRating = 4.7
+pageSize = 20
+```
+
+Grounding Lite then supplies:
+
+```text
+official website
+rating
+review count
+Google Maps source
+```
+
+The normal lawyer path does not request:
+
+```text
+reviews[]
+Place Details Enterprise
+```
+
+Historical first-1,000 benchmark:
+
+```text
+92 Text Search Pro requests
+1,252 Maps Grounding Lite calls
+0 Place Details Enterprise calls
+```
+
+Always verify current Google pricing/free caps before financial reporting.
+
+---
+
+# Crawl4AI role
+
+Crawl4AI is intentionally a **dumb homepage collector**.
+
+For each lead:
+
+1. load the homepage once,
+2. render normal header/nav/footer,
+3. collect all visible same-domain links,
+4. save URL + anchor text,
+5. retry once if needed,
+6. stop.
+
+It must not:
+
+- deep crawl,
+- recursively follow links,
+- classify service pages,
+- decide Qualified/Disqualified,
+- search for emails.
+
+Validated scaled collector:
+
+```text
+scripts/crawl_working_set_homepages_parallel.py
+```
+
+Recommended validated worker count:
+
+```text
+4 workers
+```
+
+Homepage evidence outputs include:
+
+```text
+homepage_links.csv
+homepage_links.json
+homepage_fetch_summary.csv/json
+homepage_links_summary.json
+```
+
+---
+
+# Exact service-gap rule
+
+Qualification is service-level, not firm-level.
+
+Allowed:
 
 ```text
 /services
 /practice-areas
-/what-we-do
 ```
 
-is allowed and does not automatically disqualify a service gap.
+A general umbrella page does not automatically disqualify a service gap.
 
-A service gap is disqualified only when that **exact service** has its own dedicated page/URL.
-
-Examples:
+For a specific service:
 
 ```text
-target Family Law + /family-law            → Disqualified for Family Law
-
-target Probate + /estate-planning only     → Probate may still be a gap
-
-target Adoption + /family-law only         → Adoption may still be a gap
+service genuinely offered
++
+no dedicated exact-service page/URL after mandatory double-check
+=
+Confirmed Gap
 ```
 
-Dedicated pages for other services do not disqualify the entire firm. A single law firm can have several service opportunities with different outcomes.
+If an exact dedicated page exists, that **specific gap** is disqualified. Other services at the same firm may still contain gaps.
 
-## Missing homepage link is not enough
-
-Crawl4AI evidence is only the first check.
-
-If no obvious dedicated service URL is present in homepage links, Agent 2 must independently inspect/search the official website before confirming the gap.
-
-If the firm does not genuinely offer the service:
+If the firm does not actually offer the service:
 
 ```text
 Not Relevant
 ```
 
-not Qualified.
-
-Ambiguity becomes:
-
-```text
-Needs Review
-```
-
-not a guessed positive decision.
+Missing homepage-link evidence alone is never enough to qualify a gap.
 
 ---
 
 # Direct-email rule
 
-Final qualification requires a **direct public email for the selected owner/decision maker**.
+A final outreach-ready lead requires a public direct email for the actual owner / relevant decision maker.
 
-Acceptable contacts normally include:
+Accepted example:
 
-- founder,
-- owner,
-- founding attorney,
-- managing partner when clearly the business decision maker,
-- solo attorney/owner.
+```text
+owner.name@firm.com
+```
 
-Generic addresses are not accepted, including:
+Not accepted as final contact:
 
 ```text
 info@
@@ -214,225 +379,35 @@ support@
 reception@
 intake@
 admin@
-team@
-marketing@
-appointments@
 ```
 
-A receptionist, intake coordinator, assistant, paralegal, or unrelated employee email is not a substitute for the owner email.
+Also not accepted:
 
-Emails must be publicly evidenced. **Never guess or pattern-generate an email.**
+- receptionist email,
+- assistant email,
+- unrelated attorney email,
+- guessed email pattern,
+- fabricated address.
 
-If a gap is confirmed but no direct owner email is found:
+Final qualification requires:
 
 ```text
-Gap Confirmed - Direct Email Missing
-qualified = 0
+real confirmed service gap
++
+owner/decision maker identified
++
+direct public email for that exact person
+=
+Qualified
 ```
+
+If the gap is confirmed but no acceptable direct email is found, preserve the lead as a contact-missing/non-qualified state rather than inventing data.
 
 ---
 
-# Low-cost Google discovery design
+# D1 data model
 
-The scaled lawyer workflow intentionally avoids Place Details Enterprise and review text in the normal path.
-
-## Text Search
-
-Use generic lawyer discovery, for example:
-
-```text
-textQuery = "lawyer in Phoenix, AZ"
-includedType = lawyer
-strictTypeFiltering = true
-minRating = 4.7
-pageSize = 20
-```
-
-Minimal response field mask:
-
-```text
-places.id
-places.displayName
-places.formattedAddress
-places.businessStatus
-```
-
-Do not request `websiteUri`, `rating`, `userRatingCount`, phone, opening hours, or `reviews[]` during the discovery request.
-
-## Grounding Lite
-
-For each unique candidate, query using:
-
-```text
-<business name>, <address> official website rating review count
-```
-
-Require the Grounding result's Place ID to match the discovery Place ID before trusting the identity automatically.
-
-A direct `Place ID only → Grounding search_places` lookup was tested on known law firms and returned empty results. Therefore the production path intentionally preserves the business name + address for Grounding.
-
-## Validated 1,000-lawyer run
-
-The first full working-set build collected:
-
-```text
-1,000 unique law-firm website domains
-rating floor: 4.7
-minimum reviews: 20
-Text Search Pro requests: 92
-Maps Grounding Lite calls: 1,252
-Place Details Enterprise calls: 0
-review-text requests: 0
-```
-
-Pricing and free caps can change. Verify current Google Maps Platform pricing before making cost claims for a new run.
-
----
-
-# Getting ANOTHER 1,000 leads
-
-Do not simply rerun the first-1,000 script and call its output new.
-
-Before discovery, load the authoritative existing sets:
-
-```text
-existing_place_ids
-existing_website_domains
-```
-
-A candidate only counts toward the new target when it is not already present by Place ID or normalized domain.
-
-The stop condition is:
-
-```text
-1,000 NET-NEW unique accepted domains
-```
-
-not 1,000 raw Places results.
-
-Full procedure:
-
-```text
-docs/AGENT_1_DISCOVERY_CAMPAIGN_RUNBOOK.md
-```
-
----
-
-# Crawl4AI — homepage links only
-
-Crawl4AI is intentionally a **dumb collector**.
-
-It should:
-
-1. load one homepage,
-2. render normal header/nav/footer,
-3. collect all visible same-domain links,
-4. save URL + anchor text,
-5. retry once if needed,
-6. stop.
-
-It must not:
-
-- deep crawl,
-- recursively follow collected links,
-- classify service pages,
-- make Qualified/Disqualified decisions,
-- search for emails.
-
-Primary outputs:
-
-```text
-homepage_links.csv
-homepage_links.json
-homepage_fetch_summary.csv/json
-homepage_links_summary.json
-```
-
-Validated large-set crawler:
-
-```text
-scripts/crawl_working_set_homepages_parallel.py
-```
-
-Validated worker count:
-
-```text
-4
-```
-
-Use batches so failures can be retried independently.
-
----
-
-# Running the lawyer working-set builder
-
-Validated script:
-
-```bash
-export GOOGLE_API_KEY=...
-python scripts/build_1000_lawyers.py
-```
-
-GitHub Actions workflow:
-
-```text
-Actions → Build 1000 lawyer working set
-```
-
-The workflow is **manual-dispatch only**.
-
-Important: `scripts/build_1000_lawyers.py` is the validated first-working-set reference implementation. For subsequent 1,000 sets, an agent must apply the existing Place-ID/domain exclusion procedure documented in Agent 1 before counting candidates toward the target.
-
----
-
-# Running homepage collection
-
-The working-set crawl consumes the saved working-set artifact; it does not repeat Google discovery.
-
-Relevant workflow/script:
-
-```text
-.github/workflows/crawl-lawyers-working-set.yml
-scripts/crawl_working_set_homepages_parallel.py
-```
-
-Use a batch start/limit and four workers after validation.
-
-Example logical batch:
-
-```text
-start = 0
-limit = 100
-workers = 4
-```
-
-No Google Text Search or Grounding requests are required merely to recrawl a saved working set.
-
----
-
-# Multi-campaign support
-
-Existing campaign configs include:
-
-- `campaigns/lawyers-tx.json`
-- `campaigns/dentists-tx.json`
-- `campaigns/cafes-eg.json`
-
-The repository also still contains the reusable/older campaign runner:
-
-```text
-scripts/run_campaign.py
-scripts/run_campaign_tracked.py
-scripts/sync_campaign_to_d1.py
-```
-
-These remain useful for generic campaign work, dentists/cafes, and earlier flows, but the **large-scale lawyer production architecture is the two-agent workflow documented above**. Do not assume the older lawyer service-specific query configuration represents the current scaled-lawyer strategy.
-
----
-
-# Campaign and D1 model
-
-The core D1 model currently separates canonical businesses from campaign membership:
+Core tables:
 
 ```text
 leads
@@ -440,80 +415,42 @@ campaigns
 campaign_runs
 campaign_leads
 lead_signals
+lead_domains
+market_coverage
+market_run_history
 ```
 
-This is important because one canonical business can participate in multiple campaigns without mixing campaign-specific state.
-
-## Initial state after Agent 1
-
-A newly discovered working lead should conceptually enter a campaign as:
+Responsibilities:
 
 ```text
-qualified = 0
-status = Ready for Validation
-qualification_reason = pending_gap_validation
+leads              canonical business
+lead_domains       normalized canonical domain registry
+campaigns          campaign config
+campaign_runs      run-level history
+campaign_leads     campaign-specific state / qualification
+lead_signals       optional legacy/general signals
+market_coverage    aggregate territory state/yield
+market_run_history per-market pass audit history
 ```
 
-## Final state after Agent 2
-
-Only when gap + owner + direct public owner email are all evidenced:
-
-```text
-qualified = 1
-status = Qualified
-qualification_reason = confirmed_service_gap + verified_owner + direct_public_owner_email
-```
-
-## Working-set field normalization
-
-The scaled builder uses names such as:
-
-```text
-place_id
-review_count
-source_market
-```
-
-while older campaign/D1 scripts may expect:
-
-```text
-id
-user_rating_count
-source_area
-```
-
-Do not blindly feed the raw 1,000-working-set CSV into an older sync path. Normalize the fields first. The exact mapping is documented in Agent 1.
+One business can participate in multiple campaigns without mixing campaign-specific qualification state.
 
 ---
 
-# Status lifecycle
-
-Recommended campaign lifecycle:
+# Included campaign configs
 
 ```text
-Ready for Validation
-        ↓
-Needs Review / Not Relevant / Disqualified
-        OR
-Gap Confirmed
-        ↓
-Gap Confirmed - Owner Missing
-Gap Confirmed - Direct Email Missing
-        OR
-Qualified
+campaigns/lawyers-us.json  current scalable national lawyer workflow
+campaigns/lawyers-tx.json  older Texas-focused lawyer config / legacy path
+campaigns/dentists-tx.json
+campaigns/cafes-eg.json
 ```
 
-`Gap Confirmed` is evidence of a sales opportunity, but it is **not yet outreach-ready** under the current rule.
+Do not use the expensive legacy lawyer discovery field masks for a new large-scale lawyer build when the `lawyers-us` workflow fits the task.
 
 ---
 
-# GitHub Actions safety
-
-Live Google, Grounding, Crawl, and D1 actions should be manual-dispatch workflows unless a deliberate scheduled/production automation is later designed.
-
-Normal code pushes should validate/build code without silently consuming Google API calls.
-
-Required secrets across the full system can include:
+# Required GitHub secrets
 
 ```text
 GOOGLE_API_KEY
@@ -524,47 +461,40 @@ D1_DATABASE_ID
 
 ---
 
-# Repository architecture summary
+# Workflow safety
+
+Normal code pushes must not make live Google/Grounding/Crawl/D1 campaign writes.
+
+Production live workflows are manually triggered.
+
+Relevant workflows:
 
 ```text
-campaigns/
-  campaign configurations
-
-docs/
-  FINAL_LEAD_ENGINE_ARCHITECTURE.md
-  AGENT_1_DISCOVERY_CAMPAIGN_RUNBOOK.md
-  AGENT_2_VALIDATE_ENRICH_QUALIFY_RUNBOOK.md
-  benchmark/build/review reports
-
-scripts/
-  build_1000_lawyers.py
-  benchmark_lawyer_discovery.py
-  crawl_working_set_homepages.py
-  crawl_working_set_homepages_parallel.py
-  crawl_campaign_websites.py
-  run_campaign.py
-  run_campaign_tracked.py
-  sync_campaign_to_d1.py
-
-.github/workflows/
-  manual discovery/build/crawl workflows
-
-schema.sql
-  Cloudflare D1 schema
+.github/workflows/bootstrap-lawyers-us-campaign.yml
+.github/workflows/build-next-1000-lawyers.yml
+.github/workflows/lawyer-market-status.yml
+.github/workflows/crawl-lawyers-working-set.yml
 ```
 
 ---
 
-# Next hardening priorities
+# Short version
 
-The architecture is validated; the next improvements are mainly data-model/orchestration hardening:
+For lawyers:
 
-1. Add first-class D1 tables/columns for service-gap evidence, contacts, contact evidence, and validation events.
-2. Make the 1,000-builder natively exclusion-aware by reading existing Place IDs/domains before counting the next working set.
-3. Add a first-class normalizer/sync path specifically for the scaled working-set fields instead of relying on older campaign field names.
-4. Persist homepage-link evidence into D1 when useful instead of relying only on artifacts.
-5. Create a durable validation queue so multiple Agent 2 workers can claim leads without duplicate work.
-6. Add outreach suppression/dedupe rules across campaigns.
-7. Add revalidation logic for stale websites, owners, and emails.
+```text
+Agent 1:
+managed locations
+→ next 1,000 net-new domains
+→ D1
+→ homepage links
 
-Until those improvements are implemented, the two agent runbooks are the operational source of truth for producing and qualifying lawyer leads.
+Agent 2:
+links + website double-check
+→ confirmed gap
+→ owner
+→ direct public owner email
+→ Qualified
+```
+
+If a future agent is unsure how to proceed, it should read the two runbooks and the market-coverage document before making live requests.
