@@ -77,6 +77,7 @@ jobs:
           python -m json.tool campaigns/cafes-eg.json >/dev/null
 
       - name: Detect homepage link collection requirement
+        if: github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           enabled=$(python - <<'PY'
@@ -95,21 +96,23 @@ jobs:
           npm run build
 
       - name: Install Crawl4AI
-        if: env.CRAWL_ENABLED == 'true'
+        if: github.event_name == 'workflow_dispatch' && env.CRAWL_ENABLED == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-crawl.txt
           crawl4ai-setup
 
       - name: Verify Google Places secret
+        if: github.event_name == 'workflow_dispatch'
         run: |
           test -n "$GOOGLE_API_KEY" || (echo "GOOGLE_API_KEY is missing" && exit 1)
 
       - name: Discover, score and track Google API usage
+        if: github.event_name == 'workflow_dispatch'
         run: python scripts/run_campaign_tracked.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT" --max-pages "$MAX_PAGES"
 
       - name: Collect homepage internal links
-        if: env.CRAWL_ENABLED == 'true'
+        if: github.event_name == 'workflow_dispatch' && env.CRAWL_ENABLED == 'true'
         run: python scripts/crawl_campaign_websites.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT"
 
       - name: Sync campaign to D1
@@ -121,6 +124,7 @@ jobs:
           python scripts/sync_campaign_to_d1.py --campaign "$CAMPAIGN"
 
       - name: Upload campaign artifact
+        if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.CAMPAIGN }}-lead-results
