@@ -10,9 +10,9 @@ import requests
 MCP_URL = "https://mapstools.googleapis.com/mcp"
 OUT = Path("out/maps-grounding-probe")
 QUERIES = [
-    "Gibbins Law PLLC Tyler Texas official website",
-    "Hager Law PLLC Texas official website",
-    "Tate Accident Law Sherman Texas official website",
+    "Place ID ChIJRQuged7PSYYRaphby2Q3ZUc official website rating review count",
+    "Place ID ChIJReLujZjPSYYRa_EZk7v6qDI official website rating review count",
+    "Place ID ChIJX96JSJmITIYRLMv6TUTNy3U official website rating review count",
 ]
 
 
