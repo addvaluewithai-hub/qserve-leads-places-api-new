@@ -2,7 +2,7 @@
   "id": "lawyers-tx",
   "name": "Texas Lawyers",
   "vertical": "legal",
-  "description": "Find active Texas law firms with strong Google reputation, recent review signals, a website, and a phone number. Website service-gap qualification happens in the crawl/enrichment stage.",
+  "description": "Find active Texas law firms with strong Google reputation, recent review signals, a website, and a phone number. Homepage links are collected for manual service-page verification.",
   "google": {
     "included_type": "lawyer",
     "strict_type_filtering": true,
@@ -57,10 +57,9 @@
   },
   "crawl": {
     "engine": "crawl4ai",
-    "max_depth": 2,
-    "max_pages_per_site": 30,
+    "mode": "homepage_links_only",
     "same_domain_only": true,
-    "capture_link_graph": true,
-    "general_service_pages_are_allowed": true
+    "follow_links": false,
+    "classification": false
   }
 }
