@@ -15,7 +15,7 @@ permissions:
 jobs:
   bootstrap:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       SOURCE_RUN_ID: ${{ inputs.source_run_id }}
       GH_TOKEN: ${{ github.token }}
@@ -27,14 +27,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install ZIP registry dependency
+        run: pip install pgeocode pandas
       - name: Download validated first 1000 working set
         run: |
           mkdir -p input
           gh run download "$SOURCE_RUN_ID" -n lawyers-1000-working-set -D input
           test -f input/lawyers_1000.csv
           test -f input/summary.json
-          test -f input/search_log.json
-      - name: Bootstrap campaign + market coverage into D1
+      - name: Bootstrap historical businesses + ZIP coverage into D1
         run: |
           python scripts/bootstrap_lawyers_us_campaign.py \
             --campaign lawyers-us \
