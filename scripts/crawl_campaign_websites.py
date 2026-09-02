@@ -103,6 +103,7 @@ async def fetch_homepage_links(crawler: AsyncWebCrawler, lead: dict) -> tuple[di
         "homepage_status_code": None,
         "homepage_title": None,
         "internal_links_found": 0,
+        "attempts": 0,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "error": None,
     }
@@ -110,31 +111,48 @@ async def fetch_homepage_links(crawler: AsyncWebCrawler, lead: dict) -> tuple[di
         base.update({"crawl_status": "skipped", "error": "missing_website"})
         return base, []
 
-    try:
-        config = CrawlerRunConfig(
-            scraping_strategy=LXMLWebScrapingStrategy(),
-            cache_mode=CacheMode.BYPASS,
-            page_timeout=45000,
-            verbose=False,
-        )
-        result = await crawler.arun(url=homepage, config=config)
-        if isinstance(result, list):
-            result = result[0] if result else None
-        if result is None:
-            raise RuntimeError("Crawl4AI returned no homepage result")
+    config = CrawlerRunConfig(
+        scraping_strategy=LXMLWebScrapingStrategy(),
+        cache_mode=CacheMode.BYPASS,
+        page_timeout=30000,
+        verbose=False,
+    )
 
-        metadata = getattr(result, "metadata", None) or {}
-        links = extract_internal_links(result, homepage)
-        base.update({
-            "crawl_status": "completed" if getattr(result, "success", True) else "failed",
-            "homepage_status_code": getattr(result, "status_code", None),
-            "homepage_title": metadata.get("title"),
-            "internal_links_found": len(links),
-        })
-        return base, links
-    except Exception as exc:
-        base.update({"crawl_status": "failed", "error": f"{type(exc).__name__}: {exc}"[:1200]})
-        return base, []
+    last_error = None
+    for attempt in (1, 2):
+        base["attempts"] = attempt
+        try:
+            result = await crawler.arun(url=homepage, config=config)
+            if isinstance(result, list):
+                result = result[0] if result else None
+            if result is None:
+                last_error = "Crawl4AI returned no homepage result"
+            elif getattr(result, "success", True):
+                metadata = getattr(result, "metadata", None) or {}
+                links = extract_internal_links(result, homepage)
+                base.update({
+                    "crawl_status": "completed",
+                    "homepage_status_code": getattr(result, "status_code", None),
+                    "homepage_title": metadata.get("title"),
+                    "internal_links_found": len(links),
+                    "error": None,
+                })
+                return base, links
+            else:
+                last_error = str(
+                    getattr(result, "error_message", None)
+                    or getattr(result, "error", None)
+                    or "Crawl4AI returned success=false"
+                )
+                base["homepage_status_code"] = getattr(result, "status_code", None)
+        except Exception as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+
+        if attempt == 1:
+            await asyncio.sleep(1)
+
+    base.update({"crawl_status": "failed", "error": (last_error or "unknown_error")[:1200]})
+    return base, []
 
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -173,7 +191,7 @@ async def run(args) -> None:
                     "url": link["url"],
                     "anchor_text": link["anchor_text"],
                 })
-            print(f"  status={summary['crawl_status']} links={summary['internal_links_found']}")
+            print(f"  status={summary['crawl_status']} attempts={summary['attempts']} links={summary['internal_links_found']}")
 
     payload = []
     links_by_lead: dict[str, list[dict]] = {}
@@ -198,6 +216,7 @@ async def run(args) -> None:
         "leads_attempted": len(summaries),
         "homepage_fetch_completed": sum(1 for row in summaries if row.get("crawl_status") == "completed"),
         "homepage_fetch_failed": sum(1 for row in summaries if row.get("crawl_status") == "failed"),
+        "homepages_retried": sum(1 for row in summaries if int(row.get("attempts") or 0) > 1),
         "total_internal_homepage_links": len(link_rows),
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
