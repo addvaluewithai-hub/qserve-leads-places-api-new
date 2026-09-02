@@ -1,0 +1,68 @@
+name: One-time requested next 1000 ZIP V2
+
+on:
+  issues:
+    types: [opened]
+
+concurrency:
+  group: lawyers-us-zip-discovery
+  cancel-in-progress: false
+
+permissions:
+  actions: read
+  contents: read
+  issues: read
+
+jobs:
+  run:
+    if: github.event.issue.title == 'RUN-QSERVE-ZIP-V2-20260902-1355'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install ZIP discovery + Crawl4AI dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pgeocode pandas tldextract
+          pip install -r requirements-crawl.txt
+          crawl4ai-setup
+      - name: Static compile check
+        run: |
+          python -m py_compile \
+            scripts/bootstrap_lawyers_us_campaign.py \
+            scripts/build_next_1000_lawyers_zip.py \
+            scripts/build_next_1000_lawyers_zip_v2.py \
+            scripts/zip_manager.py
+      - name: Bootstrap validated historical first 1000 into D1
+        run: |
+          rm -rf input-first-1000
+          mkdir -p input-first-1000
+          gh run download 33604156200 -n lawyers-1000-working-set -D input-first-1000
+          test -f input-first-1000/lawyers_1000.csv
+          test -f input-first-1000/summary.json
+          python scripts/bootstrap_lawyers_us_campaign.py \
+            --campaign lawyers-us \
+            --input-dir input-first-1000
+      - name: Build next 1000 net-new ZIP-managed lawyers
+        run: |
+          python scripts/build_next_1000_lawyers_zip_v2.py \
+            --campaign lawyers-us \
+            --target 1000 \
+            --max-zips 5000 \
+            --max-search-requests 900
+      - name: Upload V2 result artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-us-next-1000-zip-v2
+          path: out/lawyers-us-next-1000-zip/
+          if-no-files-found: warn
