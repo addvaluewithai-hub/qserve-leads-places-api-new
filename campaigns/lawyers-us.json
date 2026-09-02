@@ -6,7 +6,7 @@
   "market_plan": "market_plans/lawyers-us.json",
   "working_set": {
     "target_net_new_domains_per_run": 1000,
-    "dedupe_scope": "campaign",
+    "dedupe_scope": "global_domain_registry",
     "status_after_discovery": "Ready for Validation",
     "qualified_after_discovery": false
   },
