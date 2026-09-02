@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import urllib.error
 import urllib.request
 from pathlib import Path
 from urllib.parse import urlparse
@@ -45,8 +46,15 @@ def make_query_client():
             method="POST",
             headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
         )
-        with urllib.request.urlopen(request, timeout=90) as response:
-            payload = json.loads(response.read().decode("utf-8"))
+        try:
+            with urllib.request.urlopen(request, timeout=90) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            try:
+                detail = exc.read().decode("utf-8", errors="replace")
+            except Exception:
+                detail = "<unable to read D1 error body>"
+            raise RuntimeError(f"D1 HTTP {exc.code}: {detail[:4000]}") from exc
         if not payload.get("success"):
             raise RuntimeError(payload)
         result_sets = payload.get("result") or []
