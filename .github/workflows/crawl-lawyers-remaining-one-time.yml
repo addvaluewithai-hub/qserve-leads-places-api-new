@@ -1,9 +1,6 @@
 name: Crawl remaining 900 lawyer homepages
 
 on:
-  push:
-    paths:
-      - ".github/workflows/crawl-lawyers-remaining-one-time.yml"
   workflow_dispatch:
 
 permissions:
