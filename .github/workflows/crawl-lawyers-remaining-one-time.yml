@@ -1,0 +1,56 @@
+name: Crawl remaining 900 lawyer homepages
+
+on:
+  push:
+    paths:
+      - ".github/workflows/crawl-lawyers-remaining-one-time.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  crawl:
+    strategy:
+      fail-fast: false
+      matrix:
+        start: [100, 400, 700]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BUILD_RUN_ID: "33604156200"
+      BATCH_START: ${{ matrix.start }}
+      BATCH_LIMIT: "300"
+      WORKERS: "4"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download 1000-lawyer working set artifact
+        run: |
+          mkdir -p input
+          gh run download "$BUILD_RUN_ID" -n lawyers-1000-working-set -D input
+          test -f input/lawyers_1000.csv
+      - name: Install Crawl4AI
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-crawl.txt
+          crawl4ai-setup
+      - name: Crawl homepage-only batch
+        run: |
+          OUT="out/lawyers-1000/homepages-${BATCH_START}-${BATCH_LIMIT}"
+          python scripts/crawl_working_set_homepages_parallel.py \
+            --input input/lawyers_1000.csv \
+            --out-dir "$OUT" \
+            --start "$BATCH_START" \
+            --limit "$BATCH_LIMIT" \
+            --workers "$WORKERS"
+      - name: Upload homepage-link batch
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-homepages-${{ matrix.start }}-300-w4
+          path: out/lawyers-1000/homepages-${{ matrix.start }}-300/
+          if-no-files-found: error
