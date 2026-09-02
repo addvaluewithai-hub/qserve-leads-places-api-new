@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   benchmark:
-    if: github.event.issue.title == 'BENCH-QSERVE-ZIP-RELAX-10-20260902-RETRY2'
+    if: github.event.issue.title == 'BENCH-QSERVE-ZIP-RELAX-10-20260902-RETRY3'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
