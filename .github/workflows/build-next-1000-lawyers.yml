@@ -1,0 +1,47 @@
+name: Build next 1000 net-new lawyers
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Net-new unique domains to collect"
+        required: true
+        default: "1000"
+      max_markets:
+        description: "Maximum markets to inspect from managed queue"
+        required: true
+        default: "250"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      TARGET: ${{ inputs.target }}
+      MAX_MARKETS: ${{ inputs.max_markets }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests
+      - name: Build next net-new working set
+        run: |
+          python scripts/build_next_1000_lawyers.py \
+            --campaign lawyers-us \
+            --target "$TARGET" \
+            --max-markets "$MAX_MARKETS"
+      - name: Upload working set artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-us-next-${{ inputs.target }}
+          path: out/lawyers-us-next-${{ inputs.target }}/
+          if-no-files-found: error
