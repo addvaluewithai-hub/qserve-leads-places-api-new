@@ -4,13 +4,26 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: "Net-new unique domains to collect"
+        description: "Net-new unique business domains to collect"
         required: true
         default: "1000"
-      max_markets:
-        description: "Maximum markets to inspect from managed queue"
+      max_zips:
+        description: "Maximum ZIP coverage rows to inspect"
         required: true
-        default: "250"
+        default: "5000"
+      max_search_requests:
+        description: "Per-run Text Search Enterprise request ceiling"
+        required: true
+        default: "900"
+      ack_google_maps_terms_review:
+        description: "I reviewed the Google Maps Platform terms/applicable agreement for this production use"
+        required: true
+        type: boolean
+        default: false
+
+concurrency:
+  group: lawyers-us-zip-discovery
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -18,30 +31,44 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     env:
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
       TARGET: ${{ inputs.target }}
-      MAX_MARKETS: ${{ inputs.max_markets }}
+      MAX_ZIPS: ${{ inputs.max_zips }}
+      MAX_SEARCH_REQUESTS: ${{ inputs.max_search_requests }}
+      TERMS_ACK: ${{ inputs.ack_google_maps_terms_review }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install dependencies
-        run: pip install requests
-      - name: Build next net-new working set
+      - name: Require explicit terms review acknowledgement
         run: |
-          python scripts/build_next_1000_lawyers.py \
+          if [ "$TERMS_ACK" != "true" ]; then
+            echo "Refusing live Google Places production discovery until ack_google_maps_terms_review=true."
+            exit 1
+          fi
+      - name: Install discovery + Crawl4AI dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pgeocode pandas tldextract
+          pip install -r requirements-crawl.txt
+          crawl4ai-setup
+      - name: Build next ZIP-managed net-new working set
+        run: |
+          python scripts/build_next_1000_lawyers_zip.py \
             --campaign lawyers-us \
             --target "$TARGET" \
-            --max-markets "$MAX_MARKETS"
-      - name: Upload working set artifact
+            --max-zips "$MAX_ZIPS" \
+            --max-search-requests "$MAX_SEARCH_REQUESTS"
+      - name: Upload working-set + homepage evidence artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lawyers-us-next-${{ inputs.target }}
-          path: out/lawyers-us-next-${{ inputs.target }}/
-          if-no-files-found: error
+          name: lawyers-us-next-${{ inputs.target }}-zip
+          path: out/lawyers-us-next-${{ inputs.target }}-zip/
+          if-no-files-found: warn
