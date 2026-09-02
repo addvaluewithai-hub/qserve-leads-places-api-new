@@ -33,6 +33,7 @@ on:
       - "schema.sql"
       - "functions/api/**"
       - "src/**"
+      - "package.json"
       - ".github/workflows/run-lead-campaign.yml"
 
 permissions:
@@ -60,12 +61,22 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Validate campaign engine
         run: |
           python -m py_compile scripts/run_campaign.py scripts/sync_campaign_to_d1.py
           python -m json.tool campaigns/lawyers-tx.json >/dev/null
           python -m json.tool campaigns/dentists-tx.json >/dev/null
           python -m json.tool campaigns/cafes-eg.json >/dev/null
+
+      - name: Build CRM frontend
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
 
       - name: Verify Google Places secret
         run: |
