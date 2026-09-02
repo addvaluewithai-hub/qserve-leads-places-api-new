@@ -20,11 +20,8 @@
     "query_template": "lawyer in {zip_code}",
     "field_mask": [
       "places.id",
-      "places.displayName",
-      "places.formattedAddress",
       "places.addressComponents",
       "places.businessStatus",
-      "places.location",
       "places.rating",
       "places.userRatingCount",
       "places.websiteUri",
