@@ -20,10 +20,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install MCP client
+      - name: Install probe dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install "mcp>=1.20" httpx2
+          pip install requests
       - name: Probe Maps Grounding Lite raw response
         run: python scripts/probe_maps_grounding_lite.py
       - name: Upload probe artifact
