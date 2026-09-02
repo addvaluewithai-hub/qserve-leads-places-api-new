@@ -1,0 +1,1 @@
+Temporary execution note: the session uses a one-time issue-triggered workflow because workflow_dispatch is not exposed by the connected GitHub action surface here. Remove the one-time trigger workflow after the requested next-1000 test finishes.
