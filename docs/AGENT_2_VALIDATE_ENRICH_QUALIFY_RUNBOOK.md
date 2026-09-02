@@ -1,106 +1,103 @@
-# Agent 2 Runbook — Validate Gap, Enrich Owner Email, and Qualify
+# Agent 2 Runbook — Validate Gap, Enrich Owner Email, Qualify, Protect Outreach
 
-Status: **production operating procedure**
+Status: **production operating procedure — V2**
 
 Last updated: **2026-09-02**
 
 ## Mission
 
-Agent 2 converts a high-quality working-set business into either:
+Agent 2 takes a `Ready for Validation` business and decides whether it becomes an outreach-ready lead.
+
+For each business, Agent 2 performs these steps in order:
 
 ```text
-Qualified outreach-ready lead
+homepage-link review
+→ mandatory independent website double-check
+→ confirm real service gap(s)
+→ if a gap exists: identify owner/decision maker
+→ find direct public email for that exact person
+→ Qualified
 ```
 
-or a conservative non-qualified state with evidence.
-
-Agent 2 owns three logically ordered jobs for each lead:
-
-1. validate whether a real service-page gap exists,
-2. only if a gap exists, identify the owner/decision maker and find a direct public email for that person,
-3. assign the final campaign qualification state.
-
-The order matters. **Do not spend time enriching contact data before a gap is confirmed.**
-
----
-
-## Read these files first
-
-Before working a lead, read:
-
-- `README.md`
-- `docs/FINAL_LEAD_ENGINE_ARCHITECTURE.md`
-- `docs/AGENT_1_DISCOVERY_CAMPAIGN_RUNBOOK.md`
-- this file
-
-For lawyers, remember that discovery is generic. The campaign is not necessarily a Family Law campaign, Probate campaign, etc. One firm can offer many services and can have multiple independent gaps.
+Do not spend time on owner/email enrichment before at least one real gap is confirmed.
 
 ---
 
 ## Required input from Agent 1
 
-For every lead, Agent 2 should have:
+For V2, Agent 2 should receive:
 
 ```text
 campaign_id
 Place ID
-business name
-address/source market
-rating
-review count
-official website
-normalized domain
-Google Maps grounding source
+public website final URL
+registrable website domain
+homepage title
+source ZIP
 homepage crawl status
 homepage_links[] with URL + anchor text
 ```
 
-If homepage crawl failed or returned suspiciously no useful links, that is not a rejection. It means the website double-check is mandatory and should receive extra attention.
+Agent 2 does **not** need permanent Google rating/review-count data. The business already passed Agent 1's transient quality screen.
+
+If the homepage crawl failed or returned suspiciously zero useful links, do not reject automatically. Treat it as a mandatory manual/open-web review case.
 
 ---
 
-# Core qualification rule
+# Core final qualification rule
 
-A business becomes **Qualified** only when all of these are true:
+A business becomes `Qualified` only when all are true:
 
 ```text
-1. Real service offered by the firm
-2. No dedicated exact-service page exists after double-check
-3. Owner / decision maker identified
-4. Direct public business email for that exact owner / decision maker found
+1. At least one real service is genuinely offered
+2. That exact service has no dedicated internal page after double-check
+3. Owner / real decision maker is identified
+4. Direct public email for that exact person is verified
 ```
 
-In compact form:
+Compact form:
 
 ```text
 CONFIRMED GAP
-+ OWNER IDENTIFIED
-+ DIRECT PUBLIC OWNER EMAIL
-= QUALIFIED
++
+OWNER / DECISION MAKER
++
+DIRECT PUBLIC EMAIL FOR THAT PERSON
+=
+QUALIFIED
 ```
 
-Google rating/review quality alone never makes a lead Qualified.
+Discovery quality alone never creates a Qualified lead.
 
 ---
 
-# Phase 1 — Inspect Crawl4AI homepage links
+# Phase 1 — Inspect homepage evidence
 
-Start with `homepage_links.csv/json` for the lead.
+Start with Agent 1's Crawl4AI evidence:
+
+```text
+homepage_link_evidence
+```
+
+Review URL paths and anchor text for:
+
+- services/practice areas apparently offered,
+- exact dedicated service pages,
+- umbrella service/practice-area hubs,
+- similar names that could be misleading,
+- attorney/about/team pages that may reveal real practice areas.
 
 Crawl4AI is evidence, not the final judge.
 
-Inspect URL paths and anchor text to understand:
+---
 
-- services/practice areas the firm appears to offer,
-- obvious dedicated service pages,
-- generic service hubs,
-- misleading similarly named pages.
+# Phase 2 — Exact-service page rule
 
-## Exact-service rule
+Qualification is service-level, not firm-level.
 
 For each candidate service independently:
 
-### Dedicated exact page exists
+## Dedicated exact-service page exists
 
 Examples:
 
@@ -114,15 +111,17 @@ Examples:
 /power-of-attorney
 ```
 
-If the page is genuinely dedicated to the exact service:
+When the URL/page is genuinely dedicated to that exact service:
 
 ```text
-that service gap = Disqualified
+service opportunity = Disqualified
 ```
 
-### Generic pages are allowed
+This does **not** automatically disqualify every other service at the firm.
 
-These do **not** automatically disqualify a service gap:
+## General umbrella pages are allowed
+
+These are not sufficient by themselves to disqualify a specific service gap:
 
 ```text
 /services
@@ -131,169 +130,164 @@ These do **not** automatically disqualify a service gap:
 /legal-services
 ```
 
-Likewise, a dedicated page for another service does not disqualify the target service.
-
 Example:
 
 ```text
-target = Probate
+target service = Probate
 site has /estate-planning
-site has no /probate
+site has no /probate page
 ```
 
-`/estate-planning` alone does not prove Probate has a dedicated page.
+`/estate-planning` does not prove Probate has a dedicated page.
 
-### Buttons/cards only matter by destination
+## Buttons/cards matter by destination
 
-A homepage button saying `Probate` is not itself the reason for disqualification. Inspect where it goes.
+A homepage card labelled `Probate` that links to `/services` does not prove a dedicated Probate page.
 
-If it goes to a generic `/services` page, the dedicated Probate page has not yet been proven.
-
-If it goes to `/probate`, the Probate gap is disqualified.
+A card that links to `/probate` does.
 
 ---
 
-# Phase 2 — Mandatory website double-check
+# Phase 3 — Mandatory independent website double-check
 
-**Never declare a gap from homepage links alone.**
+**Never confirm a gap from homepage links alone.**
 
-Even when Crawl4AI finds no exact-service URL, Agent 2 must independently inspect/search the actual website before confirming a gap.
-
-Use the official website and open-web/site-specific search as needed.
-
-The double-check should answer two separate questions:
+Before `Gap Confirmed`, independently inspect the public website/open web and answer two separate questions:
 
 ```text
 A. Does the firm genuinely offer this service?
 B. Does a dedicated internal page for this exact service exist anywhere on the site?
 ```
 
-Recommended evidence sources:
+Use, as needed:
 
 1. official homepage,
 2. official Services / Practice Areas hub,
-3. official attorney bio/about pages if they list actual practice areas,
-4. site navigation,
-5. public search restricted to the official domain when needed.
+3. attorney/team bios,
+4. About pages,
+5. site navigation,
+6. public search restricted to the official domain.
 
-Search absence alone is not proof. Use multiple signals when necessary.
+Search absence alone is not proof.
+
+Ambiguity is not a positive result.
 
 ---
 
-# Phase 3 — Classify each service opportunity
+# Phase 4 — Store service evidence
 
-Each service should receive its own result.
-
-## `Gap Confirmed`
-
-Use only when:
+Use first-class table:
 
 ```text
-service is genuinely offered
+service_gap_evidence
+```
+
+For every evaluated service, record:
+
+```text
+campaign_id
+lead_id
+service_name
+status
+service_offered_evidence
+dedicated_page_url
+validation_method
+notes
+validated_at
+```
+
+Allowed service-level states:
+
+### `Gap Confirmed`
+
+```text
+service genuinely offered
 AND
-no dedicated exact-service internal page is found after double-check
+no dedicated exact-service page found after double-check
 ```
 
-## `Disqualified`
-
-Use when:
+### `Disqualified`
 
 ```text
-a dedicated exact-service internal page exists
+dedicated exact-service page exists
 ```
 
-This disqualifies the gap for that service, **not necessarily the whole firm**.
+Store the exact page URL.
 
-A firm can be:
+### `Not Relevant`
 
 ```text
-Family Law → Disqualified
-Probate → Gap Confirmed
-Estate Planning → Disqualified
-Business Law → Gap Confirmed
+firm does not actually offer the service
 ```
 
-## `Not Relevant`
+### `Needs Review`
 
-Use when the firm does not actually offer the service.
+Use when evidence is contradictory, ambiguous, inaccessible, or incomplete.
 
-Do not call a service gap Qualified just because Google discovery happened to match a misleading query or category.
-
-## `Needs Review`
-
-Use when evidence is ambiguous, contradictory, the site is broken, or you cannot confidently determine whether the service is offered or whether a dedicated page exists.
-
-Never convert ambiguity into a positive gap.
+Never turn ambiguity into a gap.
 
 ---
 
-# Phase 4 — Stop early when there is no confirmed gap
+# Phase 5 — Stop early if no gap
 
-If the business has **zero confirmed gaps** after website validation:
+If the firm has zero `Gap Confirmed` services:
 
 ```text
-do not perform owner/email enrichment
 qualified = 0
 ```
 
-Use the best matching overall campaign state, for example:
+Do not research owner email.
+
+Use the best overall campaign state:
 
 ```text
-Disqualified — no usable service gap
+Disqualified
 Not Relevant
 Needs Review
 ```
 
-This saves time and keeps email research focused only on real opportunities.
+This saves research time and prevents contact enrichment for businesses we cannot pitch on a real gap.
 
 ---
 
-# Phase 5 — Identify the actual owner / decision maker
+# Phase 6 — Identify the owner / decision maker
 
-Only start this phase when at least one `Gap Confirmed` service exists.
+Only continue when at least one confirmed gap exists.
 
-For a law firm, acceptable decision makers usually include:
-
-- founder,
-- owner,
-- founding attorney,
-- managing partner when clearly the business decision maker,
-- solo attorney who owns the practice.
-
-Preference order:
+Preferred law-firm decision makers:
 
 ```text
-Founder/Owner > Managing Partner > clearly empowered principal
+Founder / Owner
+> Managing Partner
+> clearly empowered principal
 ```
 
-The contact must be a person who can reasonably make a website/marketing/service-page decision.
+For a solo practice, the solo attorney is usually the owner/decision maker when public evidence supports it.
 
-Do not use:
+Do not use as the final decision maker:
 
 - receptionist,
 - intake coordinator,
 - assistant,
 - paralegal,
-- office manager unless the user explicitly changes the rule,
-- generic staff member.
+- generic staff member,
+- unrelated attorney,
+- office manager unless the business rule is explicitly changed.
 
-### Evidence for ownership
+Evidence preference:
 
-Prefer:
-
-1. official firm About/Team/Bio page,
+1. official About/Team/Bio page,
 2. official state bar profile,
-3. reputable public professional profile,
-4. other public evidence that clearly links the person to ownership/leadership.
+3. reputable public professional source,
+4. other public source that clearly proves leadership/ownership.
 
-Record both:
+Store contact identity/evidence in:
 
 ```text
-owner_name
-owner_evidence_url/source
+lead_contacts
 ```
 
-If ownership cannot be identified confidently:
+If a real decision maker cannot be established:
 
 ```text
 status = Gap Confirmed - Owner Missing
@@ -302,33 +296,33 @@ qualified = 0
 
 ---
 
-# Phase 6 — Find a DIRECT PUBLIC email for that exact owner
+# Phase 7 — Find DIRECT PUBLIC email for that exact person
 
-The email must be publicly available and belong to the identified owner/decision maker.
+Search only after a confirmed gap and owner/decision maker exist.
 
 Search order:
 
 1. official website,
 2. owner bio/contact page,
-3. official state bar or professional profile,
-4. reputable public web source clearly associating that email with the owner.
+3. official state bar/professional profile,
+4. reputable public source clearly associating the exact email with the exact person.
 
 ## Acceptable
+
+A direct, publicly evidenced email belonging to the selected owner/decision maker.
 
 Examples:
 
 ```text
-seth@sethroselaw.com
-calvin@ptlawlv.com
-brad@firmdomain.com
-owner.name@firmdomain.com
+seth@firm.com
+owner.name@firm.com
 ```
 
-A non-domain email can still be accepted only if it is publicly listed as the owner's actual business contact and the identity is clear. Firm-domain direct emails are preferred.
+A non-firm-domain address can be accepted only when public evidence clearly establishes that it is the person's business contact.
 
-## NOT acceptable
+## Not acceptable
 
-Reject generic mailboxes such as:
+Reject generic/shared addresses such as:
 
 ```text
 info@
@@ -345,101 +339,126 @@ marketing@
 appointments@
 ```
 
-Also reject an email that belongs to:
+Also reject:
 
-- receptionist,
-- intake team,
-- assistant,
-- unrelated attorney,
-- general office contact.
+- receptionist email,
+- intake team email,
+- assistant email,
+- unrelated employee email,
+- another attorney's email when the chosen decision maker is somebody else.
 
-The rule is not merely “non-generic email.” The email must belong to **the owner/decision maker selected for the lead**.
+## Never guess
 
-## Never guess an email
-
-Do not infer:
+Do not infer an address from a pattern such as:
 
 ```text
 firstname@domain.com
 ```
 
-from a naming pattern unless that exact email is publicly evidenced.
+unless that exact address is publicly evidenced.
 
 No guessed/pattern-generated email can qualify a lead.
 
-Record:
+Store the contact in `lead_contacts` with, at minimum:
 
 ```text
-owner_email
-email_evidence_url/source
-email_publicly_verified = true/false
+person_name
+role
+email
+is_owner
+is_decision_maker
+is_direct_email
+is_publicly_verified
+evidence_source
+verified_at
 ```
 
-If only a generic/reception email exists:
+If a gap is confirmed but no acceptable email exists:
 
 ```text
 status = Gap Confirmed - Direct Email Missing
 qualified = 0
 ```
 
-Do not substitute the generic email.
-
 ---
 
-# Phase 7 — Final qualification
+# Phase 8 — Final qualification
 
-A lead may be marked `Qualified` only when the complete evidence chain exists.
-
-Required final fields:
+A lead becomes `Qualified` only when:
 
 ```text
-campaign_id
-lead_id / Place ID
-company_name
-website
-website_domain
-rating
-review_count
-confirmed_gap_services[]
-gap_evidence[]
-owner_name
-owner_role
-owner_evidence
-owner_email
-email_evidence
-qualification_status
-qualification_reason
-validated_at
-```
-
-### Final `Qualified` test
-
-```text
-at least one confirmed service gap
+at least one service_gap_evidence.status = Gap Confirmed
 AND
-owner/decision maker identified
+lead_contacts contains the real owner/decision maker
 AND
-direct public email for that exact person verified
+that same contact has a direct publicly verified email
 ```
 
 Then:
 
 ```text
-qualified = 1
-status = Qualified
+campaign_leads.qualified = 1
+campaign_leads.status = Qualified
+campaign_leads.qualification_reason = confirmed_service_gap + verified_owner + direct_public_owner_email
 ```
 
-Recommended qualification reason:
+`Qualified` means outreach-ready.
 
-```text
-confirmed_service_gap + verified_owner + direct_public_owner_email
-```
+It does **not** mean outreach has already happened.
 
 ---
 
-# Recommended overall campaign states
+# Phase 9 — Outreach is a separate event
 
-Use conservative, explicit states:
+This distinction is mandatory:
+
+```text
+Qualified != Contacted
+```
+
+Only after a message/email is actually sent should the business be globally suppressed.
+
+Immediately after actual outreach, update:
+
+```text
+outreach_suppression
+```
+
+Command:
+
+```bash
+python scripts/mark_business_contacted.py \
+  --lead-id <PLACE_ID> \
+  --campaign <CAMPAIGN_ID> \
+  --email <DIRECT_OWNER_EMAIL> \
+  --status Contacted
+```
+
+Default business rule:
+
+```text
+contacted once
+→ globally blocked from being treated as a new outreach opportunity
+```
+
+This block applies across campaigns.
+
+If the person replies or status changes, update the same canonical business lifecycle:
+
+```text
+Replied
+Interested
+Not Interested
+Do Not Contact
+Bounced
+Re-engage Later
+```
+
+Never create a second campaign copy merely to contact the same business again.
+
+---
+
+# Recommended campaign states
 
 ```text
 Ready for Validation
@@ -451,142 +470,86 @@ Gap Confirmed - Direct Email Missing
 Qualified
 ```
 
-`Gap Confirmed` by itself is an intermediate evidence state, not outreach-ready qualification.
+Contact/outreach state belongs separately in `outreach_suppression` / outreach lifecycle data.
 
 ---
 
 # Evidence discipline
 
-For every decision, preserve enough evidence for another agent/person to reproduce it.
+Every important conclusion should be reproducible by another agent/person.
 
-For a confirmed gap, record:
+## Gap evidence
+
+Store:
 
 ```text
 service_name
 service_offered_evidence
-homepage_link_evidence_checked
-double_check_method
-dedicated_page_found = false
-notes
+dedicated_page_url or explicit no-page finding
+validation_method
+source URL(s)/notes
+validated_at
 ```
 
-For a disqualified gap, record the exact dedicated URL:
+## Owner/email evidence
+
+Store:
 
 ```text
-service_name
-dedicated_page_url
-anchor/title evidence
+person name
+role/ownership evidence
+email
+direct/public verification flags
+evidence source
+verification time
 ```
-
-For an owner/email qualification, record the public source that proves the association.
 
 Do not store unsupported conclusions such as:
 
 ```text
-"looks like a gap"
-"probably owner"
-"email pattern seems right"
+probably a gap
+probably the owner
+email format looks right
 ```
 
 ---
 
-# Recommended D1 handling
+## Agent 2 must NEVER
 
-Canonical business identity remains in `leads`.
-
-Campaign-specific qualification remains in `campaign_leads`.
-
-At minimum update conceptually:
-
-```text
-campaign_leads.qualified
-campaign_leads.status
-campaign_leads.qualification_reason
-campaign_leads.notes
-```
-
-The current schema does not yet have dedicated columns/tables for all gap, owner, and email evidence. Until that schema is expanded, preserve structured evidence in authoritative campaign artifacts and/or structured notes without losing source URLs.
-
-Do not put owner/email evidence into unrelated review-signal fields.
-
-A future schema improvement should introduce first-class tables/fields for:
-
-```text
-service_gap_evidence
-lead_contacts
-contact_evidence
-validation_events
-```
+- qualify from Crawl4AI homepage links alone,
+- assume search absence proves no page exists,
+- call a service a gap when the firm does not genuinely offer it,
+- disqualify the entire firm because one service has a page,
+- research email before confirming a real gap,
+- use generic/reception/intake email as final contact,
+- use another employee's direct email when it does not belong to the selected decision maker,
+- guess email patterns,
+- convert ambiguous evidence into Qualified,
+- treat `Qualified` as `Contacted`,
+- send outreach and forget to create/update global suppression.
 
 ---
 
-# Processing algorithm
-
-For each lead:
+## Final checklist before `Qualified`
 
 ```text
-LOAD lead + homepage links
-        ↓
-Inspect homepage URLs/anchors
-        ↓
-Identify candidate services
-        ↓
-Mandatory website double-check
-        ↓
-For each service:
-  dedicated exact page? → Disqualified for that service
-  service not offered?  → Not Relevant for that service
-  ambiguous?            → Needs Review
-  offered + no page?     → Gap Confirmed
-        ↓
-Any confirmed gap?
-  NO → STOP; do not enrich email
-  YES
-        ↓
-Identify owner / decision maker
-        ↓
-Find direct public email for that exact person
-        ↓
-Direct owner email found?
-  NO → Gap Confirmed - Direct Email Missing
-  YES
-        ↓
-QUALIFIED
-```
-
----
-
-## Agent 2 must NEVER do these things
-
-- Do not qualify from Crawl4AI links alone.
-- Do not assume search absence proves no page exists.
-- Do not call a service a gap if the firm does not actually offer it.
-- Do not disqualify the entire firm because one service has a dedicated page.
-- Do not research email before confirming at least one real gap.
-- Do not accept `info@`, reception, intake, or other generic emails.
-- Do not accept another employee's direct email when the selected decision maker is the owner.
-- Do not guess email patterns.
-- Do not turn ambiguous evidence into Qualified.
-
----
-
-## Agent 2 final checklist
-
-Before setting `Qualified`, confirm:
-
-```text
-[ ] Official website identity is correct
-[ ] Crawl4AI homepage links reviewed
+[ ] Public official website identity is correct
+[ ] Homepage links reviewed
 [ ] Website independently double-checked
-[ ] Service is genuinely offered
-[ ] No dedicated exact-service page exists
-[ ] At least one service gap is confirmed
-[ ] Owner/decision maker identity is evidenced
-[ ] Email belongs to that exact owner/decision maker
+[ ] Service genuinely offered
+[ ] No dedicated exact-service page exists for at least one service
+[ ] Gap evidence stored in service_gap_evidence
+[ ] Owner/decision maker is publicly evidenced
+[ ] Direct email belongs to that exact person
 [ ] Email is publicly evidenced
 [ ] Email is not generic/reception/intake
 [ ] Email was not guessed
-[ ] Gap evidence is saved
-[ ] Owner/email evidence is saved
-[ ] qualified = 1 only after every box above is true
+[ ] Contact evidence stored in lead_contacts
+[ ] campaign_leads.qualified = 1 only after every requirement above
+```
+
+After actual outreach:
+
+```text
+[ ] outreach_suppression updated immediately
 ```
