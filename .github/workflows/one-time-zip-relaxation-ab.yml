@@ -1,0 +1,47 @@
+name: One-time ZIP relaxation A/B
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: read
+
+jobs:
+  benchmark:
+    if: github.event.issue.title == 'BENCH-QSERVE-ZIP-RELAX-10-20260902'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install benchmark dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pgeocode pandas tldextract
+          pip install -r requirements-crawl.txt
+          crawl4ai-setup
+      - name: Static compile check
+        run: python -m py_compile scripts/benchmark_zip_relaxation_ab.py
+      - name: Run 10-request read-only A/B
+        run: |
+          python scripts/benchmark_zip_relaxation_ab.py \
+            --campaign lawyers-us \
+            --state TX \
+            --requests 10 \
+            --workers 4
+      - name: Upload A/B artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zip-relaxation-ab-10
+          path: out/zip-relaxation-ab/
+          if-no-files-found: warn
