@@ -29,6 +29,7 @@ on:
     paths:
       - "campaigns/**"
       - "scripts/run_campaign.py"
+      - "scripts/run_campaign_tracked.py"
       - "scripts/crawl_campaign_websites.py"
       - "scripts/sync_campaign_to_d1.py"
       - "requirements-crawl.txt"
@@ -70,7 +71,7 @@ jobs:
 
       - name: Validate campaign engine
         run: |
-          python -m py_compile scripts/run_campaign.py scripts/crawl_campaign_websites.py scripts/sync_campaign_to_d1.py
+          python -m py_compile scripts/run_campaign.py scripts/run_campaign_tracked.py scripts/crawl_campaign_websites.py scripts/sync_campaign_to_d1.py
           python -m json.tool campaigns/lawyers-tx.json >/dev/null
           python -m json.tool campaigns/dentists-tx.json >/dev/null
           python -m json.tool campaigns/cafes-eg.json >/dev/null
@@ -104,8 +105,8 @@ jobs:
         run: |
           test -n "$GOOGLE_API_KEY" || (echo "GOOGLE_API_KEY is missing" && exit 1)
 
-      - name: Discover and score leads
-        run: python scripts/run_campaign.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT" --max-pages "$MAX_PAGES"
+      - name: Discover, score and track Google API usage
+        run: python scripts/run_campaign_tracked.py --campaign "$CAMPAIGN" --limit "$TARGET_LIMIT" --max-pages "$MAX_PAGES"
 
       - name: Collect homepage internal links
         if: env.CRAWL_ENABLED == 'true'
