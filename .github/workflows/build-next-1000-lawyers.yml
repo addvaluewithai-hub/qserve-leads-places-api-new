@@ -31,7 +31,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     env:
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -58,9 +58,15 @@ jobs:
           pip install requests pgeocode pandas tldextract
           pip install -r requirements-crawl.txt
           crawl4ai-setup
+      - name: Static compile check
+        run: |
+          python -m py_compile \
+            scripts/build_next_1000_lawyers_zip.py \
+            scripts/build_next_1000_lawyers_zip_v2.py \
+            scripts/zip_manager.py
       - name: Build next ZIP-managed net-new working set
         run: |
-          python scripts/build_next_1000_lawyers_zip.py \
+          python scripts/build_next_1000_lawyers_zip_v2.py \
             --campaign lawyers-us \
             --target "$TARGET" \
             --max-zips "$MAX_ZIPS" \
