@@ -1,0 +1,21 @@
+name: One-time cancel active ZIP V5
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  actions: write
+  contents: read
+  issues: read
+
+jobs:
+  cancel:
+    if: github.event.issue.title == 'CANCEL-QSERVE-ZIP-V5-33626585954'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel active discovery run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run cancel 33626585954 -R addvaluewithai-hub/qserve-leads-places-api-new
