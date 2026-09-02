@@ -9,12 +9,12 @@
     "region_code": "US",
     "language_code": "en",
     "queries": [
-      "lawyer",
       "family law attorney",
       "probate attorney",
       "estate planning attorney",
       "immigration attorney",
-      "business attorney"
+      "business attorney",
+      "lawyer"
     ],
     "areas": [
       {"label": "Sherman, TX", "terms": ["Sherman, TX", "75090", "75092"], "match_any": ["sherman, tx", "75090", "75092"]},
