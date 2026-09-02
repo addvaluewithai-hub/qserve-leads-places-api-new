@@ -54,5 +54,13 @@
     "target_services": ["family law", "probate", "estate planning", "wills", "trusts", "immigration", "business law"],
     "decision_maker_required": true,
     "direct_email_required": true
+  },
+  "crawl": {
+    "engine": "crawl4ai",
+    "max_depth": 2,
+    "max_pages_per_site": 30,
+    "same_domain_only": true,
+    "capture_link_graph": true,
+    "general_service_pages_are_allowed": true
   }
 }
