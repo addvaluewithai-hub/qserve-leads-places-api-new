@@ -2,10 +2,6 @@ name: Benchmark lawyer discovery
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "scripts/benchmark_lawyer_discovery.py"
-      - ".github/workflows/benchmark-lawyer-discovery.yml"
 
 permissions:
   contents: read
