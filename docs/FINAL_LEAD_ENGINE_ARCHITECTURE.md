@@ -1,270 +1,524 @@
-# Final Lead Engine Architecture
+# Final Lead Engine Architecture — V2 ZIP Coverage
 
-Status: **current working architecture**
+Status: **current production architecture**
 
-Last validated: **2026-09-02**
+Last updated: **2026-09-02**
 
-This document is the source of truth for the low-cost QServe lead engine architecture. It is intentionally separate from the README so the core design is not lost while experiments and campaigns evolve.
+This document is the source of truth for the lawyer lead engine after the ZIP-scaling redesign.
 
 ## Goal
 
-Build large working sets of high-quality local-service businesses (starting with lawyers) with the lowest practical Google Maps Platform cost, then verify the actual website architecture ourselves.
+Build batches of **net-new law-firm businesses**, not raw Google listings.
 
-For lawyers, the target is not a single niche such as Family Law. The discovery target is **good active law firms generally**. Service-page gaps are discovered later from the firm's own website.
-
-## Final pipeline
+The operating target is usually:
 
 ```text
-Google Places Text Search Pro
-(minimal fields only)
-        ↓
-Place ID + business name + address + business status
-        ↓
-Maps Grounding Lite
-(name + address → official website + rating + review count)
-        ↓
-Identity validation + domain dedupe
-        ↓
-High-rating / minimum-review working set
-        ↓
-Crawl4AI homepage load only
-        ↓
-Collect same-domain links visible on homepage/header/footer/nav
-        ↓
-ChatGPT / manual service-gap validation
-        ↓
-Qualified / Disqualified / Not Relevant / Needs Review
-        ↓
-Owner + direct public email enrichment
-        ↓
-CRM / D1
+1,000 net-new unique business domains
 ```
 
-## 1. Google discovery: minimal Text Search Pro
+A business is globally deduped. If it has already been discovered, it is not counted as a new business. If it has already been contacted, it is globally suppressed from future outreach unless an explicit re-engagement state is created.
 
-Use **generic vertical discovery**, not niche-service discovery.
-
-For lawyers:
+## Production pipeline
 
 ```text
-textQuery: "lawyer in <market>"
-includedType: "lawyer"
-strictTypeFiltering: true
-minRating: 4.7
-pageSize: 20
+ZIP coverage queue
+state → preferred city → ZIP
+        ↓
+Google Places Text Search Enterprise
+one ZIP at a time
+        ↓
+transient screening only:
+Place ID
+business status
+rating
+review count
+websiteUri
+postal address components
+        ↓
+exact postal_code == target ZIP
+rating >= 4.0
+reviews >= 20
+OPERATIONAL
+website seed present
+        ↓
+global Place-ID/domain/suppression exclusion
+        ↓
+Crawl4AI immediately opens the website seed
+homepage only
+        ↓
+persist PUBLIC-WEB evidence:
+final URL
+registrable business domain
+homepage title
+homepage links
+        ↓
+D1 status = Ready for Validation
+qualified = 0
+        ↓
+Agent 2:
+gap validation
+→ owner/decision maker
+→ direct public owner email
+→ Qualified
+        ↓
+actual outreach
+        ↓
+global outreach suppression
 ```
 
-Recommended field mask:
+Grounding Lite is **not part of the V2 production path**.
+
+---
+
+## 1. ZIP is the coverage unit
+
+Do not use a whole city as one search request.
+
+The static high-level plan is:
+
+```text
+market_plans/lawyers-us-zips.json
+```
+
+The dynamic coverage source of truth is:
+
+```text
+D1.zip_coverage
+D1.zip_run_history
+```
+
+ZIPs are generated from the `pgeocode`/GeoNames US postal-code dataset. The plan controls state priority and preferred cities; D1 records what has actually been searched.
+
+Current first-priority phase starts with:
+
+```text
+TX
+FL
+GA
+NC
+TN
+AZ
+NV
+CO
+```
+
+Texas preferred cities are ordered before the rest of the Texas ZIP universe.
+
+A state is never represented by one `done` flag. Coverage is aggregated from its ZIP rows.
+
+---
+
+## 2. Google Text Search Enterprise request
+
+Current lawyer request:
+
+```text
+textQuery = "lawyer in <ZIP>"
+includedType = "lawyer"
+strictTypeFiltering = true
+minRating = 4.0
+pageSize = 20
+locationRestriction = rectangle around ZIP centroid
+```
+
+The ZIP rectangle is a search-recall aid. It is **not** the final geographic test.
+
+The final geographic gate is:
+
+```text
+places.addressComponents postal_code == target ZIP
+```
+
+If Google returns a business from a neighboring ZIP, it is ignored for that ZIP.
+
+### Field mask
+
+The production field mask is:
 
 ```text
 places.id
 places.displayName
 places.formattedAddress
+places.addressComponents
 places.businessStatus
+places.location
+places.rating
+places.userRatingCount
+places.websiteUri
+nextPageToken
 ```
 
-Do **not** request these during discovery:
+The highest fields in that mask place the request in **Text Search Enterprise**.
+
+We intentionally do not request:
 
 ```text
+reviews[]
+generative summaries
+review summaries
+Atmosphere fields
+```
+
+---
+
+## 3. Rating/review gate
+
+Current business rule:
+
+```text
+minimum rating = 4.0
+minimum review count = 20
+business status = OPERATIONAL
+```
+
+The request-side `minRating` is exactly `4.0`.
+
+The exact values are also checked in-memory before the candidate is passed to Crawl4AI.
+
+The V2 data model does not require retaining the exact Google rating/review-count values as permanent CRM data. They are screening inputs.
+
+---
+
+## 4. Pagination: solve the 20-result problem inside the ZIP
+
+Text Search returns at most 20 results per page and currently supports up to 60 results across pages.
+
+The V2 strategy:
+
+1. Search page 1 for a ZIP.
+2. Count raw results and results whose returned postal code matches the ZIP.
+3. If page 1 is dense enough and `nextPageToken` exists, fetch page 2.
+4. Continue to page 3 when appropriate.
+5. Do the pages in the same run while the token is valid.
+6. Record the number of pages searched in `zip_coverage`.
+
+Default pagination trigger:
+
+```text
+page 1 raw results >= 20
+AND
+page 1 exact-ZIP results >= 5
+```
+
+Default maximum:
+
+```text
+3 pages per ZIP
+```
+
+This replaces the old behavior where a metro could repeatedly return the same first 20 results on future passes.
+
+ZIP status:
+
+```text
+queued
+in_progress
+partial
+covered
+saturated
+failed
+cooling
+```
+
+`partial` is used when the overall 1,000 target or request budget stops the run before the ZIP is fully processed.
+
+---
+
+## 5. Google data is transient; Crawl4AI creates the stored website evidence
+
+For the V2 production code, Google non-ID fields are used during the request-processing step to:
+
+- apply the quality gate,
+- confirm the result belongs to the target ZIP,
+- obtain a website seed.
+
+The website seed is passed immediately to Crawl4AI.
+
+Crawl4AI then independently loads the public website and records:
+
+```text
+final URL
+registrable domain
+homepage title
+same-domain homepage/header/footer/nav links
+HTTP/crawl status
+```
+
+The production builder does **not** intentionally persist these Google fields as lead data:
+
+```text
+websiteUri
 rating
 userRatingCount
-websiteUri
-phone
-openingHours
-reviews[]
+formattedAddress
+location
 ```
 
-Those fields are not required at this stage and would move discovery into more expensive SKUs.
+The Google Place ID is retained as the stable external identifier.
 
-### Why not IDs-only?
+This handling reduces caching/provenance ambiguity, but it does **not by itself establish that every lead-generation use is permitted by the customer's Google Maps Platform agreement**. See `docs/GOOGLE_MAPS_USAGE_GUARDRAILS.md`.
 
-We tested Grounding Lite using only a Place ID in `search_places` on three known law firms. The MCP requests returned HTTP 200 but an empty `{}` result for all three.
+---
 
-Therefore the working design must retain at least enough human-readable identity to query Grounding Lite. **Business name + address** is sufficient and has been validated in live tests.
+## 6. Domain identity and global dedupe
 
-## 2. Maps Grounding Lite enrichment
+Dedupe is global, not campaign-local.
 
-For each unique Place ID, send a grounded query using the name and address, for example:
+Before a candidate can count toward a new 1,000 batch, exclude it when any of these are true:
 
 ```text
-Gibbins Law, PLLC, 1515 W SW Loop 323, Tyler, TX 75701 official website rating review count
+Place ID already exists in canonical leads
+registrable website domain already exists
+domain is globally outreach-suppressed
+same Place ID/domain already appeared in the current run
 ```
 
-Live tests on 2026-09-02 confirmed that Grounding Lite returned, in the generated summary:
-
-- official website URL
-- Google rating
-- Google review count
-- address
-- the matching Place ID / Google Maps source
-
-The official website is not a structured `websiteUri` field. It appears in the grounded summary when explicitly requested.
-
-### Identity validation
-
-Never trust the summary blindly.
-
-For each Grounding response:
-
-1. Compare the returned Place ID with the discovery Place ID.
-2. Keep the Google Maps attribution/source from the grounding response.
-3. Extract the non-Google official website URL from the summary.
-4. Open/fetch that website independently.
-5. Confirm the website identity matches the business before treating the domain as verified.
-
-If the Place ID does not match, or no official website is confidently resolved, mark the lead `Needs Review` / unresolved rather than guessing.
-
-## 3. Quality gate
-
-The discovery request already uses a high `minRating` filter. Grounding Lite supplies the actual rating and review count so we can apply a stronger gate without fetching `reviews[]`.
-
-Current benchmark defaults:
+For new V2 discovery, registrable-domain dedupe collapses subdomains such as:
 
 ```text
-minimum rating: 4.7
-minimum review count: 20
-business status: OPERATIONAL
-verified official website: required
+houston.examplelaw.com
+austin.examplelaw.com
 ```
 
-The minimum review threshold is configurable. Benchmarks should report yield at 10, 20 and 50 reviews so we can choose the best quality/volume tradeoff.
-
-We do not need review text or review samples for this workflow.
-
-## 4. Dedupe
-
-Dedupe in two stages:
-
-1. **Place ID** immediately after Google discovery.
-2. **Verified website domain** after Grounding Lite enrichment.
-
-Domain dedupe is important because a multi-office firm may have multiple Google Places listings but only one company/site opportunity.
-
-## 5. Crawl4AI role
-
-Crawl4AI is intentionally a dumb collector.
-
-For each verified website it should:
-
-1. Load the homepage once.
-2. Render the page normally so header, nav and footer are present.
-3. Collect all same-domain links exposed on that homepage.
-4. Save destination URL + anchor text.
-5. Stop.
-
-It must **not**:
-
-- deep crawl
-- follow the collected links recursively
-- classify service pages
-- decide Qualified/Disqualified
-- use an LLM to interpret the site
-
-Primary outputs:
+to the business domain:
 
 ```text
-homepage_links.csv
-homepage_links.json
-homepage_fetch_summary.json
-homepage_links_summary.json
+examplelaw.com
 ```
 
-## 6. Service-gap validation
+Multi-office Google listings therefore do not count as multiple sales opportunities.
 
-Lawyer discovery is generic. We do not pre-select Family Law, Probate, Estate Planning, Immigration, etc.
+The historical first 1,000 should be bootstrapped before running the next-1,000 builder so the global exclusion registry is complete.
 
-After homepage links are collected, review the firm's services and URL architecture.
+---
 
-Important qualification rule:
+## 7. Crawl4AI remains a dumb collector
 
-- `/practice-areas/`, `/services/`, or similar general pages are allowed.
-- Dedicated pages for other services are allowed.
-- Reject a specific service gap only when **that exact service** has its own dedicated internal page/URL.
-- If no dedicated target-service link is visible from the homepage, manually double-check the site before declaring the gap Qualified.
-- If the firm does not actually offer the service, mark it Not Relevant for that service rather than Qualified.
+Crawl4AI must:
 
-One firm can have multiple valid service gaps.
+1. load the homepage,
+2. render it,
+3. capture public final URL/title,
+4. collect same-domain links visible from the homepage,
+5. retry once if necessary,
+6. stop.
 
-## 7. Cost model
+It must not:
 
-Pricing changes over time, so always verify current Google Maps Platform pricing before financial reporting.
+- deep crawl,
+- recursively follow service links,
+- classify services,
+- decide gaps,
+- find emails,
+- make qualification decisions.
 
-Validated 2026-09-02 pricing/free caps used for this design:
+The V2 builder performs Crawl4AI immediately after transient discovery screening, so a separate website-URL staging table is not required.
 
-- Places API Text Search Pro: **5,000 free requests/month**; list price after the free cap starts at **$32 / 1,000 requests**.
-- Maps Grounding Lite: **10,000 free requests/month**; list price after the free cap starts at **$7 / 1,000 requests**.
+---
 
-The architecture intentionally avoids Place Details Enterprise and `reviews[]` by default.
+## 8. Agent 2 qualification
 
-## 8. Scaling to 1,000 lawyer working leads
+Agent 2 receives public-web homepage evidence.
 
-The unit we care about is not raw Google results. It is:
+For each potential service:
 
 ```text
-unique law firm domain
-+ identity matched
-+ official website resolved
-+ rating >= threshold
-+ review count >= threshold
+service genuinely offered
++
+no dedicated exact-service page after mandatory website double-check
+=
+Gap Confirmed
 ```
 
-Use benchmarks to measure the yield per Text Search request.
+A general `/services` or `/practice-areas` page does not automatically disqualify a gap.
 
-If a 10-request benchmark produces `Q` unique high-quality working leads, estimate the discovery requests needed for 1,000 as:
+A dedicated page for another service does not disqualify the target service.
 
-```text
-ceil(1000 / Q * 10)
-```
-
-Then add a safety margin for overlap, unresolved websites and market saturation.
-
-### Geographic strategy
-
-Do not restrict the 1,000-lead working set to Texas unless a campaign requires it.
-
-Use many independent metro/city markets across the US. Prefer a broad spread of medium and large markets rather than repeatedly paginating one market. This reduces duplicate firms and creates a more diverse sales pipeline.
-
-## 9. Storage / provenance
-
-Keep Google Place ID as the stable Google identifier.
-
-Grounding outputs should retain their Google Maps source/attribution as required by Google Maps Grounding Lite terms. Treat the resolved official website as a starting point for independent open-web verification; do not blindly treat generated summary text as canonical business data.
-
-CRM-specific decisions, crawl evidence, qualification status, owner/email enrichment and outreach history are our own data and should live in D1.
-
-## 10. Failure handling
-
-Use conservative states:
+If the service is not genuinely offered:
 
 ```text
-Resolved
-Needs Review
 Not Relevant
-Disqualified
+```
+
+If evidence is ambiguous:
+
+```text
+Needs Review
+```
+
+Only after at least one gap is confirmed does Agent 2 research the owner/decision maker and direct public email.
+
+Final qualification:
+
+```text
+confirmed service gap
++
+owner/decision maker identified
++
+direct public email for that exact person
+=
 Qualified
 ```
 
-Never convert missing evidence into a positive qualification.
+Generic/reception/intake emails are not accepted.
 
-Examples:
+---
 
-- Grounding returns the wrong Place ID → Needs Review.
-- No website resolved → Needs Review / skip crawl.
-- Homepage crawl fails → retry homepage once, then Needs Review.
-- Service is not actually offered → Not Relevant for that service.
-- Exact dedicated target-service page exists → Disqualified for that gap.
-- Service is offered, no exact dedicated page found, double-check confirms absence → Qualified.
+## 9. Outreach suppression
+
+Qualification is not the same as contact.
+
+When actual outreach occurs, write a global suppression record:
+
+```text
+outreach_suppression
+```
+
+Default rule:
+
+```text
+contacted once
+→ suppressed from future outreach/discovery-as-new-business
+```
+
+Possible contact states include:
+
+```text
+Contacted
+Replied
+Interested
+Not Interested
+Do Not Contact
+Bounced
+Re-engage Later
+```
+
+An explicit `reengage_after` can be recorded for future follow-up, but re-engagement should operate on the existing canonical lead, not rediscover the business as a new lead.
+
+---
+
+## 10. D1 model
+
+Core canonical/campaign tables:
+
+```text
+leads
+lead_domains
+campaigns
+campaign_runs
+campaign_leads
+```
+
+ZIP management:
+
+```text
+zip_coverage
+zip_run_history
+api_usage_ledger
+```
+
+Discovery/public-web evidence:
+
+```text
+lead_discovery_screening
+homepage_link_evidence
+```
+
+Validation/contact evidence:
+
+```text
+service_gap_evidence
+lead_contacts
+```
+
+Global outreach protection:
+
+```text
+outreach_suppression
+```
+
+Older `market_coverage`, `market_run_history`, and Grounding-era scripts remain only for historical audit/reference.
+
+---
+
+## 11. Request budget
+
+Current Google pricing must always be checked before a live production run.
+
+As of the architecture validation date, Text Search Enterprise has a 1,000-request monthly free usage cap and each page request is a request event.
+
+The repository uses an internal safety budget:
+
+```text
+900 Text Search Enterprise requests/month
+```
+
+for `lawyers-us`, leaving headroom.
+
+The local `api_usage_ledger` tracks requests made by this repository. It is **not authoritative billing data** and cannot see unrelated usage on the same Google billing account.
+
+A run stops partially rather than silently exceeding its internal budget.
+
+---
+
+## 12. Concurrency and failure handling
+
+Only one lawyer ZIP-discovery workflow should run at a time.
+
+GitHub Actions uses a concurrency group:
+
+```text
+lawyers-us-zip-discovery
+```
+
+If a process crashes while a ZIP is `in_progress`, `zip_manager.py` recovers stale rows after a timeout and moves them to retryable failure state.
+
+Accepted leads are written incrementally. If a run stops at 600/1,000, those 600 stay canonical and the next run excludes them automatically.
+
+---
+
+## 13. Current production command
+
+After historical bootstrap:
+
+```bash
+python scripts/build_next_1000_lawyers_zip.py \
+  --campaign lawyers-us \
+  --target 1000 \
+  --max-zips 5000 \
+  --max-search-requests 900
+```
+
+Coverage status:
+
+```bash
+python scripts/zip_manager.py status --campaign lawyers-us --next 50
+```
+
+Global contact suppression after outreach:
+
+```bash
+python scripts/mark_business_contacted.py \
+  --lead-id <PLACE_ID> \
+  --campaign lawyers-us \
+  --email owner@example.com \
+  --status Contacted
+```
+
+---
 
 ## Current decision
 
-Until a better validated path is found, the default production architecture is:
+The normal lawyer production path is:
 
 ```text
-Minimal Text Search Pro
-→ Maps Grounding Lite
-→ verified website
-→ homepage-only Crawl4AI
-→ ChatGPT/manual validation
+ZIP queue
+→ Text Search Enterprise transient screening
+→ immediate homepage Crawl4AI
+→ global dedupe
+→ D1 public-web evidence
+→ Agent 2 gap/contact qualification
+→ global outreach suppression
 ```
 
-Place Details Enterprise is a fallback only, not part of the normal path.
+Grounding Lite and metro-based discovery are not part of the V2 production path.
