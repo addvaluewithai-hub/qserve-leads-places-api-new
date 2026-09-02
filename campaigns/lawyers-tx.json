@@ -1,0 +1,55 @@
+{
+  "id": "lawyers-tx",
+  "name": "Texas Lawyers",
+  "vertical": "legal",
+  "description": "Find active Texas law firms with strong Google reputation, recent review signals, a website, and a phone number. Website service-gap qualification happens in the crawl/enrichment stage.",
+  "google": {
+    "included_type": "lawyer",
+    "strict_type_filtering": true,
+    "region_code": "US",
+    "language_code": "en",
+    "queries": [
+      "lawyer",
+      "family law attorney",
+      "probate attorney",
+      "estate planning attorney",
+      "immigration attorney",
+      "business attorney"
+    ],
+    "areas": [
+      {"label": "Sherman, TX", "terms": ["Sherman, TX", "75090", "75092"]},
+      {"label": "Gainesville, TX", "terms": ["Gainesville, TX", "76240"]},
+      {"label": "Wichita Falls, TX", "terms": ["Wichita Falls, TX", "76301", "76308"]},
+      {"label": "Tyler, TX", "terms": ["Tyler, TX", "75701", "75703"]},
+      {"label": "Longview, TX", "terms": ["Longview, TX", "75601", "75605"]},
+      {"label": "Lufkin, TX", "terms": ["Lufkin, TX", "75901", "75904"]},
+      {"label": "Temple, TX", "terms": ["Temple, TX", "76501", "76502"]},
+      {"label": "Victoria, TX", "terms": ["Victoria, TX", "77901", "77904"]},
+      {"label": "San Angelo, TX", "terms": ["San Angelo, TX", "76901", "76904"]},
+      {"label": "Abilene, TX", "terms": ["Abilene, TX", "79601", "79605"]}
+    ]
+  },
+  "quality": {
+    "allowed_business_statuses": ["OPERATIONAL"],
+    "min_rating": 4.3,
+    "min_reviews": 10,
+    "require_phone": true,
+    "require_website": true,
+    "review_recency_days": 365,
+    "min_recent_sampled_reviews": 1
+  },
+  "scoring": {
+    "rating_weight": 40,
+    "review_volume_weight": 20,
+    "review_freshness_weight": 20,
+    "recent_review_sample_weight": 10,
+    "website_weight": 5,
+    "phone_weight": 5
+  },
+  "enrichment": {
+    "website_crawl_required": true,
+    "target_services": ["family law", "probate", "estate planning", "wills", "trusts", "immigration", "business law"],
+    "decision_maker_required": true,
+    "direct_email_required": true
+  }
+}
