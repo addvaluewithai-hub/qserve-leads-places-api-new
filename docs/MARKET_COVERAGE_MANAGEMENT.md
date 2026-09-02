@@ -1,271 +1,242 @@
-# Market Coverage Management — Lawyers US
+# ZIP Coverage Management — Lawyers US
 
-Status: **production operating model**  
+Status: **production operating model**
+
 Last updated: **2026-09-02**
 
-This document answers one operational question:
+This document answers:
 
-> After one 1,000-lead build, where should Agent 1 search next, and how do we prevent duplicate leads or random market selection?
+> Where do we search next, how do we know what has been covered, and how do we avoid repeatedly seeing the same firms?
 
-The answer is a managed market queue backed by a static plan plus dynamic D1 coverage state.
+## Sources of truth
 
-## Source of truth
-
-Static desired market universe:
+Static high-level territory plan:
 
 ```text
-market_plans/lawyers-us.json
+market_plans/lawyers-us-zips.json
 ```
 
-Dynamic actual state:
+Dynamic coverage state:
 
 ```text
-D1.market_coverage
-D1.market_run_history
+D1.zip_coverage
+D1.zip_run_history
 ```
 
-Campaign:
+Global business identity:
 
 ```text
-campaigns/lawyers-us.json
+D1.leads
+D1.lead_domains
 ```
 
-Do not manually maintain a vague note such as "Texas done". Coverage is tracked per market/metro and per pass.
+Global contacted-business block:
 
-## Important historical correction
+```text
+D1.outreach_suppression
+```
 
-The first validated 1,000-domain working set used **92 Text Search requests across 92 markets** and stopped at **New Haven, CT**.
+## Coverage hierarchy
 
-It did **not** consume the remaining primary queue. In particular, the first build stopped before the primary Texas markets in the original plan.
+```text
+State
+  ↓
+Preferred cities
+  ↓
+ZIP codes
+```
 
-Therefore Texas is not considered exhausted.
+The ZIP code is the actual search/coverage unit.
+
+Do not use vague state notes such as `Texas done`. State summaries are calculated from ZIP rows.
+
+## ZIP universe
+
+ZIP rows are generated from the US postal-code dataset bundled through `pgeocode`/GeoNames.
+
+Each row records ZIP/city/state/centroid, plan priority, status, page/search counts, exact-ZIP results, quality passes, net-new domains and duplicate counts.
+
+The centroid is used only to create a reasonable `locationRestriction` rectangle.
+
+A Google result only counts for a ZIP when the returned address components explicitly contain:
+
+```text
+postal_code == target ZIP
+```
+
+## Priority plan
+
+Current first phase:
+
+```text
+TX
+FL
+GA
+NC
+TN
+AZ
+NV
+CO
+```
+
+Texas is first. Within Texas, preferred cities such as Houston, Dallas, Austin, San Antonio, Fort Worth and El Paso receive higher ZIP priority than the rest of the state.
+
+After the first phase, large markets and national expansion follow.
+
+The order is configuration, not hard-coded discovery logic.
 
 ## Status lifecycle
 
-Each market has one dynamic status:
-
 ```text
 queued
+in_progress
 partial
-covered_once
-exhausted
+covered
+saturated
+failed
 cooling
 ```
 
-Meaning:
+- `queued` — never processed by V2.
+- `in_progress` — currently owned by a run.
+- `partial` — stopped because target/budget was reached before ZIP completion.
+- `covered` — completed under pagination policy.
+- `saturated` — reached configured page limit while more results appeared available.
+- `failed` — retryable API/crawl processing failure.
+- `cooling` — manually paused.
 
-- `queued` — never searched by the managed production queue yet.
-- `partial` — a pass produced good net-new yield; keep the market eligible for a later pass after queued markets are preferred.
-- `covered_once` — searched once; do not immediately repeat it, but it may be revisited after the cooldown.
-- `exhausted` — current pass produced very low net-new yield; deprioritize it.
-- `cooling` — manually/operationally paused until later.
+`zip_manager.py` recovers stale `in_progress` rows after a crash.
 
-One search pass never means a city/state is permanently complete.
+## Pagination policy
 
-## Selection policy
+Page 1 always runs.
 
-Default priority is:
-
-```text
-1. queued primary markets
-2. queued secondary-expansion markets
-3. partial markets
-4. covered_once markets only after revisit cooldown
-5. never auto-select exhausted/cooling
-```
-
-Current default revisit cooldown:
+Default page 2/3 trigger:
 
 ```text
-90 days
+page 1 raw count >= 20
+AND
+page 1 exact-ZIP count >= 5
+AND
+nextPageToken exists
 ```
 
-Current target per build:
+Maximum:
 
 ```text
-1,000 NET-NEW unique website domains
+3 pages per ZIP
 ```
 
-The builder does not stop at 1,000 raw Google results.
+All pages are requested during the same ZIP processing pass.
 
-## Current next high-level sequence
+This replaces the old failure mode where revisiting a metro repeatedly returned the same first 20 results.
 
-The plan currently contains 250 managed markets:
+## Global dedupe
+
+A candidate cannot count as a net-new business if:
 
 ```text
-92 historical covered_once
-158 queued
+Place ID already exists
+OR
+registrable domain already exists
+OR
+domain is globally suppressed after outreach
+OR
+same Place ID/domain was already accepted in current run
 ```
 
-The first queued primary markets are:
+This is global across the CRM, not campaign-local.
 
-```text
-Providence, RI
-Boston, MA
-Worcester, MA
-Portland, ME
-Manchester, NH
-Burlington, VT
-Newark, NJ
-Trenton, NJ
-Virginia Beach, VA
-Savannah, GA
-Atlanta, GA
-Augusta, GA
-Fort Worth, TX
-Austin, TX
-San Antonio, TX
-Houston, TX
-El Paso, TX
-```
+A multi-office firm is one sales opportunity when offices resolve to the same registrable domain.
 
-After the remaining primary markets, the queue expands into secondary metros/cities across the US, including additional Texas markets.
+## Historical first 1,000
 
-This order is data/config, not hard-coded business logic. Reprioritize by editing `market_plans/lawyers-us.json` and syncing the plan to D1.
+The original first 1,000 came from the earlier metro/Grounding experiment.
 
-## Cross-run dedupe
-
-Before any Google call can count toward the new target, Agent 1 loads the existing campaign state from D1.
-
-Mandatory exclusion keys:
-
-```text
-Google Place ID
-normalized official website domain
-```
-
-The next-run builder also checks the global `lead_domains` registry so a known domain cannot silently become a second canonical lead.
-
-A new branch/location of an already-known firm does not count as a new working lead.
-
-## D1 tables
-
-### `lead_domains`
-
-Canonical normalized domain registry:
-
-```text
-lead_id
-website_domain
-verified
-source
-updated_at
-```
-
-### `market_coverage`
-
-One aggregate row per campaign + market:
-
-```text
-campaign_id
-market_key
-market_label
-state_code
-tier
-priority
-phase
-status
-search_count
-raw_places
-net_new_place_ids
-grounding_calls
-quality_passes
-net_new_domains
-last_yield_per_search
-first_searched_at
-last_searched_at
-last_run_id
-notes
-```
-
-### `market_run_history`
-
-Append-only per-market run measurements so yield changes can be audited later.
-
-## Bootstrap the existing first 1,000
-
-Before running `next 1,000`, the validated first working set must exist in D1. Otherwise the builder cannot prove that a candidate is net-new.
-
-Use:
+Bootstrap them before V2 discovery:
 
 ```bash
 python scripts/bootstrap_lawyers_us_campaign.py \
   --campaign lawyers-us \
-  --input-dir <directory-containing-lawyers_1000.csv-summary.json-search_log.json>
+  --input-dir <historical-artifact>
 ```
 
-The bootstrap:
+The V2 bootstrap does not pretend old metro searches are ZIP coverage. V2 ZIP rows start from their real managed state, while global Place-ID/domain dedupe prevents historical firms from counting again.
 
-1. creates/updates the `lawyers-us` campaign,
-2. stores the first working-set businesses,
-3. writes normalized domains,
-4. creates campaign membership as `Ready for Validation`, `qualified=0`,
-5. seeds the first 92 searched markets as `covered_once`.
+## Commands
 
-It makes **zero Google calls**.
-
-## See the current market queue
+Sync/generate ZIP universe:
 
 ```bash
-python scripts/market_manager.py status --campaign lawyers-us --next 25
+python scripts/zip_manager.py sync --campaign lawyers-us
 ```
 
-Sync config changes into D1:
+Coverage report:
 
 ```bash
-python scripts/market_manager.py sync --campaign lawyers-us
+python scripts/zip_manager.py status --campaign lawyers-us --next 50
 ```
 
-Show only the next markets:
+Next ZIPs:
 
 ```bash
-python scripts/market_manager.py next --campaign lawyers-us --next 25
+python scripts/zip_manager.py next --campaign lawyers-us --next 50
 ```
 
-These commands require the Cloudflare D1 environment variables.
-
-## Build the next 1,000
-
-After bootstrap:
+Build next 1,000:
 
 ```bash
-export GOOGLE_API_KEY=...
-export CLOUDFLARE_ACCOUNT_ID=...
-export CLOUDFLARE_API_TOKEN=...
-export D1_DATABASE_ID=...
-
-python scripts/build_next_1000_lawyers.py \
+python scripts/build_next_1000_lawyers_zip.py \
   --campaign lawyers-us \
-  --target 1000
+  --target 1000 \
+  --max-zips 5000 \
+  --max-search-requests 900
 ```
 
-The builder:
+## Request-budget management
 
-1. loads existing D1 Place IDs/domains,
-2. selects the next markets from `market_coverage`,
-3. performs minimal Text Search Pro discovery,
-4. excludes old Place IDs before Grounding,
-5. resolves website/rating/review count using Maps Grounding Lite,
-6. applies the 4.7 / 20+ quality gate,
-7. excludes existing/duplicate domains,
-8. records market yield after every market,
-9. continues until exactly 1,000 net-new domains are collected,
-10. writes the new working set into D1 as `Ready for Validation`, `qualified=0`.
-
-If the available market plan cannot produce the requested target, the script preserves every accepted net-new lead in D1 and reports the remaining deficit. Expand/reprioritize the market plan, then rerun with the remaining target. Cross-run dedupe prevents the saved partial set from being counted twice.
-
-## Why this structure
-
-This separates three concerns cleanly:
+Successful Text Search Enterprise page calls are written to:
 
 ```text
-WHERE should we search?       → market plan
-WHAT have we already covered? → D1 market coverage/history
-WHO have we already collected?→ D1 Place IDs + domain registry
+api_usage_ledger
 ```
 
-That means Agent 1 can be given a simple instruction:
+Current internal monthly ceiling:
 
-> Get the next 1,000 lawyers.
+```text
+900 requests
+```
 
-The agent should not need a human to manually choose cities, remember previous batches, or inspect spreadsheets for duplicate domains.
+This leaves headroom under the currently documented 1,000-request Text Search Enterprise free cap.
+
+The D1 ledger only measures calls from this repository. Google Cloud Billing remains authoritative.
+
+## Outreach management
+
+Discovery dedupe and outreach suppression are separate concepts.
+
+Canonical dedupe:
+
+```text
+already known business
+→ do not count again as net-new
+```
+
+Outreach suppression:
+
+```text
+actually contacted
+→ do not contact again through another campaign
+```
+
+After outreach:
+
+```bash
+python scripts/mark_business_contacted.py \
+  --lead-id <PLACE_ID> \
+  --campaign lawyers-us \
+  --email <DIRECT_OWNER_EMAIL> \
+  --status Contacted
+```
+
+Re-engagement uses the existing canonical business and an explicit future state; it is not rediscovered as a new business.
