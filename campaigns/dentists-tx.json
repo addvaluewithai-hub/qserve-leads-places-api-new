@@ -22,10 +22,13 @@
   },
   "quality": {
     "allowed_business_statuses": ["OPERATIONAL"],
+    "enforce_area_match": true,
     "min_rating": 4.4,
     "min_reviews": 25,
     "require_phone": true,
     "require_website": true,
+    "dedupe_by_domain": true,
+    "dedupe_by_phone": true,
     "review_recency_days": 180,
     "min_recent_sampled_reviews": 1
   },
