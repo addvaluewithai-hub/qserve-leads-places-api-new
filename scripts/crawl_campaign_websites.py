@@ -19,6 +19,12 @@ GENERAL_SERVICE_PATHS = {
     "practice-areas", "practice-area", "services", "service", "areas-of-practice",
     "areas-of-law", "legal-services", "what-we-do", "our-services",
 }
+NON_SERVICE_SECTIONS = {
+    "about", "about-us", "contact", "contact-us", "attorney", "attorneys", "team", "staff",
+    "blog", "blogs", "news", "article", "articles", "resources", "resource", "faq", "faqs",
+    "testimonials", "reviews", "privacy", "privacy-policy", "terms", "terms-and-conditions",
+    "sitemap", "search", "category", "tag",
+}
 SERVICE_ALIASES = {
     "family law": ["family law", "family-law", "familylaw", "family lawyer", "family attorney"],
     "probate": ["probate", "probate law", "probate attorney", "probate lawyer"],
@@ -83,24 +89,23 @@ def slug_text(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def page_path_tokens(url: str) -> tuple[str, str]:
-    path = urlparse(url).path.strip("/").lower()
-    normalized = slug_text(path)
-    first = path.split("/", 1)[0] if path else ""
-    return normalized, first
+def path_segments(url: str) -> list[str]:
+    return [segment.lower() for segment in urlparse(url).path.split("/") if segment]
+
+
+def page_path_text(url: str) -> str:
+    return slug_text(urlparse(url).path.strip("/"))
 
 
 def is_general_service_page(url: str, title: str) -> bool:
-    normalized_path, _ = page_path_tokens(url)
-    segments = [segment for segment in urlparse(url).path.lower().split("/") if segment]
+    segments = path_segments(url)
     if len(segments) == 1 and segments[0] in GENERAL_SERVICE_PATHS:
         return True
-    title_text = slug_text(title)
-    if len(segments) <= 1 and any(slug_text(item) == title_text for item in GENERAL_SERVICE_PATHS):
-        return True
+    normalized_path = page_path_text(url)
     if normalized_path in {slug_text(item) for item in GENERAL_SERVICE_PATHS}:
         return True
-    return False
+    title_text = slug_text(title)
+    return len(segments) <= 1 and title_text in {slug_text(item) for item in GENERAL_SERVICE_PATHS}
 
 
 def aliases_for(service: str) -> list[str]:
@@ -108,19 +113,41 @@ def aliases_for(service: str) -> list[str]:
     return list(dict.fromkeys([slug_text(service), *[slug_text(x) for x in aliases]]))
 
 
+def service_mentions(text: str, services: list[str]) -> list[str]:
+    normalized = slug_text(text)
+    found = []
+    for service in services:
+        if any(alias and alias in normalized for alias in aliases_for(service)):
+            found.append(service)
+    return found
+
+
 def dedicated_service_matches(url: str, title: str, services: list[str]) -> list[str]:
-    if is_general_service_page(url, title):
+    """Strong evidence only: the URL path itself identifies the service.
+
+    General Practice Areas/Services pages are allowed. Homepage, contact/about/blog/resource pages
+    are never treated as dedicated service pages merely because their title mentions a practice area.
+    """
+    segments = path_segments(url)
+    if not segments or is_general_service_page(url, title):
         return []
-    path_text, _ = page_path_tokens(url)
-    title_text = slug_text(title)
+    if segments[0] in NON_SERVICE_SECTIONS:
+        return []
+    path_text = page_path_text(url)
     matches = []
     for service in services:
-        aliases = aliases_for(service)
-        path_hit = any(alias and alias in path_text for alias in aliases)
-        title_hit = any(alias and alias in title_text for alias in aliases)
-        if path_hit or title_hit:
+        if any(alias and alias in path_text for alias in aliases_for(service)):
             matches.append(service)
     return matches
+
+
+def title_service_signals(url: str, title: str, services: list[str]) -> list[str]:
+    """Weaker evidence for opaque/location URLs; stored for review, never auto-disqualifies."""
+    if not title or not path_segments(url) or is_general_service_page(url, title):
+        return []
+    if path_segments(url)[0] in NON_SERVICE_SECTIONS:
+        return []
+    return service_mentions(title, services)
 
 
 def target_service_from_query(query: str | None) -> str | None:
@@ -134,6 +161,20 @@ def target_service_from_query(query: str | None) -> str | None:
 def extract_title(result) -> str:
     metadata = getattr(result, "metadata", None) or {}
     return str(metadata.get("title") or "").strip()
+
+
+def extract_markdown(result) -> str:
+    markdown = getattr(result, "markdown", None)
+    if markdown is None:
+        return ""
+    if isinstance(markdown, str):
+        return markdown
+    raw = getattr(markdown, "raw_markdown", None)
+    if raw:
+        return str(raw)
+    if isinstance(markdown, dict):
+        return str(markdown.get("raw_markdown") or markdown.get("markdown") or "")
+    return str(markdown)
 
 
 def result_depth(result) -> int:
@@ -177,6 +218,9 @@ async def crawl_one(lead: dict, campaign: dict, max_depth: int, max_pages: int) 
         "pages_found": 0,
         "dedicated_service_pages": [],
         "dedicated_services_found": [],
+        "title_only_service_signals": [],
+        "offered_services_on_home_or_general_pages": [],
+        "service_gap_candidates": [],
         "target_service_dedicated_page": None,
         "crawl_qualification": "review",
         "crawl_started_at": started,
@@ -210,6 +254,9 @@ async def crawl_one(lead: dict, campaign: dict, max_depth: int, max_pages: int) 
         seen_urls = set()
         dedicated_pages = []
         dedicated_services = set()
+        title_signals = []
+        offered_evidence: dict[str, list[str]] = {service: [] for service in services}
+
         for result in results:
             page_url = canonical_url(getattr(result, "url", None) or website)
             if not page_url or normalized_host(page_url) != root_host or page_url in seen_urls:
@@ -217,7 +264,17 @@ async def crawl_one(lead: dict, campaign: dict, max_depth: int, max_pages: int) 
             seen_urls.add(page_url)
             title = extract_title(result)
             depth = result_depth(result)
-            matches = dedicated_service_matches(page_url, title, services)
+            general_page = is_general_service_page(page_url, title)
+            strong_matches = dedicated_service_matches(page_url, title, services)
+            weak_matches = [service for service in title_service_signals(page_url, title, services) if service not in strong_matches]
+
+            # Offered-service evidence is intentionally limited to the homepage or a general
+            # Practice Areas/Services page, so a dedicated page does not prove its own gap.
+            if depth == 0 or general_page:
+                text = f"{title}\n{extract_markdown(result)[:120000]}"
+                for service in service_mentions(text, services):
+                    offered_evidence.setdefault(service, []).append(page_url)
+
             page_rows.append({
                 "lead_id": lead.get("id"),
                 "name": lead.get("name"),
@@ -225,18 +282,20 @@ async def crawl_one(lead: dict, campaign: dict, max_depth: int, max_pages: int) 
                 "url": page_url,
                 "depth": depth,
                 "title": title,
-                "is_general_services_page": is_general_service_page(page_url, title),
-                "matched_services": "|".join(matches),
-                "dedicated_service_page": bool(matches),
+                "is_general_services_page": general_page,
+                "matched_services": "|".join(strong_matches),
+                "title_only_service_signals": "|".join(weak_matches),
+                "dedicated_service_page": bool(strong_matches),
                 "status_code": getattr(result, "status_code", None),
                 "success": bool(getattr(result, "success", True)),
             })
-            if matches:
-                dedicated_pages.append({"url": page_url, "title": title, "services": matches})
-                dedicated_services.update(matches)
+            if strong_matches:
+                dedicated_pages.append({"url": page_url, "title": title, "services": strong_matches})
+                dedicated_services.update(strong_matches)
+            if weak_matches:
+                title_signals.append({"url": page_url, "title": title, "services": weak_matches})
             link_rows.extend(internal_links_from_result(result, page_url, root_host))
 
-        # De-duplicate the graph rows while preserving the most useful anchor text.
         unique_links = {}
         for row in link_rows:
             key = (row["source_url"], row["target_url"])
@@ -245,20 +304,27 @@ async def crawl_one(lead: dict, campaign: dict, max_depth: int, max_pages: int) 
                 unique_links[key] = row
         link_rows = list(unique_links.values())
 
+        offered_services = sorted(service for service, evidence in offered_evidence.items() if evidence)
+        gap_candidates = sorted(service for service in offered_services if service not in dedicated_services)
         target_hit = None
         if target_service:
             target_hit = target_service in dedicated_services
         qualification = "review"
         if target_hit is True:
             qualification = "disqualified"
-        elif target_hit is False:
+        elif target_hit is False and target_service in offered_services:
             qualification = "qualified"
+
         summary.update({
             "crawl_status": "completed",
             "pages_found": len(page_rows),
             "internal_links_found": len(link_rows),
             "dedicated_service_pages": dedicated_pages,
             "dedicated_services_found": sorted(dedicated_services),
+            "title_only_service_signals": title_signals,
+            "offered_services_on_home_or_general_pages": offered_services,
+            "offered_service_evidence": {service: urls for service, urls in offered_evidence.items() if urls},
+            "service_gap_candidates": gap_candidates,
             "target_service_dedicated_page": target_hit,
             "crawl_qualification": qualification,
             "crawl_completed_at": datetime.now(timezone.utc).isoformat(),
@@ -302,7 +368,11 @@ async def run(args) -> None:
         summaries.append(summary)
         pages.extend(page_rows)
         links.extend(link_rows)
-        print(f"  status={summary['crawl_status']} pages={summary['pages_found']} dedicated={len(summary['dedicated_service_pages'])} target={summary['target_service']} verdict={summary['crawl_qualification']}")
+        print(
+            f"  status={summary['crawl_status']} pages={summary['pages_found']} "
+            f"dedicated={len(summary['dedicated_service_pages'])} gaps={summary.get('service_gap_candidates', [])} "
+            f"target={summary['target_service']} verdict={summary['crawl_qualification']}"
+        )
 
     summary_by_id = {row.get("lead_id"): row for row in summaries}
     enriched = []
@@ -317,7 +387,7 @@ async def run(args) -> None:
     (out_dir / "leads_enriched.json").write_text(json.dumps(enriched, ensure_ascii=False, indent=2), encoding="utf-8")
     write_csv(out_dir / "crawl_pages.csv", pages, [
         "lead_id", "name", "website", "url", "depth", "title", "is_general_services_page",
-        "matched_services", "dedicated_service_page", "status_code", "success",
+        "matched_services", "title_only_service_signals", "dedicated_service_page", "status_code", "success",
     ])
     write_csv(out_dir / "crawl_links.csv", links, ["source_url", "target_url", "anchor_text"])
     aggregate = {
@@ -327,8 +397,9 @@ async def run(args) -> None:
         "crawl_failed": sum(1 for row in summaries if row.get("crawl_status") == "failed"),
         "total_pages_found": sum(int(row.get("pages_found") or 0) for row in summaries),
         "total_internal_links_found": sum(int(row.get("internal_links_found") or 0) for row in summaries),
-        "target_service_disqualified": sum(1 for row in summaries if row.get("crawl_qualification") == "disqualified"),
-        "target_service_qualified": sum(1 for row in summaries if row.get("crawl_qualification") == "qualified"),
+        "leads_with_dedicated_target_service_pages": sum(1 for row in summaries if row.get("crawl_qualification") == "disqualified"),
+        "leads_with_verified_target_service_gap": sum(1 for row in summaries if row.get("crawl_qualification") == "qualified"),
+        "leads_with_any_gap_candidates": sum(1 for row in summaries if row.get("service_gap_candidates")),
         "needs_review": sum(1 for row in summaries if row.get("crawl_qualification") == "review"),
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
