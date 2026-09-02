@@ -1,12 +1,12 @@
-name: One-time requested next 1000 ZIP V4
+name: One-time requested next 1000 ZIP V5
 
 on:
   issues:
     types: [opened]
 
 concurrency:
-  group: lawyers-us-zip-discovery
-  cancel-in-progress: true
+  group: lawyers-us-next1000-${{ github.event.issue.title }}
+  cancel-in-progress: false
 
 permissions:
   actions: read
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   run:
-    if: github.event.issue.title == 'RUN-QSERVE-ZIP-V4-20260902-RETRY3'
+    if: github.event.issue.title == 'RUN-QSERVE-ZIP-V5-20260902-RETRY4'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
@@ -39,8 +39,10 @@ jobs:
         run: |
           python -m py_compile \
             scripts/bootstrap_lawyers_us_campaign_v3.py \
+            scripts/discovery_cohort_manager.py \
             scripts/build_next_1000_lawyers_zip_v3.py \
             scripts/build_next_1000_lawyers_zip_v4.py \
+            scripts/build_next_1000_lawyers_zip_v5.py \
             scripts/zip_manager.py
       - name: Bootstrap validated historical first 1000 into D1
         run: |
@@ -52,17 +54,17 @@ jobs:
           python scripts/bootstrap_lawyers_us_campaign_v3.py \
             --campaign lawyers-us \
             --input-dir input-first-1000
-      - name: Build next 1000 net-new ZIP-managed lawyers
+      - name: Continue active next-1000 cohort
         run: |
-          python scripts/build_next_1000_lawyers_zip_v4.py \
+          python scripts/build_next_1000_lawyers_zip_v5.py \
             --campaign lawyers-us \
             --target 1000 \
             --max-zips 5000 \
             --max-search-requests 900
-      - name: Upload V4 result artifact
+      - name: Upload V5 result artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lawyers-us-next-1000-zip-v4
-          path: out/lawyers-us-next-1000-zip/
+          name: lawyers-us-next-1000-zip-v5
+          path: out/lawyers-us-next-*/
           if-no-files-found: warn
