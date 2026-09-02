@@ -10,6 +10,9 @@ import pgeocode
 from d1_helpers import ROOT, apply_schema, make_query_client, result_rows
 
 VALID_STATUSES = {"queued", "in_progress", "partial", "covered", "saturated", "failed", "cooling"}
+ZIP_UPSERT_BATCH = 50
+DEFAULT_QUEUE_TARGET = 3000
+DEFAULT_QUEUE_REFILL_BELOW = 1000
 
 
 def load_campaign(campaign_id: str) -> dict:
@@ -55,10 +58,10 @@ def normalize_zip(value) -> str | None:
         return None
     if "." in text:
         text = text.split(".", 1)[0]
-    text = "".join(ch for ch in text if ch.isdigit())
-    if not text:
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if not digits:
         return None
-    return text.zfill(5)[:5]
+    return digits.zfill(5)[:5]
 
 
 def load_zip_universe(plan: dict) -> list[dict]:
@@ -75,11 +78,9 @@ def load_zip_universe(plan: dict) -> list[dict]:
         zip_code = normalize_zip(record.get("postal_code"))
         if not zip_code:
             continue
-        latitude = record.get("latitude")
-        longitude = record.get("longitude")
         try:
-            latitude = float(latitude)
-            longitude = float(longitude)
+            latitude = float(record.get("latitude"))
+            longitude = float(record.get("longitude"))
         except (TypeError, ValueError):
             continue
         if latitude != latitude or longitude != longitude:
@@ -129,35 +130,95 @@ def ensure_campaign(query, campaign: dict) -> None:
     )
 
 
+def _bulk_insert_zip_rows(query, campaign_id: str, rows: list[dict]) -> int:
+    written = 0
+    for start in range(0, len(rows), ZIP_UPSERT_BATCH):
+        batch = rows[start:start + ZIP_UPSERT_BATCH]
+        placeholders = ",".join(["(?,?,?,?,?,?,?,?,?,'queued',CURRENT_TIMESTAMP)"] * len(batch))
+        sql = f"""
+        INSERT INTO zip_coverage (
+          campaign_id,zip_code,city,state_code,latitude,longitude,phase,
+          state_priority,city_priority,status,updated_at
+        ) VALUES {placeholders}
+        ON CONFLICT(campaign_id,zip_code) DO UPDATE SET
+          city=excluded.city,
+          state_code=excluded.state_code,
+          latitude=excluded.latitude,
+          longitude=excluded.longitude,
+          phase=excluded.phase,
+          state_priority=excluded.state_priority,
+          city_priority=excluded.city_priority,
+          updated_at=CURRENT_TIMESTAMP
+        """
+        params = []
+        for row in batch:
+            params.extend([
+                campaign_id, row["zip_code"], row["city"], row["state_code"],
+                row["latitude"], row["longitude"], row["phase"],
+                row["state_priority"], row["city_priority"],
+            ])
+        query(sql, params)
+        written += len(batch)
+    return written
+
+
 def sync_zip_plan(query, campaign: dict, plan: dict) -> dict:
+    """Keep a sliding materialized ZIP queue instead of writing the whole US universe to D1."""
     ensure_campaign(query, campaign)
     universe = load_zip_universe(plan)
-    inserted = 0
-    for index, row in enumerate(universe, 1):
-        existing = result_rows(query("SELECT zip_code FROM zip_coverage WHERE campaign_id=? AND zip_code=?", [campaign["id"], row["zip_code"]]))
-        query(
-            """
-            INSERT INTO zip_coverage (
-              campaign_id,zip_code,city,state_code,latitude,longitude,phase,
-              state_priority,city_priority,status,updated_at
-            ) VALUES (?,?,?,?,?,?,?,?,?,'queued',CURRENT_TIMESTAMP)
-            ON CONFLICT(campaign_id,zip_code) DO UPDATE SET
-              city=excluded.city,
-              state_code=excluded.state_code,
-              latitude=excluded.latitude,
-              longitude=excluded.longitude,
-              phase=excluded.phase,
-              state_priority=excluded.state_priority,
-              city_priority=excluded.city_priority,
-              updated_at=CURRENT_TIMESTAMP
-            """,
-            [campaign["id"], row["zip_code"], row["city"], row["state_code"], row["latitude"], row["longitude"], row["phase"], row["state_priority"], row["city_priority"]],
-        )
-        if not existing:
-            inserted += 1
-        if index % 1000 == 0:
-            print(f"ZIP plan synced {index}/{len(universe)}")
-    return {"zip_universe": len(universe), "new_zip_rows": inserted}
+    policy = plan.get("selection_policy") or {}
+    queue_target = int(policy.get("materialized_queue_target") or DEFAULT_QUEUE_TARGET)
+    refill_below = int(policy.get("materialize_when_queue_below") or DEFAULT_QUEUE_REFILL_BELOW)
+
+    existing_rows = result_rows(query(
+        """
+        SELECT zip_code,status,city,state_code,latitude,longitude,phase,state_priority,city_priority
+        FROM zip_coverage WHERE campaign_id=?
+        """,
+        [campaign["id"]],
+    ))
+    existing = {str(r["zip_code"]): r for r in existing_rows if r.get("zip_code")}
+    queued_count = sum(1 for r in existing_rows if r.get("status") == "queued")
+
+    universe_by_zip = {r["zip_code"]: r for r in universe}
+    changed: list[dict] = []
+    for zip_code, current in existing.items():
+        desired = universe_by_zip.get(zip_code)
+        if not desired:
+            continue
+        if (
+            str(current.get("city") or "") != desired["city"]
+            or str(current.get("state_code") or "") != desired["state_code"]
+            or str(current.get("phase") or "") != desired["phase"]
+            or int(current.get("state_priority") or 100) != desired["state_priority"]
+            or int(current.get("city_priority") or 1000) != desired["city_priority"]
+        ):
+            changed.append(desired)
+
+    missing_to_add: list[dict] = []
+    if queued_count < refill_below:
+        add_needed = max(0, queue_target - queued_count)
+        for row in universe:
+            if row["zip_code"] in existing:
+                continue
+            missing_to_add.append(row)
+            if len(missing_to_add) >= add_needed:
+                break
+
+    written = _bulk_insert_zip_rows(query, campaign["id"], changed + missing_to_add) if (changed or missing_to_add) else 0
+    materialized_after = len(existing) + len(missing_to_add)
+    return {
+        "plan_zip_universe": len(universe),
+        "materialized_before": len(existing),
+        "materialized_after": materialized_after,
+        "unmaterialized_after": max(0, len(universe) - materialized_after),
+        "queued_before": queued_count,
+        "new_zip_rows": len(missing_to_add),
+        "priority_rows_refreshed": len(changed),
+        "bulk_rows_written": written,
+        "queue_target": queue_target,
+        "refill_below": refill_below,
+    }
 
 
 def recover_stale_in_progress(query, campaign_id: str, stale_hours: int = 6) -> int:
@@ -209,7 +270,7 @@ def next_zips(query, campaign: dict, plan: dict, limit: int) -> list[dict]:
     ))
 
 
-def status_report(query, campaign: dict, plan: dict, next_count: int) -> dict:
+def status_report(query, campaign: dict, plan: dict, next_count: int, sync_result: dict | None = None) -> dict:
     by_status = result_rows(query(
         """
         SELECT status, COUNT(*) AS zips, SUM(search_count) AS searches, SUM(page_count) AS pages,
@@ -221,7 +282,7 @@ def status_report(query, campaign: dict, plan: dict, next_count: int) -> dict:
     ))
     by_state = result_rows(query(
         """
-        SELECT state_code, COUNT(*) AS total_zips,
+        SELECT state_code, COUNT(*) AS materialized_zips,
                SUM(CASE WHEN status='queued' THEN 1 ELSE 0 END) AS queued,
                SUM(CASE WHEN status='partial' THEN 1 ELSE 0 END) AS partial,
                SUM(CASE WHEN status='covered' THEN 1 ELSE 0 END) AS covered,
@@ -234,7 +295,7 @@ def status_report(query, campaign: dict, plan: dict, next_count: int) -> dict:
     ))
     leads = result_rows(query("SELECT COUNT(*) AS n FROM leads"))
     suppressed = result_rows(query("SELECT COUNT(*) AS n FROM outreach_suppression WHERE suppressed=1"))
-    return {
+    report = {
         "campaign": campaign["id"],
         "canonical_businesses_in_d1": int((leads[0] if leads else {}).get("n") or 0),
         "globally_suppressed_businesses": int((suppressed[0] if suppressed else {}).get("n") or 0),
@@ -242,6 +303,9 @@ def status_report(query, campaign: dict, plan: dict, next_count: int) -> dict:
         "states": by_state,
         "next_zips": next_zips(query, campaign, plan, next_count),
     }
+    if sync_result:
+        report["plan_materialization"] = sync_result
+    return report
 
 
 def main() -> None:
@@ -263,7 +327,7 @@ def main() -> None:
     elif args.command == "next":
         print(json.dumps(next_zips(query, campaign, plan, args.next), indent=2))
     else:
-        print(json.dumps({**sync_result, "stale_in_progress_recovered": recovered, **status_report(query, campaign, plan, args.next)}, indent=2))
+        print(json.dumps({"stale_in_progress_recovered": recovered, **status_report(query, campaign, plan, args.next, sync_result)}, indent=2))
 
 
 if __name__ == "__main__":
