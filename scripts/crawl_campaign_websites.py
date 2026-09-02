@@ -5,42 +5,14 @@ import argparse
 import asyncio
 import csv
 import json
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, urlunparse
 
 from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
 from crawl4ai.content_scraping_strategy import LXMLWebScrapingStrategy
-from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 
 ROOT = Path(__file__).resolve().parents[1]
-GENERAL_SERVICE_PATHS = {
-    "practice-areas", "practice-area", "services", "service", "areas-of-practice",
-    "areas-of-law", "legal-services", "what-we-do", "our-services",
-}
-NON_SERVICE_SECTIONS = {
-    "about", "about-us", "contact", "contact-us", "attorney", "attorneys", "team", "staff",
-    "blog", "blogs", "news", "article", "articles", "resources", "resource", "faq", "faqs",
-    "testimonials", "reviews", "privacy", "privacy-policy", "terms", "terms-and-conditions",
-    "sitemap", "search", "category", "tag",
-}
-SERVICE_ALIASES = {
-    "family law": ["family law", "family-law", "familylaw", "family lawyer", "family attorney"],
-    "probate": ["probate", "probate law", "probate attorney", "probate lawyer"],
-    "estate planning": ["estate planning", "estate-planning", "estateplanning", "estate planner"],
-    "wills": ["wills", "will attorney", "will lawyer", "last will"],
-    "trusts": ["trusts", "trust attorney", "trust lawyer", "living trust"],
-    "immigration": ["immigration", "immigration law", "immigration attorney", "immigration lawyer"],
-    "business law": ["business law", "business-law", "businesslaw", "business attorney", "business lawyer"],
-}
-QUERY_TO_SERVICE = {
-    "family law attorney": "family law",
-    "probate attorney": "probate",
-    "estate planning attorney": "estate planning",
-    "immigration attorney": "immigration",
-    "business attorney": "business law",
-}
 
 
 def load_json(path: Path):
@@ -60,8 +32,7 @@ def clean_url(value: str | None) -> str | None:
     parsed = urlparse(value)
     if not parsed.hostname:
         return None
-    path = parsed.path or "/"
-    return urlunparse((parsed.scheme or "https", parsed.netloc, path, "", "", ""))
+    return urlunparse((parsed.scheme or "https", parsed.netloc, parsed.path or "/", "", "", ""))
 
 
 def normalized_host(value: str) -> str:
@@ -69,13 +40,13 @@ def normalized_host(value: str) -> str:
     return host[4:] if host.startswith("www.") else host
 
 
-def canonical_url(value: str, base: str | None = None) -> str | None:
+def canonical_url(value: str, base: str) -> str | None:
     try:
-        absolute = urljoin(base or value, value)
+        absolute = urljoin(base, value)
         parsed = urlparse(absolute)
         if parsed.scheme not in {"http", "https"} or not parsed.hostname:
             return None
-        path = re.sub(r"/{2,}", "/", parsed.path or "/")
+        path = parsed.path or "/"
         if path != "/":
             path = path.rstrip("/")
         return urlunparse((parsed.scheme, parsed.netloc.lower(), path, "", "", ""))
@@ -83,112 +54,23 @@ def canonical_url(value: str, base: str | None = None) -> str | None:
         return None
 
 
-def slug_text(value: str) -> str:
-    value = value.lower().replace("&", " and ")
-    value = re.sub(r"[^a-z0-9]+", " ", value)
-    return re.sub(r"\s+", " ", value).strip()
-
-
-def path_segments(url: str) -> list[str]:
-    return [segment.lower() for segment in urlparse(url).path.split("/") if segment]
-
-
-def page_path_text(url: str) -> str:
-    return slug_text(urlparse(url).path.strip("/"))
-
-
-def is_general_service_page(url: str, title: str) -> bool:
-    segments = path_segments(url)
-    if len(segments) == 1 and segments[0] in GENERAL_SERVICE_PATHS:
-        return True
-    normalized_path = page_path_text(url)
-    if normalized_path in {slug_text(item) for item in GENERAL_SERVICE_PATHS}:
-        return True
-    title_text = slug_text(title)
-    return len(segments) <= 1 and title_text in {slug_text(item) for item in GENERAL_SERVICE_PATHS}
-
-
-def aliases_for(service: str) -> list[str]:
-    aliases = SERVICE_ALIASES.get(service.lower(), [service])
-    return list(dict.fromkeys([slug_text(service), *[slug_text(x) for x in aliases]]))
-
-
-def service_mentions(text: str, services: list[str]) -> list[str]:
-    normalized = slug_text(text)
-    found = []
-    for service in services:
-        if any(alias and alias in normalized for alias in aliases_for(service)):
-            found.append(service)
-    return found
-
-
-def dedicated_service_matches(url: str, title: str, services: list[str]) -> list[str]:
-    """Strong evidence only: the URL path itself identifies the service.
-
-    General Practice Areas/Services pages are allowed. Homepage, contact/about/blog/resource pages
-    are never treated as dedicated service pages merely because their title mentions a practice area.
-    """
-    segments = path_segments(url)
-    if not segments or is_general_service_page(url, title):
-        return []
-    if segments[0] in NON_SERVICE_SECTIONS:
-        return []
-    path_text = page_path_text(url)
-    matches = []
-    for service in services:
-        if any(alias and alias in path_text for alias in aliases_for(service)):
-            matches.append(service)
-    return matches
-
-
-def title_service_signals(url: str, title: str, services: list[str]) -> list[str]:
-    """Weaker evidence for opaque/location URLs; stored for review, never auto-disqualifies."""
-    if not title or not path_segments(url) or is_general_service_page(url, title):
-        return []
-    if path_segments(url)[0] in NON_SERVICE_SECTIONS:
-        return []
-    return service_mentions(title, services)
-
-
 def target_service_from_query(query: str | None) -> str | None:
-    query = slug_text(query or "")
-    for source_query, service in QUERY_TO_SERVICE.items():
-        if slug_text(source_query) == query:
-            return service
-    return None
+    mapping = {
+        "family law attorney": "family law",
+        "probate attorney": "probate",
+        "estate planning attorney": "estate planning",
+        "immigration attorney": "immigration",
+        "business attorney": "business law",
+    }
+    return mapping.get((query or "").strip().lower())
 
 
-def extract_title(result) -> str:
-    metadata = getattr(result, "metadata", None) or {}
-    return str(metadata.get("title") or "").strip()
-
-
-def extract_markdown(result) -> str:
-    markdown = getattr(result, "markdown", None)
-    if markdown is None:
-        return ""
-    if isinstance(markdown, str):
-        return markdown
-    raw = getattr(markdown, "raw_markdown", None)
-    if raw:
-        return str(raw)
-    if isinstance(markdown, dict):
-        return str(markdown.get("raw_markdown") or markdown.get("markdown") or "")
-    return str(markdown)
-
-
-def result_depth(result) -> int:
-    metadata = getattr(result, "metadata", None) or {}
-    try:
-        return int(metadata.get("depth", 0) or 0)
-    except Exception:
-        return 0
-
-
-def internal_links_from_result(result, page_url: str, root_host: str) -> list[dict]:
+def extract_internal_links(result, homepage: str) -> list[dict]:
+    root_host = normalized_host(homepage)
     links = getattr(result, "links", None) or {}
     items = links.get("internal") if isinstance(links, dict) else []
-    output = []
+    deduped: dict[str, dict] = {}
+
     for item in items or []:
         if isinstance(item, str):
             href, text = item, ""
@@ -197,145 +79,62 @@ def internal_links_from_result(result, page_url: str, root_host: str) -> list[di
             text = item.get("text") or item.get("anchor") or ""
         if not href:
             continue
-        target = canonical_url(href, page_url)
+        target = canonical_url(str(href), homepage)
         if not target or normalized_host(target) != root_host:
             continue
-        output.append({"source_url": page_url, "target_url": target, "anchor_text": str(text).strip()})
-    return output
+        current = deduped.get(target)
+        row = {"url": target, "anchor_text": str(text).strip()}
+        if current is None or (not current.get("anchor_text") and row["anchor_text"]):
+            deduped[target] = row
+
+    return sorted(deduped.values(), key=lambda row: row["url"])
 
 
-async def crawl_one(lead: dict, campaign: dict, max_depth: int, max_pages: int) -> tuple[dict, list[dict], list[dict]]:
-    website = clean_url(lead.get("website"))
-    services = [str(x).strip().lower() for x in (campaign.get("enrichment") or {}).get("target_services", []) if str(x).strip()]
-    target_service = target_service_from_query(lead.get("source_query"))
-    started = datetime.now(timezone.utc).isoformat()
-    summary = {
+async def fetch_homepage_links(crawler: AsyncWebCrawler, lead: dict) -> tuple[dict, list[dict]]:
+    homepage = clean_url(lead.get("website"))
+    base = {
         "lead_id": lead.get("id"),
         "name": lead.get("name"),
-        "website": website,
-        "target_service": target_service,
+        "source_area": lead.get("source_area"),
+        "source_query": lead.get("source_query"),
+        "target_service": target_service_from_query(lead.get("source_query")),
+        "homepage": homepage,
         "crawl_status": "pending",
-        "pages_found": 0,
-        "dedicated_service_pages": [],
-        "dedicated_services_found": [],
-        "title_only_service_signals": [],
-        "offered_services_on_home_or_general_pages": [],
-        "service_gap_candidates": [],
-        "target_service_dedicated_page": None,
-        "crawl_qualification": "review",
-        "crawl_started_at": started,
-        "crawl_completed_at": None,
+        "homepage_status_code": None,
+        "homepage_title": None,
+        "internal_links_found": 0,
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
         "error": None,
     }
-    if not website:
-        summary.update({"crawl_status": "skipped", "error": "missing_website", "crawl_completed_at": datetime.now(timezone.utc).isoformat()})
-        return summary, [], []
+    if not homepage:
+        base.update({"crawl_status": "skipped", "error": "missing_website"})
+        return base, []
 
-    root_host = normalized_host(website)
-    page_rows: list[dict] = []
-    link_rows: list[dict] = []
     try:
         config = CrawlerRunConfig(
-            deep_crawl_strategy=BFSDeepCrawlStrategy(
-                max_depth=max_depth,
-                include_external=False,
-                max_pages=max_pages,
-            ),
             scraping_strategy=LXMLWebScrapingStrategy(),
             cache_mode=CacheMode.BYPASS,
-            verbose=False,
             page_timeout=45000,
+            verbose=False,
         )
-        async with AsyncWebCrawler() as crawler:
-            results = await crawler.arun(url=website, config=config)
+        result = await crawler.arun(url=homepage, config=config)
+        if isinstance(result, list):
+            result = result[0] if result else None
+        if result is None:
+            raise RuntimeError("Crawl4AI returned no homepage result")
 
-        if not isinstance(results, list):
-            results = list(results or [])
-        seen_urls = set()
-        dedicated_pages = []
-        dedicated_services = set()
-        title_signals = []
-        offered_evidence: dict[str, list[str]] = {service: [] for service in services}
-
-        for result in results:
-            page_url = canonical_url(getattr(result, "url", None) or website)
-            if not page_url or normalized_host(page_url) != root_host or page_url in seen_urls:
-                continue
-            seen_urls.add(page_url)
-            title = extract_title(result)
-            depth = result_depth(result)
-            general_page = is_general_service_page(page_url, title)
-            strong_matches = dedicated_service_matches(page_url, title, services)
-            weak_matches = [service for service in title_service_signals(page_url, title, services) if service not in strong_matches]
-
-            # Offered-service evidence is intentionally limited to the homepage or a general
-            # Practice Areas/Services page, so a dedicated page does not prove its own gap.
-            if depth == 0 or general_page:
-                text = f"{title}\n{extract_markdown(result)[:120000]}"
-                for service in service_mentions(text, services):
-                    offered_evidence.setdefault(service, []).append(page_url)
-
-            page_rows.append({
-                "lead_id": lead.get("id"),
-                "name": lead.get("name"),
-                "website": website,
-                "url": page_url,
-                "depth": depth,
-                "title": title,
-                "is_general_services_page": general_page,
-                "matched_services": "|".join(strong_matches),
-                "title_only_service_signals": "|".join(weak_matches),
-                "dedicated_service_page": bool(strong_matches),
-                "status_code": getattr(result, "status_code", None),
-                "success": bool(getattr(result, "success", True)),
-            })
-            if strong_matches:
-                dedicated_pages.append({"url": page_url, "title": title, "services": strong_matches})
-                dedicated_services.update(strong_matches)
-            if weak_matches:
-                title_signals.append({"url": page_url, "title": title, "services": weak_matches})
-            link_rows.extend(internal_links_from_result(result, page_url, root_host))
-
-        unique_links = {}
-        for row in link_rows:
-            key = (row["source_url"], row["target_url"])
-            current = unique_links.get(key)
-            if current is None or (not current.get("anchor_text") and row.get("anchor_text")):
-                unique_links[key] = row
-        link_rows = list(unique_links.values())
-
-        offered_services = sorted(service for service, evidence in offered_evidence.items() if evidence)
-        gap_candidates = sorted(service for service in offered_services if service not in dedicated_services)
-        target_hit = None
-        if target_service:
-            target_hit = target_service in dedicated_services
-        qualification = "review"
-        if target_hit is True:
-            qualification = "disqualified"
-        elif target_hit is False and target_service in offered_services:
-            qualification = "qualified"
-
-        summary.update({
-            "crawl_status": "completed",
-            "pages_found": len(page_rows),
-            "internal_links_found": len(link_rows),
-            "dedicated_service_pages": dedicated_pages,
-            "dedicated_services_found": sorted(dedicated_services),
-            "title_only_service_signals": title_signals,
-            "offered_services_on_home_or_general_pages": offered_services,
-            "offered_service_evidence": {service: urls for service, urls in offered_evidence.items() if urls},
-            "service_gap_candidates": gap_candidates,
-            "target_service_dedicated_page": target_hit,
-            "crawl_qualification": qualification,
-            "crawl_completed_at": datetime.now(timezone.utc).isoformat(),
+        metadata = getattr(result, "metadata", None) or {}
+        links = extract_internal_links(result, homepage)
+        base.update({
+            "crawl_status": "completed" if getattr(result, "success", True) else "failed",
+            "homepage_status_code": getattr(result, "status_code", None),
+            "homepage_title": metadata.get("title"),
+            "internal_links_found": len(links),
         })
+        return base, links
     except Exception as exc:
-        summary.update({
-            "crawl_status": "failed",
-            "error": f"{type(exc).__name__}: {exc}"[:1200],
-            "crawl_completed_at": datetime.now(timezone.utc).isoformat(),
-        })
-    return summary, page_rows, link_rows
+        base.update({"crawl_status": "failed", "error": f"{type(exc).__name__}: {exc}"[:1200]})
+        return base, []
 
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -351,69 +150,66 @@ async def run(args) -> None:
     leads = load_json(out_dir / "leads.json")
     enrichment = campaign.get("enrichment") or {}
     if not enrichment.get("website_crawl_required"):
-        print(json.dumps({"campaign": args.campaign, "crawl": "skipped", "reason": "website_crawl_required=false"}, indent=2))
+        print(json.dumps({"campaign": args.campaign, "homepage_link_collection": "skipped"}, indent=2))
         return
 
-    crawl_cfg = campaign.get("crawl") or {}
-    max_depth = int(args.max_depth if args.max_depth is not None else crawl_cfg.get("max_depth", 2))
-    max_pages = int(args.max_pages if args.max_pages is not None else crawl_cfg.get("max_pages_per_site", 30))
     max_leads = min(len(leads), max(1, int(args.limit or len(leads))))
-
     summaries: list[dict] = []
-    pages: list[dict] = []
-    links: list[dict] = []
-    for index, lead in enumerate(leads[:max_leads], 1):
-        print(f"[{index}/{max_leads}] Crawling {lead.get('name')} - {lead.get('website')}")
-        summary, page_rows, link_rows = await crawl_one(lead, campaign, max_depth=max_depth, max_pages=max_pages)
-        summaries.append(summary)
-        pages.extend(page_rows)
-        links.extend(link_rows)
-        print(
-            f"  status={summary['crawl_status']} pages={summary['pages_found']} "
-            f"dedicated={len(summary['dedicated_service_pages'])} gaps={summary.get('service_gap_candidates', [])} "
-            f"target={summary['target_service']} verdict={summary['crawl_qualification']}"
-        )
+    link_rows: list[dict] = []
 
-    summary_by_id = {row.get("lead_id"): row for row in summaries}
-    enriched = []
-    for lead in leads:
-        item = dict(lead)
-        crawl = summary_by_id.get(lead.get("id"))
-        if crawl:
-            item["crawl"] = crawl
-        enriched.append(item)
+    async with AsyncWebCrawler() as crawler:
+        for index, lead in enumerate(leads[:max_leads], 1):
+            print(f"[{index}/{max_leads}] Fetching homepage links: {lead.get('name')} - {lead.get('website')}")
+            summary, links = await fetch_homepage_links(crawler, lead)
+            summaries.append(summary)
+            for link in links:
+                link_rows.append({
+                    "lead_id": lead.get("id"),
+                    "name": lead.get("name"),
+                    "source_area": lead.get("source_area"),
+                    "source_query": lead.get("source_query"),
+                    "target_service": summary.get("target_service"),
+                    "homepage": summary.get("homepage"),
+                    "url": link["url"],
+                    "anchor_text": link["anchor_text"],
+                })
+            print(f"  status={summary['crawl_status']} links={summary['internal_links_found']}")
 
-    (out_dir / "crawl_results.json").write_text(json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8")
-    (out_dir / "leads_enriched.json").write_text(json.dumps(enriched, ensure_ascii=False, indent=2), encoding="utf-8")
-    write_csv(out_dir / "crawl_pages.csv", pages, [
-        "lead_id", "name", "website", "url", "depth", "title", "is_general_services_page",
-        "matched_services", "title_only_service_signals", "dedicated_service_page", "status_code", "success",
+    payload = []
+    links_by_lead: dict[str, list[dict]] = {}
+    for row in link_rows:
+        links_by_lead.setdefault(str(row.get("lead_id")), []).append({
+            "url": row["url"],
+            "anchor_text": row["anchor_text"],
+        })
+    for summary in summaries:
+        item = dict(summary)
+        item["links"] = links_by_lead.get(str(summary.get("lead_id")), [])
+        payload.append(item)
+
+    (out_dir / "homepage_links.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "homepage_fetch_summary.json").write_text(json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_csv(out_dir / "homepage_links.csv", link_rows, [
+        "lead_id", "name", "source_area", "source_query", "target_service", "homepage", "url", "anchor_text",
     ])
-    write_csv(out_dir / "crawl_links.csv", links, ["source_url", "target_url", "anchor_text"])
+
     aggregate = {
         "campaign": args.campaign,
-        "leads_crawled": len(summaries),
-        "crawl_completed": sum(1 for row in summaries if row.get("crawl_status") == "completed"),
-        "crawl_failed": sum(1 for row in summaries if row.get("crawl_status") == "failed"),
-        "total_pages_found": sum(int(row.get("pages_found") or 0) for row in summaries),
-        "total_internal_links_found": sum(int(row.get("internal_links_found") or 0) for row in summaries),
-        "leads_with_dedicated_target_service_pages": sum(1 for row in summaries if row.get("crawl_qualification") == "disqualified"),
-        "leads_with_verified_target_service_gap": sum(1 for row in summaries if row.get("crawl_qualification") == "qualified"),
-        "leads_with_any_gap_candidates": sum(1 for row in summaries if row.get("service_gap_candidates")),
-        "needs_review": sum(1 for row in summaries if row.get("crawl_qualification") == "review"),
+        "leads_attempted": len(summaries),
+        "homepage_fetch_completed": sum(1 for row in summaries if row.get("crawl_status") == "completed"),
+        "homepage_fetch_failed": sum(1 for row in summaries if row.get("crawl_status") == "failed"),
+        "total_internal_homepage_links": len(link_rows),
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
-    (out_dir / "crawl_summary.json").write_text(json.dumps(aggregate, indent=2), encoding="utf-8")
+    (out_dir / "homepage_links_summary.json").write_text(json.dumps(aggregate, indent=2), encoding="utf-8")
     print(json.dumps(aggregate, indent=2))
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Crawl qualified campaign lead websites with Crawl4AI")
+    parser = argparse.ArgumentParser(description="Fetch same-domain links from campaign lead homepages with Crawl4AI")
     parser.add_argument("--campaign", required=True)
     parser.add_argument("--out-dir", default=None)
     parser.add_argument("--limit", type=int, default=None)
-    parser.add_argument("--max-depth", type=int, default=None)
-    parser.add_argument("--max-pages", type=int, default=None)
     args = parser.parse_args()
     asyncio.run(run(args))
 
