@@ -1,0 +1,59 @@
+{
+  "id": "lawyers-us",
+  "name": "US Lawyers - Service Gap Engine",
+  "vertical": "legal",
+  "description": "Nationwide high-quality law-firm discovery for service-page gap validation and direct-owner-email outreach.",
+  "market_plan": "market_plans/lawyers-us.json",
+  "working_set": {
+    "target_net_new_domains_per_run": 1000,
+    "dedupe_scope": "campaign",
+    "status_after_discovery": "Ready for Validation",
+    "qualified_after_discovery": false
+  },
+  "google": {
+    "included_type": "lawyer",
+    "strict_type_filtering": true,
+    "region_code": "US",
+    "language_code": "en",
+    "query_template": "lawyer in {market}",
+    "field_mask": [
+      "places.id",
+      "places.displayName",
+      "places.formattedAddress",
+      "places.businessStatus"
+    ],
+    "min_rating_search_filter": 4.7,
+    "page_size": 20,
+    "use_place_details_enterprise": false,
+    "use_review_text": false
+  },
+  "grounding": {
+    "engine": "maps_grounding_lite",
+    "query_template": "{name}, {address} official website rating review count",
+    "require_place_id_identity_match": true,
+    "workers": 4
+  },
+  "quality": {
+    "allowed_business_statuses": ["OPERATIONAL"],
+    "min_rating": 4.7,
+    "min_reviews": 20,
+    "require_verified_website_domain": true,
+    "dedupe_by_place_id": true,
+    "dedupe_by_domain": true
+  },
+  "crawl": {
+    "engine": "crawl4ai",
+    "mode": "homepage_links_only",
+    "same_domain_only": true,
+    "follow_links": false,
+    "classification": false,
+    "default_workers": 4
+  },
+  "qualification": {
+    "gap_double_check_required": true,
+    "decision_maker_required": true,
+    "direct_public_owner_email_required": true,
+    "generic_email_allowed": false,
+    "final_status": "Qualified"
+  }
+}
