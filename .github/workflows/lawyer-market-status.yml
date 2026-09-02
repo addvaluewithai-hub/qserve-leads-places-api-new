@@ -1,10 +1,10 @@
-name: Lawyer market coverage status
+name: Lawyer ZIP coverage status
 
 on:
   workflow_dispatch:
     inputs:
-      next_markets:
-        description: "How many next markets to show"
+      next_zips:
+        description: "How many next ZIPs to show"
         required: true
         default: "25"
 
@@ -14,19 +14,21 @@ permissions:
 jobs:
   report:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     env:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
-      NEXT_MARKETS: ${{ inputs.next_markets }}
+      NEXT_ZIPS: ${{ inputs.next_zips }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Print coverage and next-market queue
+      - name: Install ZIP registry dependency
+        run: pip install pgeocode pandas
+      - name: Print ZIP coverage and next queue
         run: |
-          python scripts/market_manager.py status \
+          python scripts/zip_manager.py status \
             --campaign lawyers-us \
-            --next "$NEXT_MARKETS"
+            --next "$NEXT_ZIPS"
