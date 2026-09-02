@@ -1,0 +1,33 @@
+name: Benchmark lawyer discovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/benchmark_lawyer_discovery.py"
+      - ".github/workflows/benchmark-lawyer-discovery.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run 10-request benchmark
+        run: python scripts/benchmark_lawyer_discovery.py
+      - name: Upload benchmark artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyer-discovery-benchmark
+          path: out/lawyer-discovery-benchmark/
+          if-no-files-found: error
