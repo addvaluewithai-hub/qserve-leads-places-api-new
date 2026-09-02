@@ -1,0 +1,32 @@
+name: One-time ZIP discovery progress
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: read
+
+jobs:
+  status:
+    if: github.event.issue.title == 'STATUS-QSERVE-ZIP-V4-20260902'
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read D1 discovery progress
+        run: |
+          mkdir -p out/progress
+          python scripts/report_lawyers_zip_progress.py | tee out/progress/progress.json
+      - name: Upload progress artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-us-zip-progress
+          path: out/progress/progress.json
