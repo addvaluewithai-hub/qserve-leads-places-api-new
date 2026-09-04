@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJ0S__lCROmogRPbaG_rADie4",
-    "name": "Personal Injury Trial Attorney In Mobile, AL - Moore Law Firm",
-    "website": "https://www.moorelawfirm-al.com/contact3/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing",
+    "id": "ChIJtaLZI5zDyIARW-3IunPcjIA",
+    "name": "Las Vegas Criminal Defense Lawyer - LV Criminal Defense",
+    "website": "https://www.lvcriminaldefense.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:13:00",
+    "first_seen_at": "2026-09-02 11:13:01",
     "last_seen_at": "2026-09-02 11:51:15",
-    "website_domain": "moorelawfirm-al.com"
+    "website_domain": "lvcriminaldefense.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
