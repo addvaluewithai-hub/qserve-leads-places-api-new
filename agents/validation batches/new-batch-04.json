@@ -1,0 +1,335 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 4,
+  "batch_size": 20,
+  "format": "compact Crawl4AI first-pass; links are 'path | anchor'",
+  "leads": [
+    {
+      "id": "ChIJW3-qISGZToYR4GC6bA-q49s",
+      "name": "The Daspit Law Firm: Texas Personal Injury Lawyer",
+      "domain": "daspitlaw.com",
+      "website": "https://www.daspitlaw.com/",
+      "page_links": 57,
+      "signals": 31,
+      "hint": "likely_mature",
+      "links": [
+        "/personal-injury/premises-liability | Premises Liability",
+        "/personal-injury/product-liability | Product Liability",
+        "/personal-injury/wrongful-death | Wrongful DeathOur wrongful death lawyers have extensive experience fighting for ",
+        "/personal-injury/car-accidents | Car AccidentsWhether you are facing serious injuries, heavy financial debt, or o",
+        "/personal-injury/medical-malpractice | Medical Malpractice",
+        "/personal-injury/workers-compensation | Workers CompensationThe no-fault system of workers' compensation allows employee",
+        "/personal-injury/maritime-offshore-injuries | Maritime & Offshore Injuries",
+        "/personal-injury/motorcycle-accidents | Motorcycle Accidents",
+        "/personal-injury/pedestrian-accidents | Pedestrian Accidents",
+        "/personal-injury/truck-accidents | Truck Accidents",
+        "/personal-injury/aviation-accidents | Aviation Accidents",
+        "/personal-injury/bicycle-accidents | Bicycle Accidents"
+      ]
+    },
+    {
+      "id": "ChIJi2_HIVmcToYRq-FEZ_g9k_Y",
+      "name": "Home | Corbett & Corbett LLP",
+      "domain": "corbettfirm.com",
+      "website": "http://www.corbettfirm.com/",
+      "page_links": 17,
+      "signals": 10,
+      "hint": "likely_mature",
+      "links": [
+        "/black-criminal-defense-lawyers-dallas | Black Criminal Defense Lawyers Dallas",
+        "/dallas-wrongful-death-lawyer | Wrongful Death",
+        "/civil-rights-cases",
+        "/black-dallas-personal-injury-lawyers | Black Dallas Personal Injury Lawyers",
+        "/dallas-car-wreck-lawyer-7 | Car Accidents",
+        "/dallas-family-law-attorneys",
+        "/dallas-truck-accident-lawyer | Dallas Truck Accident Attorneys",
+        "/dallas-car-accident-lawyers",
+        "/dallas-truck-accident-attorneys",
+        "/dallas-criminal-lawyer"
+      ]
+    },
+    {
+      "id": "ChIJjSJ_LY6ZToYRvt2ZOXReNkc",
+      "name": "Le & Le Attorneys and Counselors at Law",
+      "domain": "leandlelaw.com",
+      "website": "http://www.leandlelaw.com/",
+      "page_links": 19,
+      "signals": 12,
+      "hint": "likely_mature",
+      "links": [
+        "/personal-injury/wrongful-death | Wrongful Death",
+        "/family-law/child-custody | Child Custody",
+        "/personal-injury/car-accidents | Car Accidents",
+        "/personal-injury/truck-accidents | Truck Accidents",
+        "/family-law/divorce | Divorce",
+        "/family-law/modifications | Modifications",
+        "/family-law | Family Law",
+        "/immigration/family-immigration | Family Immigration",
+        "/personal-injury | Personal Injury",
+        "/immigration/humanitarian-immigration | Humanitarian Immigration",
+        "/immigration/waivers | Waivers",
+        "/immigration | Immigration"
+      ]
+    },
+    {
+      "id": "ChIJk1RuiyGZToYRQZjefVu5amo",
+      "name": "Calhoun Bhella LLP | Business and Trial Attorneys",
+      "domain": "calhounbhella.com",
+      "website": "https://www.calhounbhella.com/",
+      "page_links": 22,
+      "signals": 4,
+      "hint": "likely_mature",
+      "links": [
+        "/real-estate | Real Estate",
+        "/business-litigation | Business Litigation",
+        "/mergers-acquisitions | Mergers & Acquisitions",
+        "/employment-practices | Employment Practices"
+      ]
+    },
+    {
+      "id": "ChIJl1Xy8S2ZToYRJR7BZv7HzJc",
+      "name": "Dallas | Mike Slocumb Law Firm",
+      "domain": "slocumblaw.com",
+      "website": "https://www.slocumblaw.com/dallas/",
+      "page_links": 75,
+      "signals": 18,
+      "hint": "likely_mature",
+      "links": [
+        "/dallas/wrongful-death | Wrongful Death",
+        "/richmond/richmond-motorcycle-accident-attorneys | Motorcycle Accidents",
+        "/dallas/dog-bites | Dog Bites",
+        "/dallas/medical-malpractice | Medical Malpractice",
+        "/dallas/workers-compensation | Worker’s Compensation",
+        "/auto-accidents/rideshare-accidents | Rideshare Accidents",
+        "/dallas/car-accidents | Car Accidents",
+        "/dallas/motorcycle-accidents | Motorcycle Accidents",
+        "/dallas/slip-and-fall | Slip & Fall",
+        "/dallas/truck-accidents | Truck Accidents",
+        "/auto-accidents | Car Accidents",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJmfatu_gnTIYRb5v4IBg0dFw",
+      "name": "Personal Injury Attorney | Robert Alvarez Law P.C. 866tejanos.com",
+      "domain": "866tejanos.com",
+      "website": "http://866tejanos.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJoShMcSGZToYRaYE3BIpiN44",
+      "name": "Dallas, TX Criminal Defense Attorney & Law Firm - Harris & Harris Law Group, PLLC",
+      "domain": "harrisandharrislaw.com",
+      "website": "https://www.harrisandharrislaw.com/",
+      "page_links": 56,
+      "signals": 22,
+      "hint": "likely_mature",
+      "links": [
+        "/dallas-domestic-violence-defense-lawyer | Domestic Violence",
+        "/dallas-dwi-with-a-child-lawyer | DWI With a Child",
+        "/practice-areas | Practice Areas",
+        "/dallas-white-collar-crime-lawyer | White Collar Crimes",
+        "/dallas-assault-lawyer | Assault & Battery",
+        "/dallas-burglary-lawyer | Burglary",
+        "/dallas-drug-crime-lawyer | Drug Charges",
+        "/dallas-drug-distribution-lawyer | Drug Dealing",
+        "/dallas-drug-free-school-zone-lawyer | Drug Free School Zone",
+        "/dallas-drug-manufacturing-lawyer | Drug Manufacturing",
+        "/dallas-drug-possession-lawyer | Drug Possession",
+        "/dallas-dwi-lawyer | DWI"
+      ]
+    },
+    {
+      "id": "ChIJpeE1YDuZToYRCkqbehbGh9c",
+      "name": "Griffith Barbee | Intellectual Property & Commercial Litigation",
+      "domain": "griffithbarbee.com",
+      "website": "http://griffithbarbee.com/",
+      "page_links": 26,
+      "signals": 7,
+      "hint": "likely_mature",
+      "links": [
+        "/practice-area/commercial-litigation | Commercial Litigation",
+        "/practice-area/ip-litigation | IP Litigation",
+        "/practice-area/copyrights | Copyrights",
+        "/practice-area/patents | Patents",
+        "/practice-area/texas-local-counsel | Texas Local Counsel",
+        "/practice-area/trademarks | Trademarks",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJq4SPGS-ZToYRTYEC5f9S9rY",
+      "name": "Bruce Kaye PLLC",
+      "domain": "brucekaye.com",
+      "website": "http://brucekaye.com/",
+      "page_links": 3,
+      "signals": 0,
+      "hint": "candidate_deep_check",
+      "links": []
+    },
+    {
+      "id": "ChIJsebk5x-ZToYRDsWuSaxZ0Iw",
+      "name": "Checking your browser...",
+      "domain": "gregglawdallas.com",
+      "website": "https://www.gregglawdallas.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJ5Qm7pTCZToYRTR9U7TxsdwM",
+      "name": "Jones Day's Dallas Office | Jones Day",
+      "domain": "jonesday.com",
+      "website": "http://www.jonesday.com/dallas/",
+      "page_links": 71,
+      "signals": 6,
+      "hint": "likely_mature",
+      "links": [
+        "/en/practices/business--tort-litigation | Business & Tort Litigation",
+        "/en/practices/securities-litigation--sec-enforcement | Securities Litigation & SEC Enforcement",
+        "/en/fraud-notice | Fraud Notice",
+        "/en/insights/2026/08/business-restructuring-review-vol-25-no-4-julyaugust-2026 | August 07, 2026 Newsletters Business Restructuring Review Vol. 25 No. 4 July-Aug",
+        "/en/practices/business-restructuring--reorganization | Business Restructuring & Reorganization",
+        "/en/practices/labor--employment | Labor & Employment"
+      ]
+    },
+    {
+      "id": "ChIJCz98sD-ZToYRUV827s43Mgc",
+      "name": "Dallas Immigration Attorney | The Piri Law Firm | Ross Ave",
+      "domain": "michaelpiri.com",
+      "website": "https://michaelpiri.com/2001-ross-ave-700/",
+      "page_links": 82,
+      "signals": 53,
+      "hint": "likely_mature",
+      "links": [
+        "/criminal-defense/drug-charges | Drugs and Possession",
+        "/criminal-defense/dwi-defense | DWI/DUI",
+        "/personal-injury/car-accident-attorney | Car Accident",
+        "/personal-injury/motorcycle-accident-attorney | Motorcycle Accident",
+        "/personal-injury/truck-accident-attorney | Truck Accident",
+        "/personal-injury/commercial-vehicle-accident-attorney | Commercial Vehicle Accident",
+        "/criminal-defense | Criminal Defense",
+        "/criminal-defense-faqs | Criminal Defense FAQs",
+        "/dog-bite-attorney | Dog Bite",
+        "/criminal-defense-attorney",
+        "/domestic-violence-defense-lawyer | Domestic Violence",
+        "/misdemeanor-and-felony-defense-lawyer | Misdemeanor and Felony"
+      ]
+    },
+    {
+      "id": "ChIJHz_mZFqZToYRzg_HQtgmGjk",
+      "name": "Dallas Personal Injury Attorney | No Fees Unless We Win - Call Now",
+      "domain": "becauseyouwanttowin.com",
+      "website": "https://www.becauseyouwanttowin.com/dallas-personal-injury-lawyer/",
+      "page_links": 127,
+      "signals": 108,
+      "hint": "likely_mature",
+      "links": [
+        "/atlanta-kroger-slip-and-fall-accident-lawyer | Kroger Slip and Fall Accidents",
+        "/atlanta-dog-bite-lawyer | Dog Bites",
+        "/atlanta-premises-liability-lawyer | Premises Liability",
+        "/atlanta-wrongful-death-lawyer | Wrongful Death",
+        "/dog-bite-statistics | Study: Dog Bite Statistics",
+        "/atlanta-car-accident-lawyer | Car Accidents",
+        "/atlanta-lyft-accident-attorney | Lyft Accidents",
+        "/atlanta-motorcycle-accident-attorney | Motorcycle Accidents",
+        "/atlanta-pedestrian-accident-lawyer | Pedestrian Accidents",
+        "/atlanta-rideshare-accident-lawyer | Rideshare Accidents",
+        "/atlanta-truck-accident-lawyer | Truck Accidents",
+        "/atlanta-uber-accident-attorney | Uber Accidents"
+      ]
+    },
+    {
+      "id": "ChIJL9TYoy-ZToYRGqqO-9m_fug",
+      "name": "Dallas Personal Injury Lawyer - Jay Murray Personal Injury Lawyers",
+      "domain": "jaymurraylaw.com",
+      "website": "https://jaymurraylaw.com/",
+      "page_links": 46,
+      "signals": 21,
+      "hint": "likely_mature",
+      "links": [
+        "/dallas-slip-and-fall-accident-lawyer | Slip and Fall Accidents",
+        "/dallas-wrongful-death-lawyer | Wrongful Death",
+        "/dallas-car-accident-attorney | Car Accidents",
+        "/dallas-lyft-accident-lawyer | Lyft Accidents",
+        "/dallas-motorcycle-accident-lawyer | Motorcycle Accidents",
+        "/dallas-pedestrian-accident-lawyers | Pedestrian Accidents",
+        "/dallas-truck-accident-lawyer | Truck Accidents",
+        "/dallas-uber-accident-attorney | Uber Accidents",
+        "/dallas-tx-personal-injury-law-office | Dallas Office",
+        "/ennis-tx-personal-injury-law-office | Ennis Office",
+        "/forney-tx-personal-injury-lawyer-jay-murray | Forney Office",
+        "/personal-injury-blog | The Jay Murray Blog"
+      ]
+    },
+    {
+      "id": "ChIJQeN7WtaZToYRFH_urIFNcSw",
+      "name": "Mesothelioma Attorneys in Dallas Tx | $2+ Billion Recovered",
+      "domain": "mesotheliomaattorney.com",
+      "website": "https://mesotheliomaattorney.com/texas/dallas/",
+      "page_links": 37,
+      "signals": 1,
+      "hint": "candidate_deep_check",
+      "links": [
+        "/mesothelioma/trust-funds | Asbestos Trust Funds"
+      ]
+    },
+    {
+      "id": "ChIJbeVIAz0mTIYR2ckLtq15mpQ",
+      "name": "Robot Challenge Screen",
+      "domain": "attlaw.com",
+      "website": "https://attlaw.com/dallas/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJjxRE8t2YToYRFGVqWHfrv4M",
+      "name": "Robot Challenge Screen",
+      "domain": "kelleyfirm.com",
+      "website": "https://www.kelleyfirm.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJsw_DQCaZToYRCqFQaLGPWZk",
+      "name": "Dallas | Offices | Holland & Knight",
+      "domain": "hklaw.com",
+      "website": "https://www.hklaw.com/en/offices/dallas",
+      "page_links": 57,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/en/services/industries | Industries",
+        "/en/services/practices | Practices"
+      ]
+    },
+    {
+      "id": "ChIJvWkhwX6ZToYRTJsnApKpXPQ",
+      "name": "Personal Injury Attorneys In Dallas, TX",
+      "domain": "warfor214.com",
+      "website": "https://www.warfor214.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJ0bmG-pGZToYRG3Y5lyjXNow",
+      "name": "Robot Challenge Screen",
+      "domain": "farmerlawgroup.com",
+      "website": "https://www.farmerlawgroup.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    }
+  ]
+}

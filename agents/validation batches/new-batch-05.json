@@ -1,0 +1,386 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 5,
+  "batch_size": 20,
+  "format": "compact Crawl4AI first-pass; links are 'path | anchor'",
+  "leads": [
+    {
+      "id": "ChIJMyOdIS2ZToYRwSyOp4jl4SM",
+      "name": "Dallas Criminal Defense Attorneys | Law Office of Patrick J. McLain, PLLC",
+      "domain": "patrickjmclain.com",
+      "website": "https://www.patrickjmclain.com/",
+      "page_links": 126,
+      "signals": 87,
+      "hint": "likely_mature",
+      "links": [
+        "/criminal-defense/fraud-crimes/real-estate-fraud | Real Estate Fraud",
+        "/criminal-defense/assault-crimes/assault-family-violence | Assault Family Violence",
+        "/criminal-defense/fraud-crimes/social-security-fraud | Social Security Fraud",
+        "/criminal-defense/white-collar-crimes/identity-theft | Identity Theft",
+        "/criminal-defense/dwi/drug-dwi | Drug DWI",
+        "/criminal-defense/dwi/felony-dwi | Felony DWI",
+        "/criminal-defense/fraud-crimes/business-fraud | Business Fraud",
+        "/criminal-defense/fraud-crimes/securities-fraud | Securities Fraud",
+        "/criminal-defense/immigration-crimes/visa-and-document-fraud-18-u-s-c-1546- | Visa and Document Fraud (18 U.S.C. § 1546)",
+        "/criminal-defense/property-crimes/burglary | Burglary",
+        "/criminal-defense/sex-crimes/child-pornography | Child Pornography",
+        "/criminal-defense/sex-crimes/sexual-assault | Sexual Assault"
+      ]
+    },
+    {
+      "id": "ChIJY-36MBaZToYRYhNyqHoqzAw",
+      "name": "Copp Law Firm, PC: a Dallas, Texas LLC Formation Law Firm",
+      "domain": "copplaw.com",
+      "website": "https://www.copplaw.com/",
+      "page_links": 26,
+      "signals": 11,
+      "hint": "likely_mature",
+      "links": [
+        "/services/texas-transfer-on-death-deed | Transfer on Death Deeds",
+        "/transferring-real-estate-to-an-llc | Deed Transfers",
+        "/services/ein-for-texas-llc | EIN Obtainment",
+        "/services/llc-membership-transfer | LLC Membership Transfer",
+        "/services/register-foreign-llc | Foreign LLC Qualification",
+        "/services/reinstate-llc | LLC Reinstatement",
+        "/services/series-llc-conversion | Convert to Series LLC",
+        "/services/texas-dba-assumed-name-certificate | Assumed Name Certificates",
+        "/services/texas-llc-formation | LLC Formation",
+        "/services/texas-series-llc | Series LLC Formation",
+        "/services | Services"
+      ]
+    },
+    {
+      "id": "ChIJx2ptB6uZToYRgtDgM-dv5ts",
+      "name": "trjohnsonlaw.com",
+      "domain": "trjohnsonlaw.com",
+      "website": "http://trjohnsonlaw.com/",
+      "page_links": 6,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/criminal-defense | Criminal Defense",
+        "/personal-injury | Personal Injury"
+      ]
+    },
+    {
+      "id": "ChIJA_gl-jOZToYR4VVpMg4B7Po",
+      "name": "Dallas Personal Injury Attorney - The Barber Law Firm",
+      "domain": "thebarberlawfirm.com",
+      "website": "https://www.thebarberlawfirm.com/locations/dallas/",
+      "page_links": 71,
+      "signals": 0,
+      "hint": "candidate_deep_check",
+      "links": []
+    },
+    {
+      "id": "ChIJL5K-8DOZToYRdHwsQ6OVUzs",
+      "name": "Top Rated Dallas Criminal Attorney & Defense Lawyer | Fellman Law Office",
+      "domain": "fellmanlawoffice.com",
+      "website": "https://www.fellmanlawoffice.com/",
+      "page_links": 14,
+      "signals": 7,
+      "hint": "likely_mature",
+      "links": [
+        "/practice-areas/assault-family-violence | Assault / Family Violence",
+        "/practice-areas/dwi-dui-driving-while-intoxicated | DWI / DUI: Driving While Intoxicated",
+        "/practice-areas/drug-charges | Drug Charges",
+        "/practice-areas/facing-theft-charges-in-the-dfw-area | Theft Charges",
+        "/practice-areas/pretrial-diversion-dismissals-for-first-time-offenders | Pretrial Diversion",
+        "/practice-areas/probation-violations | Probation Violations",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJO8ykUC6ZToYR4dZql6cnvYA",
+      "name": "Marye Law Dallas Personal Injury Lawyers – SERIOUS SUITS. POWERFUL RESULTS.",
+      "domain": "maryelaw.com",
+      "website": "https://maryelaw.com/",
+      "page_links": 1,
+      "signals": 0,
+      "hint": "candidate_deep_check",
+      "links": []
+    },
+    {
+      "id": "ChIJQ6pw392fToYRUFkJ94zkyOY",
+      "name": "Dallas Business Attorney | 30+ Years of Experience",
+      "domain": "mrctexlaw.com",
+      "website": "https://www.mrctexlaw.com/",
+      "page_links": 30,
+      "signals": 18,
+      "hint": "likely_mature",
+      "links": [
+        "/practice-areas/business-law-litigation/intellectual-property | Intellectual Property",
+        "/practice-areas/family-law | Family Law",
+        "/practice-areas/real-estate-law | Real Estate Law",
+        "/practice-areas/business-law-litigation | Business Law & Litigation",
+        "/practice-areas/business-law-litigation/breach-of-contract | Breach of Contract",
+        "/practice-areas/business-law-litigation/contract-law | Contract Law",
+        "/practice-areas/business-law-litigation/startups | Startups",
+        "/practice-areas/wills-trusts/trust-litigation | Trust Litigation",
+        "/practice-areas/wills-trusts/will-litigation | Will Litigation",
+        "/practice-areas/construction-law-litigation | Construction Law & Litigation",
+        "/practice-areas/divorce | Divorce",
+        "/practice-areas/wills-trusts/last-will-testament | Last Will & Testament"
+      ]
+    },
+    {
+      "id": "ChIJg6RFKQa1RIYRf5gP7VSVQeU",
+      "name": "Dallas Personal Injury Lawyers | Zinda Law Group",
+      "domain": "zdfirm.com",
+      "website": "https://www.zdfirm.com/personal-injury-lawyer/texas/dallas/",
+      "page_links": 142,
+      "signals": 93,
+      "hint": "likely_mature",
+      "links": [
+        "/car-accident-lawyer/uber-lyft-rideshare-accidents/texas/dallas | Rideshare Accident",
+        "/medical-malpractice-lawyer/birth-injury/texas/dallas | Birth Injury",
+        "/premises-liability-lawyer/slip-and-fall/texas/dallas | Slip and Fall",
+        "/dog-bite-lawyer/texas/dallas | Dog Bite",
+        "/personal-injury-lawyer/child-abuse/texas/dallas | Child Abuse",
+        "/personal-injury-lawyer/drowning/texas/dallas | Drowning Accident",
+        "/personal-injury-lawyer/ski-accident/texas/dallas | Ski Accident",
+        "/personal-injury-lawyer/swimming-pool/texas/dallas | Swimming Pool Accident",
+        "/premises-liability-lawyer/texas | Premises Liability",
+        "/premises-liability-lawyer/texas/austin | Premises Liability",
+        "/wrongful-death-lawyer/texas/dallas | Wrongful Death",
+        "/car-accident-lawyer/drunk-driving | Drunk Driving Accidents"
+      ]
+    },
+    {
+      "id": "ChIJi8YyjWacToYRg6BHmem4Pdw",
+      "name": "Dallas Personal Injury Lawyer | Shamieh Law",
+      "domain": "shamiehlaw.com",
+      "website": "https://shamiehlaw.com/dallas/",
+      "page_links": 51,
+      "signals": 20,
+      "hint": "likely_mature",
+      "links": [
+        "/dallas/uber-lyft-accident-lawyer | Rideshare Accident",
+        "/dallas/premises-liability-lawyer | premises liability lawsuit",
+        "/dallas/product-liability-lawyer | Dallas product liability attorneys",
+        "/dallas/wrongful-death-lawyer | Wrongful Death",
+        "/dallas/car-accident-lawyer/hit-and-run | hit-and-run accidents",
+        "/dallas/burn-injury-lawyer | severe burn injuries",
+        "/dallas/car-accident-lawyer | Car Accident",
+        "/dallas/car-accident-lawyer/drunk-driving | crashes caused by drunk drivers",
+        "/dallas/construction-accident-lawyer | construction site accidents",
+        "/dallas/motorcycle-accident-lawyer | Motorcycle Accident",
+        "/dallas/slip-and-fall-lawyer | Slip & Fall",
+        "/dallas/truck-accident-lawyer | Truck Accident"
+      ]
+    },
+    {
+      "id": "ChIJk9gYV86eToYRkGBUvmxykog",
+      "name": "Dallas Business & Real Estate Litigation Lawyers | Kaplan Law Group, PLLC",
+      "domain": "kaplanlawgrouppllc.com",
+      "website": "https://www.kaplanlawgrouppllc.com/",
+      "page_links": 22,
+      "signals": 6,
+      "hint": "likely_mature",
+      "links": [
+        "/high-profile-criminal-defense | Criminal Defense",
+        "/real-estate | Real Estate",
+        "/business-commercial-litigation | Business And Commercial Litigation",
+        "/creditors-rights | Creditors’ Rights",
+        "/dallas-business-law-office | Dallas Office",
+        "/transactional-law | Business Transactions Law"
+      ]
+    },
+    {
+      "id": "ChIJlU70pSqfToYRDYfPtIUBzxk",
+      "name": "Texas Personal Injury Lawyer | Jim Adler, The Texas Hammer®",
+      "domain": "jimadler.com",
+      "website": "https://www.jimadler.com/",
+      "page_links": 34,
+      "signals": 10,
+      "hint": "likely_mature",
+      "links": [
+        "/premises-liability/slip-and-falls | Slip and Falls",
+        "/fatal-accidents-wrongful-death | Wrongful Death",
+        "/premises-liability | Premises Liability",
+        "/product-liability | Product Liability",
+        "/car-accidents | Car Accidents",
+        "/motorcycle-accidents | Motorcycle Accidents",
+        "/pedestrian-accidents | Pedestrian Accidents",
+        "/truck-accidents | Truck Accidents",
+        "/work-injury | Work Injuries",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJlYB3Zm6ZToYRQW3w9qaOUPw",
+      "name": "Lawyer | David Sheves Law | Dallas",
+      "domain": "sheveslaw.com",
+      "website": "https://www.sheveslaw.com/",
+      "page_links": 14,
+      "signals": 6,
+      "hint": "likely_mature",
+      "links": [
+        "/copia-de-personal-injury-2 | Business Litigation",
+        "/practice-areas | Personal Injury",
+        "/copia-de-criminal-law | Family Law",
+        "/copia-de-personal-injury | Criminal Law",
+        "/copia-de-personal-injury-1 | Probate",
+        "/personal-injury | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJuwg1ErKfToYReyEsoUNPk3o",
+      "name": "Dallas-Fort Worth Attorneys | Neave Law",
+      "domain": "neavelaw.com",
+      "website": "https://www.neavelaw.com/",
+      "page_links": 31,
+      "signals": 11,
+      "hint": "likely_mature",
+      "links": [
+        "/child-custody-in-texas-conservatorship-visitation-and-parental-rights-explained | Child Custody in Texas: Conservatorship, Visitation, and Parental Rights Explain",
+        "/dividing-complex-property-in-a-texas-divorce-business-crypto-and-investments | Dividing Complex Property in a Texas Divorce: Business, Crypto, and Investments",
+        "/family-law-attorney-dallas-fortworth",
+        "/victoria-neave-dallas-family-law-attorney",
+        "/child-support-dallas",
+        "/practice-areas | Practice Areas",
+        "/arlington-tx-divorce-attorneys | Arlington, TX Divorce Attorneys",
+        "/garland-tx-divorce-attorneys | Garland, TX Divorce Attorneys",
+        "/plano-tx-divorce-attorneys | Plano, TX Divorce Attorneys",
+        "/richardson-tx-divorce-attorneys | Richardson, TX Divorce Attorneys",
+        "/divorce"
+      ]
+    },
+    {
+      "id": "ChIJAzpvgp-ZToYRyRgV7211p1Y",
+      "name": "CARR TAX LAW – Tax Attorney | IRS & State Tax Solutions",
+      "domain": "carrtaxlaw.com",
+      "website": "http://www.carrtaxlaw.com/",
+      "page_links": 24,
+      "signals": 11,
+      "hint": "likely_mature",
+      "links": [
+        "/service/irs-audit-defense | TAX AUDIT DEFENSE",
+        "/service/state-tax-defense | STATE TAX DEFENSE",
+        "/service/irs-lien-representation | TAX LIEN REMOVAL",
+        "/service/irs-tax-resolution | TAX DEBT RELIEF",
+        "/service/tax-planning | TAX PLANNING",
+        "/service/tax-preparation | TAX PREPARATION",
+        "/category/tax-articles | Insights",
+        "/practice/remote-representation | Virtual Support",
+        "/ | CARR TAX LAW",
+        "/tax-books | Books",
+        "/tax-resource-center | RESOURCES"
+      ]
+    },
+    {
+      "id": "ChIJCSDD2NeYToYRrfidaaESe7M",
+      "name": "Your Lawyers | Dallas, TX | Meyer Friedman Reed PLLC",
+      "domain": "meyerandfriedman.com",
+      "website": "https://www.meyerandfriedman.com/",
+      "page_links": 4,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/family-law | Family Law",
+        "/personal-lawyers | Personal Injury"
+      ]
+    },
+    {
+      "id": "ChIJG3kI-iifToYRCiSH7KLwXq4",
+      "name": "Car Accident & Personal Injury Lawyer In Dallas, TX | | Kastl Law, P.C.",
+      "domain": "kastllaw.com",
+      "website": "https://www.kastllaw.com/",
+      "page_links": 29,
+      "signals": 17,
+      "hint": "likely_mature",
+      "links": [
+        "/personal-injury/slip-and-fall-liability | Slip-and-Fall Injuries",
+        "/personal-injury/premises-liability | Premises Liability",
+        "/personal-injury/product-liability | Product Liability",
+        "/personal-injury/brain-injury | Traumatic Brain Injuries",
+        "/personal-injury/burn-injuries | Burn Injuries",
+        "/personal-injury/catastrophic-injuries | Catastrophic Injuries",
+        "/personal-injury/industrial-accidents | Industrial Accidents",
+        "/personal-injury/spinal-cord-injuries | Spinal Cord Injuries",
+        "/car-accident/causes-of-car-accidents | Causes Of Car Accidents",
+        "/car-accident | Car Accidents",
+        "/dallas-personal-injury-law-office | Dallas, TX",
+        "/el-paso-personal-injury-office | El Paso, TX"
+      ]
+    },
+    {
+      "id": "ChIJG3kI-iifToYRfoWEkXN5DMQ",
+      "name": "Dallas Family Law Firm | Expert Divorce Attorneys | Child Custody | Double Board-Certified | Serving Highland Park, Lake Highlands, Lakewood, Preston Hollow, University Park, Park Cities, Plano, Frisco, Allen",
+      "domain": "bh-pllc.com",
+      "website": "https://bh-pllc.com/",
+      "page_links": 60,
+      "signals": 37,
+      "hint": "likely_mature",
+      "links": [
+        "/same-sex-family-lawyer | Same-Sex Divorce Attorney",
+        "/child-custody-attorney/grandparents-rights-attorney | Grandparents’ Rights",
+        "/child-custody-attorney/child-custody-modifications | Child Custody Modifications",
+        "/child-custody-attorney/paternity-attorney | Paternity Attorney",
+        "/dallas-family-law-attorney-reviews | Testimonials",
+        "/dallas-family-law-blog | Blog",
+        "/divorce-attorney/alcoholic-drug-addiction-divorce-attorney | How to Divorce an Alcoholic",
+        "/divorce-attorney/business-owner-divorce-attorney | Business Owners",
+        "/divorce-attorney/spousal-support-attorney | Spousal Support Attorney",
+        "/family-law-attorney-allen-tx | Allen",
+        "/family-law-attorney-dallas-contact | Contact Us",
+        "/family-law-attorney-denton-county-tx | Denton Office"
+      ]
+    },
+    {
+      "id": "ChIJMw_4RlKZToYRo-89K1GvQHM",
+      "name": "Dallas Personal Injury Lawyer - Nash Law Personal Injury Lawyers Located in 2807 Allen St #2033, Dallas, TX 75204",
+      "domain": "nashlaw.co",
+      "website": "https://www.nashlaw.co/",
+      "page_links": 30,
+      "signals": 20,
+      "hint": "likely_mature",
+      "links": [
+        "/personal-injury-resources/what-is-liability | liability",
+        "/dallas-premises-liability-lawyer | Premises Liability",
+        "/dallas-product-liability-lawyer | Product Liability",
+        "/dallas-wrongful-death-lawyer | Wrongful Death",
+        "/dallas-car-accident-lawyer | Car Accidents",
+        "/dallas-motorcycle-accident-lawyer | Motorcycle Accidents",
+        "/dallas-truck-accident-lawyer | Truck Accidents",
+        "/personal-injury-resources/claim-vs-lawsuit | claims",
+        "/personal-injury-resources/economic-damages | Economic damages",
+        "/personal-injury-resources/how-are-pain-and-suffering-damages-calculated | pain and suffering",
+        "/personal-injury-resources/negligence | negligence",
+        "/personal-injury-resources/non-economic-damages | non-economic"
+      ]
+    },
+    {
+      "id": "ChIJc2hMgS2ZToYRhZtA-J1VZ_U",
+      "name": "Divorce, Healthcare Fraud Defense, Litigation Attorney Dallas Texas",
+      "domain": "jamesbellpc.com",
+      "website": "https://jamesbellpc.com/",
+      "page_links": 23,
+      "signals": 11,
+      "hint": "likely_mature",
+      "links": [
+        "/practice-areas/family-law/divorce | Divorce",
+        "/practice-areas/family-law | Family Law",
+        "/practice-areas/bankruptcy-litigation | Bankruptcy Litigation",
+        "/practice-areas/business-litigation | Business Litigation",
+        "/international-criminal-defense-attorney | International Criminal Defense Attorney",
+        "/practice-areas/white-collar-crimes | White Collar Crimes",
+        "/practice-areas/white-collar-crimes/breach-fiduciary-duty | Breach Of Fiduciary Duty",
+        "/practice-areas/law-firm-defense | Law Firm Defense",
+        "/practice-areas/health-care-law | Healthcare Law",
+        "/practice-areas/native-american-and-tribal-law | Native American And Tribal Law",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJh4z96SUfTIYRVAb5gSBxGwQ",
+      "name": "Dallas Abogada/ Attorney Reina Gonzalez- Complex Litigation",
+      "domain": "dallastriallaw.com",
+      "website": "https://www.dallastriallaw.com/",
+      "page_links": 3,
+      "signals": 0,
+      "hint": "candidate_deep_check",
+      "links": []
+    }
+  ]
+}

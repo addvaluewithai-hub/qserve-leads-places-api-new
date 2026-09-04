@@ -1,0 +1,373 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 3,
+  "batch_size": 20,
+  "format": "compact Crawl4AI first-pass; links are 'path | anchor'",
+  "leads": [
+    {
+      "id": "ChIJbyRJePUSK4cRpNzJk0b8xG8",
+      "name": "Robot Challenge Screen",
+      "domain": "ig-law.com",
+      "website": "http://www.ig-law.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJcWA0Z2cSK4cR33EXScUbYvY",
+      "name": "Phoenix Workers' Compensation Attorneys : workinjuryaz.com",
+      "domain": "workinjuryaz.com",
+      "website": "https://workinjuryaz.com/phoenix-workers-compensation-lawyers/",
+      "page_links": 44,
+      "signals": 22,
+      "hint": "likely_mature",
+      "links": [
+        "/arizona-workers-compensation-lawyers/head-brain-injury | Head & Brain injuries",
+        "/arizona-workers-compensation-lawyers/foot-ankle-injuries | Back, Neck or Head Injuries",
+        "/arizona-workers-compensation-lawyers/knee-injuries | Knee Injuries",
+        "/arizona-workers-compensation-lawyers/repetitive-motion-injuries | Repetitive Motion Injuries",
+        "/arizona-workers-compensation-lawyers/settlements-of-workers-comp-cases | Settlements for workers",
+        "/arizona-workers-compensation-lawyers/shoulder-injuries | Shoulder Injuries",
+        "/arizona-workers-compensation-lawyers/workers-comp-settlements | Full & Final Settlements",
+        "/arizona-workers-compensation-lawyers/aggravations-of-pre-existing-conditions | Aggravations of Pre-existing Conditions",
+        "/arizona-workers-compensation-lawyers/bulging-herniated-disks | Bulging or herniated disks",
+        "/arizona-workers-compensation-lawyers | Arizona",
+        "/arizona-workers-compensation-liens | WC Liens",
+        "/denied-workers-compensation-claims | Denied Claims"
+      ]
+    },
+    {
+      "id": "ChIJq6pasV8SK4cRPWCODwXcj_A",
+      "name": "Experienced Phoenix Lawyers | Smith & Green, Attorneys at Law",
+      "domain": "smithgreenlaw.com",
+      "website": "https://smithgreenlaw.com/",
+      "page_links": 47,
+      "signals": 30,
+      "hint": "likely_mature",
+      "links": [
+        "/phoenix-civil-rights-lawyers | Civil Rights",
+        "/phoenix-criminal-defense-lawyer | Criminal Defense",
+        "/phoenix-dog-bite-lawyer | Dog Bites",
+        "/phoenix-wrongful-death-lawyers | Wrongful Death",
+        "/phoenix-car-accident-lawyer | Car Accidents",
+        "/phoenix-motorcycle-accident-lawyer | Motorcycle Accidents",
+        "/phoenix-pedestrian-accident-lawyer | Pedestrian Accidents",
+        "/phoenix-slip-and-fall-lawyer | Slip and Fall Injuries",
+        "/phoenix-truck-accident-lawyer | Truck Accidents",
+        "/phoenix-medical-malpractice-lawyers | Medical Malpractice",
+        "/phoenix-personal-injury-attorney | Personal Injury",
+        "/phoenix-personal-injury-guide | Personal Injury Guide"
+      ]
+    },
+    {
+      "id": "ChIJq9HWtV8SK4cRmjY2rZV071E",
+      "name": "Tariff Refund Lawyers | IEEPA Tariff Refund Claims Attorney",
+      "domain": "dayeslawfirm.com",
+      "website": "https://dayeslawfirm.com/",
+      "page_links": 71,
+      "signals": 43,
+      "hint": "likely_mature",
+      "links": [
+        "/phoenix-business-solutions/employment-discrimination-claims-lawyer | Employment Discrimination Claims",
+        "/phoenix-estate-planning/conservatorship-lawyer | Conservatorship",
+        "/phoenix-estate-planning/elder-law-attorney | Elder Law",
+        "/phoenix-estate-planning/gift-taxation-lawyer | Gift Taxation",
+        "/phoenix-estate-planning/life-insurance-lawyer | Life Insurance",
+        "/phoenix-estate-planning/trusts-lawyer | Trusts",
+        "/phoenix-estate-planning/wills-lawyer | Wills",
+        "/mesa-estate-planning | Estate Planning",
+        "/phoenix-business-solutions/employment-disputes-lawyer | Employment Disputes (For Employers)",
+        "/phoenix-business-solutions/overtimes-and-wage-disputes-lawyer | Overtime and Wage Disputes",
+        "/phoenix-business-solutions/wrongful-termination-lawyer | Wrongful Termination",
+        "/phoenix-estate-planning | Estate Planning"
+      ]
+    },
+    {
+      "id": "ChIJqcR3T2oSK4cRcsWwwHWxEpY",
+      "name": "Arizona Workers' Compensation Lawyers",
+      "domain": "fendonlaw.net",
+      "website": "https://www.fendonlaw.net/",
+      "page_links": 27,
+      "signals": 6,
+      "hint": "likely_mature",
+      "links": [
+        "/workers-compensation-lawyer/arizona-workers-compensation-laws | Arizona Workers’ Comp Laws",
+        "/workers-compensation-lawyer/common-workplace-injuries | Learn More >",
+        "/workers-compensation-lawyer/how-to-file-a-workers-comp-claim-in-arizona | How to File a Claim",
+        "/workers-compensation-lawyer/what-happens-if-my-claim-is-denied | Workers’ Comp Claim Appeal",
+        "/workers-compensation-lawyer | Workers’ Compensation",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJr9QAyaMTK4cR6aAPilb2AeY",
+      "name": "McCormick Law Firm, Car Wreck Attorney | Arizona Legal Team",
+      "domain": "limits.law",
+      "website": "https://limits.law/",
+      "page_links": 10,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/practice-areas | Practice Areas",
+        "/injury-attorneys | Our Attorneys"
+      ]
+    },
+    {
+      "id": "ChIJ8WCp94ITK4cR-czCmQAECEw",
+      "name": "AZ Injury Attorneys | Ruben Law Group",
+      "domain": "rubenlawgroup.com",
+      "website": "https://rubenlawgroup.com/",
+      "page_links": 25,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/practice-areas/personal-injury | Personal Injury",
+        "/practice-areas | Practice Areas"
+      ]
+    },
+    {
+      "id": "ChIJ85dxdjpyK4cRbUuohWPu4vc",
+      "name": "Personal Injury Lawyer | Sweet James Accident Attorneys",
+      "domain": "zacharassociates.com",
+      "website": "https://www.zacharassociates.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJ3zw1sxwTK4cRovQxuPjTzVQ",
+      "name": "Experienced Immigration Lawyer Phoenix – Thomas Law Firm, PLC – Just another WordPress site",
+      "domain": "matthewthomaslaw.com",
+      "website": "http://matthewthomaslaw.com/",
+      "page_links": 20,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/practice-areas/immigration-attorneys | Immigration Attorneys",
+        "/statement-on-privacy-liability | STATEMENT ON PRIVACY & LIABILITY"
+      ]
+    },
+    {
+      "id": "ChIJLV4K8kcMK4cRryHNpPdfovM",
+      "name": "Top Rated Phoenix Personal Injury Attorney | Request a FREE Evaluation",
+      "domain": "alsayyedlaw.com",
+      "website": "http://www.alsayyedlaw.com/",
+      "page_links": 24,
+      "signals": 17,
+      "hint": "likely_mature",
+      "links": [
+        "/phoenix-dog-bite-lawyer | Dog Bite Accident",
+        "/category/dog-bite | Dog Bite",
+        "/motorcycle-accident-attorney | Motorcycle Accidents",
+        "/trucking-accidents | Truck Accident",
+        "/category/personal-injury | Personal Injury",
+        "/category/lyft-accident-lawyer | Lyft Accident Lawyer",
+        "/category/truck-accident | Truck Accident",
+        "/personal-injury | Personal Injury",
+        "/car-accident-attorney | Car Accident",
+        "/dangerous-roads-for-truck-accidents-in-arizona | The Most Dangerous Roads for Truck Accidents in Arizona",
+        "/pedestrian-accident | Pedestrian Accident",
+        "/slip-and-fall-attorney | Slip and Fall"
+      ]
+    },
+    {
+      "id": "ChIJ--RgA8mZToYRwxeSkaQntnM",
+      "name": "Criminal Defense Lawyer Dallas — 850+ Dismissals Since 2014",
+      "domain": "spanglerlaw.com",
+      "website": "https://www.spanglerlaw.com/",
+      "page_links": 28,
+      "signals": 8,
+      "hint": "likely_mature",
+      "links": [
+        "/domestic-violence-defense-lawyer-dallas | DOMESTIC VIOLENCE",
+        "/assault-defense-lawyer-dallas | ASSAULT",
+        "/practice-areas | Services",
+        "/dallas-drug-lawyer | DRUG CRIMES",
+        "/dwi-lawyer-dallas | DWI CASES",
+        "/expungement | EXPUNGEMENT",
+        "/sex-crime | SEX CRIMES",
+        "/theft-lawyer | THEFT CRIMES"
+      ]
+    },
+    {
+      "id": "ChIJ6Vm5CSiZToYRcVCaZ7FheVo",
+      "name": "Page Not Found | McKay Law",
+      "domain": "mckaylawtx.com",
+      "website": "https://mckaylawtx.com/dallas-tx-personal-injury-lawyer/",
+      "page_links": 28,
+      "signals": 19,
+      "hint": "likely_mature",
+      "links": [
+        "/texas-premises-liability-attorneys | Premises Liability",
+        "/texas-wrongful-death-attorney | Wrongful Death",
+        "/personal-injury-attorney-near-me/greenville-tx-personal-injury-lawyer | Greenville · (903) 546-3605",
+        "/austin-tx-personal-injury-attorney | Austin · (512) 643-5419",
+        "/dallas-tx-personal-injury-attorney | Dallas · (469) 770-7159",
+        "/el-paso-tx-personal-injury-attorney | El Paso · (915) 265-4538",
+        "/houston-tx-personal-injury-attorney | Houston · (832) 772-2141",
+        "/midland-tx-personal-injury-attorney | Midland · (432) 878-4420",
+        "/personal-injury-articles | Articles",
+        "/personal-injury-attorney | About",
+        "/san-antonio-tx-personal-injury-attorney | San Antonio · (210) 714-2609",
+        "/sulphur-springs-tx-personal-injury-attorney | Sulphur Springs · (903) 415-6540"
+      ]
+    },
+    {
+      "id": "ChIJ9dapWGCcToYRoJmXX8-1MTU",
+      "name": "Dallas Personal Injury Lawyers | The Salazar Law Firm",
+      "domain": "johnrsalazar.com",
+      "website": "http://www.johnrsalazar.com/",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
+      "links": []
+    },
+    {
+      "id": "ChIJCWZQbTuZToYRb6h9h9_q7bg",
+      "name": "Udeshi Law Firm",
+      "domain": "udeshilawfirm.com",
+      "website": "http://www.udeshilawfirm.com/",
+      "page_links": 19,
+      "signals": 6,
+      "hint": "likely_mature",
+      "links": [
+        "/index.php/family-law-texas | Family Law",
+        "/family-law-texas | Family Law",
+        "/index.php/home/family-law-texas",
+        "/index.php/home/personal-injury-texas",
+        "/personal-injury-texas | Personal Injury",
+        "/criminallawtexas | Criminal Law"
+      ]
+    },
+    {
+      "id": "ChIJCbnc9SGZToYRJCItq-dgZe0",
+      "name": "Dallas Personal Injury Lawyers | Hamilton Wingo",
+      "domain": "hamiltonwingo.com",
+      "website": "http://hamiltonwingo.com/",
+      "page_links": 56,
+      "signals": 24,
+      "hint": "likely_mature",
+      "links": [
+        "/practice-areas/premises-liability/slip-fall-accidents | Slip & Fall Accidents",
+        "/practice-areas/premises-liability | Premises Liability",
+        "/practice-areas/premises-liability/negligent-security | Negligent Security",
+        "/practice-areas/wrongful-death | Wrongful Death",
+        "/practice-areas/medical-malpractice | Medical Malpractice",
+        "/practice-areas/car-accidents | Car Accidents",
+        "/practice-areas/motorcycle-accidents | Motorcycle Accidents",
+        "/practice-areas/truck-accidents | Truck Accidents",
+        "/practice-areas/aviation-accidents | Aviation Accidents",
+        "/practice-areas/bus-accidents | Bus Accidents",
+        "/practice-areas/construction-accidents | Construction Accidents",
+        "/practice-areas/construction-accidents/crane-accidents | Crane Accidents"
+      ]
+    },
+    {
+      "id": "ChIJHYeXq3qZToYRwZQgPdwWDWQ",
+      "name": "Trusted Legal Services - PV Law",
+      "domain": "pvlawoffice.com",
+      "website": "https://www.pvlawoffice.com/",
+      "page_links": 7,
+      "signals": 2,
+      "hint": "review_links",
+      "links": [
+        "/family-law | Family Law",
+        "/business-law | Business Law"
+      ]
+    },
+    {
+      "id": "ChIJIZf9_16ZToYRfQn_81_d-9s",
+      "name": "Varghese Summersett (Dallas) - Criminal Defense, Divorce, and Personal Injury Lawyers",
+      "domain": "versustexas.com",
+      "website": "https://versustexas.com/dallas/",
+      "page_links": 32,
+      "signals": 22,
+      "hint": "likely_mature",
+      "links": [
+        "/criminal-defense | CRIMINAL",
+        "/dallas-criminal-defense-attorney | Criminal Defense",
+        "/dallas-divorce-lawyer | Family Law",
+        "/dallas-wrongful-death-lawyer | Dallas Wrongful Death Lawyer",
+        "/fort-bend-criminal-defense-lawyer | Criminal",
+        "/fort-worth-criminal-defense-lawyer | Criminal",
+        "/houston-criminal-defense-attorney | Criminal",
+        "/southlake-criminal-defense-attorney | Criminal",
+        "/dallas-personal-injury-lawyer | Personal Injury",
+        "/family-law | FAMILY",
+        "/fort-bend-personal-injury-lawyer | Personal Injury",
+        "/fort-worth-personal-injury-lawyer | Personal Injury"
+      ]
+    },
+    {
+      "id": "ChIJNbl1EhiZToYRVVkBsQsZ1w8",
+      "name": "Home - Winstead PC",
+      "domain": "winstead.com",
+      "website": "http://www.winstead.com/",
+      "page_links": 123,
+      "signals": 40,
+      "hint": "likely_mature",
+      "links": [
+        "/Practices/Real-Estate-Development-Investments/Real-Estate-Litigation | Real Estate Litigation",
+        "/Practices/Real-Estate-Development-Investments/Single-Family-Rental-Build-For-Rent | Single-Family Rental & Build-For-Rent",
+        "/Practices/Intellectual-Property/IP-Litigation | IP Litigation",
+        "/Industries/Investment-Management-Private-Funds/Private-Real-Estate-Funds | Private Real Estate Funds",
+        "/Industries/Real-Estate | Real Estate",
+        "/Practices/Healthcare/Healthcare-Life-Sciences-Real-Estate | Healthcare & Life Sciences Real Estate",
+        "/Practices/Real-Estate-Development-Investments | Real Estate Development & Investments",
+        "/Practices/Real-Estate-Development-Investments/Data-Centers-Digital-Infrastructure | Data Centers & Digital Infrastructure",
+        "/Practices/Real-Estate-Development-Investments/Home-Builders | Home Builders",
+        "/Practices/Real-Estate-Development-Investments/Homeowners-Association-Law | Homeowners Association Law",
+        "/Practices/Real-Estate-Development-Investments/Land-UseEntitlements | Land Use/Entitlements",
+        "/Practices/Real-Estate-Development-Investments/Leasing-Asset-Management | Leasing & Asset Management"
+      ]
+    },
+    {
+      "id": "ChIJQSzg1iGfToYRShfgeMaIrv4",
+      "name": "Chris Lewis & Associates, P.C. | Criminal Defense & Personal Injury Lawyers",
+      "domain": "lewisdefense.com",
+      "website": "https://www.lewisdefense.com/",
+      "page_links": 124,
+      "signals": 87,
+      "hint": "likely_mature",
+      "links": [
+        "/dallas-dog-bite-injury | Dog Bites",
+        "/dallas-criminal-defense-lawyer/dallas-federal-criminal-defense-lawyer | Federal Crimes",
+        "/dallas-criminal-defense-lawyer/dallas-gun-charge-lawyer | Gun Charges",
+        "/arlington-criminal-defense-lawyer | Arlington",
+        "/arlington-wrongful-death-lawyer | Wrongful Death",
+        "/dallas-criminal-defense-lawyer | Criminal Defense",
+        "/dallas-wrongful-death-lawyer | Wrongful Death",
+        "/denton-criminal-defense-lawyer | Denton",
+        "/denton-wrongful-death-lawyer | Wrongful Death",
+        "/fort-worth-criminal-defense | Fort Worth",
+        "/fort-worth-wrongful-death-lawyer | Wrongful Death",
+        "/garland-criminal-defense-lawyer | Garland"
+      ]
+    },
+    {
+      "id": "ChIJU05B6SGZToYR9QQOZeRGJpI",
+      "name": "Federal Lemon Law Attorney | New Car Title Lawyers | Automobile | Vehicle",
+      "domain": "allenstewart.com",
+      "website": "https://www.allenstewart.com/",
+      "page_links": 62,
+      "signals": 45,
+      "hint": "likely_mature",
+      "links": [
+        "/practice-areas/lemon-law/what-happens-if-your-used-car-is-a-lemon | Used Cars & Lemon Law",
+        "/practice-areas/auto-fraud-attorneys | Auto Fraud Attorneys",
+        "/practice-areas/auto-fraud-attorneys/how-to-detect-odometer-fraud | How to Detect Odometer Fraud",
+        "/practice-areas/auto-fraud-attorneys/my-dealership-lied-to-me | My Dealership Lied To Me",
+        "/practice-areas/auto-fraud-attorneys/what-is-payment-packing-fraud | What is “Payment Packing”",
+        "/practice-areas/auto-fraud-attorneys/what-is-the-federal-odometer-law | Odometer Law",
+        "/practice-areas/auto-fraud-attorneys/what-is-the-texas-deceptive-trade-practices-act | Texas DTPA",
+        "/practice-areas/benzene-exposure/workers-at-risk | Workers at Risk From Benzene",
+        "/practice-areas/lemon-law | Texas Lemon Law Attorneys",
+        "/practice-areas/lemon-law/lemon-law-faqs | Lemon Law FAQs",
+        "/practice-areas/lemon-law/lemon-law-process | Lemon Law Process",
+        "/practice-areas/lemon-law/magnuson-moss-warranty-act | Magnuson-Moss Warranty Act"
+      ]
+    }
+  ]
+}
