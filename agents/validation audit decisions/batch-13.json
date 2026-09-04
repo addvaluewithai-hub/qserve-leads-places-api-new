@@ -1,0 +1,254 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 13,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-kashar-law-firm",
+      "lead_id": "ChIJt0yn7JknTIYRKIhGlzTLroc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage URL set is plaintiff Personal Injury work, including accident, injury, insurance and injury-location content. This is one injury client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-ackels-ackels",
+      "lead_id": "ChIJv29VPHUnTIYRL9IpOCHUuxU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_mature_architecture",
+      "campaign_notes": "The homepage crawl was blocked, so the current official site was reviewed live. Ackels & Ackels exposes a broad mature practice architecture with dedicated destinations across materially different areas including Business & Professional, Construction, Appeals, Criminal, Employment, Estate Planning/Probate, Family, Health Care, Landlord/Tenant, Real Estate and more. Separate client-journey architecture is already dominant.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-elsaban-law-firm",
+      "lead_id": "ChIJyXDjJbWdToYRxyZ_ucMuPz4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_immigration_journey",
+      "campaign_notes": "The clean homepage architecture contains one general Areas of Practice destination. Current official-site verification shows that the firm's offered matters are immigration-focused, including asylum, removal/deportation and related immigration services. This is one immigration client journey, not a multi-practice architecture opportunity.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-glenn-tucker-law",
+      "lead_id": "ChIJ2T9a-MiRToYRoOEiJeCMVDE",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "The clean homepage URL set exposes only the root and blog. Live official-site verification identifies Glenn D. Tucker as Founder and explicitly lists three materially different current practice areas—Business Law, Probate Law and Personal Injury—on the attorney/firm experience rather than through focused client destinations. Current official-site searches did not surface dedicated Business Law or Probate Law service pages. Glenn Tucker is the owner/decision maker, but no direct public individual email string was sufficiently verified, so the lead stops at Direct Email Missing. Probate Law is selected as the first gap.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Probate Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official Glenn D. Tucker attorney page explicitly lists Business Law, Probate Law and Personal Injury as current Practice Areas and describes wills, trusts, probate, construction/business disputes and accident work.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live attorney/firm page + site-restricted verification",
+          "notes": "The homepage architecture contains only the root and blog, and current official-site verification did not surface a focused Probate Law destination. The materially different practices are presented through the general firm/attorney experience."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Glenn D. Tucker",
+          "role": "Founder / Attorney / decision maker",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Law Offices of Glenn D. Tucker attorney page identifies Glenn Tucker as Founder and lists the firm's current Business Law, Probate Law and Personal Injury practice areas.",
+          "notes": "Owner/decision maker is verified. The official site provides an Email Me action but no public direct individual email string was sufficiently verified."
+        }
+      ]
+    },
+    {
+      "slug": "05-spearman-legal",
+      "lead_id": "ChIJLXYjjFaRToYRQxCHFAf1saM",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The homepage crawl was blocked, so the current official site was reviewed live. Spearman Legal explicitly offers Bankruptcy, Bankruptcy Creditor Services and Trademarks, but the materially different services are presented through the homepage and one general Practice Areas destination rather than focused client pages. Adrian C. Spearman is identified as Owner/Principal Attorney, and the current official site publicly lists the direct name-specific email acs@spearmanlegal.com. Trademarks is selected as the first outreach gap because it is a materially different client conversation from bankruptcy work.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Trademarks",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official Spearman Legal homepage explicitly offers Trademarks alongside Bankruptcy and Bankruptcy Creditor Services.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual live official homepage + general Practice Areas page + site-restricted verification after blocked homepage crawl",
+          "notes": "The current official navigation surfaces one general Practice Areas destination for Bankruptcy, Creditor Services and Trademarks; no focused Trademarks client destination was found in current official-site verification."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Adrian C. Spearman",
+          "role": "Owner / Principal Attorney",
+          "email": "acs@spearmanlegal.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Current official Spearman Legal homepage identifies Adrian C. Spearman as Owner/Principal Attorney and publicly lists acs@spearmanlegal.com; the official contact/practice pages use the same firm identity.",
+          "notes": "Direct name-specific individual email is published by the current official firm site and is not inferred from an email pattern."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Trademarks",
+        "subject": "A thought on your Trademarks page",
+        "body": "Adrian,\n\nI was looking through Spearman Legal’s site and noticed Bankruptcy, Bankruptcy Creditor Services, and Trademarks are all presented through the same general Practice Areas experience rather than having focused client pages of their own.\n\nThose are very different conversations. A business owner trying to protect a brand or trademark is arriving with different questions and priorities from an individual considering bankruptcy or a creditor dealing with a bankruptcy matter.\n\nA dedicated Trademarks page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of your practice.\n\nI’m using Trademarks as the first mockup because the contrast with the bankruptcy work makes the idea easy to see while keeping the firm’s current positioning intact.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "06-garcia-ramires",
+      "lead_id": "ChIJ2eHJUvmhToYRGLyl4iIYCUo",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs expose dedicated Civil Litigation, Criminal Defense, Family Law and Personal Injury destinations with separate child hierarchies. Multiple materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-barbosa-law-firm",
+      "lead_id": "ChIJKYVuDpKgToYRYKR-vjQhYbY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Family Law matters including divorce, custody, support, paternity, protective orders and modifications. This is one family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-brad-nance-law",
+      "lead_id": "ChIJl6BwIMKgToYRsyzRCXtj2gI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_mature_architecture",
+      "campaign_notes": "The homepage crawl was blocked, so the current official site was reviewed live. Brad Nance offers Divorce/Family matters, Criminal Defense, Attorney General child-support matters and CPS work, and the current site exposes focused service destinations including a dedicated Criminal Defense page rather than keeping all materially different services in one shared general experience. The site already demonstrates separate-page architecture, so an isolated gap hunt is outside this campaign's ICP.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-tate-law-offices",
+      "lead_id": "ChIJ0zIN2SchTIYRil8D4CSI2RM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage URL set is Personal Injury work: car/truck/motorcycle/bicycle/pedestrian accidents, brain/spine injuries, construction/work injuries and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-haddad-law-firm",
+      "lead_id": "ChIJFfAaLMyeToYRcjY6u3QCepI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes a dedicated Criminal Defense hierarchy and a separate Personal Injury hierarchy. Criminal Defense and Personal Injury are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-torres-attorneys",
+      "lead_id": "ChIJMVfiA7AZTIYR-8aUDGW1CCY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set exposes dedicated Criminal Defense, Family Law, Immigration Law and Personal Injury hierarchies. Separate client-journey architecture is already dominant across materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-mignucci-law-firm",
+      "lead_id": "ChIJUS3vfpw9TIYRd2h3aOXfy_8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs expose focused Commercial Litigation/Breach of Contract pages alongside a separate Personal Injury hierarchy. Business litigation and plaintiff injury are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-briseno-law-office",
+      "lead_id": "ChIJiyYcTTggTIYRLNCpZeoJD7s",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_mature_architecture",
+      "campaign_notes": "The stored crawl was empty/stale, so the current Briseño Law Office site was reviewed live. The current official site explicitly offers Personal Injury, Criminal Defense, Immigration Law and Family Law and has dedicated focused destinations for the materially different main practices, including separate Family Law, Immigration Law and Criminal Defense pages plus deeper child-service pages. The firm already applies mature separate client-journey architecture, so it is Disqualified despite the stale crawl evidence.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-roquemore-skierski",
+      "lead_id": "ChIJjUN245InTIYRZ-oi2-kHyBY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes focused destinations across Business Litigation, Contracts, Business Formation, Mergers & Acquisitions, Commercial Real Estate, Construction Litigation and related disputes. Transactional, real-estate and litigation client needs are already separated into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-mc-criminal-law",
+      "lead_id": "ChIJl8vCmpefToYR8TZalcFyoQg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The extensive clean homepage URL set is entirely Criminal Defense and post-arrest criminal matters, including assault, DWI, drugs, sex crimes, family-violence charges, theft, weapons, white-collar offenses and expungements. This is one criminal-defense client journey despite the deep architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-john-nwosu-law",
+      "lead_id": "ChIJlWfvDFycToYR0lOvlKLly9w",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs directly expose separate Family Law, Immigration Law and Personal Injury destinations. These are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-gilani-law-firm",
+      "lead_id": "ChIJo4SuMCUhTIYR-A5ZnGA5xSY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes dedicated Immigration and Personal Injury pages across Dallas and other locations. Immigration and plaintiff injury are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-ktc-law-firm",
+      "lead_id": "ChIJsSFtOukgTIYR9QzfLm3r53s",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs concern Personal Injury matters such as motor-vehicle accidents, premises liability, dog bites and workplace injuries. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-cordell-cordell",
+      "lead_id": "ChIJ-2IJZNwgTIYRFLXSgjCdShI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage architecture is deep Family Law and also explicitly includes a dedicated Estate Planning destination. Family Law and Estate Planning are materially different client conversations and are already separated within a mature service-page system.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-mr-law",
+      "lead_id": "ChIJ71rHoSMgTIYR679LRWAtkKI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The overwhelming public architecture is plaintiff Personal Injury: accidents, medical malpractice, premises liability, product liability, sexual abuse, third-party crime injuries and wrongful death. The isolated police-brutality injury page does not establish a separate dominant main client journey, so this remains a narrow injury practice for campaign purposes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
