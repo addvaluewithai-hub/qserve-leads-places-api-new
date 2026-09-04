@@ -1,0 +1,61 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJOT-eq58EyIkRZztU3UrmJco",
+  "firm": "Hyatt & Goldbloom | Baltimore Personal Injury Lawyers",
+  "domain": "hyattandgoldbloom.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: Hyatt & Goldbloom has a deep service-specific architecture spanning Personal Injury, Workers' Compensation, Medical Malpractice and Criminal Defense, with dedicated pages and granular subpages for the major client needs.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The homepage links individual accident/injury practices to focused destinations. A live Car Accident page exposes the broader site navigation, which includes dedicated Workers' Compensation, Medical Malpractice and Criminal Defense parent pages plus many subservices. Car Accident, Slip & Fall and Traumatic Brain Injury pages were independently inspected, and Medical Malpractice-specific pages such as Medication Errors are live. The firm therefore fails the Service-Page Gap gate; no decision-maker/email research was performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Car Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Car Accidents is a homepage practice area with a Learn More destination, and the dedicated Baltimore Car Accident page includes extensive service-specific content and multiple crash-type subpages.",
+      "dedicated_page_url": "https://hyattandgoldbloom.com/baltimore-car-accident-lawyer",
+      "validation_method": "live-site homepage + dedicated-page inspection",
+      "notes": "Dedicated client journey and subservice architecture exist."
+    },
+    {
+      "service_name": "Slip & Fall Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Slip & Fall is explicitly listed on the homepage and links to a dedicated Baltimore Slip and Fall Accident Lawyer page.",
+      "dedicated_page_url": "https://hyattandgoldbloom.com/slip-and-fall",
+      "validation_method": "live-site homepage + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Traumatic Brain Injury",
+      "status": "Disqualified",
+      "service_offered_evidence": "Brain Injuries is listed among the homepage practices and the live navigation links a focused Baltimore Traumatic Brain Injury page.",
+      "dedicated_page_url": "https://hyattandgoldbloom.com/baltimore-traumatic-brain-injury-lawyer",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Medical Malpractice is a first-class live navigation category with dedicated subpages including Birth Injury, Nursing Home Abuse, Medical Misdiagnosis, Emergency Room Errors and Medication Errors.",
+      "dedicated_page_url": "https://hyattandgoldbloom.com/medical-malpractice",
+      "validation_method": "live-site navigation architecture + medical-malpractice subpage inspection",
+      "notes": "Deep dedicated service architecture exists; a live Medication Errors page was independently inspected."
+    },
+    {
+      "service_name": "Workers' Compensation",
+      "status": "Disqualified",
+      "service_offered_evidence": "Workers' Compensation is a first-class navigation category with dedicated subpages for public-safety employees, police officers, firefighters, EMTs and correctional officers.",
+      "dedicated_page_url": "https://hyattandgoldbloom.com/workers-compensation",
+      "validation_method": "live-site navigation architecture inspection",
+      "notes": "Dedicated parent service plus granular client-specific subpages exist."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://hyattandgoldbloom.com/",
+    "https://hyattandgoldbloom.com/baltimore-car-accident-lawyer",
+    "https://hyattandgoldbloom.com/slip-and-fall",
+    "https://hyattandgoldbloom.com/baltimore-traumatic-brain-injury-lawyer",
+    "https://hyattandgoldbloom.com/prescription-drug-errors"
+  ]
+}
