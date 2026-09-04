@@ -1,0 +1,29 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ5YwtVkcSK4cRbV4fVdUroVY",
+  "firm": "Torgenson Law",
+  "domain": "torgensonlaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Torgenson Law already has mature separate-service architecture across its Arizona personal-injury practice. The current Practice Areas structure provides distinct focused destinations for Car Accidents, Motorcycle Accidents, Truck Accidents, Wrongful Death, Dog Bites, Premises Liability, Slip & Fall, Pedestrian Accidents and many additional injury matters, with further subservice depth. The firm clearly understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The site has a dedicated Practice Areas hub and numerous focused service destinations, including dedicated Truck Accident, Wrongful Death, Motorcycle and Slip-and-Fall pages. Any isolated missing page would not make the firm a fit for a campaign selling the separate-service-page concept. Contact enrichment was skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current Practice Areas hub separates Car Accidents, Motorcycle Accidents, Catastrophic Injuries, Truck & Trailer Accidents and Dog Bites, and lists many additional focused injury services; dedicated pages were independently confirmed for Truck Accidents, Wrongful Death, Motorcycle Accidents and Slip & Fall.",
+      "dedicated_page_url": "https://www.torgensonlaw.com/practice-area/",
+      "validation_method": "live Practice Areas hub + dedicated service-page inspection + architecture-maturity gate",
+      "notes": "Mature service-by-service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.torgensonlaw.com/practice-area/",
+    "https://www.torgensonlaw.com/arizona-truck-accident-lawyer/",
+    "https://www.torgensonlaw.com/arizona-wrongful-death-attorneys/",
+    "https://www.torgensonlaw.com/arizona-motorcycle-accident-lawyers/",
+    "https://www.torgensonlaw.com/arizona-slip-and-fall-injury-attorneys/"
+  ]
+}
