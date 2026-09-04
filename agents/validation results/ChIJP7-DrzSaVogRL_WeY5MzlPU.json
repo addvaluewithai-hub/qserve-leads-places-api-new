@@ -1,0 +1,26 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJP7-DrzSaVogRL_WeY5MzlPU",
+  "firm": "Larsen Weaver",
+  "domain": "larsenweaver.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Larsen Weaver already applies separate service pages across essentially all of its explicitly advertised main practices. The live navigation links Traffic Tickets, Driving While Impaired, Marijuana Possession, Underage Alcohol, Expunctions, and Wills & Estate Planning to separate destinations. The firm therefore already understands the separate-service-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Although the website is relatively small, the dominant pattern is still service-by-service rather than one shared general Practice Areas conversation. A dedicated Traffic Tickets page was independently retrieved, and the live navigation exposes distinct URLs for the remaining principal services. Contact enrichment was skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current homepage/navigation explicitly lists and links Traffic Tickets, DWI, Marijuana Possession, Underage Alcohol, Expunctions and Wills & Estate Planning as distinct practice destinations.",
+      "dedicated_page_url": "https://www.larsenweaver.com/traffic-tickets-1",
+      "validation_method": "live homepage/navigation + dedicated Traffic Tickets page + architecture-maturity gate",
+      "notes": "Small site, but the separate-page concept is already implemented across the main practices. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.larsenweaver.com/",
+    "https://www.larsenweaver.com/traffic-tickets-1"
+  ]
+}
