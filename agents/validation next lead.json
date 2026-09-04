@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJ28DACmUNK4cRwxvgF3Ax4hU",
-    "name": "Arizona Elite Family Law, Criminal Defense And DUI Lawyers",
-    "website": "https://www.chmlaw.com/?utm_campaign=gmb&utm_source=googlemaps",
+    "id": "ChIJebZ0Y0ndNIgRfpqh0FbR0_Q",
+    "name": "Fenters Law Firm | Fight Debt Lawsuits Now &mdash; Get legal Help",
+    "website": "https://www.fenterslaw.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:30",
+    "first_seen_at": "2026-09-02 11:12:31",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "chmlaw.com"
+    "website_domain": "fenterslaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
