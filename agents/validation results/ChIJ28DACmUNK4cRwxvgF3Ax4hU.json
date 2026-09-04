@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ28DACmUNK4cRwxvgF3Ax4hU",
+  "firm": "Arizona Elite Family Law, Criminal Defense And DUI Lawyers",
+  "domain": "chmlaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "CHM Law already has highly mature separate-service architecture across Family Law, Criminal Defense, DUI and Personal Injury, including many service-specific subpages and extensive location/city pages. The firm clearly understands and broadly applies the separate-page concept, so it is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed immediately. The live main navigation contains dedicated Family Law, Criminal Defense, DUI Defense and Personal Injury hubs, each with numerous focused subservice pages. The site also has large city-specific architecture for core practices. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Live navigation exposes dedicated Family Law, Criminal Defense, DUI Defense and Personal Injury destinations with many nested service-specific pages such as Divorce, Child Custody, Drug Crimes, Sex Crimes, Extreme DUI, Car Accidents and Semi Truck Accidents.",
+      "dedicated_page_url": "https://www.chmlaw.com/",
+      "validation_method": "live homepage + main navigation + service hierarchy review + architecture-maturity gate",
+      "notes": "This is an advanced service-by-service website. Any isolated content gap would not make it a fit for a campaign selling the separate-page concept."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.chmlaw.com/",
+    "https://www.chmlaw.com/arizona-dui-defense/",
+    "https://www.chmlaw.com/about-us/"
+  ]
+}
