@@ -1,0 +1,90 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJtQwI6NWk-IgRAQhzrbE4SJE",
+  "firm": "Personal Injury Attorneys in Columbia, South Carolina | Jeffcoat Lawyers",
+  "domain": "scinjurylawfirm.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the firm's live Columbia Practice Areas architecture links its principal personal-injury services to dedicated, substantial service pages, including car, truck and motorcycle accidents, nursing-home abuse, workers' compensation, pedestrian accidents, slip-and-fall, wrongful death and medical malpractice.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. Homepage and Practice Areas pages explicitly offer a broad set of personal-injury services. The Practice Areas page provides direct dedicated destinations for the major services. Multiple destinations were independently inspected, including Medical Malpractice, Workers' Compensation, Slip and Fall and Wrongful Death. Because the main services already have focused client journeys, the firm is not a strong Service-Page Gap campaign candidate. Decision-maker/email research was skipped after the gap gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Car Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "The homepage and Columbia Practice Areas page explicitly list Car Accidents and link to a dedicated service destination.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/car-accident-lawyer-columbia/",
+      "validation_method": "live-site homepage/practice-area architecture + dedicated-page inspection",
+      "notes": "Dedicated service page exists."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live navigation and Practice Areas page explicitly list Medical Malpractice; the dedicated Columbia Medical Malpractice page contains extensive service-specific eligibility, process and claim content.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-medical-malpractice-lawyer/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Substantial dedicated client journey."
+    },
+    {
+      "service_name": "Workers' Compensation",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Practice Areas page explicitly lists Workers' Compensation and links to a dedicated Columbia Workers' Compensation Lawyer page.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-workers-comp-lawyer/",
+      "validation_method": "live-site practice-area page + dedicated-page inspection",
+      "notes": "The dedicated page contains extensive workers-comp-specific rights, benefits, process and CTA content."
+    },
+    {
+      "service_name": "Nursing Home Abuse",
+      "status": "Disqualified",
+      "service_offered_evidence": "The homepage/Practice Areas architecture explicitly lists Nursing Home Abuse and points to a dedicated Columbia Nursing Home Abuse Lawyer page.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-nursing-home-abuse-lawyer/",
+      "validation_method": "live-site practice-area architecture + dedicated-page inspection",
+      "notes": "Dedicated nursing-home abuse and neglect destination exists."
+    },
+    {
+      "service_name": "Slip and Fall Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Practice Areas page explicitly lists Slip And Fall Accidents and links directly to its dedicated service page.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-slip-and-fall-lawyer/",
+      "validation_method": "live-site practice-area architecture + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Practice Areas page explicitly lists Wrongful Death and links directly to a dedicated Columbia Wrongful Death page.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-wrongful-death-lawyer/",
+      "validation_method": "live-site practice-area architecture + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Truck Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Practice Areas page explicitly lists Truck Accidents and links directly to a dedicated truck-accident page.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-truck-accident-lawyer/",
+      "validation_method": "live-site practice-area architecture + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Motorcycle Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Practice Areas page explicitly lists Motorcycle Accidents and links directly to a dedicated motorcycle-accident page.",
+      "dedicated_page_url": "https://scinjurylawfirm.com/columbia-motorcycle-accident-lawyer/",
+      "validation_method": "live-site practice-area architecture + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://scinjurylawfirm.com/",
+    "https://scinjurylawfirm.com/columbia-practice-areas/",
+    "https://scinjurylawfirm.com/car-accident-lawyer-columbia/",
+    "https://scinjurylawfirm.com/columbia-medical-malpractice-lawyer/",
+    "https://scinjurylawfirm.com/columbia-workers-comp-lawyer/",
+    "https://scinjurylawfirm.com/columbia-nursing-home-abuse-lawyer/",
+    "https://scinjurylawfirm.com/columbia-slip-and-fall-lawyer/",
+    "https://scinjurylawfirm.com/columbia-wrongful-death-lawyer/",
+    "https://scinjurylawfirm.com/columbia-truck-accident-lawyer/",
+    "https://scinjurylawfirm.com/columbia-motorcycle-accident-lawyer/"
+  ]
+}
