@@ -1,0 +1,61 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJvWX_qL_vwIcRPitwFZ5Pw7s",
+  "firm": "Speeding Ticket Attorney in Kansas City, MO | Your Traffic Ticket Lawyer, LLC",
+  "domain": "yourtrafficticketlawyer.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the firm's live Practice Areas navigation provides dedicated destinations for its principal offered matters, including traffic violations, reckless driving, license reinstatement, moving violations, speeding tickets, drug possession, driving while revoked, DUI, motor-vehicle accidents, driving without insurance and five/ten-year denial matters.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The Practice Areas hub and primary navigation are already service-specific: each listed case type is a direct link rather than a section trapped on one general page. This already gives materially different traffic/criminal client needs separate destinations. The firm therefore fails the Service-Page Gap validation gate and no decision-maker/email research was performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Speeding Tickets",
+      "status": "Disqualified",
+      "service_offered_evidence": "Speeding Tickets is explicitly listed in the live Practice Areas menu and card grid as a linked service.",
+      "dedicated_page_url": "https://yourtrafficticketlawyer.com/practice-areas/speeding-tickets/",
+      "validation_method": "live-site Practice Areas navigation inspection",
+      "notes": "Dedicated linked service destination exists."
+    },
+    {
+      "service_name": "DUI",
+      "status": "Disqualified",
+      "service_offered_evidence": "DUI is explicitly listed in the live Practice Areas menu and card grid as its own linked service.",
+      "dedicated_page_url": "https://yourtrafficticketlawyer.com/practice-areas/dui/",
+      "validation_method": "live-site Practice Areas navigation inspection",
+      "notes": "Dedicated linked service destination exists."
+    },
+    {
+      "service_name": "Drug Possession",
+      "status": "Disqualified",
+      "service_offered_evidence": "Drug Possession is explicitly listed in the live Practice Areas menu and card grid as its own linked service.",
+      "dedicated_page_url": "https://yourtrafficticketlawyer.com/practice-areas/drug-possession/",
+      "validation_method": "live-site Practice Areas navigation inspection",
+      "notes": "Dedicated linked service destination exists."
+    },
+    {
+      "service_name": "License Reinstatement",
+      "status": "Disqualified",
+      "service_offered_evidence": "License Reinstated is explicitly listed in the live Practice Areas navigation and grid as a distinct linked client need.",
+      "dedicated_page_url": "https://yourtrafficticketlawyer.com/practice-areas/license-reinstated/",
+      "validation_method": "live-site Practice Areas navigation inspection",
+      "notes": "Dedicated linked service destination exists."
+    },
+    {
+      "service_name": "Motor Vehicle Accident",
+      "status": "Disqualified",
+      "service_offered_evidence": "Motor Vehicle Accident is explicitly listed as a separate linked practice area on the live site.",
+      "dedicated_page_url": "https://yourtrafficticketlawyer.com/practice-areas/motor-vechicle-accident/",
+      "validation_method": "live-site Practice Areas navigation inspection",
+      "notes": "Despite the site's spelling in the URL/title, this is a dedicated linked destination."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://yourtrafficticketlawyer.com/",
+    "https://yourtrafficticketlawyer.com/practice-areas/",
+    "https://yourtrafficticketlawyer.com/attorneys/",
+    "https://yourtrafficticketlawyer.com/attorneys/about-trevor-l-ferguson/",
+    "https://yourtrafficticketlawyer.com/contact/"
+  ]
+}
