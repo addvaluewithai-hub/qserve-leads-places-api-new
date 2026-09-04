@@ -1,0 +1,52 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJJXVVmjmgVogRXY4RbhEopBE",
+  "firm": "The Icard Law Firm",
+  "domain": "icardlawfirm.com",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "Historical outreach-ready lead revalidated under the corrected ICP. The current site remains essentially a one-page/general practice presentation: Criminal Defense, Traffic Violations, DWI, felonies/misdemeanors, license restoration and expungement are presented within the same shared site experience rather than a mature service-by-service page architecture. Brad Icard personally handles cases and his direct public email Brad@IcardLawFirm.com is published on the official site.",
+  "campaign_notes": "Historical lead synchronized after live recheck on 2026-09-04. The site still has only general HOME/ABOUT/PRACTICE/CONTACT navigation and presents materially different traffic/DWI/serious-criminal client matters within the shared main experience. Brad Icard is the sole named attorney and states he personally handles all cases. Direct email is published on the homepage. This lead remains Qualified but does not count as a newly discovered Qualified for the current stop condition.",
+  "service_gap_evidence": [
+    {
+      "service_name": "DWI Defense",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The official site says the firm assists clients charged with driving while impaired and lists DWI among the matters it handles.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + navigation + architecture-maturity gate",
+      "notes": "The site does not show a mature service-by-service structure. DWI is a strong first mockup example within the broader shared criminal/traffic presentation."
+    },
+    {
+      "service_name": "Traffic Violations",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The official site explicitly markets Traffic Violations and says the firm handles traffic tickets and related cases.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + navigation review",
+      "notes": "Another meaningful practice sharing the same general page experience."
+    }
+  ],
+  "contacts": [
+    {
+      "id": "lawyers-us:ChIJJXVVmjmgVogRXY4RbhEopBE:Brad@IcardLawFirm.com",
+      "person_name": "Brad Icard",
+      "role": "Attorney / Principal",
+      "email": "Brad@IcardLawFirm.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "https://icardlawfirm.com/",
+      "notes": "Official site names Brad Icard as the attorney, states he personally handles all cases, and publishes Email: Brad@IcardLawFirm.com."
+    }
+  ],
+  "outreach_draft": {
+    "selected_service": "DWI Defense",
+    "decision_maker": "Brad Icard",
+    "email": "Brad@IcardLawFirm.com",
+    "subject": "A thought on your practice pages",
+    "body": "Brad,\n\nI noticed the site puts DWI, traffic violations and more serious felony/misdemeanor matters into the same main practice experience.\n\nThey all fall within criminal and traffic defense, but the people arriving for them are often trying to understand very different things. Someone facing a DWI has immediate license and timing concerns that are different from a routine traffic-ticket client or someone charged with a serious felony.\n\nDedicated pages for those main matters could:\n- speak directly to that type of client\n- give Google a focused page to crawl and index\n- give AI tools clearer context about each part of the practice\n\nI’m using DWI as the first mockup example because it makes that difference especially easy to show.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  },
+  "source_urls_checked": [
+    "https://icardlawfirm.com/"
+  ]
+}
