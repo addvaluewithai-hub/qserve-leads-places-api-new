@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJTTVXjJ7DyIARrm4WpCX7YuA",
-    "name": "Las Vegas Car Accident Lawyer - Millions Recovered | Gina Corena",
-    "website": "https://www.corenalaw.com/",
+    "id": "ChIJmzP22N_4rlQRYdDqKW7iYlg",
+    "name": "Bankruptcy Relief: Simple and Smooth - Peterson Zeyer Law Home",
+    "website": "https://www.petersonzeyerlaw.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:36",
+    "first_seen_at": "2026-09-02 11:12:38",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "corenalaw.com"
+    "website_domain": "petersonzeyerlaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
