@@ -1,0 +1,43 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJE5FqlsHL2IcRVIzJ9glqK-c",
+  "firm": "Holland Injury Law, LLC",
+  "domain": "stlinjury.lawyer",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the current live site has a deep service architecture with dedicated pages for major practice areas and many subservices.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The D1 display name was stale ('403 - Forbidden'), but the website is currently reachable. The live Cases We Handle navigation exposes dedicated pages for Motor Vehicle Accidents, Personal Injury, Workers’ Compensation, Defective Drug Devices, Mass Tort, Wrongful Death, Mesothelioma, and many specific subservices. No contact enrichment performed because the gap gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Workers’ Compensation",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live Cases We Handle navigation explicitly lists Workers’ Compensation and links to its own focused page, with Industrial Accidents as a subpage.",
+      "dedicated_page_url": "https://www.stlinjury.lawyer/workers-compensation/",
+      "validation_method": "live-site navigation inspection",
+      "notes": "Dedicated main-service destination exists."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live Cases We Handle navigation explicitly lists Wrongful Death as a separate linked practice area.",
+      "dedicated_page_url": "https://www.stlinjury.lawyer/wrongful-death/",
+      "validation_method": "live-site navigation inspection",
+      "notes": "Dedicated main-service destination exists."
+    },
+    {
+      "service_name": "Defective Drug Devices",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live Cases We Handle navigation explicitly lists Defective Drug Devices as a linked practice area with Talcum Powder and Ovarian Cancer beneath it.",
+      "dedicated_page_url": "https://www.stlinjury.lawyer/defective-drug-devices/",
+      "validation_method": "live-site navigation inspection",
+      "notes": "Dedicated main-service destination exists."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.stlinjury.lawyer/",
+    "https://www.stlinjury.lawyer/william-k-holland/",
+    "https://www.stlinjury.lawyer/ofallon/"
+  ]
+}
