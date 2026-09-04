@@ -3,63 +3,43 @@
   "lead_id": "ChIJqTwze2Qh7IcRoX4e_2YtkYA",
   "firm": "Tom Fowler Law",
   "domain": "tomfowlerlaw.com",
-  "final_status": "Qualified",
-  "qualified": true,
-  "qualification_reason": "Confirmed meaningful Medical Malpractice service-page gap plus a publicly evidenced direct email for the firm's principal decision maker. The live site explicitly says Tom Fowler Law assists medical-malpractice victims, while the primary practice navigation gives focused pages to other major injury services and does not provide a dedicated Medical Malpractice client page.",
-  "campaign_notes": "Live-site validation completed 2026-09-04. The primary navigation and homepage were inspected. Dedicated pages exist for Car Accident, Truck Accident, Motorcycle Accident, Bicycle Accident, Pedestrian Accident, Workers' Compensation, Wrongful Death, Slip and Fall, and Dog Bites. The homepage explicitly states the firm can assist when medical malpractice causes serious harm and repeats medical malpractice as an example of work the firm understands. A site-restricted search found medical-malpractice blog/content, including 'Common Mistakes to Avoid when Handling a Medical Malpractice Claim,' but no focused Medical Malpractice service destination in the practice navigation. Medical-malpractice clients have a materially different journey from vehicle-crash and workplace-injury clients. Tom Fowler is the firm's named attorney on the official site; the About page describes Tom Fowler Law as a family-run business with one attorney, and the official Contact page publishes tom@tomfowlerlaw.com.",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Architecture-maturity reclassification: Tom Fowler Law already uses dedicated service pages extensively across its meaningful practice areas, including car, truck, motorcycle, bicycle and pedestrian accidents, workers' compensation, wrongful death, slip and fall and dog bites. Medical Malpractice may lack a focused page, but it is an isolated exception inside an already mature separate-service architecture, so the firm is not the ICP for this campaign.",
+  "campaign_notes": "Reclassified 2026-09-04 after campaign ICP clarification. The campaign is for firms that have not yet adopted separate client journeys as a website concept. Tom Fowler Law already demonstrates that concept throughout its practice navigation. The missing Medical Malpractice destination is a possible content opportunity but not a valid reason to pitch the separate-pages concept. Prior contact research remains factual but is no longer qualification evidence.",
   "service_gap_evidence": [
     {
       "service_name": "Medical Malpractice",
-      "status": "Gap Confirmed",
-      "service_offered_evidence": "The official homepage states: 'Whether a car accident led to a fracture or medical malpractice put the victim on the brink of death, we are confident that we can assist,' and separately says that whether it is medical malpractice or a car accident, clients need a trusted Des Moines personal injury attorney. A current firm article also states Tom Fowler Law can help victims of medical errors pursue compensation.",
+      "status": "Disqualified",
+      "service_offered_evidence": "The official site explicitly says the firm assists medical-malpractice victims and publishes related educational content.",
       "dedicated_page_url": null,
-      "validation_method": "live homepage/navigation inspection + site-restricted search + current firm medical-malpractice content review",
-      "notes": "Medical Malpractice is explicitly offered and materially distinct, but unlike the firm's other major practice areas it is not present as a dedicated service destination in the current practice navigation. Site-restricted discovery surfaced medical-malpractice articles/content rather than a focused service page. Other major services have clear dedicated pages, making this a strong first mockup example."
+      "validation_method": "live architecture review + architecture-maturity gate",
+      "notes": "No focused Medical Malpractice page was found, but the firm already applies dedicated service pages broadly. This is an isolated content gap, not the broader consolidated-architecture problem targeted by this campaign."
     },
     {
       "service_name": "Workers' Compensation",
       "status": "Disqualified",
-      "service_offered_evidence": "Workers' Compensation is explicitly listed in the primary practice navigation and has a focused Des Moines Workers' Compensation Lawyer page.",
+      "service_offered_evidence": "Workers' Compensation has its own focused service page in the primary practice architecture.",
       "dedicated_page_url": "https://www.tomfowlerlaw.com/des-moines-workers-compensation-lawyer",
       "validation_method": "live navigation + dedicated-page inspection",
-      "notes": "Used as contrast: this major service already has its own focused client destination."
+      "notes": "Evidence of mature separate-service architecture."
     },
     {
       "service_name": "Wrongful Death",
       "status": "Disqualified",
-      "service_offered_evidence": "Wrongful Death is explicitly listed in the primary practice navigation and has a focused Des Moines Wrongful Death Lawyer page.",
+      "service_offered_evidence": "Wrongful Death has its own focused service page in the primary practice architecture.",
       "dedicated_page_url": "https://www.tomfowlerlaw.com/des-moines-wrongful-death-lawyer",
       "validation_method": "live navigation + dedicated-page inspection",
-      "notes": "Used as contrast: this major service already has its own focused client destination."
+      "notes": "Evidence of mature separate-service architecture."
     }
   ],
-  "contacts": [
-    {
-      "id": "lawyers-us:ChIJqTwze2Qh7IcRoX4e_2YtkYA:tom@tomfowlerlaw.com",
-      "person_name": "Tom Fowler",
-      "role": "Principal attorney / named firm decision maker",
-      "email": "tom@tomfowlerlaw.com",
-      "is_owner": false,
-      "is_decision_maker": true,
-      "is_direct_email": true,
-      "is_publicly_verified": true,
-      "evidence_source": "https://www.tomfowlerlaw.com/contact",
-      "notes": "Official site names Tom Fowler as the firm's attorney, describes Tom Fowler Law as a family-run business with one attorney, and publishes tom@tomfowlerlaw.com on the official Contact page."
-    }
-  ],
-  "outreach_draft": {
-    "selected_service": "Medical Malpractice",
-    "subject": "Your medical malpractice content caught my eye",
-    "body": "Tom,\n\nI noticed your main practice navigation gives car, truck, motorcycle, workers’ comp, wrongful death, slip-and-fall and dog-bite matters their own pages, while Medical Malpractice is something you explicitly say the firm can handle but it still lives inside broader injury content and articles.\n\nThat feels like a different client conversation. Someone dealing with a medical error is trying to understand negligence, records, providers and whether they even have a viable case—not the same questions as someone coming in after a crash or workplace injury.\n\nA focused Medical Malpractice page could:\n- speak directly to that type of client\n- give Google a focused page to crawl and index\n- give AI tools clearer context about that part of the firm’s work\n\nYou already have useful malpractice content, so I’m using that as the first mockup example.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
-  },
+  "contacts": [],
+  "outreach_draft": null,
   "source_urls_checked": [
     "https://www.tomfowlerlaw.com/",
     "https://www.tomfowlerlaw.com/about-us",
-    "https://www.tomfowlerlaw.com/tom-fowler",
     "https://www.tomfowlerlaw.com/contact",
     "https://www.tomfowlerlaw.com/des-moines-workers-compensation-lawyer",
-    "https://www.tomfowlerlaw.com/des-moines-wrongful-death-lawyer",
-    "https://www.tomfowlerlaw.com/des-moines-truck-accident-lawyer",
-    "https://www.tomfowlerlaw.com/post/common-mistakes-after-medical-malpractice"
+    "https://www.tomfowlerlaw.com/des-moines-wrongful-death-lawyer"
   ]
 }
