@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJF_yA9eR654gR_9nhpyiq31w",
-    "name": "Orlando Criminal Defense Law Firm | The Law Office of Corey I. Cohen &amp; Associates",
-    "website": "https://www.coreycohen.com/?npcmp=dir:local:4138363:32803",
+    "id": "ChIJ-zTH2Y_EwogROsgokQ03VKw",
+    "name": "Personal Injury Lawyers in Tampa FL - MattLaw Car Accident and Personal Injury Lawyers",
+    "website": "https://mattlaw.com/?utm_source=google&utm_medium=organic&utm_campaign=main",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:16",
+    "first_seen_at": "2026-09-02 11:12:17",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "coreycohen.com"
+    "website_domain": "mattlaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
