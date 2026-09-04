@@ -1,0 +1,216 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 14,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-armstrong-legal-immigration",
+      "lead_id": "ChIJM49jSiMgTIYR1Jh75VsISag",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_immigration_journey",
+      "campaign_notes": "The homepage crawl was empty, so the current official site and State Bar profile were checked live. Armstrong Legal is explicitly an Immigration Law firm and its services are immigration matters such as removal defense, asylum, family petitions, permanent residence, citizenship, TPS, DACA, U Visa and VAWA. This is one immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-texas-debt-law",
+      "lead_id": "ChIJZwWbpeQhTIYRH2UDDzslVUE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_debt_journey",
+      "campaign_notes": "The complete clean homepage URL set concerns consumer/business debt defense, FDCPA claims, judgments, settlement and debt-collection litigation across Texas. These are variations within one debt-defense client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-vasilas-montani",
+      "lead_id": "ChIJnwdc4o2ZToYR4y5D3TsFiCc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs expose distinct Criminal Defense and Deportation/Immigration destinations. Those are materially different main client journeys and are already separately presented.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-tadlock-law",
+      "lead_id": "ChIJy8aJSgAZTIYRu3KsfytDtSU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Family Law matters: divorce, custody, support, CPS, paternity, mediation, parental rights and post-divorce enforcement/modification. This is one family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-fasoro-law",
+      "lead_id": "ChIJ00GKNSMgTIYR06igxUQKoy0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs expose dedicated Immigration and Personal Injury destinations, with separate child pages for immigration applications/visas and accident/injury matters. These materially different client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-naidoo-law-firm",
+      "lead_id": "ChIJ7cY73_YfTIYRq6aM-saPtz8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes separate Criminal, Immigration, Personal Injury, Sports Agency and Traffic destinations. Multiple materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-aaron-herbert-law",
+      "lead_id": "ChIJBbf9NSMgTIYRyIuSr6iNAGY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The 131 clean homepage URLs are overwhelmingly plaintiff Personal Injury and accident matters across locations: vehicle crashes, premises liability, child injuries, workplace injuries, brain injury, dog bites and wrongful death. This is one injury client journey despite the deep architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-mark-scott-law-group",
+      "lead_id": "ChIJBzby7hGZToYR57ZYzpGAVLM",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "current_site_under_construction_architecture_unstable",
+      "campaign_notes": "The clean homepage crawl exposes only the root. Current official-site verification shows the homepage is explicitly under construction, while other current official pages and the State Bar confirm the firm actively handles both Criminal Defense and Personal Injury. A current DWI/Assault page also contains injury content, but because the live site is in an unstable under-construction state, the campaign should not treat the present lack/mixing of service destinations as a durable architecture gap. Re-review after the current site structure stabilizes.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Needs Review",
+          "service_offered_evidence": "Current official-site and State Bar evidence confirm Mark Scott Law Group handles Personal Injury and Criminal Defense, but the official homepage is currently under construction.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual clean-homepage-URL audit + current official website + current State Bar cross-check",
+          "notes": "Do not infer a durable service-page gap from a temporarily incomplete/under-construction site."
+        }
+      ],
+      "contacts": []
+    },
+    {
+      "slug": "09-weston-legal",
+      "lead_id": "ChIJEbmyeq4hTIYRNDbTsvPMc0g",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_debt_journey",
+      "campaign_notes": "The homepage crawl was blocked, so the current Dallas page and current public practice evidence were checked live. The firm's Dallas work is debt-law focused: debt lawsuit/judgment defense, bankruptcy, student-loan defense, debt settlement, creditor harassment and lien issues. These services revolve around one debt/financial-distress client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-mathew-law-firm",
+      "lead_id": "ChIJHSChQPIfTIYRNL4kbudryNE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage architecture exposes a dedicated Immigration Law hierarchy plus separate Criminal Defense and Personal Injury destinations under Additional Practice Areas. Materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-severe-injury-lawyers",
+      "lead_id": "ChIJJabtxrAhTIYRaoNSpXrcrxM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean URL set is plaintiff Personal Injury and accident work: car, truck, motorcycle, pedestrian, bicycle, premises liability, dog bites and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-titans-legal",
+      "lead_id": "ChIJO6R8F64pTIYRlSZJgZrtElA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are plaintiff injury matters such as vehicle accidents, construction/workplace injuries, dog bites, burns, slip-and-fall and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-presti-law-firm",
+      "lead_id": "ChIJOddkDJKgToYRqiDzJgy3Z14",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes dedicated Immigration Law, Personal Injury and Criminal Defense destinations, with deeper immigration and injury hierarchies and additional estate/business-related pages. Separate client-journey architecture is already established across materially different practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-forester-haynie",
+      "lead_id": "ChIJTxHQ9T2ZToYRO8pvONPdhXM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_mature_architecture",
+      "campaign_notes": "The homepage crawl was blocked, so the current official site was checked live. Forester Haynie has distinct current practice destinations for Wages & Overtime, Personal Injury and Bad Drugs & Devices, including dedicated wage-and-hour child pages. Employment/wage claims and injury/product matters are materially different client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-humphreys-peterson",
+      "lead_id": "ChIJjWD20zmmToYR6iuRCU0TrZ4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_criminal_journey",
+      "campaign_notes": "The clean homepage crawl exposes only the root, so current public evidence was checked live. Humphreys & Peterson is a Criminal/Juvenile defense practice; current client content and State Bar evidence center on criminal cases, probation and juvenile matters. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-texas-legal-group-law-giant",
+      "lead_id": "ChIJk6SW1U8hTIYRoZcEACR52Aw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage architecture is plaintiff Personal Injury: vehicle crashes, premises liability, product liability, nursing-home abuse, work injuries, bad-faith insurance and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-ogunji-law",
+      "lead_id": "ChIJnyq5JcofTIYRt5KrKiQ65jQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_immigration_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Immigration matters including removal/deportation, family petitions, fiance visas, investor/employment visas, naturalization and visitor/student visas. This is one immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-reina-gonzalez",
+      "lead_id": "ChIJx-O1yeefToYRmYCHO7zaU_U",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The clean homepage URL set is accident/injury representation, including auto, oilfield and workplace accident pages. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-jasmit-dhaliwal-law",
+      "lead_id": "ChIJxRcnaiifToYRtVTh4nZSCEM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes dedicated Immigration and Family Law/Divorce destinations with separate child pages. These materially different client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-hmb-lawyers",
+      "lead_id": "ChIJzbJeOOgfTIYRc7UYhwOZzzI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage architecture directly exposes separate Criminal Defense, Immigration and Personal Injury destinations. These are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
