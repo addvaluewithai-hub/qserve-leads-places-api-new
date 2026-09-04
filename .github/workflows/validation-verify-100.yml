@@ -1,5 +1,6 @@
 name: Verify 100-lead validation run
 
+# Re-run after the five sequential manual clean-homepage-URL audit batches.
 on:
   push:
     paths:
@@ -59,6 +60,7 @@ jobs:
           new_ready=(query("""SELECT COUNT(*) AS n FROM campaign_leads WHERE campaign_id=? AND status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation'""",['lawyers-us']) or [{'n':0}])[0]['n']
           out={
             'campaign_id':'lawyers-us',
+            'audit_mode':'five sequential batches of 20; manual full clean-homepage-URL review; no scoring/hints/categorization/ranking/truncation',
             'verified_result_files':len(files),
             'verified_d1_rows':len(rows),
             'missing_from_d1':missing,
