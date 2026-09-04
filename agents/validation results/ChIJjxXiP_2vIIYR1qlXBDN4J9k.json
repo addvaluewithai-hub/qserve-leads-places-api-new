@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJjxXiP_2vIIYR1qlXBDN4J9k",
+  "firm": "Kiefer & Kiefer",
+  "domain": "kieferandkiefer.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Kiefer & Kiefer already has mature separate-service architecture across its personal-injury practice. The live main navigation links distinct pages for Car Accidents, Bicycle Accidents, Jones Act, Medical Malpractice, Motorcycle Accidents, Premises Liability, Serious Injuries, Truck Accidents and Trip & Falls, with additional dedicated Wrongful Death and location-specific pages. The firm clearly understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The site has multiple dedicated service destinations and significant location-specific content. No isolated content opportunity should qualify the firm for a campaign selling the separate-page concept. Contact enrichment skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current main navigation exposes numerous focused practice-area destinations including Car Accidents, Bicycle Accidents, Medical Malpractice, Motorcycle Accidents, Premises Liability, Truck Accidents and Trip & Falls.",
+      "dedicated_page_url": "https://kieferandkiefer.com/practice-areas/",
+      "validation_method": "live homepage/navigation + dedicated service-page review + architecture-maturity gate",
+      "notes": "Mature service-by-service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://kieferandkiefer.com/",
+    "https://kieferandkiefer.com/practice-areas/",
+    "https://kieferandkiefer.com/practice-areas/wrongful-death-claims/"
+  ]
+}
