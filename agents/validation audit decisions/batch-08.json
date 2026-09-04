@@ -1,0 +1,228 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 8,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-texas-law-dog",
+      "lead_id": "ChIJeYGaypGbToYR2R17CbjBp0s",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full clean homepage URL set is Personal Injury: auto, truck, bicycle, boat, motorcycle and pedestrian accidents, catastrophic/child injuries, dangerous drugs, dog bites, premises liability and wrongful death. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-estrada-law-office",
+      "lead_id": "ChIJm43e5tCaToYRhLlw1kW-dq4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs expose dedicated Federal Criminal Defense, State Criminal Defense and Personal Injury destinations with deep focused subpages. Criminal and plaintiff-injury are materially different client journeys already separated by the site.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-guardia-law",
+      "lead_id": "ChIJdcaNp3GfToYRHZp_82nUPEc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive homepage URLs are plaintiff Personal Injury services and geo pages: vehicle crashes, rideshare, slip-and-fall, workplace injury and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-ak-firm",
+      "lead_id": "ChIJheZiKzufToYR_vxvghdCncM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full homepage URL set is Personal Injury across multiple Texas locations: car, bicycle, motorcycle, pedestrian, truck and wrongful-death matters. This is one plaintiff-injury journey despite the geo depth.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-cameron-byrd-law",
+      "lead_id": "ChIJvz_XWC6aToYRPgJxsuSYcR0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose separate Criminal Law and Personal Injury destinations under Areas of Practice. The two materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-david-bower",
+      "lead_id": "ChIJcTLLYDGZToYR56Gu6arLEVo",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "Clean homepage evidence showed only a generic /services page. Live verification confirms the official site combines Wills, Probate, Fiduciary Litigation, Personal Injury, Business Law & Litigation and Business Incorporation in the same shared Services experience rather than focused service destinations. David Bower is the named principal attorney/decision maker. The only sufficiently verified public email found is the generic contact@DavidBowerLawyer.com; no direct individual email was verified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official David Bower, PC homepage and Services page explicitly state that the firm handles Personal Injury alongside Wills, Probate, Fiduciary Litigation and Business Law/Litigation.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live homepage and Services page + public contact search",
+          "notes": "Personal Injury remains one section of the shared /services page alongside materially different estate and business matters. No focused Personal Injury destination surfaced."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "David Bower",
+          "role": "Principal attorney / decision maker",
+          "email": "contact@DavidBowerLawyer.com",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": true,
+          "evidence_source": "Official David Bower, PC homepage and contact page publish contact@DavidBowerLawyer.com and identify David Bower as the attorney serving the firm's matters.",
+          "notes": "Generic firm inbox only; no direct public individual email for David Bower was sufficiently verified."
+        }
+      ]
+    },
+    {
+      "slug": "07-phillip-hayes",
+      "lead_id": "ChIJ1zUPo86eToYR2unSomQUdLI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive homepage URLs are Criminal Defense matters: robbery, drug crimes, DWI, felony/misdemeanor defense, homicide and white-collar crime. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-arnold-itkin",
+      "lead_id": "ChIJC_wDY12fToYRUjOa8f_Toyk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The clean homepage URL set is plaintiff Personal Injury and catastrophic-injury litigation: vehicle, maritime, oilfield, plant/refinery, work injury, explosions and wrongful death. These are variants of one injury client journey for this campaign.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-luis-perez-law",
+      "lead_id": "ChIJJe28pzyfToYRwyd5XRcGCvg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The substantive clean URLs are Spanish/English Personal Injury and accident pages, including auto and workplace accidents. The public positioning is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-mcconathy-law",
+      "lead_id": "ChIJKYQGfjkhTIYRduqx4NvsXaE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set exposes a deep Criminal Defense/DWI architecture and a separate dedicated /family-lawyer destination. Criminal Defense and Family Law are materially different client journeys already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-walker-fults",
+      "lead_id": "ChIJLSTiPDWZToYReELx3lNnhWo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Criminal Defense matters including alcohol, assault, drugs, expunction, federal crimes, firearms, juvenile, probation, sex crimes and theft. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-pipkin-law",
+      "lead_id": "ChIJLSTiPDWZToYRvFoMTplHT1E",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The homepage URLs are entirely Personal Injury/product-liability matters: auto defects, car/truck accidents, defective products, premises liability, rollover and wrongful death. This is one plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-mccray-stewart",
+      "lead_id": "ChIJM7zxdZghTIYRGSueORtni1o",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose distinct Criminal Law, Family Law, Immigration, Personal Injury and Probate/Estate destinations. Mature multi-practice separate-page architecture is explicit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-john-cook",
+      "lead_id": "ChIJN3oHaLWeToYRTyqCDi2wNro",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The homepage URL set exposes a dedicated Criminal Defense destination and a separate dedicated Personal Injury destination. The materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-gloger-law",
+      "lead_id": "ChIJNyA4w1KfToYR8AOZtqJY2xw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "Stored crawl evidence was empty, so the current official site was reviewed live. IJG Law is positioned as a Criminal Defense practice with theft, assault, DWI/DUI, drug cases, homicide and probation-violation defense. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-gallian-firm",
+      "lead_id": "ChIJO6ngAtCZToYRjW0By-0BRF8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full homepage URL set shows mature Criminal Defense architecture plus separate Business/Commercial Dispute, Civil Litigation, Labor/Employment Defense, Premises Liability, Product Liability and Outside General Counsel destinations. Multiple materially different journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-ferrer-poirot-feller",
+      "lead_id": "ChIJTYvG_tgR9YgRMCaSo8Q1kqI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_product_injury_journey",
+      "campaign_notes": "The clean homepage URLs center on plaintiff injury/product litigation: drug injury, medical devices, auto/truck injury, birth injury, chemical exposure and related product harms. For this campaign these are one plaintiff injury/product-harm journey, not materially different main legal conversations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-freese-goss",
+      "lead_id": "ChIJU77AmzKZToYRYJiLHntOG8U",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_mass_tort_journey",
+      "campaign_notes": "The full URL set is plaintiff Personal Injury, products/drugs/medical-device and mass-tort litigation, including accidents and wrongful death. These matters remain within one plaintiff injury/product-harm client journey for this campaign.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-loncar-lyon-jenkins",
+      "lead_id": "ChIJVWuf1vuZToYR4CnAeT3ntH8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The extensive clean URL set is Personal Injury: vehicle, construction, oilfield, premises, dangerous-drug, medical-device, malpractice, catastrophic injury and wrongful-death matters. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-dallas-fort-worth-criminal-lawyer",
+      "lead_id": "ChIJWxu7f0B8ToYR5l-1yVWqPu8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The clean homepage URL set consists almost entirely of repetitive Dallas criminal-lawyer paths and contains no materially different main legal practice. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
