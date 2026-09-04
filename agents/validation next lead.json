@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJn6s4-n0UsYkRFOvsJsNr4vE",
-    "name": "Top Rated Virginia Traffic Lawyers - Reckless Driving, Speeding, DUI, DWI",
-    "website": "https://virginiatrafficlawyer.net/",
+    "id": "ChIJfd-hbQCf7ocRDSmSy41HTqw",
+    "name": "Ben Lynch Law | A Lawyer for the People",
+    "website": "https://www.benlynchlaw.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:50",
+    "first_seen_at": "2026-09-02 11:12:51",
     "last_seen_at": "2026-09-02 11:51:15",
-    "website_domain": "virginiatrafficlawyer.net"
+    "website_domain": "benlynchlaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
