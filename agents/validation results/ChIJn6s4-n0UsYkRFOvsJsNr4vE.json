@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJn6s4-n0UsYkRFOvsJsNr4vE",
+  "firm": "Virginia Traffic Lawyer - David A.C. Long",
+  "domain": "virginiatrafficlawyer.net",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "The site already has mature separate-page architecture across its core traffic and DUI practice. Current navigation links dedicated Speeding, Reckless Driving, DUI/DWI and out-of-state-driver pages, along with extensive jurisdiction-specific traffic and reckless-driving pages. The firm clearly understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Although the practice is narrow, its main client matters are already split into focused service pages and supported by extensive local/jurisdiction architecture. Contact enrichment skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current Traffic Violations navigation links separate Speeding Ticket, Reckless Driving, Out-of-State Drivers and DUI in Virginia destinations, with many county/city pages.",
+      "dedicated_page_url": "https://virginiatrafficlawyer.net/speeding/",
+      "validation_method": "live homepage/navigation + dedicated service-page review + architecture-maturity gate",
+      "notes": "Mature service and jurisdiction architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://virginiatrafficlawyer.net/",
+    "https://virginiatrafficlawyer.net/speeding/",
+    "https://virginiatrafficlawyer.net/colonial-heights-virginia-traffic-lawyer/"
+  ]
+}
