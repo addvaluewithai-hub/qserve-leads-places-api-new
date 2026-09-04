@@ -2,24 +2,15 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 6,
-  "lead_id": "ChIJ455YKFSZToYR0efH22dXaWg",
-  "name": "Pumarejo Law Firm, PLLC | Dallas County Criminal Defense| 601 Haines Avenue, Dallas, TX, USA",
-  "domain": "dallascountydefenselawyer.com",
-  "website": "https://www.dallascountydefenselawyer.com/",
-  "clean_homepage_url_count": 13,
+  "lead_id": "ChIJcTLLYDGZToYR56Gu6arLEVo",
+  "name": "davidbowerlawyer.com",
+  "domain": "davidbowerlawyer.com",
+  "website": "http://davidbowerlawyer.com/",
+  "clean_homepage_url_count": 4,
   "clean_homepage_urls": [
     "/",
-    "/attorneys",
     "/contact",
-    "/copy-of-assault-family-violence-cha",
-    "/copy-of-drug-offenses-possession-cha",
-    "/copy-of-dwi-intoxication-1",
-    "/copy-of-juvenile-defense",
-    "/copy-of-murder-manslaughter-charges",
-    "/copy-of-practice-areas",
-    "/copy-of-sex-offenses",
-    "/copy-of-theft-charges",
-    "/news-and-resources",
-    "/practice-areas"
+    "/main",
+    "/services"
   ]
 }
