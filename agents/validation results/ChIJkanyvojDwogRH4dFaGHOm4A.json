@@ -1,0 +1,56 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJkanyvojDwogRH4dFaGHOm4A",
+  "firm": "Dan Newlin Injury Attorneys | $$ Billions Recovered",
+  "domain": "newlinlaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap after live-site double-check: the current Areas of Practice navigation links distinct major services to focused destinations. Social Security Disability, Medical Malpractice and Wrongful Death each have substantial service-specific pages, and auto-accident content has dedicated practice URLs/landing pages.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. Homepage-link absence was not used as proof. The current site was independently checked and the live service navigation was found inside service/FAQ destinations. It lists Auto Accidents, Motorcycle Accidents, Tractor Trailer Accidents, Pedestrian Accidents, Wrongful Death, DUI Accidents, Social Security Disability, Slip and Fall, Medical Malpractice, Birth Injuries and other major matters as separate linked destinations. Although some dedicated URLs use an FAQ naming pattern, the pages themselves are overwhelmingly about the exact service and include service-specific client guidance and consultation CTAs, so they count as dedicated under the runner rule. No decision-maker/email research was performed because the gap gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Auto Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Auto Accidents is explicitly offered in the live Areas of Practice navigation and the site has dedicated auto-accident practice content and car-accident landing destinations.",
+      "dedicated_page_url": "https://www.newlinlaw.com/car-accident-glp/",
+      "validation_method": "live-site navigation + dedicated-page/open-web inspection",
+      "notes": "Dedicated accident client experience exists; additional URLs are also present under /areas-of-practice/auto-accidents/."
+    },
+    {
+      "service_name": "Social Security Disability",
+      "status": "Disqualified",
+      "service_offered_evidence": "Social Security Disability is explicitly listed in the Areas of Practice navigation and the dedicated page explains eligibility, the SSA process, benefits and how the firm assists clients.",
+      "dedicated_page_url": "https://www.newlinlaw.com/social-security-and-disability-faqs/",
+      "validation_method": "live-site Areas of Practice navigation + focused-page inspection",
+      "notes": "Despite the FAQ-style URL, the page is overwhelmingly about Social Security Disability and functions as a dedicated service destination."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Medical Malpractice is explicitly listed in the live Areas of Practice navigation and has a full service-specific page explaining negligence, claims, evidence and the firm's representation.",
+      "dedicated_page_url": "https://www.newlinlaw.com/medical-malpractice-faqs/",
+      "validation_method": "live-site Areas of Practice navigation + focused-page inspection",
+      "notes": "The page is overwhelmingly medical-malpractice-specific and includes a direct consultation CTA, so it counts as dedicated regardless of the FAQ URL label."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "Wrongful Death is explicitly listed as a separate Area of Practice and has a focused page explaining Florida wrongful-death claims and law.",
+      "dedicated_page_url": "https://www.newlinlaw.com/wrongful-death-faqs/",
+      "validation_method": "live-site Areas of Practice navigation + focused-page inspection",
+      "notes": "Dedicated service-specific destination exists."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.newlinlaw.com/",
+    "https://www.newlinlaw.com/case-tool/",
+    "https://www.newlinlaw.com/faqs/",
+    "https://www.newlinlaw.com/car-accident-glp/",
+    "https://www.newlinlaw.com/areas-of-practice/auto-accidents/mandatory-insurance-coverage-state-florida/",
+    "https://www.newlinlaw.com/social-security-and-disability-faqs/",
+    "https://www.newlinlaw.com/medical-malpractice-faqs/",
+    "https://www.newlinlaw.com/wrongful-death-faqs/"
+  ]
+}
