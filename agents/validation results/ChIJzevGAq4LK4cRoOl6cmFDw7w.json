@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJzevGAq4LK4cRoOl6cmFDw7w",
+  "firm": "Shapiro Law Team",
+  "domain": "shapirolawaz.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Shapiro Law Team already has mature separate-service architecture across its core personal-injury practices. The current navigation and Practice Areas hub link focused destinations for Car Accidents, Truck Accidents, Motorcycle Accidents, Rideshare Accidents, Medical Malpractice, Premises Liability, Dog Bites and other major services. The firm clearly understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The live site has a dedicated Practice Areas hub with numerous Learn More service destinations, multiple offices, a sizeable attorney team, and additional localized/Spanish service architecture. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Live navigation links distinct pages for Car Accident, Truck Accident, Motorcycle Accident, Rideshare Accident, Medical Malpractice, Premises Liability, Personal Injury and Dog Bite Injury, while the Practice Areas hub lists additional focused services.",
+      "dedicated_page_url": "https://shapirolawaz.com/practice-areas/",
+      "validation_method": "live homepage + Practice Areas hub + navigation + architecture-maturity gate",
+      "notes": "Mature service-by-service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://shapirolawaz.com/",
+    "https://shapirolawaz.com/practice-areas/",
+    "https://shapirolawaz.com/our-team/"
+  ]
+}
