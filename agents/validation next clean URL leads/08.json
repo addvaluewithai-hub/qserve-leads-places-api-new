@@ -2,10 +2,12 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 8,
-  "lead_id": "ChIJl6BwIMKgToYRsyzRCXtj2gI",
-  "name": "Robot Challenge Screen",
-  "domain": "bradnance.com",
-  "website": "https://www.bradnance.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJBzby7hGZToYR57ZYzpGAVLM",
+  "name": "Mark Scott Law Group, PLLC – Top Personal Injury Law Firm",
+  "domain": "markscottlawgroup.com",
+  "website": "http://markscottlawgroup.com/",
+  "clean_homepage_url_count": 1,
+  "clean_homepage_urls": [
+    "/"
+  ]
 }
