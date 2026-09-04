@@ -1,0 +1,29 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ5YqMdP5654gRBjjje3Y3UcM",
+  "firm": "NeJame Law",
+  "domain": "nejamelaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "NeJame Law already has mature separate client-journey architecture across its major divisions. The current site has dedicated Personal Injury, Criminal Defense, Immigration and Employment Law hubs, each with service-specific messaging and substantial nested practice content. The firm clearly understands and routinely applies the separate-page concept, so it is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Although the homepage presents many divisions, those divisions are not trapped in one general page: Personal Injury, Criminal Defense, Immigration and Employment each have focused destinations, with extensive subservice structures. The firm also has a sizeable specialist attorney team. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current live pages independently confirm focused Personal Injury, Criminal Defense, Immigration and Employment Law destinations, while the homepage lists extensive nested practice categories.",
+      "dedicated_page_url": "https://nejamelaw.com/personal-injury-attorneys/",
+      "validation_method": "live homepage/domain discovery + dedicated major-practice hubs + architecture-maturity gate",
+      "notes": "Major client journeys are already separated into focused practice hubs. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://nejamelaw.com/",
+    "https://nejamelaw.com/personal-injury-attorneys/",
+    "https://nejamelaw.com/criminal-defense-attorneys/",
+    "https://nejamelaw.com/immigration-law-attorneys/",
+    "https://nejamelaw.com/employment-law-attorneys/"
+  ]
+}
