@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJT3VCgxX2rIkRvblAftuxmYs",
+  "firm": "Raleigh, NC Traffic Ticket Attorney | Adams, Portnoy & Berggren PLLC",
+  "domain": "raleightrafficticket.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "The firm already demonstrates extensive separate-page architecture across its core traffic practice, with dedicated destinations for DWI/DUI, speeding, reckless driving, license revocation, commercial-driver issues and many other traffic matters. Although the site also mentions bankruptcy, real estate, personal injury and wills without comparable focused pages, that is an isolated secondary-service coverage gap inside a site that clearly understands and applies the separate-page concept. It is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The current site has a deep traffic-service hierarchy and many service-specific URLs. The campaign is not targeting firms that already know the separate-page strategy but have a few secondary practices underrepresented. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live site exposes dedicated pages for DWI/DUI, Speeding Tickets, Reckless Driving, License Revocations, Commercial Drivers License, Driving With Revoked License, Hit & Run and numerous other traffic services.",
+      "dedicated_page_url": "https://raleightrafficticket.com/dwdui/",
+      "validation_method": "live homepage + navigation + service-page inspection + architecture-maturity gate",
+      "notes": "The firm already applies separate service pages extensively. Mentions of bankruptcy, real estate, personal injury and wills do not make this a campaign fit because the core architecture concept is already understood."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://raleightrafficticket.com/",
+    "https://raleightrafficticket.com/dwdui/",
+    "https://raleightrafficticket.com/about-our-firm/",
+    "https://raleightrafficticket.com/contact-us/"
+  ]
+}
