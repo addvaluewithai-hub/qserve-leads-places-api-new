@@ -1,0 +1,103 @@
+name: Export clean URL audit batch
+
+on:
+  push:
+    paths:
+      - "agents/validation audit request.json"
+
+permissions:
+  contents: write
+
+jobs:
+  export-audit-batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export exactly one 20-lead batch as clean homepage URLs
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          request=json.loads(Path('agents/validation audit request.json').read_text(encoding='utf-8'))
+          batch=int(request['batch_number'])
+          if batch not in {1,2,3,4,5}:
+              raise SystemExit('batch_number must be 1..5')
+
+          files=sorted(Path('agents/validation results').glob(f'new-batch{batch:02d}-*.json'))
+          if len(files)!=20:
+              raise SystemExit(f'Expected 20 result files for batch {batch}, found {len(files)}')
+          ids=[json.loads(p.read_text(encoding='utf-8'))['lead_id'] for p in files]
+
+          account=os.environ['CLOUDFLARE_ACCOUNT_ID']; token=os.environ['CLOUDFLARE_API_TOKEN']; database=os.environ['D1_DATABASE_ID']
+          endpoint=f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
+          def query(sql, params=None):
+              req=urllib.request.Request(endpoint,data=json.dumps({'sql':sql,'params':params or []}).encode(),headers={'Authorization':f'Bearer {token}','Content-Type':'application/json'},method='POST')
+              with urllib.request.urlopen(req,timeout=30) as response: body=json.load(response)
+              if not body.get('success'): raise SystemExit(json.dumps(body))
+              result=body.get('result') or []
+              return (result[0].get('results') or []) if result else []
+
+          asset_exts={'.png','.jpg','.jpeg','.gif','.svg','.webp','.avif','.ico','.pdf','.css','.js','.map','.xml','.txt','.zip','.mp3','.mp4','.webm','.woff','.woff2','.ttf','.eot'}
+          asset_markers=('/wp-content/uploads/','/wp-includes/','/assets/images/','/images/')
+          def clean_path(url):
+              path=(urlparse(url or '').path or '/').strip()
+              if not path.startswith('/'):
+                  path='/'+path
+              low=path.lower()
+              if any(m in low for m in asset_markers): return None
+              if Path(low).suffix.lower() in asset_exts: return None
+              if path!='/' and path.endswith('/'): path=path.rstrip('/')
+              return path
+
+          out=[]
+          for lead_id in ids:
+              lead=(query('''SELECT l.id,l.name,l.website,d.website_domain,cl.status,cl.qualified
+                              FROM campaign_leads cl JOIN leads l ON l.id=cl.lead_id
+                              LEFT JOIN lead_domains d ON d.lead_id=cl.lead_id
+                              WHERE cl.campaign_id=? AND cl.lead_id=?''',['lawyers-us',lead_id]) or [{}])[0]
+              rows=query('''SELECT url FROM homepage_link_evidence
+                            WHERE campaign_id=? AND lead_id=? ORDER BY url''',['lawyers-us',lead_id])
+              seen=set(); paths=[]
+              for row in rows:
+                  path=clean_path(row.get('url'))
+                  if path and path not in seen:
+                      seen.add(path); paths.append(path)
+              out.append({
+                  'lead_id':lead_id,
+                  'name':lead.get('name'),
+                  'domain':lead.get('website_domain'),
+                  'website':lead.get('website'),
+                  'clean_homepage_url_count':len(paths),
+                  'clean_homepage_urls':paths,
+              })
+
+          payload={
+              'campaign_id':'lawyers-us',
+              'audit':'manual clean-homepage-URL review; no scoring, hints, categorization, ranking, or truncation',
+              'batch_number':batch,
+              'batch_size':len(out),
+              'urls_are':'all deduped same-domain page paths collected from the rendered homepage; obvious asset/file targets removed only',
+              'leads':out,
+          }
+          path=Path(f'agents/validation audit batch {batch:02d} clean urls.json')
+          path.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print(json.dumps({'batch':batch,'leads':len(out),'total_clean_urls':sum(x['clean_homepage_url_count'] for x in out)},indent=2))
+          PY
+      - name: Commit audit batch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          batch=$(python3 -c "import json; print(int(json.load(open('agents/validation audit request.json'))['batch_number']))")
+          file=$(printf 'agents/validation audit batch %02d clean urls.json' "$batch")
+          git add "$file"
+          git commit -m "Export clean URL audit batch $(printf '%02d' "$batch")"
+          git push
