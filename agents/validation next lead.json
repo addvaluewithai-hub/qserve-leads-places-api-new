@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJqTwze2Qh7IcRoX4e_2YtkYA",
-    "name": "Des Moines Personal Injury Lawyer | Tom Fowler Law",
-    "website": "https://www.tomfowlerlaw.com/",
+    "id": "ChIJKb9kcqfByIARUKxRJW4ESnw",
+    "name": "PT Law &#8211; #1 Law Group",
+    "website": "https://ptlawlv.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:25",
+    "first_seen_at": "2026-09-02 11:12:26",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "tomfowlerlaw.com"
+    "website_domain": "ptlawlv.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
