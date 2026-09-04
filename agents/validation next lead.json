@@ -1,5 +1,15 @@
 {
   "campaign_id": "lawyers-us",
+  "counts": {
+    "Disqualified": 132,
+    "Gap Confirmed - Direct Email Missing": 2,
+    "Needs Review": 2,
+    "Not Relevant": 10,
+    "Qualified": 7,
+    "Ready for Validation": 1677,
+    "Total": 1830,
+    "QualifiedFlag": 7
+  },
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
     "id": "ChIJtaLZI5zDyIARW-3IunPcjIA",

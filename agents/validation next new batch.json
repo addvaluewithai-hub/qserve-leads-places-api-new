@@ -1,188 +1,188 @@
 {
   "campaign_id": "lawyers-us",
-  "new_ready_count": 824,
+  "new_ready_count": 724,
   "batch_size": 20,
   "selection_rule": "new production only; Crawl4AI homepage evidence already exists",
   "leads": [
     {
-      "id": "ChIJL74zCAoRK4cRxk5vFlMj6DA",
-      "name": "landeroslegal.com",
-      "domain": "landeroslegal.com",
-      "website": "http://landeroslegal.com/",
+      "id": "ChIJoXYdxJMhTIYR4T7Q4iKaLZ4",
+      "name": "Dallas Fort Worth Personal Injury Lawyer | Armstrong Law, PLLC",
+      "domain": "armstronglawyer.com",
+      "website": "https://www.armstronglawyer.com/offices/dallas-fort-worth-personal-injury-lawyer.cfm",
+      "page_link_count": 42,
+      "architecture_signal_count": 27,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJvUOuB1SfToYRNKWHMG1xGMY",
+      "name": "Personalized Legal Solutions | The Line Law Firm – Compassionate support & fierce advocacy for personal injury, trucking accidents, motor vehicle accidents & wrongful death. Contact our Dallas, TX attorneys for a free consultation.",
+      "domain": "linelawfirm.com",
+      "website": "http://linelawfirm.com/",
+      "page_link_count": 14,
+      "architecture_signal_count": 9,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJ63DVOSafToYRPuF9sjI3CGA",
+      "name": "Criminal Defense Lawyer in Dallas | Free Consultations",
+      "domain": "rbisenberg.com",
+      "website": "https://www.rbisenberg.com/criminal-defense-lawyer/texas/dallas/",
+      "page_link_count": 86,
+      "architecture_signal_count": 57,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJHVm9kt-YToYRs9JlYa-GjgA",
+      "name": "Law Firm in Texas",
+      "domain": "alemanlaw.com",
+      "website": "https://www.alemanlaw.com/",
+      "page_link_count": 17,
+      "architecture_signal_count": 7,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJVVVl9yCfToYRH1MMGZ1zoi8",
+      "name": "Roberts & Roberts - Personal Injury Attorneys | Voted #1 Law Firm",
+      "domain": "robertslawfirm.com",
+      "website": "https://www.robertslawfirm.com/",
+      "page_link_count": 40,
+      "architecture_signal_count": 8,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJ_VGvttefToYR55_YwillBB0",
+      "name": "Personal Injury Attorneys in Dallas | Morgan & Morgan Law Firm",
+      "domain": "forthepeople.com",
+      "website": "https://www.forthepeople.com/office-locations/texas/dallas/",
+      "page_link_count": 138,
+      "architecture_signal_count": 65,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJdWXkuw2fToYRoKKMyayNJwU",
+      "name": "Military Defense Lawyer - Karns Law Firm",
+      "domain": "karnslawfirm.com",
+      "website": "http://www.karnslawfirm.com/",
+      "page_link_count": 48,
+      "architecture_signal_count": 7,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJl3Xo2TWfToYRRQVFoD75qqY",
+      "name": "HandleMyTickets.com",
+      "domain": "handlemytickets.com",
+      "website": "https://www.handlemytickets.com/",
+      "page_link_count": 5,
+      "architecture_signal_count": 0,
+      "screen_hint": "candidate_deep_check"
+    },
+    {
+      "id": "ChIJ-dDtm8qeToYRkMou98kb9gg",
+      "name": "Dallas, TX Criminal Defense Attorney | Law Offices of Thomas R. Cox III",
+      "domain": "coxlegal.com",
+      "website": "https://coxlegal.com/",
+      "page_link_count": 26,
+      "architecture_signal_count": 18,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJ3ww4pEqfToYR-Zv3kf9VG0g",
+      "name": "Klinck Law PLLC",
+      "domain": "klincklaw.com",
+      "website": "http://www.klincklaw.com/",
+      "page_link_count": 15,
+      "architecture_signal_count": 8,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJCwq2eGOfToYRPxIB4wu9Ams",
+      "name": "Home | Erin Hendricks Law",
+      "domain": "erinhendrickslaw.com",
+      "website": "http://erinhendrickslaw.com/",
       "page_link_count": 6,
       "architecture_signal_count": 1,
       "screen_hint": "candidate_deep_check"
     },
     {
-      "id": "ChIJPT8vj3oTK4cRta1Ns64F_x4",
-      "name": "Phoenix Criminal Lawyer | Arizona Criminal Law Specialists",
-      "domain": "dmcantor.com",
-      "website": "https://dmcantor.com/",
-      "page_link_count": 64,
-      "architecture_signal_count": 14,
+      "id": "ChIJHxV-ggyfToYRkLmkI6ewc4E",
+      "name": "Dallas Bankruptcy Lawyer | The Law Office of Donald E. Hood, PLLC",
+      "domain": "dehlaw.com",
+      "website": "http://www.dehlaw.com/",
+      "page_link_count": 67,
+      "architecture_signal_count": 7,
       "screen_hint": "likely_mature"
     },
     {
-      "id": "ChIJRSNoWIMIK4cRDgVxA9wMEgs",
-      "name": "Home - Merchant Law | Arizona Business & Corporate Attorneys",
-      "domain": "merchantlawaz.com",
-      "website": "http://merchantlawaz.com/",
-      "page_link_count": 13,
-      "architecture_signal_count": 6,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJVVVVVbgSK4cRG5GOC_1br7U",
-      "name": "Phoenix Personal Injury Attorneys | The Husband & Wife Law Team",
-      "domain": "husbandandwifelawteam.com",
-      "website": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
-      "page_link_count": 68,
-      "architecture_signal_count": 28,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJX1fjfSESK4cRVkzkb21d0Cs",
-      "name": "Phoenix Criminal Defense Attorney | Law Offices of David A. Black",
-      "domain": "dbphoenixcriminallawyer.com",
-      "website": "http://www.dbphoenixcriminallawyer.com/",
-      "page_link_count": 66,
-      "architecture_signal_count": 34,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJX1fjfSESK4cRctliDHiNJxs",
-      "name": "Robot Challenge Screen",
-      "domain": "barberlawgroup.com",
-      "website": "https://www.barberlawgroup.com/",
+      "id": "ChIJN_velTCfToYRBVYWgK5gMfU",
+      "name": "GreenClark Law Firm - Trial Attorneys & Investigative Lawyers Dallas, TX",
+      "domain": "stephengreenlaw.com",
+      "website": "https://www.stephengreenlaw.com/",
       "page_link_count": 0,
       "architecture_signal_count": 0,
       "screen_hint": "crawl_review"
     },
     {
-      "id": "ChIJX1fjfSESK4cRfvU9e2RUSjo",
-      "name": "Phoenix Lawyer | Knowles Law Firm, PLC",
-      "domain": "knowleslaw.org",
-      "website": "https://www.knowleslaw.org/",
-      "page_link_count": 126,
-      "architecture_signal_count": 99,
+      "id": "ChIJOe9WbTuZToYRdjnk3g4hdlc",
+      "name": "Dallas Criminal Attorneys (RECOMMENDED) 214-888-8888",
+      "domain": "dunhamlaw.com",
+      "website": "https://www.dunhamlaw.com/tx/dallas-criminal-attorneys/",
+      "page_link_count": 211,
+      "architecture_signal_count": 62,
       "screen_hint": "likely_mature"
     },
     {
-      "id": "ChIJeZi6wV8NK4cR5J41Y73yF6E",
-      "name": "Phoenix Personal Injury Attorney: CLS Law",
-      "domain": "clswins.com",
-      "website": "https://www.clswins.com/",
-      "page_link_count": 23,
-      "architecture_signal_count": 15,
-      "screen_hint": "likely_mature"
+      "id": "ChIJP0cyLM-jToYRSvGpulRYczM",
+      "name": "U888 Jfalas ✅️ U88 - Link Trang Chủ U888.Com Chính Hãng 2026",
+      "domain": "barbarelawyer.com",
+      "website": "http://www.barbarelawyer.com/",
+      "page_link_count": 0,
+      "architecture_signal_count": 0,
+      "screen_hint": "crawl_review"
     },
     {
-      "id": "ChIJpcPRAtwSK4cR8AaUC28kaM4",
-      "name": "Phoenix Personal Injury Lawyer | Samuel P. Moeller Law",
-      "domain": "spmoellerlaw.com",
-      "website": "https://www.spmoellerlaw.com/",
-      "page_link_count": 19,
-      "architecture_signal_count": 7,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJq6opU2gSK4cR5O85uQXPrB4",
-      "name": "Law Office of Richard A. Castillo, PLLC | Phoenix, AZ Attorney",
-      "domain": "richardcastillolawfirm.com",
-      "website": "http://www.richardcastillolawfirm.com/",
-      "page_link_count": 5,
+      "id": "ChIJR-f5o3OfToYRiBdWtez3DAM",
+      "name": "The Law Office of Ruthe Belachew, PLLC",
+      "domain": "belachewlaw.com",
+      "website": "https://www.belachewlaw.com/",
+      "page_link_count": 12,
       "architecture_signal_count": 2,
       "screen_hint": "review_links"
     },
     {
-      "id": "ChIJqWcAAC8SK4cR_x487TkkJNY",
-      "name": "DuMond Law Firm, PLLC",
-      "domain": "dumondlawaz.com",
-      "website": "https://www.dumondlawaz.com/",
+      "id": "ChIJi8yR_cqfToYR6HJJhRm348k",
+      "name": "Dallas Personal Injury Lawyer – Javier Perez Law",
+      "domain": "javierperezlaw.com",
+      "website": "https://javierperezlaw.com/en/",
+      "page_link_count": 26,
+      "architecture_signal_count": 13,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJpSGzMBaZToYRdbPfTnN4jJE",
+      "name": "Dallas Criminal Defense Attorney | Jeff King Law",
+      "domain": "jeffkinglaw.com",
+      "website": "https://jeffkinglaw.com/",
+      "page_link_count": 38,
+      "architecture_signal_count": 25,
+      "screen_hint": "likely_mature"
+    },
+    {
+      "id": "ChIJG3kI-iifToYRHQ781q6oraU",
+      "name": "ATWOOD & McCALL - Family Office Legal Services",
+      "domain": "atwoodmccall.com",
+      "website": "http://atwoodmccall.com/",
       "page_link_count": 14,
       "architecture_signal_count": 4,
       "screen_hint": "likely_mature"
     },
     {
-      "id": "ChIJv6NE1RQSK4cRoX5eHacHt0k",
-      "name": "Salvador Ongaro Law Offices |  Best Affordable Lawyers",
-      "domain": "ongarolawoffices.com",
-      "website": "http://www.ongarolawoffices.com/",
-      "page_link_count": 10,
-      "architecture_signal_count": 1,
-      "screen_hint": "candidate_deep_check"
-    },
-    {
-      "id": "ChIJw8V3m18SK4cRbvW8WAeMbxQ",
-      "name": "Arizona Business Law Firm - Jaburg Wilk",
-      "domain": "jaburgwilk.com",
-      "website": "https://www.jaburgwilk.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review"
-    },
-    {
-      "id": "ChIJzXRxgn4TK4cReLBZ_HuBes0",
-      "name": "Phoenix Criminal Defense Lawyers - Belen Law Firm, PLLC",
-      "domain": "belenlawfirm.com",
-      "website": "https://www.belenlawfirm.com/",
-      "page_link_count": 100,
-      "architecture_signal_count": 75,
+      "id": "ChIJeUKlb-ifToYRl34yP9Bd6FI",
+      "name": "Dallas-Fort Worth Bankruptcy Attorney | Toronjo & Prosser Law",
+      "domain": "t-plaw.com",
+      "website": "https://www.t-plaw.com/",
+      "page_link_count": 32,
+      "architecture_signal_count": 16,
       "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJq6qqqn5sK4cRpH3p7TrCuOU",
-      "name": "Phoenix Personal Injury Lawyers | Law Offices of Michael Cordova",
-      "domain": "mcordova.com",
-      "website": "https://www.mcordova.com/",
-      "page_link_count": 37,
-      "architecture_signal_count": 14,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJd1VqW0sSK4cRMpvNtNppxpE",
-      "name": "Best Personal Injury Lawyers Phoenix | Big Chad Law",
-      "domain": "bigchadlaw.com",
-      "website": "https://www.bigchadlaw.com/",
-      "page_link_count": 105,
-      "architecture_signal_count": 87,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJ8WQH12cSK4cR8xexT-o0Tes",
-      "name": "Saldivar & Associates PLLC | Quality Legal Counsel and Representation",
-      "domain": "saldivarlaw.com",
-      "website": "http://www.saldivarlaw.com/",
-      "page_link_count": 25,
-      "architecture_signal_count": 18,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJzyfEkHgNK4cR8RuXRAHG0VU",
-      "name": "Attorney Profile | Attorney Benjamin Taylor | United States",
-      "domain": "benjamintaylorlaw.com",
-      "website": "http://www.benjamintaylorlaw.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review"
-    },
-    {
-      "id": "ChIJG2-BLk1uK4cRQ5fZCsoFqf4",
-      "name": "Personal Injury Lawyers in Arizona & Colorado | Rafi Law Group, PLLC",
-      "domain": "rafilawgroup.com",
-      "website": "https://www.rafilawgroup.com/",
-      "page_link_count": 65,
-      "architecture_signal_count": 15,
-      "screen_hint": "likely_mature"
-    },
-    {
-      "id": "ChIJ7S6unaQSK4cRNWFNF-5ICEI",
-      "name": "Experienced Personal Injury Attorney | Law Offices of William W. Black, P.C.",
-      "domain": "accidentlawyersarizona.com",
-      "website": "https://accidentlawyersarizona.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review"
     }
   ]
 }
