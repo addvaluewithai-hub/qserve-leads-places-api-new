@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJwblHAUAwQQERdSVsmkFB5ms",
-    "name": "New Orleans Office - Gordon McKernan Injury Attorneys",
-    "website": "https://www.getgordon.com/locations/new-orleans/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "id": "ChIJT3VCgxX2rIkRvblAftuxmYs",
+    "name": "Raleigh,NC Traffic Ticket Attorney | Wake County | Adams, Portnoy &amp; Berggren PLLC",
+    "website": "https://raleightrafficticket.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:28",
+    "first_seen_at": "2026-09-02 11:12:29",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "getgordon.com"
+    "website_domain": "raleightrafficticket.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
