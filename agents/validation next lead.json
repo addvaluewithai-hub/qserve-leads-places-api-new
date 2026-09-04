@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJebZ0Y0ndNIgRfpqh0FbR0_Q",
-    "name": "Fenters Law Firm | Fight Debt Lawsuits Now &mdash; Get legal Help",
-    "website": "https://www.fenterslaw.com/",
+    "id": "ChIJP7-DrzSaVogRL_WeY5MzlPU",
+    "name": "Larsen Weaver",
+    "website": "https://www.larsenweaver.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:31",
+    "first_seen_at": "2026-09-02 11:12:33",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "fenterslaw.com"
+    "website_domain": "larsenweaver.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
