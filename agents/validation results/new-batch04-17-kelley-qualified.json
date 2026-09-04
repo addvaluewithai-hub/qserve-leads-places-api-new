@@ -1,0 +1,32 @@
+{
+  "campaign_id":"lawyers-us",
+  "lead_id":"ChIJjxRE8t2YToYRFGVqWHfrv4M",
+  "final_status":"Qualified",
+  "qualified":true,
+  "qualification_reason":"architecture_gap_confirmed_direct_dm_email_verified",
+  "campaign_notes":"Strong corrected-ICP fit after crawl-review. The current Kelley Law Firm site is built primarily as a consolidated personal-injury experience, while Kevin Kelley's official firm profile explicitly describes Kelley Law Firm as a wrongful-death, serious-injury, and business-litigation law firm and says he represents small businesses in commercial disputes. No focused Business Litigation destination surfaced. Kevin Kelley is explicitly Attorney, Owner. Direct public kelley@kelleyfirm.com is verified in a publicly filed court document; the website itself shows only generic info@kelleyfirm.com.",
+  "service_gap_evidence":[{
+    "service_name":"Business Litigation",
+    "status":"Gap Confirmed",
+    "service_offered_evidence":"Official Kevin Kelley profile states he is a named partner with the wrongful-death, serious-injury, and business-litigation Kelley Law Firm and that he represents small businesses in commercial disputes.",
+    "dedicated_page_url":null,
+    "validation_method":"Crawl4AI zero-link review + official firm homepage/profile + domain discovery",
+    "notes":"Business-dispute clients have a materially different commercial/conflict journey from injury clients, but the public site is overwhelmingly built around personal injury and no focused Business Litigation destination surfaced."
+  }],
+  "contacts":[{
+    "person_name":"Kevin Kelley",
+    "role":"Attorney / Owner",
+    "email":"kelley@kelleyfirm.com",
+    "is_owner":true,
+    "is_decision_maker":true,
+    "is_direct_email":true,
+    "is_publicly_verified":true,
+    "evidence_source":"Official Kelley Law Firm owner profile + publicly filed court document displaying kelley@kelleyfirm.com",
+    "notes":"Direct individual email is publicly evidenced; not inferred from a pattern."
+  }],
+  "outreach_draft":{
+    "selected_service":"Business Litigation",
+    "subject":"A thought on Kelley Law Firm’s business-litigation work",
+    "body":"Kevin,\n\nI noticed Kelley Law Firm’s public site is built very strongly around personal injury, while your own firm profile also says the practice handles business litigation and that you represent small businesses in commercial disputes. That business client is arriving with a completely different set of questions from an injury client—contracts, financial exposure, disputes, strategy, and whether litigation can be avoided or needs to be pursued.\n\nA focused Business Litigation page could:\n- give that business owner a clearer path into the firm\n- give Google a focused page to crawl and index\n- give AI tools clearer context around that side of the practice\n\nYou already have the credibility and positioning in your profile, so I’m using Business Litigation as the first mockup example.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  }
+}

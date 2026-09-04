@@ -1,0 +1,32 @@
+{
+  "campaign_id":"lawyers-us",
+  "lead_id":"ChIJq4SPGS-ZToYRTYEC5f9S9rY",
+  "final_status":"Qualified",
+  "qualified":true,
+  "qualification_reason":"architecture_gap_confirmed_direct_dm_email_verified",
+  "campaign_notes":"Strong corrected-ICP fit. Bruce Kaye PLLC presents three materially different client conversations—Criminal Law, Entertainment Law, and Wrongful Death—directly on one general homepage and Crawl4AI found only three page-like links with no separate-service architecture signals. Entertainment Law is explicitly offered but no focused destination surfaced in crawl evidence or independent domain discovery. Bruce Kaye is the named attorney/principal decision maker and his direct public email bruce@brucekaye.com is published on the official site.",
+  "service_gap_evidence":[{
+    "service_name":"Entertainment Law",
+    "status":"Gap Confirmed",
+    "service_offered_evidence":"Official homepage explicitly offers Entertainment Law alongside Criminal Law and Wrongful Death, describing contracts, masters registration and royalty disputes.",
+    "dedicated_page_url":null,
+    "validation_method":"Crawl4AI homepage evidence + official live homepage + domain discovery",
+    "notes":"Entertainment clients have a materially different contract/rights/royalty journey from criminal-defense and wrongful-death clients, but all three conversations remain on the shared homepage."
+  }],
+  "contacts":[{
+    "person_name":"Bruce Kaye",
+    "role":"Named attorney / principal decision maker",
+    "email":"bruce@brucekaye.com",
+    "is_owner":false,
+    "is_decision_maker":true,
+    "is_direct_email":true,
+    "is_publicly_verified":true,
+    "evidence_source":"Official brucekaye.com homepage Contact section",
+    "notes":"Direct individual email published by the firm; not guessed."
+  }],
+  "outreach_draft":{
+    "selected_service":"Entertainment Law",
+    "subject":"A thought on your Entertainment Law section",
+    "body":"Bruce,\n\nI noticed your site speaks to three very different kinds of clients—Criminal Law, Entertainment Law, and Wrongful Death—but they currently share the same general homepage experience. Entertainment Law especially feels like its own conversation: an artist or creator dealing with contracts, masters, registrations, or royalty disputes is arriving with very different questions from someone facing a criminal charge or a family dealing with a wrongful death.\n\nA focused Entertainment Law page could:\n- speak directly to creators and entertainment clients\n- give Google a focused page to crawl and index\n- give AI tools clearer context around that part of your practice\n\nYou already explain the core entertainment issues clearly on the homepage, so I’m using that as the first mockup example.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  }
+}
