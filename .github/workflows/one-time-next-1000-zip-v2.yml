@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   run:
-    if: github.event.issue.title == 'RUN-QSERVE-ZIP-V6-20260902-RETRY6'
+    if: github.event.issue.title == 'RUN-QSERVE-ZIP-V6-20260904-RESUME1'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
@@ -49,12 +49,12 @@ jobs:
           python scripts/build_next_1000_lawyers_zip_v6.py \
             --campaign lawyers-us \
             --target 1000 \
-            --max-zips 5000 \
-            --max-search-requests 900
+            --max-zips 150 \
+            --max-search-requests 25
       - name: Upload V6 result artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lawyers-us-next-1000-zip-v6
+          name: lawyers-us-next-1000-zip-v6-resume1
           path: out/lawyers-us-next-*/
           if-no-files-found: warn
