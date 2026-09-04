@@ -2,787 +2,344 @@
   "campaign_id": "lawyers-us",
   "new_ready_count": 824,
   "batch_size": 20,
-  "format": "links are [path, short_anchor]; assets/date-blog/utility pages omitted from first-pass view",
-  "important": "screen_hint is heuristic only; candidate gaps still require independent website double-check",
+  "format": "links are compact 'path | anchor' strings; assets/date-blog/utility/case-result pages omitted",
+  "important": "hint is heuristic only; candidates still require independent website double-check",
   "leads": [
     {
       "id": "ChIJL74zCAoRK4cRxk5vFlMj6DA",
       "name": "landeroslegal.com",
       "domain": "landeroslegal.com",
-      "website": "http://landeroslegal.com/",
-      "page_link_count": 6,
-      "architecture_signal_count": 1,
-      "screen_hint": "candidate_deep_check",
+      "page_links": 6,
+      "signals": 1,
+      "hint": "candidate_deep_check",
       "links": [
-        [
-          "/services",
-          "Our Services"
-        ]
+        "/services | Our Services"
       ]
     },
     {
       "id": "ChIJPT8vj3oTK4cRta1Ns64F_x4",
       "name": "Phoenix Criminal Lawyer | Arizona Criminal Law Specialists",
       "domain": "dmcantor.com",
-      "website": "https://dmcantor.com/",
-      "page_link_count": 64,
-      "architecture_signal_count": 14,
-      "screen_hint": "likely_mature",
+      "page_links": 64,
+      "signals": 14,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/post-conviction/expungement-restoration-of-civil-rights",
-          "EXPUNGE/RESTORE RIGHTS"
-        ],
-        [
-          "/estate-planning-probate",
-          "Estate and Probate"
-        ],
-        [
-          "/family-law",
-          "Family Law"
-        ],
-        [
-          "/felony-aggravated-dui-case-progression-information",
-          "Click here for Felony Aggravated DUI Case Progression Information"
-        ],
-        [
-          "/fraud-theft-crimes",
-          "Fraud / Theft Crimes"
-        ],
-        [
-          "/misdemeanor-dui-case-progression-information",
-          "Click here for Misdemeanor DUI Case Progression Information"
-        ],
-        [
-          "/case-stages/adult-felony-case-stages",
-          "Adult Felony Case Stages"
-        ],
-        [
-          "/case-stages/adult-misdemeanor-case-stages",
-          "Adult Misdemeanor Case Stages"
-        ],
-        [
-          "/assault-violent-crimes-homicides",
-          "Assault / Violent Crimes"
-        ],
-        [
-          "/crimes-against-property",
-          "Crimes Against Property"
-        ],
-        [
-          "/drug-offenses",
-          "Drug Crimes"
-        ],
-        [
-          "/dui-vehicular-crimes",
-          "DUI & Vehicular Crimes"
-        ]
+        "/post-conviction/expungement-restoration-of-civil-rights | EXPUNGE/RESTORE RIGHTS",
+        "/estate-planning-probate | Estate and Probate",
+        "/family-law | Family Law",
+        "/felony-aggravated-dui-case-progression-information | Click here for Felony Aggravated DUI Case Progression Information",
+        "/fraud-theft-crimes | Fraud / Theft Crimes",
+        "/misdemeanor-dui-case-progression-information | Click here for Misdemeanor DUI Case Progression Information",
+        "/case-stages/adult-felony-case-stages | Adult Felony Case Stages",
+        "/case-stages/adult-misdemeanor-case-stages | Adult Misdemeanor Case Stages",
+        "/assault-violent-crimes-homicides | Assault / Violent Crimes",
+        "/crimes-against-property | Crimes Against Property",
+        "/drug-offenses | Drug Crimes",
+        "/dui-vehicular-crimes | DUI & Vehicular Crimes"
       ]
     },
     {
       "id": "ChIJRSNoWIMIK4cRDgVxA9wMEgs",
       "name": "Home - Merchant Law | Arizona Business & Corporate Attorneys",
       "domain": "merchantlawaz.com",
-      "website": "http://merchantlawaz.com/",
-      "page_link_count": 13,
-      "architecture_signal_count": 6,
-      "screen_hint": "likely_mature",
+      "page_links": 13,
+      "signals": 6,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/real-estate-transaction",
-          "Real Estate Transaction"
-        ],
-        [
-          "/intellectual-property",
-          "Intellectual Property"
-        ],
-        [
-          "/mergers-and-acquisitions",
-          "Mergers and Acquisitions"
-        ],
-        [
-          "/corporate-law",
-          "Corporate Law"
-        ],
-        [
-          "/immigration-law-visa-solutions",
-          "Immigration and Visa Law"
-        ],
-        [
-          "/ppm-securities",
-          "PPM and Security Law"
-        ]
+        "/real-estate-transaction | Real Estate Transaction",
+        "/intellectual-property | Intellectual Property",
+        "/mergers-and-acquisitions | Mergers and Acquisitions",
+        "/corporate-law | Corporate Law",
+        "/immigration-law-visa-solutions | Immigration and Visa Law",
+        "/ppm-securities | PPM and Security Law"
       ]
     },
     {
       "id": "ChIJVVVVVbgSK4cRG5GOC_1br7U",
       "name": "Phoenix Personal Injury Attorneys | The Husband & Wife Law Team",
       "domain": "husbandandwifelawteam.com",
-      "website": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
-      "page_link_count": 68,
-      "architecture_signal_count": 28,
-      "screen_hint": "likely_mature",
+      "page_links": 68,
+      "signals": 28,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/practice-areas/premises-liability/trip-and-fall-accidents",
-          "Slip and Fall"
-        ],
-        [
-          "/practice-areas/premises-liability/pool-injuries",
-          "Swimming Pool Injury"
-        ],
-        [
-          "/practice-areas/personal-injury/birth-injury",
-          "Birth Injury"
-        ],
-        [
-          "/practice-areas/product-liability/roundup",
-          "RoundUp Weed Killer"
-        ],
-        [
-          "/practice-areas/wrongful-death",
-          "Wrongful Death"
-        ],
-        [
-          "/practice-areas/wrongful-death/phoenix-wrongful-death",
-          ""
-        ],
-        [
-          "/practice-areas/dog-bites",
-          "Dog Bites"
-        ],
-        [
-          "/practice-areas/personal-injury",
-          "All Personal Injury Case Types"
-        ],
-        [
-          "/practice-areas/personal-injury/pharmaceutical-injury",
-          "Pharmaceutical Injury"
-        ],
-        [
-          "/practice-areas/car-accidents",
-          "Car Accidents"
-        ],
-        [
-          "/practice-areas/construction-accidents",
-          "Construction Accident"
-        ],
-        [
-          "/practice-areas/daycare-injuries/child-abuse",
-          "Day Care Child Abuse"
-        ]
+        "/practice-areas/premises-liability/trip-and-fall-accidents | Slip and Fall",
+        "/practice-areas/premises-liability/pool-injuries | Swimming Pool Injury",
+        "/practice-areas/personal-injury/birth-injury | Birth Injury",
+        "/practice-areas/product-liability/roundup | RoundUp Weed Killer",
+        "/practice-areas/wrongful-death | Wrongful Death",
+        "/practice-areas/wrongful-death/phoenix-wrongful-death",
+        "/practice-areas/dog-bites | Dog Bites",
+        "/practice-areas/personal-injury | All Personal Injury Case Types",
+        "/practice-areas/personal-injury/pharmaceutical-injury | Pharmaceutical Injury",
+        "/practice-areas/car-accidents | Car Accidents",
+        "/practice-areas/construction-accidents | Construction Accident",
+        "/practice-areas/daycare-injuries/child-abuse | Day Care Child Abuse"
       ]
     },
     {
       "id": "ChIJX1fjfSESK4cRVkzkb21d0Cs",
       "name": "Phoenix Criminal Defense Attorney | Law Offices of David A. Black",
       "domain": "dbphoenixcriminallawyer.com",
-      "website": "http://www.dbphoenixcriminallawyer.com/",
-      "page_link_count": 66,
-      "architecture_signal_count": 34,
-      "screen_hint": "likely_mature",
+      "page_links": 66,
+      "signals": 34,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/practice-areas/criminal-appeals",
-          "Appeals"
-        ],
-        [
-          "/practice-areas/domestic-violence",
-          "Domestic Violence"
-        ],
-        [
-          "/practice-areas/drugs",
-          "Drug Crimes"
-        ],
-        [
-          "/practice-areas/assault",
-          "Assault"
-        ],
-        [
-          "/practice-areas/credit-card-fraud",
-          "Credit Card Fraud"
-        ],
-        [
-          "/practice-areas/dui",
-          "DUI"
-        ],
-        [
-          "/practice-areas/dui/extreme",
-          "Extreme DUI"
-        ],
-        [
-          "/practice-areas/dui/first-time",
-          "First-Time DUI"
-        ],
-        [
-          "/practice-areas/dui/second-dui",
-          "Second-Time DUI"
-        ],
-        [
-          "/practice-areas/harassment",
-          "Harassment"
-        ],
-        [
-          "/practice-areas/homicide",
-          "Homicide"
-        ],
-        [
-          "/practice-areas/mortgage-fraud",
-          "Mortgage Fraud"
-        ]
+        "/practice-areas/criminal-appeals | Appeals",
+        "/practice-areas/domestic-violence | Domestic Violence",
+        "/practice-areas/drugs | Drug Crimes",
+        "/practice-areas/assault | Assault",
+        "/practice-areas/credit-card-fraud | Credit Card Fraud",
+        "/practice-areas/dui | DUI",
+        "/practice-areas/dui/extreme | Extreme DUI",
+        "/practice-areas/dui/first-time | First-Time DUI",
+        "/practice-areas/dui/second-dui | Second-Time DUI",
+        "/practice-areas/harassment | Harassment",
+        "/practice-areas/homicide | Homicide",
+        "/practice-areas/mortgage-fraud | Mortgage Fraud"
       ]
     },
     {
       "id": "ChIJX1fjfSESK4cRctliDHiNJxs",
       "name": "Robot Challenge Screen",
       "domain": "barberlawgroup.com",
-      "website": "https://www.barberlawgroup.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
       "links": []
     },
     {
       "id": "ChIJX1fjfSESK4cRfvU9e2RUSjo",
       "name": "Phoenix Lawyer | Knowles Law Firm, PLC",
       "domain": "knowleslaw.org",
-      "website": "https://www.knowleslaw.org/",
-      "page_link_count": 126,
-      "architecture_signal_count": 99,
-      "screen_hint": "likely_mature",
+      "page_links": 126,
+      "signals": 99,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/phoenix-personal-injury-lawyer/premises-liability",
-          "Premises Liability"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/wrongful-death",
-          "Wrongful Death"
-        ],
-        [
-          "/phoenix-criminal-defense-attorney/domestic-violence",
-          "Domestic Violence"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/motorcycle-accident",
-          "Motorcycle Accidents"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/pedestrian-accident",
-          "Pedestrian Accidents"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/truck-accident",
-          "Truck Accidents"
-        ],
-        [
-          "/phoenix-criminal-defense-attorney/white-collar-crimes",
-          "White Collar Crimes"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/dog-bites",
-          "Dog Bites"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/medical-malpractice",
-          "Medical Malpractice"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer/workers-compensation",
-          "Workers' Compensation"
-        ],
-        [
-          "/phoenix-criminal-defense-attorney/assault",
-          "Assault"
-        ],
-        [
-          "/phoenix-criminal-defense-attorney/drug-crimes",
-          "Drug Crimes"
-        ]
+        "/phoenix-personal-injury-lawyer/premises-liability | Premises Liability",
+        "/phoenix-personal-injury-lawyer/wrongful-death | Wrongful Death",
+        "/phoenix-criminal-defense-attorney/domestic-violence | Domestic Violence",
+        "/phoenix-personal-injury-lawyer/motorcycle-accident | Motorcycle Accidents",
+        "/phoenix-personal-injury-lawyer/pedestrian-accident | Pedestrian Accidents",
+        "/phoenix-personal-injury-lawyer/truck-accident | Truck Accidents",
+        "/phoenix-criminal-defense-attorney/white-collar-crimes | White Collar Crimes",
+        "/phoenix-personal-injury-lawyer/dog-bites | Dog Bites",
+        "/phoenix-personal-injury-lawyer/medical-malpractice | Medical Malpractice",
+        "/phoenix-personal-injury-lawyer/workers-compensation | Workers' Compensation",
+        "/phoenix-criminal-defense-attorney/assault | Assault",
+        "/phoenix-criminal-defense-attorney/drug-crimes | Drug Crimes"
       ]
     },
     {
       "id": "ChIJeZi6wV8NK4cR5J41Y73yF6E",
       "name": "Phoenix Personal Injury Attorney: CLS Law",
       "domain": "clswins.com",
-      "website": "https://www.clswins.com/",
-      "page_link_count": 23,
-      "architecture_signal_count": 15,
-      "screen_hint": "likely_mature",
+      "page_links": 23,
+      "signals": 15,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/phoenix-wrongful-death-lawyer",
-          "Wrongful Death"
-        ],
-        [
-          "/phoenix-pedestrian-accident-lawyer",
-          "Pedestrian Accidents"
-        ],
-        [
-          "/apache-junction-personal-injury-lawyer",
-          "Apache Junction"
-        ],
-        [
-          "/gilbert-personal-injury-lawyers",
-          "Gilbert"
-        ],
-        [
-          "/glendale-personal-injury-lawyer",
-          "Glendale"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer",
-          "Personal Injury"
-        ],
-        [
-          "/queen-creek-personal-injury-attorney",
-          "Queen Creek"
-        ],
-        [
-          "/scottsdale-personal-injury-lawyer",
-          "Scottsdale"
-        ],
-        [
-          "/tempe-personal-injury-lawyer",
-          "Tempe"
-        ],
-        [
-          "/phoenix-car-accident-lawyer",
-          "Auto Accident"
-        ],
-        [
-          "/phoenix-motorcycle-accident-lawyer",
-          "Motorcycle accident"
-        ],
-        [
-          "/phoenix-slip-and-fall-lawyer",
-          "Slip Fall"
-        ]
+        "/phoenix-wrongful-death-lawyer | Wrongful Death",
+        "/phoenix-pedestrian-accident-lawyer | Pedestrian Accidents",
+        "/apache-junction-personal-injury-lawyer | Apache Junction",
+        "/gilbert-personal-injury-lawyers | Gilbert",
+        "/glendale-personal-injury-lawyer | Glendale",
+        "/phoenix-personal-injury-lawyer | Personal Injury",
+        "/queen-creek-personal-injury-attorney | Queen Creek",
+        "/scottsdale-personal-injury-lawyer | Scottsdale",
+        "/tempe-personal-injury-lawyer | Tempe",
+        "/phoenix-car-accident-lawyer | Auto Accident",
+        "/phoenix-motorcycle-accident-lawyer | Motorcycle accident",
+        "/phoenix-slip-and-fall-lawyer | Slip Fall"
       ]
     },
     {
       "id": "ChIJpcPRAtwSK4cR8AaUC28kaM4",
       "name": "Phoenix Personal Injury Lawyer | Samuel P. Moeller Law",
       "domain": "spmoellerlaw.com",
-      "website": "https://www.spmoellerlaw.com/",
-      "page_link_count": 19,
-      "architecture_signal_count": 7,
-      "screen_hint": "likely_mature",
+      "page_links": 19,
+      "signals": 7,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/practice-areas/wrongful-death",
-          "Wrongful Death"
-        ],
-        [
-          "/practice-areas/motorcycle-accidents",
-          "Motorcycle Accident"
-        ],
-        [
-          "/practice-areas/slip-fall",
-          "Slip&Fall"
-        ],
-        [
-          "/practice-areas/auto-accidents",
-          "Auto Accidents"
-        ],
-        [
-          "/practice-areas/trucking-accidents",
-          "Trucking Accidents"
-        ],
-        [
-          "/practice-areas/animal-bites",
-          "Animal Bites"
-        ],
-        [
-          "/practice-areas",
-          "Practice Areas"
-        ]
+        "/practice-areas/wrongful-death | Wrongful Death",
+        "/practice-areas/motorcycle-accidents | Motorcycle Accident",
+        "/practice-areas/slip-fall | Slip&Fall",
+        "/practice-areas/auto-accidents | Auto Accidents",
+        "/practice-areas/trucking-accidents | Trucking Accidents",
+        "/practice-areas/animal-bites | Animal Bites",
+        "/practice-areas | Practice Areas"
       ]
     },
     {
       "id": "ChIJq6opU2gSK4cR5O85uQXPrB4",
       "name": "Law Office of Richard A. Castillo, PLLC | Phoenix, AZ Attorney",
       "domain": "richardcastillolawfirm.com",
-      "website": "http://www.richardcastillolawfirm.com/",
-      "page_link_count": 5,
-      "architecture_signal_count": 2,
-      "screen_hint": "review_links",
+      "page_links": 5,
+      "signals": 2,
+      "hint": "review_links",
       "links": [
-        [
-          "/criminal-defense-lawyer",
-          "Criminal Defense"
-        ],
-        [
-          "/civil-litigation-lawyer",
-          "Civil Litigation"
-        ]
+        "/criminal-defense-lawyer | Criminal Defense",
+        "/civil-litigation-lawyer | Civil Litigation"
       ]
     },
     {
       "id": "ChIJqWcAAC8SK4cR_x487TkkJNY",
       "name": "DuMond Law Firm, PLLC",
       "domain": "dumondlawaz.com",
-      "website": "https://www.dumondlawaz.com/",
-      "page_link_count": 14,
-      "architecture_signal_count": 4,
-      "screen_hint": "likely_mature",
+      "page_links": 14,
+      "signals": 4,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/trust-and-estate-planning-and-probate-law",
-          "Trust and Estate Planning and Probate Law"
-        ],
-        [
-          "/criminal-defense",
-          "Criminal Defense"
-        ],
-        [
-          "/family-law",
-          "Family Law"
-        ],
-        [
-          "/personal-injury",
-          "Personal Injury"
-        ]
+        "/trust-and-estate-planning-and-probate-law | Trust and Estate Planning and Probate Law",
+        "/criminal-defense | Criminal Defense",
+        "/family-law | Family Law",
+        "/personal-injury | Personal Injury"
       ]
     },
     {
       "id": "ChIJv6NE1RQSK4cRoX5eHacHt0k",
       "name": "Salvador Ongaro Law Offices |  Best Affordable Lawyers",
       "domain": "ongarolawoffices.com",
-      "website": "http://www.ongarolawoffices.com/",
-      "page_link_count": 10,
-      "architecture_signal_count": 1,
-      "screen_hint": "candidate_deep_check",
+      "page_links": 10,
+      "signals": 1,
+      "hint": "candidate_deep_check",
       "links": [
-        [
-          "/practice-areas",
-          "Practice Areas"
-        ]
+        "/practice-areas | Practice Areas"
       ]
     },
     {
       "id": "ChIJw8V3m18SK4cRbvW8WAeMbxQ",
       "name": "Arizona Business Law Firm - Jaburg Wilk",
       "domain": "jaburgwilk.com",
-      "website": "https://www.jaburgwilk.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
       "links": []
     },
     {
       "id": "ChIJzXRxgn4TK4cReLBZ_HuBes0",
       "name": "Phoenix Criminal Defense Lawyers - Belen Law Firm, PLLC",
       "domain": "belenlawfirm.com",
-      "website": "https://www.belenlawfirm.com/",
-      "page_link_count": 100,
-      "architecture_signal_count": 75,
-      "screen_hint": "likely_mature",
+      "page_links": 100,
+      "signals": 75,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/criminal-defense/white-collar-criminal-attorney-in-phoenix/identity-theft",
-          "Identity Theft"
-        ],
-        [
-          "/criminal-defense/white-collar-criminal-attorney-in-phoenix/phoenix-check-fraud-defense-attorney",
-          "Check Fraud"
-        ],
-        [
-          "/criminal-defense/aggravated-domestic-violence",
-          "Aggravated Domestic Violence"
-        ],
-        [
-          "/criminal-defense/domestic-violence-attorney-phoenix",
-          "Domestic Violence"
-        ],
-        [
-          "/criminal-defense/sex-crime-defense-attorney-phoenix/child-molestation",
-          "Child Molestation"
-        ],
-        [
-          "/criminal-defense/sex-crime-defense-attorney-phoenix/sexual-assault",
-          "Sexual Assault"
-        ],
-        [
-          "/criminal-defense/white-collar-criminal-attorney-in-phoenix",
-          "White Collar Crimes"
-        ],
-        [
-          "/criminal-defense/aggravated-assault",
-          "Aggravated Assault"
-        ],
-        [
-          "/criminal-defense/aggravated-harassment",
-          "Aggravated Harassment"
-        ],
-        [
-          "/criminal-defense/child-abuse",
-          "Child Abuse"
-        ],
-        [
-          "/criminal-defense/child-pornography-defense-in-arizona",
-          "Child Pornography"
-        ],
-        [
-          "/criminal-defense/dui-offense-attorney-phoenix",
-          "DUI Offense"
-        ]
+        "/criminal-defense/white-collar-criminal-attorney-in-phoenix/identity-theft | Identity Theft",
+        "/criminal-defense/white-collar-criminal-attorney-in-phoenix/phoenix-check-fraud-defense-attorney | Check Fraud",
+        "/criminal-defense/aggravated-domestic-violence | Aggravated Domestic Violence",
+        "/criminal-defense/domestic-violence-attorney-phoenix | Domestic Violence",
+        "/criminal-defense/sex-crime-defense-attorney-phoenix/child-molestation | Child Molestation",
+        "/criminal-defense/sex-crime-defense-attorney-phoenix/sexual-assault | Sexual Assault",
+        "/criminal-defense/white-collar-criminal-attorney-in-phoenix | White Collar Crimes",
+        "/criminal-defense/aggravated-assault | Aggravated Assault",
+        "/criminal-defense/aggravated-harassment | Aggravated Harassment",
+        "/criminal-defense/child-abuse | Child Abuse",
+        "/criminal-defense/child-pornography-defense-in-arizona | Child Pornography",
+        "/criminal-defense/dui-offense-attorney-phoenix | DUI Offense"
       ]
     },
     {
       "id": "ChIJq6qqqn5sK4cRpH3p7TrCuOU",
       "name": "Phoenix Personal Injury Lawyers | Law Offices of Michael Cordova",
       "domain": "mcordova.com",
-      "website": "https://www.mcordova.com/",
-      "page_link_count": 37,
-      "architecture_signal_count": 21,
-      "screen_hint": "likely_mature",
+      "page_links": 37,
+      "signals": 14,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/dog-bite-case-results",
-          "Dog Bite Case Results"
-        ],
-        [
-          "/phoenix-dog-bite-attorneys",
-          "Dog Bites"
-        ],
-        [
-          "/phoenix-medical-malpractice-attorneys",
-          "medical injury,"
-        ],
-        [
-          "/phoenix-wrongful-death-lawyers",
-          "Wrongful Death"
-        ],
-        [
-          "/premises-liability-case-results",
-          "Premises Liability Case Results"
-        ],
-        [
-          "/wrongful-death-case-results",
-          "Wrongful Death Case Results"
-        ],
-        [
-          "/phoenix-auto-accident-lawyers",
-          "Car Accidents"
-        ],
-        [
-          "/phoenix-motorcycle-accident-lawyers",
-          "Motorcycle Accidents"
-        ],
-        [
-          "/phoenix-pedestrian-accident-lawyer",
-          "Pedestrian Accidents"
-        ],
-        [
-          "/phoenix-premises-liability-lawyers",
-          ""
-        ],
-        [
-          "/phoenix-slip-and-fall-accidents-attorneys",
-          "Slip-and-Fall"
-        ],
-        [
-          "/phoenix-truck-accident-lawyer",
-          "Truck Accidents"
-        ]
+        "/phoenix-dog-bite-attorneys | Dog Bites",
+        "/phoenix-medical-malpractice-attorneys | medical injury,",
+        "/phoenix-wrongful-death-lawyers | Wrongful Death",
+        "/phoenix-auto-accident-lawyers | Car Accidents",
+        "/phoenix-motorcycle-accident-lawyers | Motorcycle Accidents",
+        "/phoenix-pedestrian-accident-lawyer | Pedestrian Accidents",
+        "/phoenix-premises-liability-lawyers",
+        "/phoenix-slip-and-fall-accidents-attorneys | Slip-and-Fall",
+        "/phoenix-truck-accident-lawyer | Truck Accidents",
+        "/phoenix-personal-injury-attorneys | Personal Injury",
+        "/phoenix-construction-accident-attorneys | Construction Accidents",
+        "/phoenix-nursing-home-abuse-lawyer | Nursing Home Abuse"
       ]
     },
     {
       "id": "ChIJd1VqW0sSK4cRMpvNtNppxpE",
       "name": "Best Personal Injury Lawyers Phoenix | Big Chad Law",
       "domain": "bigchadlaw.com",
-      "website": "https://www.bigchadlaw.com/",
-      "page_link_count": 105,
-      "architecture_signal_count": 87,
-      "screen_hint": "likely_mature",
+      "page_links": 105,
+      "signals": 87,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/arizona-criminal-defense-attorney",
-          "Criminal Defense"
-        ],
-        [
-          "/arizona-dog-bite-attorney",
-          "Dog Bites"
-        ],
-        [
-          "/arizona-wrongful-death-attorney",
-          "Wrongful Death"
-        ],
-        [
-          "/chandler-criminal-defense-attorney",
-          "Criminal Defense"
-        ],
-        [
-          "/chandler-dog-bite-lawyer",
-          "Dog Bite"
-        ],
-        [
-          "/chandler-wrongful-death-lawyer",
-          "Wrongful Death"
-        ],
-        [
-          "/glendale-criminal-defense-lawyer",
-          "Criminal Defense"
-        ],
-        [
-          "/glendale-dog-bite-lawyer",
-          "Dog Bite"
-        ],
-        [
-          "/glendale-wrongful-death-lawyer",
-          "Wrongful Death"
-        ],
-        [
-          "/kingman-criminal-defense-lawyer",
-          "Criminal Defense"
-        ],
-        [
-          "/kingman-dog-bite-lawyer",
-          "Dog Bite"
-        ],
-        [
-          "/kingman-wrongful-death-lawyer",
-          "Wrongful Death"
-        ]
+        "/arizona-criminal-defense-attorney | Criminal Defense",
+        "/arizona-dog-bite-attorney | Dog Bites",
+        "/arizona-wrongful-death-attorney | Wrongful Death",
+        "/chandler-criminal-defense-attorney | Criminal Defense",
+        "/chandler-dog-bite-lawyer | Dog Bite",
+        "/chandler-wrongful-death-lawyer | Wrongful Death",
+        "/glendale-criminal-defense-lawyer | Criminal Defense",
+        "/glendale-dog-bite-lawyer | Dog Bite",
+        "/glendale-wrongful-death-lawyer | Wrongful Death",
+        "/kingman-criminal-defense-lawyer | Criminal Defense",
+        "/kingman-dog-bite-lawyer | Dog Bite",
+        "/kingman-wrongful-death-lawyer | Wrongful Death"
       ]
     },
     {
       "id": "ChIJ8WQH12cSK4cR8xexT-o0Tes",
       "name": "Saldivar & Associates PLLC | Quality Legal Counsel and Representation",
       "domain": "saldivarlaw.com",
-      "website": "http://www.saldivarlaw.com/",
-      "page_link_count": 25,
-      "architecture_signal_count": 18,
-      "screen_hint": "likely_mature",
+      "page_links": 25,
+      "signals": 18,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/personal-injury/medical-malpractice",
-          "Medical Malpractice"
-        ],
-        [
-          "/criminal-defense/arizona-homicide-defense",
-          "Arizona Homicide Defense"
-        ],
-        [
-          "/criminal-defense/drug-charges",
-          "Drug Charges"
-        ],
-        [
-          "/family-law/child-custody",
-          "Child Custody"
-        ],
-        [
-          "/criminal-defense/federal-defense",
-          "Federal Defense"
-        ],
-        [
-          "/family-law/best-interests-of-child",
-          "Best Interests of Child"
-        ],
-        [
-          "/family-law/community-property",
-          "Community Property"
-        ],
-        [
-          "/personal-injury/auto-accident",
-          "Auto Accident"
-        ],
-        [
-          "/personal-injury/bicycle-accidents",
-          "Bicycle Accidents"
-        ],
-        [
-          "/civil-litigation/business-disputes",
-          "Business Disputes"
-        ],
-        [
-          "/civil-litigation/business-formation",
-          "Business Formation"
-        ],
-        [
-          "/criminal-defense",
-          "Criminal Defense"
-        ]
+        "/personal-injury/medical-malpractice | Medical Malpractice",
+        "/criminal-defense/arizona-homicide-defense | Arizona Homicide Defense",
+        "/criminal-defense/drug-charges | Drug Charges",
+        "/family-law/child-custody | Child Custody",
+        "/criminal-defense/federal-defense | Federal Defense",
+        "/family-law/best-interests-of-child | Best Interests of Child",
+        "/family-law/community-property | Community Property",
+        "/personal-injury/auto-accident | Auto Accident",
+        "/personal-injury/bicycle-accidents | Bicycle Accidents",
+        "/civil-litigation/business-disputes | Business Disputes",
+        "/civil-litigation/business-formation | Business Formation",
+        "/criminal-defense | Criminal Defense"
       ]
     },
     {
       "id": "ChIJzyfEkHgNK4cR8RuXRAHG0VU",
       "name": "Attorney Profile | Attorney Benjamin Taylor | United States",
       "domain": "benjamintaylorlaw.com",
-      "website": "http://www.benjamintaylorlaw.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
       "links": []
     },
     {
       "id": "ChIJG2-BLk1uK4cRQ5fZCsoFqf4",
       "name": "Personal Injury Lawyers in Arizona & Colorado | Rafi Law Group, PLLC",
       "domain": "rafilawgroup.com",
-      "website": "https://www.rafilawgroup.com/",
-      "page_link_count": 65,
-      "architecture_signal_count": 15,
-      "screen_hint": "likely_mature",
+      "page_links": 65,
+      "signals": 15,
+      "hint": "likely_mature",
       "links": [
-        [
-          "/slip-fall-accident",
-          "Slip & Fall Accidents"
-        ],
-        [
-          "/dog-bite",
-          "Dog Bites"
-        ],
-        [
-          "/premises-liability",
-          "Premises Liability"
-        ],
-        [
-          "/wrongful-death",
-          "Wrongful Death"
-        ],
-        [
-          "/car-accident",
-          "Car Accidents"
-        ],
-        [
-          "/motorcycle-accident",
-          "Motorcycle Accidents"
-        ],
-        [
-          "/truck-accident",
-          "Truck Accidents"
-        ],
-        [
-          "/avondale-personal-injury-lawyer",
-          "Visit Site"
-        ],
-        [
-          "/denver-personal-injury-lawyer",
-          "Denver personal injury lawyers"
-        ],
-        [
-          "/mesa-personal-injury-lawyer",
-          "Visit Site"
-        ],
-        [
-          "/phoenix-personal-injury-lawyer",
-          "Explore How We Can Help"
-        ],
-        [
-          "/tucson-personal-injury-lawyer",
-          "Visit Site"
-        ]
+        "/slip-fall-accident | Slip & Fall Accidents",
+        "/dog-bite | Dog Bites",
+        "/premises-liability | Premises Liability",
+        "/wrongful-death | Wrongful Death",
+        "/car-accident | Car Accidents",
+        "/motorcycle-accident | Motorcycle Accidents",
+        "/truck-accident | Truck Accidents",
+        "/avondale-personal-injury-lawyer | Visit Site",
+        "/denver-personal-injury-lawyer | Denver personal injury lawyers",
+        "/mesa-personal-injury-lawyer | Visit Site",
+        "/phoenix-personal-injury-lawyer | Explore How We Can Help",
+        "/tucson-personal-injury-lawyer | Visit Site"
       ]
     },
     {
       "id": "ChIJ7S6unaQSK4cRNWFNF-5ICEI",
       "name": "Experienced Personal Injury Attorney | Law Offices of William W. Black, P.C.",
       "domain": "accidentlawyersarizona.com",
-      "website": "https://accidentlawyersarizona.com/",
-      "page_link_count": 0,
-      "architecture_signal_count": 0,
-      "screen_hint": "crawl_review",
+      "page_links": 0,
+      "signals": 0,
+      "hint": "crawl_review",
       "links": []
     }
   ]
