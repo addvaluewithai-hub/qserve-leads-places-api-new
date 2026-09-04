@@ -2,24 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 7,
-  "lead_id": "ChIJ1-bctbC1RIYRxypaJOkWUy8",
-  "name": "Immigration Lawyers | Law Office of Juan DeKruyff - Austin, TX",
-  "domain": "juandekruyff.com",
-  "website": "http://www.juandekruyff.com/",
-  "clean_homepage_url_count": 13,
-  "clean_homepage_urls": [
-    "/",
-    "/articles-and-news",
-    "/author/juan",
-    "/contact",
-    "/december-2020-daca-update",
-    "/es",
-    "/our-firm",
-    "/privacy-policy",
-    "/resources",
-    "/services-payments",
-    "/terms-and-conditions",
-    "/testimonials",
-    "/uscis-policies-leading-to-more-denied-cases"
-  ]
+  "lead_id": "ChIJVY4pAQ_NRIYR2hqIREpu2ys",
+  "name": "One moment, please...",
+  "domain": "smithfamilylawfirm.com",
+  "website": "https://www.smithfamilylawfirm.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
