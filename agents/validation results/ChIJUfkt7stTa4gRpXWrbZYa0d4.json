@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJUfkt7stTa4gRpXWrbZYa0d4",
+  "firm": "Pinyerd Disability Law",
+  "domain": "pinyerdlaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Pinyerd Disability Law already uses separate-service architecture across its principal disability practices. The live site exposes focused destinations for Social Security Disability Insurance (SSDI), Supplemental Security Income (SSI), Veterans Disability Benefits, Short-Term Disability Insurance and Long-Term Disability Insurance. The firm therefore already understands and implements the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "The stored 403 status was stale; the current website is accessible. Architecture Maturity Gate failed because the homepage and Practice Areas structure explicitly link distinct disability-service destinations. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current homepage lists and links SSDI, SSI, Veterans Disability, Short-Term Disability Insurance and Long-Term Disability Insurance as distinct practice destinations.",
+      "dedicated_page_url": "https://pinyerdlaw.com/practice-areas/short-term-disability-insurance/",
+      "validation_method": "live homepage + practice-area page review + architecture-maturity gate",
+      "notes": "Separate-page architecture is already implemented across the firm's main disability services. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://pinyerdlaw.com/",
+    "https://pinyerdlaw.com/practice-areas/short-term-disability-insurance/",
+    "https://pinyerdlaw.com/chicago-disability-attorney/"
+  ]
+}
