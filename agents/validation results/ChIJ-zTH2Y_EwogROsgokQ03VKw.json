@@ -1,0 +1,61 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ-zTH2Y_EwogROsgokQ03VKw",
+  "firm": "Personal Injury Lawyers in Tampa FL - MattLaw Car Accident and Personal Injury Lawyers",
+  "domain": "mattlaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: MattLaw's live Practice Areas navigation links its principal injury services to dedicated destinations, including Car Accidents, Truck Accidents, Motorcycle Accidents, Medical Malpractice, Birth Injuries, Nursing Home Abuse, Slip and Fall, Wrongful Death, Traumatic Brain Injury and more.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The homepage contains an explicit Practice Areas mega-navigation where the major services are direct links. Dedicated Car Accident and Truck Accident pages were independently inspected, and the homepage links Medical Malpractice, Birth Injuries, Nursing Home Abuse, Slip and Fall, Wrongful Death and other major client needs to their own destinations. The site already separates materially different injury client conversations, so the gap gate failed. No decision-maker/email research was performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Car Accident",
+      "status": "Disqualified",
+      "service_offered_evidence": "Car Accident is a direct Practice Areas link and has a substantial Tampa Car Accident Lawyers page with further crash-type subpages.",
+      "dedicated_page_url": "https://mattlaw.com/tampa-car-accident-lawyer/",
+      "validation_method": "live-site homepage navigation + dedicated-page inspection",
+      "notes": "Dedicated service page and sub-service architecture exist."
+    },
+    {
+      "service_name": "Truck Accident",
+      "status": "Disqualified",
+      "service_offered_evidence": "Truck Accident is a direct Practice Areas link and has a dedicated Tampa Truck Accident Lawyers page.",
+      "dedicated_page_url": "https://mattlaw.com/tampa-truck-accident-lawyer/",
+      "validation_method": "live-site homepage navigation + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Medical Malpractice is a direct Practice Areas navigation link and is also treated as a distinct major client need in the homepage content.",
+      "dedicated_page_url": "https://mattlaw.com/medical-malpractice-lawyer-tampa/",
+      "validation_method": "live-site homepage navigation inspection",
+      "notes": "Separate linked destination exists."
+    },
+    {
+      "service_name": "Nursing Home Abuse",
+      "status": "Disqualified",
+      "service_offered_evidence": "Nursing Home Abuse is directly linked from the live Practice Areas navigation and highlighted as an Area of Focus.",
+      "dedicated_page_url": "https://mattlaw.com/nursing-home-abuse-lawyer-tampa/",
+      "validation_method": "live-site homepage navigation inspection",
+      "notes": "Separate linked service destination exists."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "Wrongful Death is directly linked in Practice Areas and highlighted among the firm's focus areas.",
+      "dedicated_page_url": "https://mattlaw.com/wrongful-death-lawyer-tampa/",
+      "validation_method": "live-site homepage navigation inspection",
+      "notes": "Separate linked destination exists."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://mattlaw.com/",
+    "https://mattlaw.com/personal-injury-lawyers-tampa/",
+    "https://mattlaw.com/tampa-car-accident-lawyer/",
+    "https://mattlaw.com/tampa-truck-accident-lawyer/",
+    "https://mattlaw.com/attorneys/"
+  ]
+}
