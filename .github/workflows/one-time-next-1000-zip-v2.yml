@@ -46,11 +46,47 @@ jobs:
             scripts/d1_helpers.py
       - name: Continue active next-1000 cohort with relaxed ZIP-area acceptance
         run: |
+          set +e
           python scripts/build_next_1000_lawyers_zip_v6.py \
             --campaign lawyers-us \
             --target 1000 \
             --max-zips 150 \
             --max-search-requests 25
+          rc=$?
+          set -e
+
+          if [ "$rc" -eq 0 ]; then
+            exit 0
+          fi
+
+          # The core builder intentionally exits non-zero when a guarded request
+          # cap is reached before the cohort target. Treat only that persisted,
+          # explicit stop reason as a successful partial run; real errors stay red.
+          if python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in Path("out").rglob("*.json"):
+              try:
+                  payload = json.loads(path.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              if not isinstance(payload, dict):
+                  continue
+              if (
+                  payload.get("stop_reason") == "request_budget_exhausted"
+                  and str(payload.get("status") or "").startswith("partial_")
+              ):
+                  print(f"Expected guarded partial stop recorded in {path}")
+                  raise SystemExit(0)
+          raise SystemExit(1)
+          PY
+          then
+            echo "Guard cap reached as designed; treating workflow as successful partial."
+            exit 0
+          fi
+
+          exit "$rc"
       - name: Upload V6 result artifact
         if: always()
         uses: actions/upload-artifact@v4
