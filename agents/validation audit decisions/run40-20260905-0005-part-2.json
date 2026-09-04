@@ -1,0 +1,232 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-lisinski-law",
+      "lead_id": "ChIJ0ZadfVWfToYRv5OTyx7dnd0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean homepage URL set is entirely immigration-focused, including citizenship and naturalization, court defense, parole in place, VAWA, T visas, and U visas. These are one narrow immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-fortenberry-firm",
+      "lead_id": "ChIJ76amfFwjTIYRc-K7Y2S5LJA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is plaintiff injury and victim-recovery work: truck and car wrecks, daycare injuries, dog bites, drunk-driving injuries, sexual assault injuries, human-trafficking claims, and wrongful death. These remain one narrow injury/tort journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-garza-law-firm",
+      "lead_id": "ChIJAQBAOOgfTIYRryT-MqjAZis",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_single_narrow_journey",
+      "campaign_notes": "The production crawl returned zero clean URLs, so the current official site was checked. It identifies the firm as a Dallas divorce and family-law practice focused on divorce, custody, and related family matters, which is one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-wolf-law",
+      "lead_id": "ChIJC-RSCl0hTIYRXyTj83rigtU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is overwhelmingly personal-injury work: car and truck accidents, premises liability, workplace injury, wrongful death, and related injury claims and case results. This is one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-alexandra-geczi-family-law",
+      "lead_id": "ChIJGzYRKYMfTIYReUbpRMbeDmo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL architecture is dedicated to divorce and family law, including custody, support, adoption, prenups, collaborative law, and high-net-worth divorce. These are one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-dfw-tax-advisor",
+      "lead_id": "ChIJHxV-ggyfToYRSMIvraDDfr0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set exposes dedicated destinations for business law, estate planning, immigration law, income-tax preparation, IRS representation, and property-tax protest. Materially different services are already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-gibson-herod-law",
+      "lead_id": "ChIJOchJoXiCToYREMknqOolojY",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The zero-link production crawl required live validation. The current site explicitly offers asset recovery, commercial transactions, commercial litigation, probate/probate litigation, civil appeals, and specialized business matters, but the navigation entries all resolve into the same general Practice Areas page instead of focused service destinations. David Gibson is the Managing Partner, and recent public court material tied to the firm publishes dgibson@gibsonherod.com directly.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Probate and Probate Litigation",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official Practice Areas page explicitly offers Probate and Probate Litigation, including estate administration, probate disputes, heirship, guardianships, trust administration/litigation, creditor claims, and will/trust drafting.",
+          "dedicated_page_url": null,
+          "validation_method": "Official live-site navigation and full Practice Areas validation after zero-link production crawl",
+          "notes": "The site presents commercial asset recovery, transactions, litigation, probate, appeals, and other materially different journeys on one shared /practice-areas/ page. Navigation submenu items for major practices resolve to that same general destination, and no reasonable focused Probate destination is exposed."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "David R. Gibson",
+          "role": "Managing Partner",
+          "email": "dgibson@gibsonherod.com",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Dallas County public foreclosure filing dated December 16, 2024 identifies David R. Gibson and publishes dgibson@gibsonherod.com; the current official team page identifies David Gibson as Managing Partner.",
+          "notes": "Direct individual email from recent public court material tied to the exact Managing Partner; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Probate and Probate Litigation",
+        "subject": "A thought on your Probate page",
+        "body": "Hi David,\n\nI was looking through Gibson Herod Law’s site and noticed Probate and Probate Litigation is presented on the same general Practice Areas page as commercial transactions, asset recovery, business litigation, appeals, and other business-focused work. A probate client arriving after a death or family dispute has a very different set of questions and priorities from a commercial client.\n\nA focused Probate page could give that visitor a clearer journey—what matters you handle, who you represent, what the process looks like, and when to reach out—without asking them to navigate the broader commercial conversation. It can also give Google a more specific service context and make the site easier for AI systems to understand.\n\nI’d use Probate for the first mockup because it is the clearest distinct client journey on the shared page.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "08-dfw-law-group",
+      "lead_id": "ChIJeUKlb-ifToYROEqfFBKsR3o",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set includes focused destinations for business/civil litigation, criminal defense, family law, immigration law, and personal injury. The materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-gauthier-law-firm",
+      "lead_id": "ChIJhauPOuIeTIYR-V2kRflfUxU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site has focused destinations for family law and its subservices, estate planning, personal injury, and Texas debt-litigation defense. The multi-practice architecture is already separated enough that an isolated weak secondary page would not represent the campaign gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-wilson-legal-group",
+      "lead_id": "ChIJnUdLTVohTIYR7f6Zhs9Rjoc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL architecture is highly mature, with dedicated destinations for business law, litigation, copyright, patents, trademarks, family law, estate planning, real estate, and numerous focused subservices and industry solutions.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-hernandez-law-group",
+      "lead_id": "ChIJtRnoJjkgTIYRSkJDlySZ4ug",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is personal injury: motor-vehicle accidents, premises liability, work injury, product liability, wrongful death, and related injury subtypes and locations. This is one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-texas-criminal-defense-group",
+      "lead_id": "ChIJz_LPf42dToYRRveKPGrHeLU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_single_narrow_journey",
+      "campaign_notes": "The production crawl returned zero links, so the current official site was checked. Its practice areas are criminal-defense matters such as assault, domestic violence, drugs, DWI, felonies, fraud, gun charges, theft, prostitution, and related charges. This is one narrow criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-law-office-ajay-shah",
+      "lead_id": "ChIJPXOX2NojTIYRgPCxCr4ome4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set gives separate destinations to business and transactional law, commercial litigation, and personal injury. The materially different main service journeys already have focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-rad-law-firm",
+      "lead_id": "ChIJg74i3fEgTIYRKYgyZLz5iR4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Despite the homepage title issue, the full clean URL set is personal-injury work: vehicle accidents, workplace accidents, premises accidents, product defects, brain and burn injuries, animal attacks, slip-and-fall, truck accidents, and wrongful death. This is one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-goff-law",
+      "lead_id": "ChIJqYBvSschTIYR20fxVSwtXTg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_single_narrow_journey",
+      "campaign_notes": "The production crawl returned zero links, so the current site was checked. Its live Legal Services navigation is focused on personal-injury and injury-related matters such as car and truck wrecks, catastrophic injury, premises/product liability, medical malpractice, work injury, and wrongful death. The homepage biography mentions prior/broader commercial litigation experience, but the current service architecture does not establish a separate meaningful commercial-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-ekeh-law-firm",
+      "lead_id": "ChIJ4QeHO_QfTIYRF7WDMs8QLI4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is limited to personal injury, motor-vehicle accidents, trucking accidents, and location variants. These are one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-ritter-spencer-cheng",
+      "lead_id": "ChIJFZcgXg4hTIYR1TB1iyYc_wI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean architecture has focused destinations for healthcare law, business/corporate law, bankruptcy, commercial litigation, intellectual property, labor and employment, real estate, mergers and acquisitions, and additional regulated-industry work. Architecture is mature.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-reyna-law-firm",
+      "lead_id": "ChIJVZZ9a9cjTIYR-GxpQRwR0xU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_single_narrow_journey",
+      "campaign_notes": "The production crawl returned zero links, so the current official site was checked. It explicitly describes the firm as handling all areas of personal injury law and lists accident, workplace, construction, oilfield, burn, brain/spinal injury, wrongful-death, and related claims. This is one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-idefend-dfw",
+      "lead_id": "ChIJYZbK9T2ZToYRLyIfF3zN7Ig",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is criminal-defense work, including Texas and federal criminal defense, juvenile law, expunctions/nondisclosures, and criminal appeals/habeas matters. These remain one narrow criminal-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-pj-putnam",
+      "lead_id": "ChIJeY7BTV8jTIYRdO1Umsc3q6I",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The business-focused firm already exposes separate destinations for employment, entertainment, intellectual property, fractional general counsel, and other business-law offerings. The dominant architecture separates its materially different service conversations rather than consolidating them on one general page.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
