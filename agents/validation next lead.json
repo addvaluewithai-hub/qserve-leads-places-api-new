@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJx48c0wtVkFQRT01wau6NJjo",
-    "name": "#1 WA Gun Rights Lawyer &#8211; Kertchen Law",
-    "website": "https://www.kertchenlaw.com/",
+    "id": "ChIJkanyvojDwogRH4dFaGHOm4A",
+    "name": "Dan Newlin Injury Attorneys | $$ Billions Recovered",
+    "website": "https://www.newlinlaw.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:14",
+    "first_seen_at": "2026-09-02 11:12:15",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "kertchenlaw.com"
+    "website_domain": "newlinlaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
