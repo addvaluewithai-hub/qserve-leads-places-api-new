@@ -1,38 +1,22 @@
-# 40 Leads Runner
+# 40 Leads Validation Runner
 
 ## Mission
 
-Validate **exactly 40 new-production law-firm leads** for campaign `lawyers-us` as **two sequential batches of 20**.
-
-This is a production execution runner, not a research experiment.
+Validate **exactly 40 new-production law-firm leads** for campaign `lawyers-us` as:
 
 ```text
-Batch 10 = 20 leads
-→ finish all 20
-→ persist all 20 to D1
-→ verify the D1 apply receipt + refreshed next batch
-→ only then start Batch 11
-
-Batch 11 = next 20 leads
-→ finish all 20
-→ persist all 20 to D1
-→ verify the D1 apply receipt
-→ STOP after 40 total leads
+20 leads
+→ finish + persist + verify
+→ then next 20 leads
+→ finish + persist + verify
+→ stop
 ```
 
-**Do not run the two batches in parallel.**
+**Do not run the 40 in parallel.**
 
-The agent should be able to execute this file directly. Do not ask the user to restate the ICP or workflow unless a genuine technical blocker makes execution impossible.
+This runner assumes you are the only validation agent operating this queue during the run. If another agent is simultaneously changing the same Ready queue, stop and avoid duplicate work.
 
----
-
-# 1. Current Starting Point
-
-Campaign:
-
-```text
-lawyers-us
-```
+The repository and D1 pipeline are already configured. **Do not redesign the workflows. Do not add scoring. Do not add hints. Do not build a crawler.** Your job is validation and persistence.
 
 Repository:
 
@@ -40,27 +24,19 @@ Repository:
 addvaluewithai-hub/qserve-leads-places-api-new
 ```
 
-Completed production validation through:
+Campaign:
 
 ```text
-batch-09.json
+lawyers-us
 ```
 
-Current new-production Ready count at handoff:
+D1 is the source of truth.
 
-```text
-644
-```
+---
 
-Current first lead in the next clean-URL batch:
+# 1. Start Here
 
-```text
-Texas Injury Lawyers Delivering Life-Changing Results - Grossman Law
-injuryrelief.com
-lead_id = ChIJm1MpQL8gTIYRd7iR1GQmiFo
-```
-
-The next 20 are already generated in:
+At the start of the new conversation, read this file and then immediately read the **current** production snapshot:
 
 ```text
 agents/validation next clean URL batch.json
@@ -69,358 +45,226 @@ agents/validation next clean URL leads/01.json
 agents/validation next clean URL leads/20.json
 ```
 
-Start with those files. They are **Batch 10**.
+The per-lead files are the preferred working surface.
 
-After Batch 10 is applied to D1, the same GitHub Actions workflow automatically regenerates those paths with the next 20. Those refreshed files become **Batch 11**.
+**Important:** the snapshot is live and can change. Never assume an old batch number, old Ready count, old first lead, or old lead list from another conversation.
 
-If another validator has changed the queue since this file was written, trust the **current contents** of `agents/validation next clean URL batch.json`, not the numeric count above. Never re-run already-finalized leads.
+For the first 20:
+
+1. Read `01.json` through `20.json` in order.
+2. Judge each lead manually from the complete clean homepage URL list.
+3. Use live-site research only where the clean URLs are not enough.
+4. Produce one decision JSON containing exactly those 20 lead IDs.
+5. Commit that decision file.
+6. Wait for the D1 apply workflow to finish successfully.
+7. Verify the receipt contains all 20 matching lead IDs and statuses.
+8. Only then re-read the newly refreshed `01.json` through `20.json` for the second batch.
+
+Repeat once, then stop after 40 total.
 
 ---
 
-# 2. The Only Input Surface You Should Use First
+# 2. Production Input Contract
 
-For each lead, read its full file:
+The clean-URL files contain:
 
 ```text
-agents/validation next clean URL leads/01.json ... 20.json
+lead_id
+name
+domain
+website
+clean_homepage_url_count
+clean_homepage_urls
 ```
 
-Each file contains:
+These URLs are:
 
-- lead ID
-- firm name
-- domain / website
-- **all clean same-domain page paths collected from the rendered homepage**
+- same-domain page paths collected from the rendered homepage
+- deduplicated
+- obvious assets/files removed
+- **not scored**
+- **not ranked**
+- **not categorized**
+- **not truncated to a top-N list**
 
-The clean URL collection removes obvious asset/file targets only.
+Treat Crawl4AI as evidence collection only.
 
-It does **not** classify, score, rank, truncate, or decide anything.
+Do **not** infer qualification from URL count.
 
-## Critical: deprecated surfaces
-
-Do **not** use these as decision logic:
-
-- old scoring
-- old hints such as `likely_mature`
-- old service categorization
-- old top-N structural links
-- `agents/validation new crawl prescreen.json` as a qualification surface
-
-The agent must judge the architecture manually from the complete clean URL list.
+A site with 150 Personal Injury URLs can still be one narrow client journey and therefore `Not Relevant`.
 
 ---
 
-# 3. Core ICP — The Question You Are Actually Answering
+# 3. Core ICP Rule
 
-We are **not** looking for any firm with one missing service page.
+We are not looking for one forgotten service URL.
 
-We are looking for firms that have **not yet made the architectural leap from one shared/general service conversation to separate client journeys**.
+We are looking for firms that have **not yet made the architectural leap from one general service conversation to separate client journeys**.
 
-The key question is:
+The main question is:
 
 > Are materially different main legal client journeys already separated into focused destinations?
-
-Not:
-
-> Does the site have many service-looking URLs?
-
-And not:
-
-> Can I find one service without a page?
 
 A missing page matters only when it is evidence of a broader consolidated architecture problem.
 
 ---
 
-# 4. Status Logic — Get This Exactly Right
+# 4. Manual Decision Logic
 
-Canonical final statuses:
+## A. `Not Relevant`
 
-```text
-Needs Review
-Not Relevant
-Disqualified
-Gap Confirmed - Owner Missing
-Gap Confirmed - Direct Email Missing
-Qualified
-```
+Use this when the firm is essentially one narrow client journey, even if it has many subpages.
 
-## `Not Relevant`
+Typical examples:
 
-Use when the firm is essentially **one narrow client journey**, even if it has dozens or hundreds of focused pages.
+- Personal Injury-only
+- Criminal Defense-only
+- Family Law-only
+- Bankruptcy-only
+- Immigration-only
+- DWI/traffic-only
+- another similarly narrow single-practice family
 
-Common examples:
+Do not call a PI firm mature merely because it has Car Accident, Truck Accident, Motorcycle Accident, Wrongful Death, Slip & Fall, etc. Those can still be one injury journey.
 
-- Personal Injury only
-- Criminal Defense only
-- Family Law only
-- Immigration only
-- Bankruptcy only
-- Tax only
-- Workers' Compensation only
-
-Examples inside one PI journey:
+Typical reason:
 
 ```text
-Car Accidents
-Truck Accidents
-Motorcycle Accidents
-Wrongful Death
-Dog Bites
-Premises Liability
-Medical Malpractice
-Work Injuries
+manual_clean_url_audit_single_narrow_journey
 ```
 
-A PI-only firm with 150 URLs is usually **Not Relevant**, not Disqualified.
+---
 
-Likewise, a Criminal Defense firm with DWI, drugs, assault, sex crimes, federal defense, fraud, weapons, etc. is usually one criminal-defense journey.
+## B. `Disqualified`
 
-## `Disqualified`
-
-Use when the firm has **materially different main services and already separates them into focused destinations**.
+Use this when the firm has multiple materially different main services **and already separates them into focused destinations**.
 
 Examples:
 
 ```text
-/criminal-defense
-/personal-injury
-/family-law
-/immigration
+Criminal Defense -> dedicated page
+Family Law -> dedicated page
+Immigration -> dedicated page
+Personal Injury -> dedicated page
+Estate Planning -> dedicated page
 ```
 
 or:
 
 ```text
-/estate-planning
-/business-litigation
-/employment-law
-/personal-injury
+Business Law -> dedicated page
+Commercial Litigation -> dedicated page
+Estate Planning -> dedicated page
+Real Estate -> dedicated page
 ```
 
-If the firm already routinely applies separate client/service pages, it is Disqualified even if you find one isolated secondary service without a page.
+A single missing or weak secondary service on an otherwise mature multi-practice site is still usually `Disqualified`.
 
-**Do not hunt forgotten URLs on a mature site.**
+Do not hunt isolated forgotten URLs.
 
-## `Needs Review`
-
-Use only when a material fact cannot be resolved safely, for example:
-
-- current offered services conflict across official pages
-- site identity/domain is unclear
-- architecture remains genuinely ambiguous after a reasonable live check
-
-Do not force a binary answer when the evidence is genuinely unclear.
-
-## Gap statuses
-
-Only continue to gap/contact research when:
-
-1. the firm offers multiple materially different main services, and
-2. several of those services still share a homepage/general Services/Practice Areas experience, and
-3. separate-page architecture is not already dominant.
-
-Then choose one meaningful main service as the first mockup example.
-
-If the gap is confirmed but no actual owner/decision maker can be established:
+Typical reason:
 
 ```text
-Gap Confirmed - Owner Missing
+manual_clean_url_audit_mature_architecture
 ```
-
-If the decision maker is known but no **direct public individual email** can be verified:
-
-```text
-Gap Confirmed - Direct Email Missing
-```
-
-## `Qualified`
-
-Qualified requires **all** of these:
-
-```text
-real broader architecture gap
-+ meaningful selected service gap
-+ actual owner / decision maker
-+ direct public verified individual email for that exact person
-+ outreach draft persisted
-```
-
-Qualified does **not** mean contacted.
 
 ---
 
-# 5. Manual Review Procedure for Each Lead
+## C. Real gap candidate
 
-## Step A — Read every clean homepage URL
+Continue to live validation when:
 
-Read the whole URL list for the lead.
+- the firm explicitly offers multiple materially different main services
+- several of those services still share the homepage, one general Services page, one Practice Areas page, or another shared/general destination
+- the site does not already demonstrate mature separate-service architecture as the dominant pattern
 
-Do not decide from URL count alone.
-
-Ask:
-
-1. What appear to be the firm's materially different main legal conversations?
-2. Are those different conversations already represented by separate focused destinations?
-3. Or do the URLs mostly represent subtopics/geographies inside one narrow practice?
-
-### Fast examples
-
-This is usually `Not Relevant`:
+Examples:
 
 ```text
-/personal-injury
-/car-accidents
-/truck-accidents
-/motorcycle-accidents
-/wrongful-death
-/dog-bites
+Family Law + Criminal Law + Personal Injury
+all on /services
 ```
 
-This is usually `Disqualified`:
+or:
 
 ```text
-/criminal-defense
-/family-law
-/personal-injury
-/business-law
+Immigration + Personal Injury
+both presented only on homepage
 ```
 
-This deserves deeper checking:
-
-```text
-/services
-/about
-/contact
-```
-
-with homepage copy showing several different practices.
+This is the campaign ICP.
 
 ---
 
-## Step B — Decide whether a live check is needed
+## D. `Needs Review`
 
-Do a live/public-site check when the clean URL evidence is:
+Use only when a material fact cannot be resolved safely, such as:
+
+- conflicting current-site evidence about whether a service is actually offered
+- ambiguous architecture where a reasonable reviewer could go either way
+- site identity/domain cannot be resolved confidently
+
+Do not force a Qualified or Disqualified result when key evidence is genuinely unclear.
+
+---
+
+# 5. When to Live-Check
+
+Do **not** open every website by default.
+
+Live-check when the clean homepage evidence is:
 
 - zero links
-- generic only (`/services`, `/practice-areas`, `/about`, etc.)
-- blocked / robot challenge
-- DNS/stale-domain issue
-- ambiguous about materially different services
-- potentially redirected to a new domain/property
+- generic only (`/`, `/services`, `/practice-areas`, etc.)
+- ambiguous
+- inconsistent with the business identity
+- showing a robot/challenge/DNS/stale/hijacked domain
+- potentially a real architecture-gap candidate
 
-Also live-check any promising gap before proving page absence.
+For a possible gap, live validation must establish both:
 
-### Zero links rule
+1. the selected service is explicitly offered now, and
+2. no reasonable focused destination exists for it **while the overall site remains consolidated rather than mature**.
 
-```text
-0 clean URLs ≠ opportunity
-```
+Useful checks:
 
-It only means Crawl4AI evidence is inadequate. Check the current site or credible current public evidence.
-
-### Current identity rule
-
-If the domain:
-
-- redirects
-- changed firms
-- is stale
-- is hijacked/spam/gambling
-- has moved to a new official law-firm domain
-
-verify the current identity before classifying.
-
----
-
-## Step C — Architecture Maturity Gate
-
-Before looking for a specific missing page, ask:
-
-> Would a reasonable reviewer say this firm already knows and routinely applies separate service/client-journey pages?
-
-If yes:
-
-```text
-Disqualified
-```
-
-If the site is essentially one narrow practice:
-
-```text
-Not Relevant
-```
-
-If no, and several materially different main services remain consolidated:
-
-```text
-continue to gap validation
-```
-
-If unclear:
-
-```text
-Needs Review
-```
-
-### Important mixed-architecture rule
-
-A few dedicated pages do not automatically make the site mature.
-
-If several materially different main services still live in a shared/general experience and separate-page adoption is not dominant, the lead can still fit.
-
-But one isolated missing page on an otherwise mature service-by-service site does **not** fit.
-
----
-
-# 6. Gap Validation Rules
-
-Only use services the firm **explicitly says it handles**.
-
-Never infer a service only because an attorney bio says the lawyer has experience in it.
-
-A valid selected gap should be a meaningful main service such as:
-
-- Family Law
-- Criminal Defense
-- Personal Injury
-- Immigration
-- Business Litigation
-- Employment Law
-- Estate Planning / Probate
-- Civil Rights
-
-Do not hunt micro-subservice gaps such as Child Support under a good Family Law page or Green Cards under a good Immigration page.
-
-A page counts as dedicated based on its actual content and client purpose, not only its URL slug.
-
-## Absence proof
-
-Search absence alone is **never** sufficient proof that a page does not exist.
-
-Use a combination of:
-
-- complete clean homepage links
-- live navigation
-- service cards/buttons
-- general Services / Practice Areas page
+- homepage
+- navigation
+- Services / Practice Areas
+- relevant service links
 - footer
-- relevant internal links
-- site-restricted/public search when useful
+- internal links/buttons
+- sitemap/site-restricted search when useful
 
-If you cannot prove absence safely, use `Needs Review` rather than manufacturing a gap.
+**Search absence alone never proves page absence.**
+
+Do not infer a service from an attorney biography alone.
 
 ---
 
-# 7. Contact Research Comes LAST
+# 6. Architecture Gate Before Contact Research
 
-Do not research owner/email for:
+Before researching an owner or email, all of these must be true:
 
-- Not Relevant
-- Disqualified
-- ordinary Needs Review cases where the architecture gate has not passed
+```text
+service explicitly offered = yes
+meaningful main service = yes
+no reasonable focused destination = yes
+overall site not already mature = yes
+gap represents broader shared/general architecture problem = yes
+```
 
-Only do it after a real architecture gap is confirmed.
+If the site is mature, stop and mark `Disqualified`.
+
+If it is one narrow journey, stop and mark `Not Relevant`.
+
+**Owner/email research is always last.**
+
+---
+
+# 7. Decision Maker + Email Rules
+
+Only after a real gap passes.
 
 Decision-maker priority:
 
@@ -431,19 +275,14 @@ Decision-maker priority:
 5. Solo Attorney / Principal
 6. another clearly senior buyer
 
-## Direct email rule
+Qualified requires a **direct public email belonging to that exact person**.
 
-Qualified requires a **public email attributable to that exact person**.
+Accept:
 
-Accept examples:
+- direct email on official firm site
+- direct email in credible public professional/court/government material clearly tied to that person
 
-```text
-jane@firm.com
-firstname.lastname@firm.com
-personal legacy address clearly published by the firm for that attorney
-```
-
-Reject as direct email:
+Reject:
 
 ```text
 info@
@@ -456,35 +295,47 @@ intake@
 legal@
 ```
 
-Never guess an email pattern.
+Also reject guessed email patterns and private/leaked databases.
 
-Never qualify from a guessed address.
+If gap confirmed but no owner/DM can be established:
 
-A generic verified firm inbox can be stored as evidence, but it produces:
+```text
+Gap Confirmed - Owner Missing
+```
+
+If owner/DM exists but no direct public verified personal email:
 
 ```text
 Gap Confirmed - Direct Email Missing
 ```
 
-not Qualified.
+If gap + decision maker + direct public verified personal email all exist:
+
+```text
+Qualified
+qualified = true
+```
+
+`Qualified` does not mean Contacted.
 
 ---
 
 # 8. Outreach Draft for Qualified Leads
 
-For every Qualified lead, persist a short outreach draft, roughly 130–160 words.
+Qualified leads require an outreach draft persisted with the decision.
+
+Target roughly 130–160 words.
 
 Structure:
 
-1. specific observation from the current site
-2. explain that materially different clients are sharing the same general service experience
+1. real observation from the current site
+2. explain that materially different clients are sharing one general website conversation
 3. explain why a focused page gives that client a clearer journey
-4. mention Google focused-page context secondarily
-5. mention clearer AI context secondarily
-6. explain why the selected service is the first mockup example
-7. soft CTA
+4. mention focused Google context and clearer AI context as secondary benefits
+5. explain why this service is the first mockup example
+6. soft CTA
 
-Default close:
+Default ending:
 
 ```text
 I’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.
@@ -492,36 +343,52 @@ I’m putting together a quick mockup to show you what I mean. I’ll send it ov
 If you’d rather I didn’t, just let me know.
 ```
 
-Do not promise rankings, indexing speed, leads, or revenue.
-
-Client experience comes first; Google/AI are supporting benefits.
+No ranking guarantees. No indexing promises. No hard call-booking CTA.
 
 ---
 
-# 9. How to Persist Each Batch
+# 9. Canonical Statuses
 
-Do **not** create one workflow commit per lead.
-
-After reviewing all 20 leads in the current batch, create one file:
-
-For the first 20 of this mission:
+Use only these:
 
 ```text
-agents/validation audit decisions/batch-10.json
+Ready for Validation
+Needs Review
+Not Relevant
+Disqualified
+Gap Confirmed - Owner Missing
+Gap Confirmed - Direct Email Missing
+Qualified
 ```
 
-For the second 20:
+---
+
+# 10. Decision File Format
+
+For each group of 20, create **one new JSON file** under:
 
 ```text
-agents/validation audit decisions/batch-11.json
+agents/validation audit decisions/
 ```
 
-Use this top-level structure:
+Do **not** assume the next numeric `batch-XX.json` filename is free. Other conversations/agents may have advanced the queue.
+
+To avoid collisions, prefer a unique filename such as:
+
+```text
+run40-YYYYMMDD-HHMM-part-1.json
+run40-YYYYMMDD-HHMM-part-2.json
+```
+
+Do not overwrite an existing decision file.
+
+The workflow accepts any changed `*.json` in that folder.
+
+Top-level shape:
 
 ```json
 {
   "campaign_id": "lawyers-us",
-  "batch_number": 10,
   "audit_mode": "manual_clean_homepage_urls_only",
   "decisions": [
     ... exactly 20 decisions ...
@@ -529,7 +396,7 @@ Use this top-level structure:
 }
 ```
 
-Each decision should use:
+Basic non-gap decision:
 
 ```json
 {
@@ -537,280 +404,180 @@ Each decision should use:
   "lead_id": "PLACE_ID_HERE",
   "final_status": "Not Relevant",
   "qualified": false,
-  "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
-  "campaign_notes": "Concise reproducible evidence for the decision.",
+  "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+  "campaign_notes": "Complete clean homepage URL review shows the firm is limited to one narrow Personal Injury client journey despite multiple injury subpages.",
   "service_gap_evidence": [],
   "contacts": []
 }
 ```
 
-For a confirmed gap, populate `service_gap_evidence`:
+Qualified decision shape:
 
 ```json
 {
-  "service_name": "Family Law",
-  "status": "Gap Confirmed",
-  "service_offered_evidence": "Official-site evidence that the firm explicitly offers the service.",
-  "dedicated_page_url": null,
-  "validation_method": "Manual full clean-homepage-URL audit + official live-site verification",
-  "notes": "Why the service remains in the shared/general architecture and why this is broader than one forgotten URL."
+  "slug": "02-example-firm",
+  "lead_id": "PLACE_ID_HERE",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+  "campaign_notes": "Concise reproducible explanation of architecture, gap, owner and email evidence.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Selected Service",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "Exact current-site evidence that the firm offers it.",
+      "dedicated_page_url": null,
+      "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+      "notes": "Why no reasonable focused destination exists and why the overall architecture is still consolidated."
+    }
+  ],
+  "contacts": [
+    {
+      "person_name": "Decision Maker",
+      "role": "Owner / Founder",
+      "email": "person@firm.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "Public source tying the email directly to this person.",
+      "notes": "Not guessed; direct individual email."
+    }
+  ],
+  "outreach_draft": {
+    "selected_service": "Selected Service",
+    "subject": "A thought on your Selected Service page",
+    "body": "Full outreach email here."
+  }
 }
 ```
 
-For contact research, populate `contacts` with:
+For `Gap Confirmed - Direct Email Missing`, keep the confirmed service-gap evidence, save the owner/DM contact if known, but do not mark Qualified and do not invent an email.
 
-```json
-{
-  "person_name": "Jane Doe",
-  "role": "Founder / Managing Attorney",
-  "email": "jane@firm.com",
-  "is_owner": true,
-  "is_decision_maker": true,
-  "is_direct_email": true,
-  "is_publicly_verified": true,
-  "evidence_source": "Official site / credible public source",
-  "notes": "Why the email belongs to this exact decision maker."
-}
-```
-
-For Qualified leads also include:
-
-```json
-"outreach_draft": {
-  "selected_service": "Family Law",
-  "subject": "A thought on your Family Law page",
-  "body": "..."
-}
-```
-
-Use recent files such as:
-
-```text
-agents/validation audit decisions/batch-07.json
-agents/validation audit decisions/batch-08.json
-agents/validation audit decisions/batch-09.json
-```
-
-as schema examples only. Do not copy their decisions into the new batch.
+Recent decision files in the same directory can be used as schema examples only. Do not copy their lead decisions.
 
 ---
 
-# 10. What Happens After You Commit a 20-Lead Decision File
+# 11. What Happens After You Commit 20
 
-The workflow is already configured:
+This workflow is already configured:
 
 ```text
 .github/workflows/validation-audit-apply-decisions.yml
 ```
 
-A push to:
+A commit to:
 
 ```text
 agents/validation audit decisions/*.json
 ```
 
-triggers one workflow that:
+will automatically:
 
-1. validates there are exactly 20 decisions
-2. upserts service-gap evidence
-3. upserts contact evidence
-4. stores outreach draft in campaign notes when present
-5. updates all 20 `campaign_leads` rows in D1
-6. writes:
+1. require exactly 20 decisions
+2. upsert `service_gap_evidence`
+3. upsert `lead_contacts`
+4. append outreach draft JSON into campaign notes when present
+5. update `campaign_leads.status`, `qualified`, reason and notes in D1
+6. write:
 
 ```text
 agents/validation audit apply receipt.json
 ```
 
-7. queries the updated D1 queue
-8. refreshes:
+7. query updated D1
+8. refresh:
 
 ```text
 agents/validation next clean URL batch.json
 agents/validation next clean URL leads/01.json ... 20.json
 ```
 
-9. commits the receipt + refreshed next batch
+all inside the same workflow run.
 
-## Mandatory verification before moving on
-
-After committing Batch 10:
-
-- verify the workflow completed successfully
-- verify the receipt contains **20 rows** with `source_file = agents/validation audit decisions/batch-10.json`
-- verify the clean URL batch changed to the next 20
-- only then begin Batch 11
-
-After committing Batch 11:
-
-- verify workflow success
-- verify the receipt contains **20 rows** from `batch-11.json`
-- then stop; do not start Batch 12 in this mission
-
-If the workflow fails for a technical reason, fix/retry the same batch. **Do not advance to the next 20 until D1 persistence succeeds.**
-
-The apply operation is intended to be safe to re-run on the same decision batch if necessary.
+No manual D1 SQL is normally required.
 
 ---
 
-# 11. Expected 40-Lead Cadence
+# 12. Verification Gate Between the Two 20s
 
-## Batch 10
+After Part 1 is committed:
 
-```text
-Read current 01–20 files
-→ manually classify all 20
-→ live-check only zero/generic/ambiguous/promising-gap cases
-→ contact research only for real gaps
-→ create batch-10.json with exactly 20 decisions
-→ commit
-→ verify workflow success
-→ verify 20-row D1 receipt
-→ verify refreshed next clean 20
-```
+**Do not start Part 2 yet.**
 
-## Batch 11
+Verify:
 
 ```text
-Read newly refreshed 01–20 files
-→ repeat the same process
-→ create batch-11.json with exactly 20 decisions
-→ commit
-→ verify workflow success
-→ verify 20-row D1 receipt
-→ STOP
+workflow = success
+receipt contains exactly 20 entries
+receipt lead IDs match your Part 1 lead IDs
+receipt statuses match your decisions
 ```
 
-Do not pre-read or process Batch 11 while Batch 10 is still in progress.
+Then re-fetch the newly generated clean URL files.
 
-Do not process 40 in one JSON file.
+The second 20 must come from the **refreshed snapshot after Part 1**, not from a preloaded list.
 
-Do not create or apply the two batches in parallel.
+If the workflow fails, fix/retry the current 20 first. Never advance with an unpersisted batch.
+
+After Part 2, perform the same verification and then stop.
 
 ---
 
-# 12. Quality-Control Checklist Before Finalizing Any Lead
+# 13. 40-Lead Completion Checklist
 
-Ask:
+Do not finish until all are true:
 
-- [ ] Did I read the complete clean homepage URL list?
-- [ ] Did I avoid score/hint/category shortcuts?
-- [ ] Is this truly multiple materially different client journeys, or just one narrow practice with many subpages?
-- [ ] If it is one narrow journey, did I use `Not Relevant` rather than `Disqualified`?
-- [ ] If multiple different journeys exist, are they already separately represented?
-- [ ] If the site is mature, did I stop instead of hunting one missing URL?
-- [ ] If URL evidence was zero/generic/ambiguous, did I live-check the current site?
-- [ ] Did I verify current domain/firm identity if there was a redirect, stale site, or challenge screen?
-- [ ] For a gap, is the selected service explicitly offered?
-- [ ] Is the gap meaningful rather than a micro-subservice?
-- [ ] Did I avoid using search absence alone as proof?
-- [ ] Did I delay owner/email research until after the architecture gate passed?
-- [ ] If Qualified, does the direct public email belong to the actual decision maker?
-- [ ] Is the email neither generic nor guessed?
-- [ ] If Qualified, is the outreach draft persisted?
-- [ ] Is the final reasoning reproducible from `campaign_notes` and evidence fields?
+- [ ] First 20 reviewed sequentially from full clean homepage URL lists.
+- [ ] Live checks performed only where needed.
+- [ ] No scoring/hints used as decision logic.
+- [ ] Contact research happened only for real gap candidates.
+- [ ] Part 1 decision JSON has exactly 20 decisions.
+- [ ] Part 1 workflow succeeded.
+- [ ] Part 1 receipt verified.
+- [ ] Second 20 loaded only after Part 1 refresh.
+- [ ] Second 20 reviewed sequentially.
+- [ ] Part 2 decision JSON has exactly 20 decisions.
+- [ ] Part 2 workflow succeeded.
+- [ ] Part 2 receipt verified.
+- [ ] Exactly 40 leads total were processed.
+- [ ] No third batch started.
 
----
-
-# 13. Important Learned Edge Cases
-
-These rules came from real production errors and corrections. Keep them.
-
-### Many URLs can still be one journey
-
-A 100-page PI site is usually still `Not Relevant`.
-
-A 100-page Criminal Defense site is usually still `Not Relevant`.
-
-Do not confuse depth with multi-practice maturity.
-
-### A general `/services` page can be a strong candidate
-
-If the official site explicitly offers, for example:
+At the end, report concise counts across the 40:
 
 ```text
-Family Law
-Criminal Law
-Personal Injury
-```
-
-and all three remain on the same `/services` page, that is exactly the type of architecture gap we want.
-
-### One service missing on a mature site is not enough
-
-If a site has focused Criminal, PI, Family, Business, Estate, etc. pages and one service is not separately surfaced, the concept is already adopted. Usually `Disqualified`.
-
-### Generic email is not Qualified
-
-A real gap + founder + `legal@firm.com` is:
-
-```text
+Not Relevant
+Disqualified
+Needs Review
+Gap Confirmed - Owner Missing
 Gap Confirmed - Direct Email Missing
+Qualified
 ```
 
-not Qualified.
-
-### Stale/blocked sites require identity checking
-
-Do not infer opportunity from a robot screen, DNS failure, zero links, or dead domain.
-
----
-
-# 14. End-of-Mission Output
-
-After Batch 11 is successfully persisted, give the user a concise report containing:
-
-- `40/40` completed
-- Batch 10 status counts
-- Batch 11 status counts
-- combined 40-lead counts
-- names of any new Qualified leads
-- names of any `Gap Confirmed - Direct Email Missing` / `Owner Missing` leads
-- any `Needs Review` leads
-- confirmation that both batches were applied to D1
-- current remaining new-production Ready count from the refreshed clean batch
-- exact next batch number (`batch-12`) but **do not start it**
-
-Also update:
+List any Qualified firms with:
 
 ```text
-agents/validation runner last update.md
+firm
+domain
+selected service
+decision maker
+direct public verified email
 ```
-
-with the two completed batches, notable edge cases, current remaining count, and the exact next action.
 
 ---
 
-# 15. Infrastructure Status
+# Final Guardrails
 
-Everything required for this 40-lead run is already wired:
+- Do not equate many URLs with mature architecture.
+- Do not qualify a single missing page on an otherwise mature site.
+- Do not treat PI subtypes as separate materially different client journeys by default.
+- Do not infer services from attorney bios alone.
+- Do not use search absence alone to prove page absence.
+- Do not research emails before the architecture gap passes.
+- Do not accept generic or guessed emails.
+- Do not proceed to the next 20 until the current 20 are persisted and verified in D1.
+- Do not process more than 40 leads in this run.
 
-- clean homepage URL evidence exists
-- per-lead 01–20 files exist
-- no score/hint decision surface is needed
-- batch decision JSON schema is established
-- GitHub Actions applies the 20 decisions to D1
-- the same workflow refreshes the next clean 20 after D1 update
-- receipt verification is available
+## One-line operating philosophy
 
-**Do not redesign the workflow during this mission unless a real technical failure blocks execution.**
-
-If something fails, make the smallest safe repair, re-run the same batch, verify persistence, then continue.
-
----
-
-# Final Instruction to the Agent
-
-Start now with the current:
-
-```text
-agents/validation next clean URL leads/01.json ... 20.json
-```
-
-Treat them as **Batch 10**.
-
-Finish and persist those 20 first.
-
-Only after successful D1 receipt + automatic refresh, process the next 20 as **Batch 11**.
-
-Then stop after exactly **40 validated leads**.
+> Read all clean homepage URLs, judge the architecture yourself, live-check only ambiguity or real candidates, persist 20, verify, then repeat once.
