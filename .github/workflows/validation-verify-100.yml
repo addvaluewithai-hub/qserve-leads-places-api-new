@@ -1,0 +1,82 @@
+name: Verify 100-lead validation run
+
+on:
+  push:
+    paths:
+      - ".github/workflows/validation-verify-100.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact 100 IDs in D1
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from collections import Counter
+          from pathlib import Path
+
+          account=os.environ['CLOUDFLARE_ACCOUNT_ID']; token=os.environ['CLOUDFLARE_API_TOKEN']; database=os.environ['D1_DATABASE_ID']
+          endpoint=f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
+          def query(sql, params=None):
+              req=urllib.request.Request(endpoint,data=json.dumps({'sql':sql,'params':params or []}).encode(),headers={'Authorization':f'Bearer {token}','Content-Type':'application/json'},method='POST')
+              with urllib.request.urlopen(req,timeout=30) as response: body=json.load(response)
+              if not body.get('success'): raise SystemExit(json.dumps(body))
+              result=body.get('result') or []
+              return (result[0].get('results') or []) if result else []
+
+          files=[]
+          for batch in range(1,6):
+              files += sorted(Path('agents/validation results').glob(f'new-batch{batch:02d}-*.json'))
+          if len(files) != 100:
+              raise SystemExit(f'Expected 100 batch result files, found {len(files)}')
+          expected={json.loads(p.read_text(encoding='utf-8'))['lead_id']: str(p) for p in files}
+          ids=list(expected)
+          rows=[]
+          for start in range(0,len(ids),40):
+              chunk=ids[start:start+40]
+              placeholders=','.join('?' for _ in chunk)
+              rows += query(f'''SELECT cl.lead_id,l.name,d.website_domain,cl.status,cl.qualified,cl.qualification_reason
+                                FROM campaign_leads cl
+                                JOIN leads l ON l.id=cl.lead_id
+                                LEFT JOIN lead_domains d ON d.lead_id=cl.lead_id
+                                WHERE cl.campaign_id=? AND cl.lead_id IN ({placeholders})''', ['lawyers-us',*chunk])
+          got={r['lead_id']:r for r in rows}
+          missing=sorted(set(ids)-set(got))
+          still_ready=sorted(r['lead_id'] for r in rows if r['status']=='Ready for Validation')
+          counts=Counter(r['status'] for r in rows)
+          qualified=[r for r in rows if int(r.get('qualified') or 0)==1]
+          new_ready=(query("""SELECT COUNT(*) AS n FROM campaign_leads WHERE campaign_id=? AND status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation'""",['lawyers-us']) or [{'n':0}])[0]['n']
+          out={
+            'campaign_id':'lawyers-us',
+            'verified_result_files':len(files),
+            'verified_d1_rows':len(rows),
+            'missing_from_d1':missing,
+            'still_ready_among_100':still_ready,
+            'status_counts':dict(sorted(counts.items())),
+            'qualified_count':len(qualified),
+            'qualified_leads':sorted(qualified,key=lambda x:x['name']),
+            'new_production_ready_remaining':new_ready,
+            'verification':'PASS' if len(rows)==100 and not missing and not still_ready else 'FAIL'
+          }
+          Path('agents/validation 100-run verification.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print(json.dumps(out,indent=2,ensure_ascii=False))
+          PY
+      - name: Commit verification
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "agents/validation 100-run verification.json"
+          git commit -m "Verify 100-lead validation run in D1"
+          git push
