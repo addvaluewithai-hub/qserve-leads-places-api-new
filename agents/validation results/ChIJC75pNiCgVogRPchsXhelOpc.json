@@ -1,0 +1,45 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJC75pNiCgVogRPchsXhelOpc",
+  "firm": "Rosensteel Fleishman Law Firm | Serving Injury Victims in North Carolina",
+  "domain": "rflaw.net",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the live site exposes major practice areas as dedicated service destinations, including Medical Malpractice, Workers Compensation, Wrongful Death, car/truck/motorcycle accidents, slip and fall, dog bites, and related injury services.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The homepage and primary navigation were inspected. Practice Areas links point to focused service pages rather than one general shared destination. Medical Malpractice, Workers Compensation, and Wrongful Death were independently opened and confirmed as substantial dedicated client pages. No decision-maker/email research performed because the lead failed the service-page validation gate.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Live navigation explicitly lists Medical Malpractice and links to a focused Charlotte Medical Malpractice Lawyer page with malpractice-specific client questions, eligibility, process, damages, and case types.",
+      "dedicated_page_url": "https://www.rflaw.net/practice-areas/medical-malpractice/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Substantial dedicated service page; reasonable person would clearly consider it a focused Medical Malpractice destination."
+    },
+    {
+      "service_name": "Workers Compensation",
+      "status": "Disqualified",
+      "service_offered_evidence": "Live navigation explicitly lists Workers Compensation and links to a dedicated Workers Compensation Lawyer in Charlotte page.",
+      "dedicated_page_url": "https://www.rflaw.net/practice-areas/personal-injury/workers-compensation/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated workers compensation client destination."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "Live navigation explicitly lists Wrongful Death and links to a dedicated Wrongful Death Lawyer in Charlotte page.",
+      "dedicated_page_url": "https://www.rflaw.net/practice-areas/personal-injury/wrongful-death/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated wrongful-death client destination."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.rflaw.net/",
+    "https://www.rflaw.net/practice-areas/personal-injury/",
+    "https://www.rflaw.net/practice-areas/medical-malpractice/",
+    "https://www.rflaw.net/practice-areas/personal-injury/workers-compensation/",
+    "https://www.rflaw.net/practice-areas/personal-injury/wrongful-death/"
+  ]
+}
