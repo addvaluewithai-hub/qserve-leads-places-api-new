@@ -2,22 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 18,
-  "lead_id": "ChIJx-O1yeefToYRmYCHO7zaU_U",
-  "name": "La Abogada Latina Reina Gonzalez, Abogados de Accidentes de Auto",
-  "domain": "abogadosparalatinos.com",
-  "website": "http://abogadosparalatinos.com/",
-  "clean_homepage_url_count": 11,
-  "clean_homepage_urls": [
-    "/",
-    "/abogada-mexicana",
-    "/abogado-law-firm",
-    "/abogados-accidentes-dallas",
-    "/abogados-de-accidentes-de-aceite-en",
-    "/abogados-de-accidentes-el-paso-nuev",
-    "/abogados-de-accidentes-en-dallas-y-texas",
-    "/abogados-de-accidentes-en-trabajo",
-    "/abogados-en-dallas",
-    "/about-5",
-    "/contact"
-  ]
+  "lead_id": "ChIJnZ9EU12cToYRBWEFVn37sC4",
+  "name": "One moment, please...",
+  "domain": "markmlaw.com",
+  "website": "http://markmlaw.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

@@ -2,12 +2,23 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJjWD20zmmToYR6iuRCU0TrZ4",
-  "name": "Humphreys & Peterson Law Firm",
-  "domain": "dallasjusticeforall.com",
-  "website": "https://dallasjusticeforall.com/",
-  "clean_homepage_url_count": 1,
+  "lead_id": "ChIJHzIQTl6cToYRU43AsiReb5w",
+  "name": "Home | JCP Law",
+  "domain": "theimmigrationlawyers.com",
+  "website": "http://www.theimmigrationlawyers.com/",
+  "clean_homepage_url_count": 12,
   "clean_homepage_urls": [
-    "/"
+    "/",
+    "/about-jcp",
+    "/citizenship",
+    "/contact-us",
+    "/es",
+    "/faq",
+    "/helpful-links",
+    "/other-services",
+    "/privacy-policy",
+    "/removal-defense",
+    "/residency",
+    "/terms-of-service"
   ]
 }

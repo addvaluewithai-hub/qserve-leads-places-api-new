@@ -2,10 +2,17 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 1,
-  "lead_id": "ChIJM49jSiMgTIYR1Jh75VsISag",
-  "name": "Armstrong Legal Immigration Law Firm | Attorney Dallas TX",
-  "domain": "legalarmstrong.com",
-  "website": "http://legalarmstrong.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJ4XWtZheZToYRAHCLuA7MPFk",
+  "name": "Home",
+  "domain": "herzlaw.com",
+  "website": "https://herzlaw.com/",
+  "clean_homepage_url_count": 6,
+  "clean_homepage_urls": [
+    "/",
+    "/blog",
+    "/celina",
+    "/herzlaw.com/privacy",
+    "/privacy",
+    "/protective-orders"
+  ]
 }
