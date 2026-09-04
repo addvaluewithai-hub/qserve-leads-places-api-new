@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJmzP22N_4rlQRYdDqKW7iYlg",
-    "name": "Bankruptcy Relief: Simple and Smooth - Peterson Zeyer Law Home",
-    "website": "https://www.petersonzeyerlaw.com/",
+    "id": "ChIJIYw6cnwTK4cRQuebTbg5X48",
+    "name": "403 - Forbidden",
+    "website": "https://solorzanolawfirm.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:38",
+    "first_seen_at": "2026-09-02 11:12:39",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "petersonzeyerlaw.com"
+    "website_domain": "solorzanolawfirm.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
