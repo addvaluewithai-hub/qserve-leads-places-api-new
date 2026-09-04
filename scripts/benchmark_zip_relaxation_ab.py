@@ -16,7 +16,6 @@ import argparse
 import asyncio
 import json
 import os
-from pathlib import Path
 from urllib.parse import urlparse
 
 import requests
@@ -222,7 +221,7 @@ def main() -> None:
     key = os.environ["GOOGLE_API_KEY"]
     query = make_query_client()  # read-only use only; do NOT apply schema or write
     campaign = load_campaign(args.campaign)
-    plan = load_plan(campaign["market_plan"])
+    plan = load_plan(campaign)
     existing_ids, existing_domains = existing_global(query)
     zips = choose_zips(query, campaign, plan, args.state.upper(), args.requests)
 
@@ -301,7 +300,7 @@ def main() -> None:
         "strict_domains_per_request": round(len(strict_domains) / max(1, len(zips)), 3),
         "relaxed_domains_per_request": round(len(relaxed_domains) / max(1, len(zips)), 3),
         "yield_multiplier": round(len(relaxed_domains) / max(1, len(strict_domains)), 3),
-        "note": "Google requests are intentionally not written to the D1 usage ledger because D1 daily row-write quota is exhausted; this artifact is the authoritative usage record for these benchmark calls.",
+        "note": "Google requests are intentionally not written to the D1 usage ledger; this benchmark performs read-only D1 access and its artifact is the authoritative usage record for these benchmark calls.",
     }
 
     out = ROOT / "out" / "zip-relaxation-ab"
