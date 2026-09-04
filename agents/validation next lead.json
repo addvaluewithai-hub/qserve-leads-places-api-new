@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJESmju2-32YgRZ8EXSoRVxE8",
-    "name": "Miami Car Accident Lawyer | Personal Injury Attorneys - Jaime Suarez",
-    "website": "https://www.jaime-suarez.com/",
+    "id": "ChIJv7KW6ji7xokRTGJHZNnOkt0",
+    "name": "Pennsylvania Lemon Law | Free Help &amp; Info for PA Drivers | 1 800 LEMON LAW",
+    "website": "https://www.lemonlaw.com/pennsylvania/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:20",
+    "first_seen_at": "2026-09-02 11:12:21",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "jaime-suarez.com"
+    "website_domain": "lemonlaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
