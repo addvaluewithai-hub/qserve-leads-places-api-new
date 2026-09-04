@@ -33,6 +33,7 @@ jobs:
           python3 - <<'PY'
           import json, os, urllib.request
           from pathlib import Path
+          from urllib.parse import urlparse
 
           account = os.environ['CLOUDFLARE_ACCOUNT_ID']
           token = os.environ['CLOUDFLARE_API_TOKEN']
@@ -41,30 +42,19 @@ jobs:
 
           def query(sql, params=None):
               payload = json.dumps({'sql': sql, 'params': params or []}).encode()
-              req = urllib.request.Request(
-                  endpoint,
-                  data=payload,
-                  headers={
-                      'Authorization': f'Bearer {token}',
-                      'Content-Type': 'application/json',
-                  },
-                  method='POST',
-              )
+              req = urllib.request.Request(endpoint, data=payload, headers={
+                  'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'
+              }, method='POST')
               with urllib.request.urlopen(req, timeout=30) as response:
                   body = json.load(response)
               if not body.get('success'):
                   raise SystemExit(json.dumps(body))
               result = body.get('result') or []
-              if not result:
-                  return []
-              return result[0].get('results') or []
+              return (result[0].get('results') or []) if result else []
 
           counts_rows = query('''
-              SELECT status, COUNT(*) AS count
-              FROM campaign_leads
-              WHERE campaign_id = ?
-              GROUP BY status
-              ORDER BY status
+              SELECT status, COUNT(*) AS count FROM campaign_leads
+              WHERE campaign_id = ? GROUP BY status ORDER BY status
           ''', ['lawyers-us'])
           counts = {row['status']: row['count'] for row in counts_rows}
           counts['Total'] = sum(counts.values())
@@ -74,19 +64,16 @@ jobs:
           ) or [{'count': 0}])[0]['count']
 
           base_select = '''
-              SELECT
-                l.id, l.name, l.website, l.address, l.phone, l.primary_type,
-                cl.campaign_id, cl.status, cl.qualified, cl.quality_score,
-                cl.qualification_reason, cl.notes, cl.first_seen_at, cl.last_seen_at,
-                d.website_domain
+              SELECT l.id, l.name, l.website, l.address, l.phone, l.primary_type,
+                     cl.campaign_id, cl.status, cl.qualified, cl.quality_score,
+                     cl.qualification_reason, cl.notes, cl.first_seen_at, cl.last_seen_at,
+                     d.website_domain
               FROM campaign_leads cl
               JOIN leads l ON l.id = cl.lead_id
               LEFT JOIN lead_domains d ON d.lead_id = cl.lead_id
           '''
           ready_where = '''
-              WHERE cl.campaign_id = ?
-                AND cl.status = 'Ready for Validation'
-                AND cl.qualified = 0
+              WHERE cl.campaign_id = ? AND cl.status = 'Ready for Validation' AND cl.qualified = 0
           '''
           ordering = ' ORDER BY cl.quality_score DESC, cl.first_seen_at ASC, cl.lead_id ASC '
 
@@ -94,59 +81,69 @@ jobs:
           batch = query(base_select + ready_where + ordering + ' LIMIT 12', ['lawyers-us'])
 
           out = {
-              'campaign_id': 'lawyers-us',
-              'counts': counts,
+              'campaign_id': 'lawyers-us', 'counts': counts,
               'selection_rule': "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
-              'lead': None,
-              'homepage_links': [],
-              'existing_service_gap_evidence': [],
-              'existing_contacts': [],
+              'lead': None, 'homepage_links': [], 'existing_service_gap_evidence': [], 'existing_contacts': [],
           }
-
           if leads:
-              lead = leads[0]
-              lead_id = lead['id']
-              out['lead'] = lead
+              lead = leads[0]; lead_id = lead['id']; out['lead'] = lead
               out['homepage_links'] = query('''
-                  SELECT homepage, final_url, url, anchor_text, crawled_at
-                  FROM homepage_link_evidence
-                  WHERE campaign_id = ? AND lead_id = ?
-                  ORDER BY url
+                  SELECT homepage, final_url, url, anchor_text, crawled_at FROM homepage_link_evidence
+                  WHERE campaign_id = ? AND lead_id = ? ORDER BY url
               ''', ['lawyers-us', lead_id])
               out['existing_service_gap_evidence'] = query('''
-                  SELECT service_name, status, service_offered_evidence,
-                         dedicated_page_url, validation_method, notes, validated_at
-                  FROM service_gap_evidence
-                  WHERE campaign_id = ? AND lead_id = ?
-                  ORDER BY service_name
+                  SELECT service_name, status, service_offered_evidence, dedicated_page_url,
+                         validation_method, notes, validated_at FROM service_gap_evidence
+                  WHERE campaign_id = ? AND lead_id = ? ORDER BY service_name
               ''', ['lawyers-us', lead_id])
               out['existing_contacts'] = query('''
                   SELECT id, person_name, role, email, is_owner, is_decision_maker,
-                         is_direct_email, is_publicly_verified, evidence_source,
-                         verified_at, notes
-                  FROM lead_contacts
-                  WHERE lead_id = ?
+                         is_direct_email, is_publicly_verified, evidence_source, verified_at, notes
+                  FROM lead_contacts WHERE lead_id = ?
                   ORDER BY is_decision_maker DESC, is_owner DESC, person_name
               ''', [lead_id])
 
           batch_out = {
-              'campaign_id': 'lawyers-us',
-              'selection_rule': out['selection_rule'],
-              'generated_from_current_d1_queue': True,
-              'leads': batch,
+              'campaign_id': 'lawyers-us', 'selection_rule': out['selection_rule'],
+              'generated_from_current_d1_queue': True, 'leads': batch,
           }
 
-          # New-production-only batch: these rows were created by the V2 ZIP builder,
-          # where Crawl4AI runs immediately and homepage_link_evidence should already exist.
           new_where = ready_where + " AND cl.qualification_reason = 'working_set_ready_for_validation' "
           new_batch = query(base_select + new_where + ordering + ' LIMIT 10', ['lawyers-us'])
           enriched_new_batch = []
+
+          legal_terms = {
+              'criminal','defense','dui','dwi','drug','assault','theft','burglary','sex','domestic','violence',
+              'traffic','reckless','speeding','injury','accident','car','truck','motorcycle','wrongful','death',
+              'malpractice','workers','comp','slip','fall','premises','immigration','family','divorce','custody',
+              'child','support','adoption','bankruptcy','estate','probate','will','trust','business','corporate',
+              'employment','disability','social','security','veteran','maritime','product','liability','expungement'
+          }
+          utility_terms = {
+              'about','contact','blog','news','resource','faq','testimonial','review','result','case-success',
+              'privacy','terms','sitemap','team','attorney','lawyer-profile','location','office','charity','fees'
+          }
+          asset_exts = ('.png','.jpg','.jpeg','.gif','.svg','.webp','.pdf','.css','.js','.ico')
+
+          def signal_score(link):
+              url = (link.get('url') or '').lower()
+              anchor = (link.get('anchor_text') or '').lower()
+              path = urlparse(url).path.lower()
+              if path.endswith(asset_exts) or '/wp-content/' in path:
+                  return -99
+              text = path.replace('-', ' ').replace('_', ' ') + ' ' + anchor
+              score = sum(2 for term in legal_terms if term in text)
+              score -= sum(2 for term in utility_terms if term in text)
+              if anchor in {'learn more','read more','more','click here',''}:
+                  score -= 1
+              if path.count('/') >= 2:
+                  score += 1
+              return score
+
           for lead in new_batch:
               links = query('''
-                  SELECT homepage, final_url, url, anchor_text, crawled_at
-                  FROM homepage_link_evidence
-                  WHERE campaign_id = ? AND lead_id = ?
-                  ORDER BY url
+                  SELECT homepage, final_url, url, anchor_text, crawled_at FROM homepage_link_evidence
+                  WHERE campaign_id = ? AND lead_id = ? ORDER BY url
               ''', ['lawyers-us', lead['id']])
               item = dict(lead)
               item['homepage_link_count'] = len(links)
@@ -155,32 +152,46 @@ jobs:
               enriched_new_batch.append(item)
 
           new_ready_count = (query('''
-              SELECT COUNT(*) AS count
-              FROM campaign_leads
-              WHERE campaign_id = ?
-                AND status = 'Ready for Validation'
-                AND qualified = 0
+              SELECT COUNT(*) AS count FROM campaign_leads
+              WHERE campaign_id = ? AND status = 'Ready for Validation' AND qualified = 0
                 AND qualification_reason = 'working_set_ready_for_validation'
           ''', ['lawyers-us']) or [{'count': 0}])[0]['count']
 
           new_out = {
               'campaign_id': 'lawyers-us',
               'selection_rule': "new production only: status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation'",
-              'new_ready_count': new_ready_count,
-              'batch_size': len(enriched_new_batch),
-              'leads': enriched_new_batch,
+              'new_ready_count': new_ready_count, 'batch_size': len(enriched_new_batch), 'leads': enriched_new_batch,
           }
 
-          Path('agents/validation next lead.json').write_text(
-              json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
-          )
-          Path('agents/validation next batch.json').write_text(
-              json.dumps(batch_out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
-          )
-          Path('agents/validation next new batch.json').write_text(
-              json.dumps(new_out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
-          )
-          print(json.dumps({'next': out.get('lead'), 'new_batch': new_out, 'counts': counts}, indent=2, ensure_ascii=False))
+          compact = []
+          for item in enriched_new_batch:
+              scored = []
+              for link in item['homepage_links']:
+                  score = signal_score(link)
+                  if score > 0:
+                      scored.append((score, link))
+              scored.sort(key=lambda pair: (-pair[0], pair[1].get('url') or ''))
+              compact.append({
+                  'id': item['id'], 'name': item['name'], 'website': item['website'],
+                  'website_domain': item['website_domain'], 'homepage_link_count': item['homepage_link_count'],
+                  'crawl_evidence_available': item['crawl_evidence_available'],
+                  'structural_signal_count': len(scored),
+                  'top_structural_links': [
+                      {'score': score, 'url': link.get('url'), 'anchor_text': link.get('anchor_text')}
+                      for score, link in scored[:15]
+                  ],
+              })
+          compact_out = {
+              'campaign_id': 'lawyers-us', 'new_ready_count': new_ready_count,
+              'purpose': 'Crawl4AI-first architecture pre-screen. Heuristic only; final gap decisions still require website double-check.',
+              'leads': compact,
+          }
+
+          Path('agents/validation next lead.json').write_text(json.dumps(out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          Path('agents/validation next batch.json').write_text(json.dumps(batch_out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          Path('agents/validation next new batch.json').write_text(json.dumps(new_out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          Path('agents/validation new crawl prescreen.json').write_text(json.dumps(compact_out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          print(json.dumps({'new_ready_count': new_ready_count, 'compact': compact}, indent=2, ensure_ascii=False))
           PY
 
       - name: Commit snapshots when changed
@@ -188,7 +199,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "agents/validation next lead.json" "agents/validation next batch.json" "agents/validation next new batch.json"
+          git add "agents/validation next lead.json" "agents/validation next batch.json" \
+                  "agents/validation next new batch.json" "agents/validation new crawl prescreen.json"
           if git diff --cached --quiet; then
             echo "Snapshots unchanged."
             exit 0
