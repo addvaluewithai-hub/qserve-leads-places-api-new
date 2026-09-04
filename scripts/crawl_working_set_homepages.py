@@ -12,6 +12,19 @@ from urllib.parse import urljoin, urlparse, urlunparse
 from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
 from crawl4ai.content_scraping_strategy import LXMLWebScrapingStrategy
 
+PAGE_ASSET_EXTENSIONS = {
+    ".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".avif", ".ico",
+    ".css", ".js", ".map", ".xml", ".txt", ".zip", ".mp3", ".mp4", ".webm",
+    ".woff", ".woff2", ".ttf", ".eot", ".pdf",
+}
+ASSET_PATH_MARKERS = (
+    "/wp-content/uploads/",
+    "/wp-includes/",
+    "/assets/images/",
+    "/images/",
+)
+GENERIC_ANCHORS = {"", "learn more", "read more", "more", "click here", "view more", "details"}
+
 
 def clean_url(value: str | None) -> str | None:
     if not value:
@@ -46,7 +59,38 @@ def canonical_url(value: str, base: str) -> str | None:
         return None
 
 
+def is_page_link(url: str) -> bool:
+    path = (urlparse(url).path or "/").lower()
+    if any(marker in path for marker in ASSET_PATH_MARKERS):
+        return False
+    suffix = Path(path).suffix.lower()
+    if suffix in PAGE_ASSET_EXTENSIONS:
+        return False
+    return True
+
+
+def clean_anchor(value: object) -> str:
+    text = " ".join(str(value or "").split())
+    if len(text) > 140:
+        text = text[:137].rstrip() + "..."
+    return text
+
+
+def anchor_quality(text: str) -> tuple[int, int]:
+    normalized = text.strip().lower()
+    if normalized in GENERIC_ANCHORS:
+        return (0, -len(text))
+    if 2 <= len(text) <= 80:
+        return (2, -len(text))
+    return (1, -len(text))
+
+
 def extract_internal_links(result, homepage: str) -> list[dict]:
+    """Collect only page-like same-domain links visible on the rendered homepage.
+
+    This is deliberately not a deep crawl and does not classify services. It removes
+    obvious asset/file targets and keeps a compact anchor for each unique page URL.
+    """
     root_host = normalized_host(homepage)
     links = getattr(result, "links", None) or {}
     items = links.get("internal") if isinstance(links, dict) else []
@@ -61,11 +105,12 @@ def extract_internal_links(result, homepage: str) -> list[dict]:
         if not href:
             continue
         target = canonical_url(str(href), homepage)
-        if not target or normalized_host(target) != root_host:
+        if not target or normalized_host(target) != root_host or not is_page_link(target):
             continue
-        row = {"url": target, "anchor_text": str(text).strip()}
+
+        row = {"url": target, "anchor_text": clean_anchor(text)}
         current = deduped.get(target)
-        if current is None or (not current.get("anchor_text") and row["anchor_text"]):
+        if current is None or anchor_quality(row["anchor_text"]) > anchor_quality(current.get("anchor_text") or ""):
             deduped[target] = row
 
     return sorted(deduped.values(), key=lambda row: row["url"])
@@ -189,7 +234,7 @@ async def run(args) -> None:
                     "url": link["url"],
                     "anchor_text": link["anchor_text"],
                 })
-            print(f"  status={summary['crawl_status']} attempts={summary['attempts']} links={summary['internal_links_found']}")
+            print(f"  status={summary['crawl_status']} attempts={summary['attempts']} page_links={summary['internal_links_found']}")
 
     links_by_index: dict[int, list[dict]] = {}
     for row in link_rows:
@@ -226,7 +271,7 @@ async def run(args) -> None:
         "homepage_fetch_skipped": sum(1 for r in summaries if r.get("crawl_status") == "skipped"),
         "homepages_retried": sum(1 for r in summaries if int(r.get("attempts") or 0) > 1),
         "completed_with_zero_internal_links": sum(1 for r in summaries if r.get("crawl_status") == "completed" and int(r.get("internal_links_found") or 0) == 0),
-        "total_internal_homepage_links": len(link_rows),
+        "total_internal_homepage_page_links": len(link_rows),
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
     (out_dir / "homepage_links_summary.json").write_text(json.dumps(aggregate, indent=2), encoding="utf-8")
@@ -234,7 +279,7 @@ async def run(args) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Fetch homepage-only same-domain links for a CSV working set")
+    parser = argparse.ArgumentParser(description="Fetch homepage-only same-domain page links for a CSV working set")
     parser.add_argument("--input", required=True)
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--start", type=int, default=0)
