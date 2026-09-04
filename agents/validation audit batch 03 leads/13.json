@@ -1,0 +1,12 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 3,
+  "position": 13,
+  "lead_id": "ChIJ9dapWGCcToYRoJmXX8-1MTU",
+  "name": "Dallas Personal Injury Lawyers | The Salazar Law Firm",
+  "domain": "johnrsalazar.com",
+  "website": "http://www.johnrsalazar.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
+}

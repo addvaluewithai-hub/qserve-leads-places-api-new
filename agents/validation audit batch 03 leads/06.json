@@ -1,0 +1,23 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 3,
+  "position": 6,
+  "lead_id": "ChIJr9QAyaMTK4cR6aAPilb2AeY",
+  "name": "McCormick Law Firm, Car Wreck Attorney | Arizona Legal Team",
+  "domain": "limits.law",
+  "website": "https://limits.law/",
+  "clean_homepage_url_count": 10,
+  "clean_homepage_urls": [
+    "/",
+    "/about-the-firm",
+    "/blog",
+    "/common-questions",
+    "/contact-us",
+    "/injury-attorneys",
+    "/practice-areas",
+    "/privacy-policy",
+    "/settlements",
+    "/terms-of-service"
+  ]
+}

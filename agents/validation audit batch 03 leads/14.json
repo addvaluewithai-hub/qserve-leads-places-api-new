@@ -1,0 +1,32 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 3,
+  "position": 14,
+  "lead_id": "ChIJCWZQbTuZToYRb6h9h9_q7bg",
+  "name": "Udeshi Law Firm",
+  "domain": "udeshilawfirm.com",
+  "website": "http://www.udeshilawfirm.com/",
+  "clean_homepage_url_count": 19,
+  "clean_homepage_urls": [
+    "/index.php/about",
+    "/",
+    "/about",
+    "/austin",
+    "/contact-us",
+    "/criminallawtexas",
+    "/ei-passo",
+    "/family-law-texas",
+    "/houston",
+    "/index.php/blog",
+    "/index.php/contact-us",
+    "/index.php/family-law-texas",
+    "/index.php/home/criminallawtexas",
+    "/index.php/home/family-law-texas",
+    "/index.php/home/personal-injury-texas",
+    "/personal-injury-texas",
+    "/privacy",
+    "/san-antonio",
+    "/terms"
+  ]
+}

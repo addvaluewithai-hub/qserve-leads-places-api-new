@@ -1,0 +1,20 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 3,
+  "position": 16,
+  "lead_id": "ChIJHYeXq3qZToYRwZQgPdwWDWQ",
+  "name": "Trusted Legal Services - PV Law",
+  "domain": "pvlawoffice.com",
+  "website": "https://www.pvlawoffice.com/",
+  "clean_homepage_url_count": 7,
+  "clean_homepage_urls": [
+    "/",
+    "/about-us",
+    "/business-law",
+    "/contact-us",
+    "/disclaimer",
+    "/family-law",
+    "/faq"
+  ]
+}

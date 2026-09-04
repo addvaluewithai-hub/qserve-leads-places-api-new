@@ -1,0 +1,12 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 3,
+  "position": 8,
+  "lead_id": "ChIJ85dxdjpyK4cRbUuohWPu4vc",
+  "name": "Personal Injury Lawyer | Sweet James Accident Attorneys",
+  "domain": "zacharassociates.com",
+  "website": "https://www.zacharassociates.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
+}

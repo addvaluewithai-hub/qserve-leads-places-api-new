@@ -1,0 +1,33 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 3,
+  "position": 9,
+  "lead_id": "ChIJ3zw1sxwTK4cRovQxuPjTzVQ",
+  "name": "Experienced Immigration Lawyer Phoenix – Thomas Law Firm, PLC – Just another WordPress site",
+  "domain": "matthewthomaslaw.com",
+  "website": "http://matthewthomaslaw.com/",
+  "clean_homepage_url_count": 20,
+  "clean_homepage_urls": [
+    "/contact-us",
+    "/resources/check-uscis-case-status",
+    "/resources/visa-bulletin",
+    "/statement-on-privacy-liability",
+    "/",
+    "/2015/07/30/why-cant-all-immigrants-get-lawyers",
+    "/2018/01/29/the-current-state-of-daca-and-renewal-applications",
+    "/2018/02/08/immigration-benefits-for-victims-of-crimes",
+    "/author/mthomas",
+    "/blog",
+    "/category/featured",
+    "/check-uscis-case-status",
+    "/faqs",
+    "/matthew-c-thomas",
+    "/natalie-ramos",
+    "/practice-areas/immigration-attorneys",
+    "/testimonials",
+    "/testimonials/madi",
+    "/testimonials/sandra",
+    "/visa-bulletin"
+  ]
+}
