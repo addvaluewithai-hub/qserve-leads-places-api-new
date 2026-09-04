@@ -149,6 +149,7 @@ jobs:
               'contact-', 'about-', 'blog-', 'news-', 'resource-', 'testimonial-', 'review-',
               'case-result', 'case-success', 'case-victor', 'location-', 'office-', 'attorney-', 'lawyer-profile', 'faq-'
           )
+          noise_contains = ('case-result', 'case-success', 'case-victor')
           asset_exts = {
               '.png','.jpg','.jpeg','.gif','.svg','.webp','.avif','.ico','.pdf','.css','.js','.map','.xml','.txt',
               '.zip','.mp3','.mp4','.webm','.woff','.woff2','.ttf','.eot'
@@ -180,7 +181,7 @@ jobs:
                   return True
               parts = [part for part in low.strip('/').split('/') if part]
               for part in parts:
-                  if part in noise_segments or part.startswith(noise_prefixes):
+                  if part in noise_segments or part.startswith(noise_prefixes) or any(marker in part for marker in noise_contains):
                       return True
               return False
 
@@ -226,7 +227,10 @@ jobs:
                       signals.append((score, path, anchor))
 
               signals.sort(key=lambda item: (-item[0], item[1]))
-              visible = [[path, anchor] for _, path, anchor in signals[:12]]
+              visible = [
+                  f"{path} | {anchor}" if anchor else path
+                  for _, path, anchor in signals[:12]
+              ]
               signal_count = len(signals)
               if len(page_rows) == 0:
                   hint = 'crawl_review'
@@ -241,10 +245,9 @@ jobs:
                   'id': lead['id'],
                   'name': lead['name'],
                   'domain': lead['website_domain'],
-                  'website': lead['website'],
-                  'page_link_count': len(page_rows),
-                  'architecture_signal_count': signal_count,
-                  'screen_hint': hint,
+                  'page_links': len(page_rows),
+                  'signals': signal_count,
+                  'hint': hint,
                   'links': visible,
               })
               metadata_only.append({
@@ -273,8 +276,8 @@ jobs:
                   'campaign_id': 'lawyers-us',
                   'new_ready_count': new_ready_count,
                   'batch_size': len(compact),
-                  'format': "links are [path, short_anchor]; assets/date-blog/utility pages omitted from first-pass view",
-                  'important': "screen_hint is heuristic only; candidate gaps still require independent website double-check",
+                  'format': "links are compact 'path | anchor' strings; assets/date-blog/utility/case-result pages omitted",
+                  'important': "hint is heuristic only; candidates still require independent website double-check",
                   'leads': compact,
               }, indent=2, ensure_ascii=False)+'\n', encoding='utf-8'
           )
