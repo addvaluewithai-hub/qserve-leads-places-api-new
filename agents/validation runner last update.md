@@ -1,21 +1,20 @@
 # Validation Runner Last Update
 
-> This file is the required handoff record between validation sessions.
-> Read it before doing any validation work.
-> D1 is the source of truth; this file is the human-readable handoff.
+> Required handoff record between validation sessions.
+> Read this before validation work. D1 is the source of truth.
 
 ## Last Updated
 
 - Date: 2026-09-04
-- Runner / session: ChatGPT validation runner — Crawl4AI-first new-production test
+- Runner / session: ChatGPT validation runner — 100 new-production leads, 5 batches x 20
 - Repository / dataset: `addvaluewithai-hub/qserve-leads-places-api-new` / D1 `lawyers-us`
 - Campaign: `lawyers-us`
 
 ## Current Operating Mode
 
-Temporarily prioritize **new production leads** over the historical first-1,000 queue so the current Crawl4AI handoff can be tested before historical backfill work.
+Continue prioritizing **new production leads with existing Crawl4AI homepage evidence**.
 
-New-production selection rule:
+Selection rule:
 
 ```text
 campaign_id = lawyers-us
@@ -24,87 +23,170 @@ qualified = 0
 qualification_reason = working_set_ready_for_validation
 ```
 
-The new-production snapshot showed **830 Ready for Validation** leads before this test batch.
+After the completed 100-lead run, D1 reports:
 
-## Crawl4AI-First Validation Flow
+```text
+new-production Ready for Validation remaining = 724
+```
 
-For new production leads, start from `homepage_link_evidence` before opening the live site.
+## Crawl4AI-First Flow
 
-1. Review homepage internal URL paths + anchor text in batches.
-2. Apply the Architecture Maturity Gate from Crawl4AI evidence.
-3. If the homepage links clearly prove a mature separate-service architecture, mark `Disqualified` without owner/email research.
-4. Only open the website deeply when Crawl4AI evidence is sparse, ambiguous, or suggests a shared/general service architecture.
-5. A gap can still only be confirmed after independent live-site double-check.
+Agent 1 / Crawl4AI is an evidence collector only:
 
-A compact helper snapshot now exists:
+```text
+homepage only
+→ render public page
+→ collect same-domain page-like links
+→ remove obvious asset/file targets
+→ dedupe URLs
+→ keep a short useful anchor
+→ stop
+```
+
+No deep crawl, service classification, gap decision, or contact research belongs in Agent 1.
+
+Agent 2 normal first pass:
+
+```text
+20 new-production Ready leads
+→ compact `path | anchor` view
+→ Architecture Maturity Gate
+→ obvious mature sites can be Disqualified from sufficient crawl evidence
+→ only promising / ambiguous / crawl-review leads get live-site deep validation
+→ owner/email research only after a real architecture gap passes
+```
+
+Production contract:
+
+```text
+docs/CRAWL4AI_HOMEPAGE_EVIDENCE_CONTRACT.md
+```
+
+Compact snapshot:
 
 ```text
 agents/validation new crawl prescreen.json
 ```
 
-It ranks structural/service-like homepage links for the next 10 new-production leads. This is a pre-screen only, not a final classifier.
+The snapshot workflow now refreshes automatically after each validation apply receipt, so the normal cadence is:
 
-## First New-Production Test Batch
+```text
+validate 20
+→ apply 20 to D1
+→ automatic next compact 20 snapshot
+→ repeat
+```
 
-The first six leads through the stop condition were applied to D1 in one commit/workflow run.
+## Completed 100-Lead Run
 
-### Disqualified from Crawl4AI architecture evidence
+D1 verification file:
 
-1. Castillo Lawyer — `castillolawphoenix.com`
-   - 29 homepage internal links
-   - clear separate pages for Assault, DUI, Drug Defense, Sex Crimes, etc.
+```text
+agents/validation 100-run verification.json
+```
 
-2. Alcock Law — `alcocklaw.com`
-   - 82 homepage internal links
-   - very mature Criminal Defense / Family / Personal Injury service architecture
+Verification result: `PASS`
 
-3. Shah Law Firm — `arjashahlaw.com`
-   - 64 homepage internal links
-   - separate DUI / criminal-defense pages and geo/service depth
+Exact D1 counts for the 100 processed leads:
 
-4. Sotelo Law Group — `sotelolawgroup.com`
-   - 25 homepage internal links
-   - dedicated `case-types` pages for Car, Motorcycle, Slip & Fall, Truck, etc.
+```text
+Disqualified                         88
+Not Relevant                         6
+Needs Review                         2
+Gap Confirmed - Direct Email Missing 2
+Qualified                            2
+TOTAL                              100
+```
 
-5. Hartley Law — `hartleylawusa.com`
-   - 25 homepage internal links
-   - dedicated pages for Car, Motorcycle, Truck, Medical Malpractice, etc.
+All 100 result files were found, all 100 D1 rows were found, and zero of the 100 remain `Ready for Validation`.
 
-No owner/email research was performed for these five because they failed the Architecture Maturity Gate.
+## Qualified Leads From This 100
 
-### Qualified — Owen Law Firm
+### Bruce Kaye PLLC
 
-- Lead ID: `ChIJKb6Hs5wTK4cRlg9qnRRmGgs`
-- Domain: `amyowenlaw.com`
-- Crawl4AI homepage evidence: 8 internal links, zero structural service-page signals
-- Deep validation: official `Areas of Practice` page combines **Personal Injury + Civil Rights** on one shared page
-- Selected first mockup service: **Civil Rights**
-- Dedicated Civil Rights page: none found after navigation + site-restricted search
-- Decision maker: **Amy Owen — Founder & Managing Attorney**
-- Direct public email: **amy@amyowenlaw.com**
-- D1 final status: `Qualified`
-- D1 qualified flag: `1`
-- Outreach draft stored in campaign notes
+- Lead ID: `ChIJq4SPGS-ZToYRTYEC5f9S9rY`
+- Domain: `brucekaye.com`
+- D1: `Qualified`, qualified=1
+- Architecture: Criminal Law + Entertainment Law + Wrongful Death share a general homepage rather than a mature service-page system
+- Selected service: `Entertainment Law`
+- Decision maker: Bruce Kaye
+- Direct public email: `bruce@brucekaye.com`
+- Outreach draft persisted in campaign notes
 
-## What This Test Showed
+### Kelley Law Firm
 
-The Crawl4AI collection itself is doing the intended job for new production leads: homepage rendering + same-domain visible internal link collection is enough to eliminate obvious mature-architecture firms very quickly.
+- Lead ID: `ChIJjxRE8t2YToYRFGVqWHfrv4M`
+- Domain: `kelleyfirm.com`
+- D1: `Qualified`, qualified=1
+- Architecture: public site is primarily a consolidated injury experience while the official owner profile explicitly describes Business Litigation work; no focused Business Litigation destination surfaced
+- Selected service: `Business Litigation`
+- Decision maker: Kevin Kelley — Attorney / Owner
+- Direct public email: `kelley@kelleyfirm.com`
+- Outreach draft persisted in campaign notes
 
-Current finding: **do not add deep crawling to Crawl4AI yet.** The biggest improvement needed was on the Agent 2 presentation/pre-screen layer, not the crawler depth.
+## Strong Fits That Did Not Become Qualified
 
-The raw Crawl4AI data contains some noise (assets, blog URLs, generic `Learn More` anchors), so the compact pre-screen helper filters/ranks structural links while preserving the full raw evidence in D1.
+### Salvador Ongaro Law Offices
+
+- Status: `Gap Confirmed - Direct Email Missing`
+- Shared Practice Areas page combines Immigration, Personal Injury, Criminal Defense, and Divorce/Child Custody
+- Selected gap: Immigration
+- Decision maker: Salvador Ongaro — Managing Partner / CEO
+- Only generic firm email was verified; no direct DM email
+
+### Law Offices of William W. Black, P.C.
+
+- Status: `Gap Confirmed - Direct Email Missing`
+- Consolidated site combines multiple injury/wrongful-death matter types as sections rather than focused destinations
+- Selected gap: Wrongful Death
+- Decision maker: William W. Black
+- No verified direct DM email
+
+## Needs Review From This 100
+
+- `landeroslegal.com` — crawl evidence sparse and live architecture could not be proven safely enough
+- `matthewthomaslaw.com` — current homepage contains conflicting copy about whether Criminal Defense is actively offered alongside Immigration
+
+## Important Findings From the 100-Lead Test
+
+1. **20-by-20 works well.** It materially reduces unnecessary website opens while preserving review safeguards.
+2. A high `signals` count is useful evidence of architecture maturity, but the hint is never a final decision.
+3. `crawl_review` must not be interpreted as opportunity. Several zero-link/robot-challenge leads proved mature after live review.
+4. A low-signal location page can hide mature service architecture elsewhere, so `candidate_deep_check` / `review_links` still require live verification.
+5. Single-practice niche firms should be `Not Relevant` even when the site is consolidated if all matters are one core client journey.
+6. Do not convert an ambiguous offered service into a gap; use `Needs Review`.
+
+## Next Compact 20
+
+The post-run snapshot refreshed successfully from D1.
+
+- New-production Ready remaining: `724`
+- Batch size: `20`
+- First lead in next batch:
+  - `Armstrong Law, PLLC`
+  - domain: `armstronglawyer.com`
+  - lead ID: `ChIJoXYdxJMhTIYR4T7Q4iKaLZ4`
+  - Crawl hint: `likely_mature`
+
+The next compact batch is already available at:
+
+```text
+agents/validation new crawl prescreen.json
+```
 
 ## Exact Next Action
 
-> Continue in new-production mode from the next unprocessed lead after Owen Law in the tested batch: `landeroslegal.com`, lead ID `ChIJL74zCAoRK4cRxk5vFlMj6DA`. Its Crawl4AI snapshot has only 6 homepage links and zero structural service signals, so it requires a live-site identity/architecture double-check. Then continue 10-by-10 using Crawl4AI pre-screening until the next genuinely new Qualified lead is found.
+> Continue new-production validation with the current compact 20-lead snapshot. Process all 20, apply them to D1 in one batch commit, confirm the apply receipt, then use the automatically refreshed next compact 20. Keep the corrected Architecture Maturity Gate and all contact rules unchanged.
 
-Historical first-1,000 validation is intentionally deferred for now. Later, decide whether to backfill their `homepage_link_evidence` with Crawl4AI.
+Historical first-1,000 validation remains intentionally deferred until the new-production flow is fully settled.
 
 ## Handoff Confirmation
 
-- [x] Architecture Maturity Gate remains mandatory.
-- [x] New production leads are temporarily prioritized.
-- [x] Crawl4AI-first 10-lead pre-screen snapshot exists.
-- [x] Five mature sites were disqualified from Crawl evidence without unnecessary contact research.
-- [x] Owen Law passed deep validation and was written to D1 as Qualified.
-- [x] Exact next new-production lead is recorded.
+- [x] 100 new-production leads processed as 5 x 20.
+- [x] All five apply runs completed successfully.
+- [x] D1 verification passed for all 100 IDs.
+- [x] Exact status counts recorded.
+- [x] Two Qualified leads persisted with direct public DM emails and outreach drafts.
+- [x] Compact 20-lead snapshot flow is productionized.
+- [x] Snapshot now auto-refreshes after each apply receipt.
+- [x] Next compact 20 is already generated.
