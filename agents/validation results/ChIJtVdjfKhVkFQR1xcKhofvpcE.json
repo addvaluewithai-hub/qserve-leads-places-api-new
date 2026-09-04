@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJtVdjfKhVkFQR1xcKhofvpcE",
+  "firm": "Law Office of Scott Moriarity",
+  "domain": "scottmoriaritylaw.com",
+  "final_status": "Not Relevant",
+  "qualified": false,
+  "qualification_reason": "The Law Office of Scott Moriarity is a narrowly focused traffic/driving-defense practice rather than a multi-service firm forcing materially different legal client types through one general website experience. The site centers on traffic infractions, speeding, negligent driving, accident tickets and related driving offenses, all within substantially the same client journey. It is therefore not relevant to this campaign's multi-service separate-client-journey ICP.",
+  "campaign_notes": "Live-site review completed under the corrected ICP. The official About page says Scott has dedicated his entire career to fighting driving charges and infractions, and the homepage describes the practice as traffic criminal defense. The Areas of Practice page lists traffic infractions, speeding, negligent driving and accident tickets. Those are related variations of one primary legal conversation rather than several materially different main practices. No contact enrichment performed; the site only publishes a generic info@ inbox in any event.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Practice Architecture",
+      "status": "Not Relevant",
+      "service_offered_evidence": "The official site focuses on traffic infractions and driving offenses, with practice pages for traffic, speeding and related ticket matters; the About page states Scott has dedicated his career to driving charges and infractions.",
+      "dedicated_page_url": "https://www.scottmoriaritylaw.com/areas-of-practice/",
+      "validation_method": "live homepage + Areas of Practice + About page + ICP gate",
+      "notes": "Single primary legal client journey rather than a multi-service shared-page architecture problem."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.scottmoriaritylaw.com/",
+    "https://www.scottmoriaritylaw.com/areas-of-practice/",
+    "https://www.scottmoriaritylaw.com/areas-of-practice/traffic/",
+    "https://www.scottmoriaritylaw.com/about-scott/"
+  ]
+}
