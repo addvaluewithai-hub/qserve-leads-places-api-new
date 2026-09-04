@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJwblHAUAwQQERdSVsmkFB5ms",
+  "firm": "New Orleans Office - Gordon McKernan Injury Attorneys",
+  "domain": "getgordon.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "The firm clearly already understands and broadly implements separate service/client-journey pages. The live navigation exposes dedicated Car Accident, Truck Accident, Personal Injury, Workers' Compensation, Wrongful Death and Offshore Accident destinations, with additional deep practice and location architecture. This is a mature service-page system and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The firm has a large intentional service-by-service structure, multiple focused practice pages, extensive location pages and 55+ attorneys. No isolated missing page should be treated as a campaign opportunity because the firm already applies the concept being pitched. Contact enrichment was correctly skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Live main navigation and Practice Areas expose multiple service-specific client destinations including Car Accident, Truck Accident, Workers' Compensation, Wrongful Death and Offshore Accident.",
+      "dedicated_page_url": "https://www.getgordon.com/practice-areas/",
+      "validation_method": "live homepage + main navigation + practice-area architecture review + architecture-maturity gate",
+      "notes": "Mature separate-service architecture. Firm is not the ICP even if a secondary page could be improved."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.getgordon.com/",
+    "https://www.getgordon.com/practice-areas/",
+    "https://www.getgordon.com/locations/new-orleans/"
+  ]
+}
