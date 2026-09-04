@@ -1,0 +1,63 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJI4xr2B7DrIkRafqqANDAY9E",
+  "firm": "iTicket.law | Traffic Attorneys in North Carolina",
+  "domain": "iticket.law",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the firm's major advertised case types each have substantial dedicated pages, while narrower ticket/offense topics are covered within the substantial Traffic parent page and are micro-gaps for this campaign.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. Homepage navigation explicitly lists Traffic, DWI, Accidents, Marijuana, and License Restoration under Case Types. Dedicated pages were inspected for each. The Traffic page is itself substantial and explicitly covers speeding, reckless driving, license-related charges, and other ticket types; those narrower topics should not be targeted as micro-gaps. No decision-maker/email research performed because the lead failed the service-page validation gate.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Traffic",
+      "status": "Disqualified",
+      "service_offered_evidence": "Homepage Case Types navigation explicitly lists Traffic; the dedicated page states the firm handles North Carolina speeding and traffic citations and enumerates multiple ticket types.",
+      "dedicated_page_url": "https://www.iticket.law/case-types/traffic/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Substantial dedicated parent page. It covers Speeding, School/Work Zone Speeding, Following Too Closely, Improper Turn/Lane Change, Unsafe Movement, Failure to Reduce Speed, Careless and Reckless Driving, No Operators License, Expired Registration, DWI, and DWLR. Do not treat those narrower items as primary service-page gaps in this campaign."
+    },
+    {
+      "service_name": "DWI",
+      "status": "Disqualified",
+      "service_offered_evidence": "Homepage Case Types navigation explicitly lists DWI and the dedicated page is titled North Carolina DWI Defense Attorneys with DWI-specific client messaging and defense content.",
+      "dedicated_page_url": "https://www.iticket.law/case-types/dwi/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Reasonable person would clearly consider this a dedicated DWI service page."
+    },
+    {
+      "service_name": "Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Homepage Case Types navigation explicitly lists Accidents; the dedicated page presents statewide auto-accident representation and a specific accident-citation process.",
+      "dedicated_page_url": "https://www.iticket.law/case-types/accidents/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated auto-accident service destination with service-specific process and reasons to hire the firm."
+    },
+    {
+      "service_name": "Marijuana",
+      "status": "Disqualified",
+      "service_offered_evidence": "Homepage Case Types navigation explicitly lists Marijuana; the dedicated page discusses North Carolina marijuana charges, penalties, defense strategy, possession/sale/cultivation and paraphernalia matters.",
+      "dedicated_page_url": "https://www.iticket.law/case-types/marijuana/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Substantial dedicated marijuana-defense page."
+    },
+    {
+      "service_name": "License Restoration",
+      "status": "Disqualified",
+      "service_offered_evidence": "Homepage Case Types navigation explicitly lists License Restoration; the dedicated page explains suspension causes, reinstatement stages, the firm's process, fees and DWLR-related issues.",
+      "dedicated_page_url": "https://www.iticket.law/case-types/license-restoration/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Substantial dedicated license-restoration client journey."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.iticket.law/",
+    "https://www.iticket.law/case-types/traffic/",
+    "https://www.iticket.law/case-types/dwi/",
+    "https://www.iticket.law/case-types/accidents/",
+    "https://www.iticket.law/case-types/marijuana/",
+    "https://www.iticket.law/case-types/license-restoration/",
+    "https://www.iticket.law/about-us/"
+  ]
+}
