@@ -1,0 +1,47 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ5XSm8Sml-IgRDzyAKH87BS4",
+  "firm": "Seth Rose, Attorney at Law",
+  "domain": "sethroselaw.com",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "Historical outreach-ready lead rechecked live: multiple materially different practice areas remain presented through the general site experience without focused service destinations, and Seth Rose's direct public business email is still published on the official contact page.",
+  "campaign_notes": "Historical qualified lead synchronized into D1 on 2026-09-04 after live recheck. Do not count this as the new-session stop-condition Qualified because it was already documented as outreach-ready before the D1 validation runner was established. Live homepage still presents DUI Defense, Drug Charges, Personal Injury / Work Comp, and Criminal Defense as general practice blocks. Official contact page still publishes Seth Rose's direct email. Decision maker is Seth Rose, the named attorney/principal of the practice.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Personal Injury / Work Comp",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The current official homepage explicitly lists Personal Injury / Work Comp as an Area of Practice and describes experience helping injured clients.",
+      "dedicated_page_url": null,
+      "validation_method": "live official homepage inspection + historical architecture record + current domain recheck",
+      "notes": "The service is materially different from DUI/drug/criminal defense client journeys and remains presented within the general site experience rather than a focused service destination."
+    },
+    {
+      "service_name": "DUI Defense",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The current official homepage explicitly lists DUI Defense as an Area of Practice.",
+      "dedicated_page_url": null,
+      "validation_method": "live official homepage inspection + historical architecture record + current domain recheck",
+      "notes": "Historical validation found the practice areas consolidated rather than served by dedicated service pages; current homepage continues the same general presentation."
+    }
+  ],
+  "contacts": [
+    {
+      "id": "lawyers-us:ChIJ5XSm8Sml-IgRDzyAKH87BS4:seth@sethroselaw.com",
+      "person_name": "Seth Rose",
+      "role": "Principal attorney / named owner-decision maker",
+      "email": "seth@sethroselaw.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "https://www.sethroselaw.com/contact/",
+      "notes": "Official contact page directly labels and publishes Seth Rose's email."
+    }
+  ],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://sethroselaw.com/",
+    "https://www.sethroselaw.com/contact/"
+  ]
+}
