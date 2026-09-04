@@ -1,0 +1,129 @@
+name: Validation runner D1 snapshot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/validation-runner-snapshot.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot-next-lead:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify D1 secrets
+        shell: bash
+        run: |
+          for name in CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID; do
+            test -n "${!name}" || { echo "$name is missing"; exit 2; }
+          done
+
+      - name: Export next Ready for Validation lead
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from pathlib import Path
+
+          account = os.environ['CLOUDFLARE_ACCOUNT_ID']
+          token = os.environ['CLOUDFLARE_API_TOKEN']
+          database = os.environ['D1_DATABASE_ID']
+          endpoint = f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
+
+          def query(sql, params=None):
+              payload = json.dumps({'sql': sql, 'params': params or []}).encode()
+              req = urllib.request.Request(
+                  endpoint,
+                  data=payload,
+                  headers={
+                      'Authorization': f'Bearer {token}',
+                      'Content-Type': 'application/json',
+                  },
+                  method='POST',
+              )
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  body = json.load(response)
+              if not body.get('success'):
+                  raise SystemExit(json.dumps(body))
+              result = body.get('result') or []
+              if not result:
+                  return []
+              return result[0].get('results') or []
+
+          leads = query('''
+              SELECT
+                l.id, l.name, l.website, l.address, l.phone, l.primary_type,
+                cl.campaign_id, cl.status, cl.qualified, cl.quality_score,
+                cl.qualification_reason, cl.notes, cl.first_seen_at, cl.last_seen_at,
+                d.website_domain
+              FROM campaign_leads cl
+              JOIN leads l ON l.id = cl.lead_id
+              LEFT JOIN lead_domains d ON d.lead_id = cl.lead_id
+              WHERE cl.campaign_id = ?
+                AND cl.status = 'Ready for Validation'
+                AND cl.qualified = 0
+              ORDER BY cl.quality_score DESC, cl.first_seen_at ASC, cl.lead_id ASC
+              LIMIT 1
+          ''', ['lawyers-us'])
+
+          out = {
+              'campaign_id': 'lawyers-us',
+              'selection_rule': "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
+              'lead': None,
+              'homepage_links': [],
+              'existing_service_gap_evidence': [],
+              'existing_contacts': [],
+          }
+
+          if leads:
+              lead = leads[0]
+              lead_id = lead['id']
+              out['lead'] = lead
+              out['homepage_links'] = query('''
+                  SELECT homepage, final_url, url, anchor_text, crawled_at
+                  FROM homepage_link_evidence
+                  WHERE campaign_id = ? AND lead_id = ?
+                  ORDER BY url
+              ''', ['lawyers-us', lead_id])
+              out['existing_service_gap_evidence'] = query('''
+                  SELECT service_name, status, service_offered_evidence,
+                         dedicated_page_url, validation_method, notes, validated_at
+                  FROM service_gap_evidence
+                  WHERE campaign_id = ? AND lead_id = ?
+                  ORDER BY service_name
+              ''', ['lawyers-us', lead_id])
+              out['existing_contacts'] = query('''
+                  SELECT id, person_name, role, email, is_owner, is_decision_maker,
+                         is_direct_email, is_publicly_verified, evidence_source,
+                         verified_at, notes
+                  FROM lead_contacts
+                  WHERE lead_id = ?
+                  ORDER BY is_decision_maker DESC, is_owner DESC, person_name
+              ''', [lead_id])
+
+          path = Path('agents/validation next lead.json')
+          path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          print(json.dumps(out, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Commit snapshot when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- "agents/validation next lead.json" && git ls-files --error-unmatch "agents/validation next lead.json" >/dev/null 2>&1; then
+            echo "Snapshot unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "agents/validation next lead.json"
+          git commit -m "Refresh validation runner next-lead snapshot"
+          git push
