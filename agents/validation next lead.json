@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJE5FqlsHL2IcRVIzJ9glqK-c",
-    "name": "403 - Forbidden",
-    "website": "https://www.stlinjury.lawyer/",
+    "id": "ChIJ5XSm8Sml-IgRDzyAKH87BS4",
+    "name": "Seth Rose, Attorney at Law",
+    "website": "http://www.sethroselaw.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:23",
+    "first_seen_at": "2026-09-02 11:12:24",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "stlinjury.lawyer"
+    "website_domain": "sethroselaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
