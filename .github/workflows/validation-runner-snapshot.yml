@@ -120,16 +120,21 @@ jobs:
           new_where = ready_where + " AND cl.qualification_reason = 'working_set_ready_for_validation' "
           new_batch = query(base_select + new_where + ordering + ' LIMIT 20', ['lawyers-us'])
 
-          service_terms = {
-              'criminal','defense','dui','dwi','drug','assault','theft','burglary','sex','domestic','violence',
-              'traffic','reckless','speeding','injury','accident','car','truck','motorcycle','wrongful','death',
-              'malpractice','workers','comp','slip','fall','premises','immigration','family','divorce','custody',
-              'child','support','adoption','bankruptcy','estate','probate','will','trust','business','corporate',
-              'employment','disability','social','security','veteran','maritime','product','liability','expungement',
-              'civil rights','civil-rights','discrimination','harassment','wage','foreclosure','garnishment','tax',
-              'lemon','dealer','fraud','nursing','birth','pedestrian','rideshare','uber','lyft','dog bite','dog-bite'
+          service_tokens = {
+              'criminal','defense','dui','dwi','drug','drugs','assault','theft','burglary','sex','domestic','violence',
+              'traffic','reckless','speeding','injury','injuries','accident','accidents','car','truck','motorcycle','wrongful','death',
+              'malpractice','workers','comp','slip','fall','premises','immigration','family','divorce','custody','child','support',
+              'adoption','bankruptcy','estate','probate','will','trust','business','corporate','employment','disability','veteran',
+              'maritime','product','liability','expungement','civil','rights','discrimination','harassment','wage','foreclosure',
+              'garnishment','tax','lemon','dealer','fraud','nursing','birth','pedestrian','rideshare','uber','lyft','dog','bite',
+              'litigation','securities','mergers','acquisitions','intellectual','property','homicide','appeals','felony','misdemeanor'
           }
-          hub_terms = {
+          service_phrases = {
+              'civil rights','social security','workers comp','medical malpractice','personal injury','wrongful death',
+              'real estate','estate planning','family law','criminal defense','product liability','premises liability',
+              'dog bite','birth injury','motor vehicle','white collar'
+          }
+          hub_segments = {
               'practice-areas','practice-area','areas-of-practice','services','service','what-we-do','case-types',
               'legal-services','our-practice','our-services'
           }
@@ -137,14 +142,20 @@ jobs:
               'blog','blogs','news','article','articles','resource','resources','testimonial','testimonials','review','reviews',
               'case-results','case-result','case-successes','case-success','case-victories','results','successes',
               'about','about-us','contact','contact-us','team','attorneys','attorney','lawyers','staff','locations','location',
-              'offices','office','privacy','terms','sitemap','charity','fees','careers','career','events','faqs','faq'
+              'offices','office','privacy','terms','sitemap','charity','fees','careers','career','events','faqs','faq',
+              'appointment','appointments','free-resources','free-evaluation','areas-we-serve','client-portal-guide'
           }
+          noise_prefixes = (
+              'contact-', 'about-', 'blog-', 'news-', 'resource-', 'testimonial-', 'review-',
+              'case-result', 'case-success', 'case-victor', 'location-', 'office-', 'attorney-', 'lawyer-profile', 'faq-'
+          )
           asset_exts = {
               '.png','.jpg','.jpeg','.gif','.svg','.webp','.avif','.ico','.pdf','.css','.js','.map','.xml','.txt',
               '.zip','.mp3','.mp4','.webm','.woff','.woff2','.ttf','.eot'
           }
-          generic_anchors = {'', 'learn more', 'read more', 'more', 'click here', 'view more', 'details'}
+          generic_anchors = {'', 'learn more', 'read more', 'more', 'click here', 'view more', 'details', 'home', 'skip to content', 'skip to main content'}
           date_path = re.compile(r'^/\d{4}/\d{1,2}/(?:\d{1,2}/)?')
+          token_re = re.compile(r'[a-z0-9]+')
 
           def compact_anchor(value):
               text = ' '.join(str(value or '').split())
@@ -153,10 +164,9 @@ jobs:
               return text[:80]
 
           def page_path(url):
-              path = urlparse(url or '').path or '/'
-              if path != '/':
-                  path = path.rstrip('/')
-              return path
+              raw = urlparse(url or '').path or '/'
+              parts = [part for part in raw.split('/') if part]
+              return '/' + '/'.join(parts) if parts else '/'
 
           def is_asset(path):
               low = path.lower()
@@ -168,16 +178,24 @@ jobs:
               low = path.lower()
               if date_path.match(low):
                   return True
-              parts = {part for part in low.strip('/').split('/') if part}
-              return bool(parts & noise_segments)
+              parts = [part for part in low.strip('/').split('/') if part]
+              for part in parts:
+                  if part in noise_segments or part.startswith(noise_prefixes):
+                      return True
+              return False
 
           def architecture_score(path, anchor):
               low_path = path.lower()
-              text = (low_path.replace('-', ' ').replace('_', ' ') + ' ' + anchor.lower())
-              score = 0
-              score += sum(3 for term in service_terms if term in text)
-              score += sum(4 for term in hub_terms if term in low_path)
-              if low_path.count('/') >= 2:
+              path_parts = [part for part in low_path.strip('/').split('/') if part]
+              normalized = (low_path.replace('-', ' ').replace('_', ' ') + ' ' + anchor.lower())
+              tokens = set(token_re.findall(normalized))
+              service_hits = len(tokens & service_tokens)
+              phrase_hits = sum(1 for phrase in service_phrases if phrase in normalized)
+              hub_hits = len(set(path_parts) & hub_segments)
+              if service_hits == 0 and phrase_hits == 0 and hub_hits == 0:
+                  return 0
+              score = service_hits * 3 + phrase_hits * 4 + hub_hits * 5
+              if len(path_parts) >= 2:
                   score += 1
               if anchor and anchor.lower() not in generic_anchors:
                   score += 1
@@ -210,7 +228,9 @@ jobs:
               signals.sort(key=lambda item: (-item[0], item[1]))
               visible = [[path, anchor] for _, path, anchor in signals[:12]]
               signal_count = len(signals)
-              if signal_count >= 4:
+              if len(page_rows) == 0:
+                  hint = 'crawl_review'
+              elif signal_count >= 4:
                   hint = 'likely_mature'
               elif signal_count <= 1:
                   hint = 'candidate_deep_check'
