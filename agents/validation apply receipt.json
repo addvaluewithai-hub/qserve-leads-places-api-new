@@ -2,11 +2,51 @@
   "receipts": [
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJ0S__lCROmogRPbaG_rADie4",
+      "lead_id": "ChIJDf2anCESK4cRwz4SOd3pBhk",
       "status": "Disqualified",
       "qualified": 0,
-      "source_file": "agents/validation results/ChIJ0S__lCROmogRPbaG_rADie4.json",
-      "applied_at": "2026-09-04T17:19:59.461459+00:00"
+      "source_file": "agents/validation results/new-2026-09-04-alcock-law.json",
+      "applied_at": "2026-09-04T17:41:11.723341+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ124JfkESK4cRM_FJdj2I4_8",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation results/new-2026-09-04-castillo-lawyer.json",
+      "applied_at": "2026-09-04T17:41:12.503454+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJIXJtnsUud04R7v4ympmhFR8",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation results/new-2026-09-04-hartley-law.json",
+      "applied_at": "2026-09-04T17:41:13.355693+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJKb6Hs5wTK4cRlg9qnRRmGgs",
+      "status": "Qualified",
+      "qualified": 1,
+      "source_file": "agents/validation results/new-2026-09-04-owen-law-qualified.json",
+      "applied_at": "2026-09-04T17:41:14.477308+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJE9JefyESK4cRENqVZ5rvAv4",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation results/new-2026-09-04-shah-law.json",
+      "applied_at": "2026-09-04T17:41:15.393319+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJI3NUmgMTK4cRWSzW9QpHkuc",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation results/new-2026-09-04-sotelo-law-group.json",
+      "applied_at": "2026-09-04T17:41:16.189105+00:00"
     }
   ]
 }
