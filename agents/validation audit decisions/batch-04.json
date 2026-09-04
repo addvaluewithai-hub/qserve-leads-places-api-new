@@ -1,0 +1,259 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 4,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-daspit-law",
+      "lead_id": "ChIJW3-qISGZToYR4GC6bA-q49s",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows extensive dedicated Personal Injury pages plus a focused Commercial Litigation destination and Workers' Compensation pages. The site already separates materially different legal conversations and fails the Architecture Maturity Gate.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-corbett-corbett",
+      "lead_id": "ChIJi2_HIVmcToYRq-FEZ_g9k_Y",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review exposes separate focused destinations for Civil Rights, Criminal Defense, Family Law, Personal Injury, truck accidents and wrongful death. Mature separate client-journey architecture is explicit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-le-and-le",
+      "lead_id": "ChIJjSJ_LY6ZToYRvt2ZOXReNkc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows distinct Family Law, Immigration and Personal Injury destinations with focused subpages under each. The firm already uses separate client journeys as dominant architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-calhoun-bhella",
+      "lead_id": "ChIJk1RuiyGZToYRQZjefVu5amo",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review exposes dedicated pages for Business Litigation, Commercial Transactions, Construction Law, Employment Practices, Environmental Law, Healthcare Regulatory Assistance, Mergers & Acquisitions and Real Estate. Mature architecture is clear.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-slocumb-law",
+      "lead_id": "ChIJl1Xy8S2ZToYRJR7BZv7HzJc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows many focused injury destinations plus separately surfaced Workers' Compensation and other focused matter pages. The firm already demonstrates routine separate-page thinking rather than a consolidated multi-service architecture gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-robert-alvarez",
+      "lead_id": "ChIJmfatu_gnTIYRb5v4IBg0dFw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "Crawl returned zero clean homepage URLs, so the current official/public presence was checked. Robert Alvarez Law is positioned as a Personal Injury practice. Its matters belong to one narrow plaintiff-injury client journey, so it is not the multi-conversation ICP.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-harris-harris",
+      "lead_id": "ChIJoShMcSGZToYRaYE3BIpiN44",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The full clean homepage URL set is overwhelmingly Criminal Defense subtopics such as assault, burglary, domestic violence, drugs, DWI, fraud, weapons, sex crimes and violent crimes. These are variations within one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-griffith-barbee",
+      "lead_id": "ChIJpeE1YDuZToYRCkqbehbGh9c",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review exposes separate destinations for Commercial Litigation, Copyrights, IP Litigation, Patents, Trademarks and Texas Local Counsel. The firm already applies focused practice-page architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-bruce-kaye",
+      "lead_id": "ChIJq4SPGS-ZToYRTYEC5f9S9rY",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Manual full clean-homepage-URL audit confirms the corrected-ICP fit. Bruce Kaye PLLC presents three materially different client conversations—Criminal Law, Entertainment Law, and Wrongful Death—directly on one general homepage with no focused service destinations surfaced. Entertainment Law is explicitly offered but no dedicated destination surfaced. Bruce Kaye is the named attorney/principal decision maker and his direct public email bruce@brucekaye.com is published on the official site.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Entertainment Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "Official homepage explicitly offers Entertainment Law alongside Criminal Law and Wrongful Death, describing contracts, masters registration and royalty disputes.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live homepage + domain discovery",
+          "notes": "Entertainment clients have a materially different contract/rights/royalty journey from criminal-defense and wrongful-death clients, but all three conversations remain on the shared homepage."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Bruce Kaye",
+          "role": "Named attorney / principal decision maker",
+          "email": "bruce@brucekaye.com",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official brucekaye.com homepage Contact section",
+          "notes": "Direct individual email published by the firm; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Entertainment Law",
+        "subject": "A thought on your Entertainment Law section",
+        "body": "Bruce,\n\nI noticed your site speaks to three very different kinds of clients—Criminal Law, Entertainment Law, and Wrongful Death—but they currently share the same general homepage experience. Entertainment Law especially feels like its own conversation: an artist or creator dealing with contracts, masters, registrations, or royalty disputes is arriving with very different questions from someone facing a criminal charge or a family dealing with a wrongful death.\n\nA focused Entertainment Law page could:\n- speak directly to creators and entertainment clients\n- give Google a focused page to crawl and index\n- give AI tools clearer context around that part of your practice\n\nYou already explain the core entertainment issues clearly on the homepage, so I’m using that as the first mockup example.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "10-gregg-law",
+      "lead_id": "ChIJsebk5x-ZToYRDsWuSaxZ0Iw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_live_confirmed_mature_architecture",
+      "campaign_notes": "Crawl returned zero clean URLs, so live verification was required. The current official site exposes dedicated service pages for Injury and Damage, Vaccine Injury, and Wage and Overtime matters. Materially different wage/employment and injury conversations are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-jones-day",
+      "lead_id": "ChIJ5Qm7pTCZToYRTR9U7TxsdwM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows a mature global practices hierarchy with dedicated pages for Business & Tort Litigation, Business Restructuring, Financial Markets, Health Care & Life Sciences, Labor & Employment, Securities Litigation and other materially different practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-piri-law",
+      "lead_id": "ChIJCz98sD-ZToYRUV827s43Mgc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows distinct Immigration, Family Law, Criminal Defense and Personal Injury destinations, each with focused subpages. The materially different main services are already separated at scale.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-monge-associates",
+      "lead_id": "ChIJHz_mZFqZToYRzg_HQtgmGjk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full 127-URL homepage set is dominated by Personal Injury location pages and plaintiff-injury matter pages such as car, truck, dog-bite, premises and wrongful-death work. Despite the large architecture, it remains one narrow PI client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-jay-murray",
+      "lead_id": "ChIJL9TYoy-ZToYRGqqO-9m_fug",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "Full clean homepage URL review shows Personal Injury matters only: car, brain, catastrophic injury, motorcycle, nursing-home abuse, pedestrian, sexual-assault injury, slip-and-fall, truck, oilfield injury and wrongful death. These belong to one plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-mesothelioma-attorney",
+      "lead_id": "ChIJQeN7WtaZToYRFH_urIFNcSw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_mesothelioma_journey",
+      "campaign_notes": "The full clean homepage URL set is entirely asbestos/mesothelioma litigation, treatment, compensation, trust-fund and geography content. This is one narrow mesothelioma client journey, not multiple materially different main legal services.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-att-law",
+      "lead_id": "ChIJbeVIAz0mTIYR2ckLtq15mpQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_immigration_journey",
+      "campaign_notes": "Crawl returned zero clean URLs, so the current official site was checked. ATT Law's current public firm offer is Immigration Law. Prior attorney experience in other areas is not treated as a current firm service. This is one narrow immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-kelley-law-firm",
+      "lead_id": "ChIJjxRE8t2YToYRFGVqWHfrv4M",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Manual full clean-homepage-URL audit confirms the corrected-ICP fit. The current Kelley Law Firm site is built primarily as a consolidated personal-injury experience, while Kevin Kelley's official firm profile explicitly describes Kelley Law Firm as a wrongful-death, serious-injury, and business-litigation law firm and says he represents small businesses in commercial disputes. No focused Business Litigation destination surfaced. Kevin Kelley is explicitly Attorney, Owner. Direct public kelley@kelleyfirm.com is verified in a publicly filed court document; the website itself shows only generic info@kelleyfirm.com.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Business Litigation",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "Official Kevin Kelley profile states he is a named partner with the wrongful-death, serious-injury, and business-litigation Kelley Law Firm and that he represents small businesses in commercial disputes.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official firm homepage/profile + domain discovery",
+          "notes": "Business-dispute clients have a materially different commercial/conflict journey from injury clients, but the public site is overwhelmingly built around personal injury and no focused Business Litigation destination surfaced."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Kevin Kelley",
+          "role": "Attorney / Owner",
+          "email": "kelley@kelleyfirm.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Kelley Law Firm owner profile + publicly filed court document displaying kelley@kelleyfirm.com",
+          "notes": "Direct individual email is publicly evidenced; not inferred from a pattern."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Business Litigation",
+        "subject": "A thought on Kelley Law Firm’s business-litigation work",
+        "body": "Kevin,\n\nI noticed Kelley Law Firm’s public site is built very strongly around personal injury, while your own firm profile also says the practice handles business litigation and that you represent small businesses in commercial disputes. That business client is arriving with a completely different set of questions from an injury client—contracts, financial exposure, disputes, strategy, and whether litigation can be avoided or needs to be pursued.\n\nA focused Business Litigation page could:\n- give that business owner a clearer path into the firm\n- give Google a focused page to crawl and index\n- give AI tools clearer context around that side of the practice\n\nYou already have the credibility and positioning in your profile, so I’m using Business Litigation as the first mockup example.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "18-holland-knight",
+      "lead_id": "ChIJsw_DQCaZToYRCqFQaLGPWZk",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_live_confirmed_mature_architecture",
+      "campaign_notes": "The Dallas-office homepage exposes practice hubs rather than individual service URLs, so the live official site was checked. Holland & Knight has a deep mature practice hierarchy across finance, litigation, energy, real estate, environmental, healthcare, employment, IP, privacy/cyber, bankruptcy, tax and transactional work. The Architecture Maturity Gate clearly fails.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-warfor214",
+      "lead_id": "ChIJvWkhwX6ZToYRTJsnApKpXPQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "Crawl returned zero clean URLs, so the current official site was checked. The firm is positioned as a Dallas Personal Injury practice handling accident, malpractice, workplace-injury and wrongful-death matters. These are variations inside one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-farmer-law-group",
+      "lead_id": "ChIJ0bmG-pGZToYRG3Y5lyjXNow",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_live_confirmed_mature_architecture",
+      "campaign_notes": "Crawl returned zero clean URLs, so the current official site was checked. Although Civil Litigation is presented on the homepage, the site already has a dedicated Criminal Defense hub with deep criminal pages and a separate Personal Injury hierarchy. A missing Civil Litigation destination would be an isolated gap on an already mature separate-page site, which is explicitly outside the ICP.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
