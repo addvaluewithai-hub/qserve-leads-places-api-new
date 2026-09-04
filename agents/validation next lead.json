@@ -1,0 +1,24 @@
+{
+  "campaign_id": "lawyers-us",
+  "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
+  "lead": {
+    "id": "ChIJI4xr2B7DrIkRafqqANDAY9E",
+    "name": "iTicket.law | Traffic Attorneys in North Carolina",
+    "website": "https://www.iticket.law:443/",
+    "address": null,
+    "phone": null,
+    "primary_type": null,
+    "campaign_id": "lawyers-us",
+    "status": "Ready for Validation",
+    "qualified": 0,
+    "quality_score": 0,
+    "qualification_reason": "historical_working_set_ready_for_validation",
+    "notes": "",
+    "first_seen_at": "2026-09-02 11:12:05",
+    "last_seen_at": "2026-09-02 11:51:14",
+    "website_domain": "iticket.law"
+  },
+  "homepage_links": [],
+  "existing_service_gap_evidence": [],
+  "existing_contacts": []
+}
