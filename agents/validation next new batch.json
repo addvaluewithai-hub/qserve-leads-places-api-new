@@ -1,0 +1,2913 @@
+{
+  "campaign_id": "lawyers-us",
+  "selection_rule": "new production only: status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation'",
+  "new_ready_count": 830,
+  "batch_size": 10,
+  "leads": [
+    {
+      "id": "ChIJ124JfkESK4cRM_FJdj2I4_8",
+      "name": "Phoenix Criminal Defense Attorney | Castillo Lawyer",
+      "website": "http://castillolawphoenix.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "castillolawphoenix.com",
+      "homepage_link_count": 29,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/",
+          "anchor_text": "Skip to content",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/2014/08/04/college-arrests-and-legal-situations-for-parents-and-college-students",
+          "anchor_text": "resisting arrest",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/2017/02/17/what-is-an-aggravated-assault-in-az",
+          "anchor_text": "aggravated assault",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/abogado-certificado-en-defensa-criminal-en-phoenix-az-2",
+          "anchor_text": "Hablamos Español",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/about-us",
+          "anchor_text": "About Us",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/all-about-maricopa-county-jails/towers-jail-phoenix-az",
+          "anchor_text": "Phoenix",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/assault-defense-lawyer-in-phoenix-az",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/assault-defense-lawyer-in-phoenix-az/domestic-violence-charges",
+          "anchor_text": "domestic violence offenses",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/blog",
+          "anchor_text": "Blog",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/burglary-crimes-in-arizona",
+          "anchor_text": "burglary",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/case-successes",
+          "anchor_text": "Case Successes",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/contact-us",
+          "anchor_text": "Contact Us 24/7",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/criminal-trespassing-az",
+          "anchor_text": "trespass",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/drug-lawyer-in-phoenix",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/dui-lawyer-in-phoenix-az",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/faqs-page",
+          "anchor_text": "Resources",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/maricopa-county-court-information",
+          "anchor_text": "Maricopa County",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/practice-areas",
+          "anchor_text": "Practice Areas",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/pre-indictment-precharge-representation-lawyer-phoenix-az",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/probation-violation",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/set-aside-lawyer-in-phoenix-arizona",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/sex-crime-defense-lawyer-in-phoenix-az",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/shoplifting",
+          "anchor_text": "shoplifting",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/shoplifting-defense-attorney-in-phoenix-arizona",
+          "anchor_text": "Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/shopping-for-an-attorney",
+          "anchor_text": "Read more about Cindy Castillo",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/testimonials",
+          "anchor_text": "Testimonials",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/theft-crimes",
+          "anchor_text": "theft",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/wp-content/uploads/2024/07/cropped-primary.png",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        },
+        {
+          "homepage": "http://castillolawphoenix.com/",
+          "final_url": "http://castillolawphoenix.com/",
+          "url": "https://castillolawphoenix.com/wp-content/uploads/2025/03/fav-group-smile-no-bg-1.png",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.945910+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJDf2anCESK4cRwz4SOd3pBhk",
+      "name": "Phoenix Attorney: Top Immigration, Family, Injury, Criminal Lawyers",
+      "website": "https://www.alcocklaw.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "alcocklaw.com",
+      "homepage_link_count": 82,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/",
+          "anchor_text": "Inglés",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/affordable-fees",
+          "anchor_text": "Our Fees",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/blog",
+          "anchor_text": "Blog",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/charity",
+          "anchor_text": "Charity",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/contact",
+          "anchor_text": "Contact",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense-attorneys",
+          "anchor_text": "Criminal Defense",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/aggravated-dui-lawyers-phoenix-az",
+          "anchor_text": "AGGRAVATED DUI",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/assault-lawyers-phoenix-az",
+          "anchor_text": "ASSAULT",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/burglary-lawyers-phoenix-az",
+          "anchor_text": "BURGLARY",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/criminal-damage-charges-lawyers-phoenix-az",
+          "anchor_text": "CRIMINAL DAMAGE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/disorderly-conduct-lawyers-phoenix-az",
+          "anchor_text": "DISORDERLY CONDUCT",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/domestic-violence-lawyers-phoenix-az",
+          "anchor_text": "DOMESTIC VIOLENCE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/drug-offense-lawyers-phoenix-az",
+          "anchor_text": "DRUG CHARGES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/federal-criminal-defense-lawyers-phoenix-az",
+          "anchor_text": "FEDERAL CASES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/felony-lawyers-phoenix-az",
+          "anchor_text": "FELONY",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/homicide-lawyers-phoenix-az",
+          "anchor_text": "MANSLAUGHTER",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/judicial-interference-lawyers-phoenix-az",
+          "anchor_text": "JUDICIAL INTERFERENCE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/juvenile-crimes-lawyers-phoenix-az",
+          "anchor_text": "JUVENILE CRIMES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/kidnapping-lawyers-phoenix-az",
+          "anchor_text": "KIDNAPPING",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/misdemeanor-compromise-lawyers-phoenix-az",
+          "anchor_text": "MISDEMEANOR COMPROMISE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/phoenix-forgery-attorney",
+          "anchor_text": "FORGERY",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/phoenix-theft-crime-lawyer",
+          "anchor_text": "THEFT",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/probation-violation-attorneys-in-phoenix-az",
+          "anchor_text": "PROBATION",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/robbery-lawyers-phoenix-az",
+          "anchor_text": "ROBBERY",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/set-aside-lawyers-phoenix-az",
+          "anchor_text": "SET ASIDE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/sex-crimes-lawyers-phoenix-az",
+          "anchor_text": "SEX CRIMES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/shoplifting-lawyer-in-phoenix",
+          "anchor_text": "SHOPLIFTING",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/warrants-attorney-phoenix-az",
+          "anchor_text": "WARRANTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/criminal-defense/weapons-charges-lawyers-phoenix-az",
+          "anchor_text": "WEAPONS CHARGES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui-lawyers",
+          "anchor_text": "DUI",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui/dui-faq",
+          "anchor_text": "DUI FAQS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui/dui-law-in-arizona",
+          "anchor_text": "DUI LAW IN ARIZONA",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui/dui-process-phoenix-az",
+          "anchor_text": "DUI PROCESS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui/dui-types",
+          "anchor_text": "DUI TYPES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui/license-suspensions",
+          "anchor_text": "LICENSE SUSPENSIONS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/dui/your-rights-phoenix-az",
+          "anchor_text": "YOUR DUI RIGHTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/es",
+          "anchor_text": "Español",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/family-lawyers-phoenix-az",
+          "anchor_text": "Family",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/family-lawyers/alimony-lawyers-phoenix-az",
+          "anchor_text": "SPOUSAL MAINTENANCE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/family-lawyers/child-custody-lawyers-phoenix-az",
+          "anchor_text": "CHILD CUSTODY",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/family-lawyers/divorce-attorney-in-phoenix",
+          "anchor_text": "DIVORCE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/family-lawyers/prenuptial-agreement-lawyer-phoenix-az",
+          "anchor_text": "PRENUPTIAL AGREEMENT",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/family-lawyers/spousal-maintenance-calculator",
+          "anchor_text": "ALIMONY CALCULATOR",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration",
+          "anchor_text": "Immigration",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/601-waivers",
+          "anchor_text": "1-601A Waiver",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/adjustment-of-status-lawyers-phoenix-az",
+          "anchor_text": "Adjustment",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/appeals-phoenix-az",
+          "anchor_text": "Appeals",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/asylum-lawyers-phoenix-az",
+          "anchor_text": "Asylum",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/bond-hearings-lawyers-phoenix-az",
+          "anchor_text": "Bond Hearings",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/daca-attorneys",
+          "anchor_text": "Daca",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/deportation-lawyers-phoenix-az",
+          "anchor_text": "Cancellation of Removal",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/green-card-attorney",
+          "anchor_text": "Green Card",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/immigration-naturalization-n-400",
+          "anchor_text": "Citizenship",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/removal-of-conditions-lawyer-phoenix-az",
+          "anchor_text": "REMOVAL OF CONDITIONS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/u-visas",
+          "anchor_text": "U-Visas",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/immigration-attorney/vawa-attorneys",
+          "anchor_text": "Vawa",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/our-attorneys",
+          "anchor_text": "Our Attorneys",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/our-victories",
+          "anchor_text": "Our Victories",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury-attorneys",
+          "anchor_text": "Personal Injury",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/accidental-shooting-attorney-phoenix-az",
+          "anchor_text": "ACCIDENTAL SHOOTING",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/bad-faith-insurance-lawyers-phoenix-az",
+          "anchor_text": "BAD FAITH INSURANCE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/bicycle-accidents-lawyers-phoenix-az",
+          "anchor_text": "BICYCLE ACCIDENT",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/boating-accident-lawyers-phoenix-az",
+          "anchor_text": "BOATING ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/brain-injury-lawyers-phoenix-az",
+          "anchor_text": "BRAIN INJURIES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/burn-injury-lawyers-phoenix-az",
+          "anchor_text": "BURN INJURIES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/bus-accidents-lawyer",
+          "anchor_text": "BUS ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/car-accidents-lawyers-phoenix-az",
+          "anchor_text": "AUTO ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/catastrophic-injury-lawyers-phoenix-az",
+          "anchor_text": "CATASTROPHIC INJURIES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/commercial-vehicle-accident-lawyers-phoenix-az",
+          "anchor_text": "COMMERCIAL VEHICLES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/construction-accident-lawyer-phoenix-az",
+          "anchor_text": "CONSTRUCTION ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/dog-bite-lawyers-phoenix-az",
+          "anchor_text": "DOG BITES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/motorcycle-accident-lawyers-phoenix-az",
+          "anchor_text": "MOTORCYCLE ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/nursing-home-abuse-lawyers-phoenix-az",
+          "anchor_text": "NURSING HOME ABUSE",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/pedestrian-accident-lawyers-phoenix-az",
+          "anchor_text": "PEDESTRIAN ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/slip-and-fall-lawyers-phoenix-az",
+          "anchor_text": "SLIP-AND-FALLS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/spinal-cord-injury-lawyers-phoenix-az",
+          "anchor_text": "SPINAL CORD INJURIES",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/truck-accident-lawyers-phoenix-az",
+          "anchor_text": "TRUCKING ACCIDENTS",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/personal-injury/wrongful-death-lawyers-phoenix-az",
+          "anchor_text": "WRONGFUL DEATH",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/practice-areas",
+          "anchor_text": "Practice Areas",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/privacy-policy",
+          "anchor_text": "Privacy Policy",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/reviews",
+          "anchor_text": "Reviews",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        },
+        {
+          "homepage": "https://www.alcocklaw.com/",
+          "final_url": "https://www.alcocklaw.com/",
+          "url": "https://www.alcocklaw.com/video-library",
+          "anchor_text": "Videos",
+          "crawled_at": "2026-09-02T11:31:27.920365+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJE9JefyESK4cRENqVZ5rvAv4",
+      "name": "Voted Best DUI Lawyer In Phoenix | Shah Law Firm",
+      "website": "https://arjashahlaw.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "arjashahlaw.com",
+      "homepage_link_count": 64,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/",
+          "anchor_text": "HOME",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/about",
+          "anchor_text": "ABOUT▼",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/ahwatukee-criminal-defense-lawyer",
+          "anchor_text": "Ahwatukee",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/areas-we-serve",
+          "anchor_text": "Areas We Serve▼",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-admin-per-se-form",
+          "anchor_text": "Admin Per Se Form",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-assault-lawyer",
+          "anchor_text": "Aggravated Assault",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-bench-warrant",
+          "anchor_text": "Bench Warrant Search & Questions in Arizona",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-disorderly-conduct-lawyer",
+          "anchor_text": "Disorderly Conduct",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-drug-possession-attorney",
+          "anchor_text": "Drug Possession",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-dui-attorney",
+          "anchor_text": "DUI▼",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-dui-child-in-car",
+          "anchor_text": "DUI with Child in Car",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-dui-vs-dwi",
+          "anchor_text": "DUI vs DWI Meaning",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-expungement-set-aside-laws",
+          "anchor_text": "Set Aside / Expungement",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-shoplifting-attorney",
+          "anchor_text": "Shoplifting",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-theft-attorney",
+          "anchor_text": "Theft Charges",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/arizona-underage-dui",
+          "anchor_text": "Underage DUI",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/assault-and-battery-defense-phoenix",
+          "anchor_text": "Assault and Battery",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/author/arja-shah-law",
+          "anchor_text": "Arja Shah",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/avondale-criminal-defense-lawyer",
+          "anchor_text": "Avondale",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/az-criminal-defense-attorney",
+          "anchor_text": "CRIMINAL DEFENSE▼",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/blog",
+          "anchor_text": "BLOG",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/blog/arizona-marijuana-laws-2022",
+          "anchor_text": "Arizona Marijuana Laws",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/blog/recreational-marijuana-dui-laws",
+          "anchor_text": "Marijuana DUI Laws",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/blog/unconscious-from-car-accident-while-under-the-influence",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/blog/will-i-lose-teaching-license-for-dui",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/buckeye-criminal-defense-lawyer",
+          "anchor_text": "Buckeye",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/casa-grande-criminal-defense-lawyer",
+          "anchor_text": "Casa Grande",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/chandler-criminal-defense-lawyer",
+          "anchor_text": "Chandler",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/contact",
+          "anchor_text": "CONTACT US",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/criminal-defense/tempe-police-vs-asu-police-first-offense-dui-case-for-students",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/domestic-violence-defense-attorney",
+          "anchor_text": "Domestic Violence / Abuse",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/dui-defense/underage-dui-asu",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/es",
+          "anchor_text": "Español",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/extreme-dui-charges",
+          "anchor_text": "Extreme DUI",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/felony-aggravated-dui-defense",
+          "anchor_text": "Felony Aggravated DUI",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/fountain-hills-criminal-defense-lawyer",
+          "anchor_text": "Fountain Hills",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/gilbert-criminal-defense-lawyer",
+          "anchor_text": "Gilbert",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/glendale-criminal-defense-lawyer",
+          "anchor_text": "Glendale",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/goodyear-criminal-defense-lawyer",
+          "anchor_text": "Goodyear",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/identity-theft-attorney-phoenix-2",
+          "anchor_text": "Identity Theft",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/maricopa-criminal-defense-lawyer",
+          "anchor_text": "Maricopa",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/mesa-criminal-defense-lawyer",
+          "anchor_text": "Mesa",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/next-slide",
+          "anchor_text": "Next Slide",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/paradise-valley-criminal-defense-lawyer",
+          "anchor_text": "Paradise Valley",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/peoria-criminal-defense-lawyer",
+          "anchor_text": "Peoria",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/phoenix-criminal-defense-lawyer",
+          "anchor_text": "Phoenix",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/phoenix-dui-attorney",
+          "anchor_text": "DUI Defense Phoenix",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/prescription-drug-dui-phoenix",
+          "anchor_text": "Prescription Drug DUI",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/previous-slide",
+          "anchor_text": "Previous Slide",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/pricing",
+          "anchor_text": "Pricing",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/privacy-policy",
+          "anchor_text": "Privacy Policy",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/queen-creek-criminal-defense-lawyer",
+          "anchor_text": "Queen Creek",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/recent-cases",
+          "anchor_text": "RECENT CASES",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/restore-civil-rights-criminal-conviction",
+          "anchor_text": "Restore Civil Rights",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/robbery-charges-defense-phoenix",
+          "anchor_text": "Robbery",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/san-tan-valley-criminal-defense-lawyer",
+          "anchor_text": "San Tan",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/scottsdale-criminal-defense-lawyer",
+          "anchor_text": "Scottsdale",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/scottsdale-dui-lawyer",
+          "anchor_text": "Scottsdale DUI Lawyer",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/super-extreme-dui-lawyer",
+          "anchor_text": "Super Extreme DUI",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/surprise-dui-lawyer-defense",
+          "anchor_text": "Surprise",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/tempe-criminal-defense-lawyer",
+          "anchor_text": "Tempe",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/terms-of-use",
+          "anchor_text": "Terms of Use",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/tucson-criminal-defense-lawyer",
+          "anchor_text": "Tucson",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        },
+        {
+          "homepage": "https://arjashahlaw.com/",
+          "final_url": "https://arjashahlaw.com/",
+          "url": "https://arjashahlaw.com/vehicular-manslaughter-attorney-phoenix",
+          "anchor_text": "Vehicular Manslaughter",
+          "crawled_at": "2026-09-02T11:31:35.946011+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJI3NUmgMTK4cRWSzW9QpHkuc",
+      "name": "Sotelo Law Group: Phoenix Personal Injury Attorneys",
+      "website": "https://www.sotelolawgroup.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "sotelolawgroup.com",
+      "homepage_link_count": 25,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/",
+          "anchor_text": "English",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/about-us",
+          "anchor_text": "About Team",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/articles",
+          "anchor_text": "Articles",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types",
+          "anchor_text": "Case Types",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/car-accidents",
+          "anchor_text": "Car AccidentsCollisions caused by a reckless driver or at-fault party, including distracted, speeding, or impaired drivers, resulting in accident injuries.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/catastrophic-injuries",
+          "anchor_text": "Catastrophic InjuriesIncluding traumatic brain injuries, spinal cord damage, severe burns, or loss of limbs, often requiring compensation for future medical expenses.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/dog-bites-animal-attacks",
+          "anchor_text": "Dog Bites (Animal Attacks)Claims for accident victims injured by an unrestrained or aggressive animal.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/hit-and-run",
+          "anchor_text": "Hit-and-RunClaims for victims injured by drivers who flee the scene of an accident.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/motorcycle-accidents",
+          "anchor_text": "Motorcycle AccidentsClaims for riders who suffer severe injuries or serious injuries due to negligent or reckless drivers, often resulting in complex accident injuries.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/pedestrian-accidents",
+          "anchor_text": "Pedestrian AccidentsCases where drivers fail to yield or drive safely around those on foot or bike, causing accident injuries.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/rideshare-accidents",
+          "anchor_text": "Rideshare AccidentsAccidents involving Uber or Lyft drivers where multiple insurance policies may apply, and accident victims may suffer various injuries.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/slip-and-fall-accidents",
+          "anchor_text": "Slip and Fall Accidents Injuries, including severe injuries, that occur due to unsafe property conditions, spills, or poor maintenance.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/case-types/truck-accidents",
+          "anchor_text": "Truck AccidentsSerious crashes involving commercial vehicles and reckless drivers or at-fault parties that often lead to severe injuries, with consideration for future medical expenses.Learn More",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/contact-us",
+          "anchor_text": "Free Case Evaluation",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/es",
+          "anchor_text": "Español",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/faq",
+          "anchor_text": "FAQ",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/avondale-personal-injury-attorneys",
+          "anchor_text": "Avondale",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/buckeye-personal-injury-attorneys",
+          "anchor_text": "Buckeye",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/el-mirage-personal-injury-attorneys",
+          "anchor_text": "El Mirage",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/glendale-personal-injury-attorneys",
+          "anchor_text": "Glendale",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/goodyear-personal-inujury-attorneys",
+          "anchor_text": "Goodyear",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/tempe-personal-injury-attorneys",
+          "anchor_text": "Tempe",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/locations/tolleson-personal-injury-attorneys",
+          "anchor_text": "Tolleson",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/privacy-policy",
+          "anchor_text": "Privacy Policy",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        },
+        {
+          "homepage": "https://www.sotelolawgroup.com/",
+          "final_url": "https://www.sotelolawgroup.com/",
+          "url": "https://www.sotelolawgroup.com/success-stories",
+          "anchor_text": "Success Stories",
+          "crawled_at": "2026-09-02T11:31:35.945972+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJIXJtnsUud04R7v4ympmhFR8",
+      "name": "Arizona Personal Injury Attorney | Hartley Law",
+      "website": "https://hartleylawusa.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "hartleylawusa.com",
+      "homepage_link_count": 25,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/about-us",
+          "anchor_text": "About Our Firm",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/areas-we-serve",
+          "anchor_text": "View All +",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-all-practice-areas",
+          "anchor_text": "View All+",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-car-accident-lawyer",
+          "anchor_text": "Car Accidents",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-medical-malpractice-lawyer",
+          "anchor_text": "Medical Malpractice",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-motorcycle-accident-lawyer",
+          "anchor_text": "Motorcycle Accidents",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-pedestrian-accident-lawyer",
+          "anchor_text": "Pedestrian Accidents",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-slip-and-fall-lawyer",
+          "anchor_text": "Slip and Fall Accidents",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-truck-accident-lawyer",
+          "anchor_text": "Truck Accidents",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/arizona-uber-accident-lawyer",
+          "anchor_text": "Uber Accidents",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/blog",
+          "anchor_text": "Our Blog",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/case-results",
+          "anchor_text": "See how we approach serious cases",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/contact-us",
+          "anchor_text": "Contact Us",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/llms.txt",
+          "anchor_text": "Hey AI, learn about us",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/matt-hartley",
+          "anchor_text": "Attorney Matt Hartley",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/phoenix-personal-injury-lawyer",
+          "anchor_text": "Phoenix",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/practice-areas",
+          "anchor_text": "View All Practice Areas",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/privacy-policy",
+          "anchor_text": "Privacy and Legal Disclaimers",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/resources",
+          "anchor_text": "Resources",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/scottsdale-personal-injury-lawyer",
+          "anchor_text": "Scottsdale",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/sitemap",
+          "anchor_text": "Sitemap",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/tempe-personal-injury-lawyer",
+          "anchor_text": "Tempe",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/terms-of-service",
+          "anchor_text": "Terms of Service",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        },
+        {
+          "homepage": "https://hartleylawusa.com/",
+          "final_url": "https://hartleylawusa.com/",
+          "url": "https://hartleylawusa.com/testimonials",
+          "anchor_text": "Testimonials",
+          "crawled_at": "2026-09-02T11:31:35.946189+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJKb6Hs5wTK4cRlg9qnRRmGgs",
+      "name": "Owen Law Firm",
+      "website": "https://www.amyowenlaw.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "amyowenlaw.com",
+      "homepage_link_count": 8,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/",
+          "anchor_text": "Home",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/blog",
+          "anchor_text": "Blog",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/contact-us",
+          "anchor_text": "Contact",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/faq",
+          "anchor_text": "FAQ",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/menu",
+          "anchor_text": "Areas of Practice",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/our-staff",
+          "anchor_text": "Our Team",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/privacy-policy",
+          "anchor_text": "Privacy Policy",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        },
+        {
+          "homepage": "https://www.amyowenlaw.com/",
+          "final_url": "https://www.amyowenlaw.com/",
+          "url": "https://www.amyowenlaw.com/terms-and-conditions",
+          "anchor_text": "Terms and Conditions",
+          "crawled_at": "2026-09-02T11:31:44.387510+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJL74zCAoRK4cRxk5vFlMj6DA",
+      "name": "landeroslegal.com",
+      "website": "http://landeroslegal.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "landeroslegal.com",
+      "homepage_link_count": 6,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "http://landeroslegal.com/",
+          "final_url": "http://landeroslegal.com/",
+          "url": "https://landeroslegal.com/",
+          "anchor_text": "Home",
+          "crawled_at": "2026-09-02T11:31:27.920447+00:00"
+        },
+        {
+          "homepage": "http://landeroslegal.com/",
+          "final_url": "http://landeroslegal.com/",
+          "url": "https://landeroslegal.com/about-us",
+          "anchor_text": "About Us",
+          "crawled_at": "2026-09-02T11:31:27.920447+00:00"
+        },
+        {
+          "homepage": "http://landeroslegal.com/",
+          "final_url": "http://landeroslegal.com/",
+          "url": "https://landeroslegal.com/appointment",
+          "anchor_text": "Appointment",
+          "crawled_at": "2026-09-02T11:31:27.920447+00:00"
+        },
+        {
+          "homepage": "http://landeroslegal.com/",
+          "final_url": "http://landeroslegal.com/",
+          "url": "https://landeroslegal.com/contact",
+          "anchor_text": "Contanct Us",
+          "crawled_at": "2026-09-02T11:31:27.920447+00:00"
+        },
+        {
+          "homepage": "http://landeroslegal.com/",
+          "final_url": "http://landeroslegal.com/",
+          "url": "https://landeroslegal.com/free-resources",
+          "anchor_text": "Free Resources",
+          "crawled_at": "2026-09-02T11:31:27.920447+00:00"
+        },
+        {
+          "homepage": "http://landeroslegal.com/",
+          "final_url": "http://landeroslegal.com/",
+          "url": "https://landeroslegal.com/services",
+          "anchor_text": "Our Services",
+          "crawled_at": "2026-09-02T11:31:27.920447+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJPT8vj3oTK4cRta1Ns64F_x4",
+      "name": "Phoenix Criminal Lawyer | Arizona Criminal Law Specialists",
+      "website": "https://dmcantor.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "dmcantor.com",
+      "homepage_link_count": 65,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/",
+          "anchor_text": "Skip to content",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/about-dmc",
+          "anchor_text": "About Us",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/additional-crimes",
+          "anchor_text": "Miscellaneous Crimes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/arizona-court-judges",
+          "anchor_text": "Judges",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/assault-violent-crimes-homicides",
+          "anchor_text": "Assault / Violent Crimes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/blog",
+          "anchor_text": "Blog",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/careers",
+          "anchor_text": "Careers",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-stages",
+          "anchor_text": "Case Stages",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-stages/adult-felony-case-stages",
+          "anchor_text": "Adult Felony Case Stages",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-stages/adult-misdemeanor-case-stages",
+          "anchor_text": "Adult Misdemeanor Case Stages",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-stages/juvenile-case-stages",
+          "anchor_text": "Juvenile Case Stages",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/appeal-post-conviction-relief-victories",
+          "anchor_text": "Appeal/Post Conviction Relief/Habeas Corpus Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/assault-violent-crimes",
+          "anchor_text": "Assault / Violent Crime Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/bench-trial-victories",
+          "anchor_text": "Bench Trial Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/complete-acquittal-all-criminal-charges",
+          "anchor_text": "Complete Acquittal at Bench TrialNot Guilty On All Charges!",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/complete-acquittals-all-charges",
+          "anchor_text": "Complete Acquittal at Jury TrialNot Guilty On All Charges!",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/dismissed-at-bench-trial",
+          "anchor_text": "Complete Dismissal at Bench Trial",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/dismissed-at-trial",
+          "anchor_text": "Complete Dismissal at Jury Trial",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/drug-crimes",
+          "anchor_text": "Drug Crime Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/dui-vehicular-crimes",
+          "anchor_text": "DUI / Vehicular Crime Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/expungement-victories",
+          "anchor_text": "Set Aside (Expungement) Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/federal-court-victories",
+          "anchor_text": "Federal Court Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/hung-at-jury-trial",
+          "anchor_text": "Complete Hung at Jury Trial",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/hung-jury-partial-acquittal",
+          "anchor_text": "Hung Jury/Partial Acquittal at Jury Trial",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/juvenile-court-victories",
+          "anchor_text": "Juvenile Court Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/miscellaneous-crimes",
+          "anchor_text": "Miscellaneous Crime Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/partial-acquittal",
+          "anchor_text": "Partial Acquittals at Bench Trial",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/partial-acquittals",
+          "anchor_text": "Not Guilty/Partial Acquittal at Jury Trial",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/pre-charge-cases",
+          "anchor_text": "Pre-Charge Case Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/probation-violation-victories",
+          "anchor_text": "Probation Violation Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/professional-board-hearing-victories",
+          "anchor_text": "Professional Board Hearing Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/property-crimes",
+          "anchor_text": "Property Crime Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/school-discipline-hearings-title-9",
+          "anchor_text": "School Discipline Hearings / Title 9 Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/sentence-modification-victories",
+          "anchor_text": "Sentence Modification Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/sex-crimes",
+          "anchor_text": "Sex Crimes Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/state-v-mr-m-dmc-no-16919",
+          "anchor_text": "Jason Mayes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/state-v-ms-l-dmc-no-16795",
+          "anchor_text": "Dr. Nancy Lee",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/case-victories/theft-fraud-crimes",
+          "anchor_text": "Theft / Fraud Victories",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/contact-us",
+          "anchor_text": "Criminal Law",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/contact-us-epp",
+          "anchor_text": "Estate and Probate",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/contact-us-flp",
+          "anchor_text": "Family Law",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/courts",
+          "anchor_text": "Courts",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/crimes-against-property",
+          "anchor_text": "Crimes Against Property",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/drug-offenses",
+          "anchor_text": "Drug Crimes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/dui-vehicular-crimes",
+          "anchor_text": "DUI & Vehicular Crimes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/estate-planning-probate",
+          "anchor_text": "Estate and Probate",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/family-law",
+          "anchor_text": "Family Law",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/felony-aggravated-dui-case-progression-information",
+          "anchor_text": "Click here for Felony Aggravated DUI Case Progression Information",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/forfeiture-cases",
+          "anchor_text": "FORFEITURE CASES",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/fraud-theft-crimes",
+          "anchor_text": "Fraud / Theft Crimes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/in-the-news",
+          "anchor_text": "In The News",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/legal-disclaimer",
+          "anchor_text": "Legal Disclaimer",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/misdemeanor-dui-case-progression-information",
+          "anchor_text": "Click here for Misdemeanor DUI Case Progression Information",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/our-people",
+          "anchor_text": "Our People",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/post-conviction",
+          "anchor_text": "POST CONVICTION ISSUES/APPEALS",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/post-conviction/expungement-restoration-of-civil-rights",
+          "anchor_text": "EXPUNGE/RESTORE RIGHTS",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/precharge-investigation-stage-cases",
+          "anchor_text": "PRECHARGE “INVESTIGATION STAGE” CASES",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/privacy-policy",
+          "anchor_text": "Privacy Policy",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/probation-sentence-modification",
+          "anchor_text": "PROBATION/SENTENCE TERMINATION",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/probation-violation-arizona",
+          "anchor_text": "PROBATION VIOLATIONS",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/release-extradition",
+          "anchor_text": "Initial Appearance/Release, & Extradition Hearings",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/sexual-offenses",
+          "anchor_text": "Sex Crimes",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/site-map",
+          "anchor_text": "Site Map",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/sitemap.xml",
+          "anchor_text": "Sitemap",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        },
+        {
+          "homepage": "https://dmcantor.com/",
+          "final_url": "https://dmcantor.com/",
+          "url": "https://dmcantor.com/top-law-firms-for-2026",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:27.920112+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJRSNoWIMIK4cRDgVxA9wMEgs",
+      "name": "Home - Merchant Law | Arizona Business & Corporate Attorneys",
+      "website": "http://merchantlawaz.com/",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "merchantlawaz.com",
+      "homepage_link_count": 13,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/",
+          "anchor_text": "Skip to content",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/about",
+          "anchor_text": "About",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/commercial-transaction",
+          "anchor_text": "Commercial Transaction",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/contact-us",
+          "anchor_text": "Contact",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/corporate-law",
+          "anchor_text": "Corporate Law",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/general-counsel",
+          "anchor_text": "General Counsel",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/immigration-law-visa-solutions",
+          "anchor_text": "Immigration and Visa Law",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/intellectual-property",
+          "anchor_text": "Intellectual Property",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/legal-advisory",
+          "anchor_text": "Legal Advisory",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/mergers-and-acquisitions",
+          "anchor_text": "Mergers and Acquisitions",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/news",
+          "anchor_text": "News",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/ppm-securities",
+          "anchor_text": "PPM and Security Law",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        },
+        {
+          "homepage": "http://merchantlawaz.com/",
+          "final_url": "http://merchantlawaz.com/",
+          "url": "https://merchantlawaz.com/real-estate-transaction",
+          "anchor_text": "Real Estate Transaction",
+          "crawled_at": "2026-09-02T11:31:44.387628+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ChIJVVVVVbgSK4cRG5GOC_1br7U",
+      "name": "Phoenix Personal Injury Attorneys | The Husband & Wife Law Team",
+      "website": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+      "address": null,
+      "phone": null,
+      "primary_type": null,
+      "campaign_id": "lawyers-us",
+      "status": "Ready for Validation",
+      "qualified": 0,
+      "quality_score": 0,
+      "qualification_reason": "working_set_ready_for_validation",
+      "notes": "",
+      "first_seen_at": "2026-09-02 11:31:45",
+      "last_seen_at": "2026-09-02 11:31:45",
+      "website_domain": "husbandandwifelawteam.com",
+      "homepage_link_count": 68,
+      "crawl_evidence_available": true,
+      "homepage_links": [
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/",
+          "anchor_text": "",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/about",
+          "anchor_text": "About Us",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/accessibility",
+          "anchor_text": "Accessibility",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/awards-and-memberships",
+          "anchor_text": "Our Awards and Memberships",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/blog",
+          "anchor_text": "Blog",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/books",
+          "anchor_text": "Free Injury Law Guides",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/contact",
+          "anchor_text": "Other Inquiries",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/free-case-evaluation",
+          "anchor_text": "Free Case Review",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/free-police-report",
+          "anchor_text": "Free Police Report",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/hablamos-espanol",
+          "anchor_text": "Hablamos Español",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/in-the-news",
+          "anchor_text": "In the News",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/in-your-community",
+          "anchor_text": "In Your Community",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/in-your-community/heart-campaign",
+          "anchor_text": "Heart Campaign",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/in-your-community/kids-take-the-field",
+          "anchor_text": "Kids Take the Field",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/in-your-community/scholarships",
+          "anchor_text": "Scholarship",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/in-your-community/teacher-appreciation",
+          "anchor_text": "Teacher Appreciation",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/join-our-team",
+          "anchor_text": "Join Our Team",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/lawyer-referrals",
+          "anchor_text": "Referrals",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations",
+          "anchor_text": "All Locations",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona",
+          "anchor_text": "All Arizona Locations",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "anchor_text": "Live Chat",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona/east-valley-phoenix",
+          "anchor_text": "East Valley Phoenix",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona/mesa",
+          "anchor_text": "Mesa",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona/north-east-tucson",
+          "anchor_text": "North East Tucson",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona/scottsdale",
+          "anchor_text": "Scottsdale",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/arizona/tucson",
+          "anchor_text": "Tucson",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/new-mexico",
+          "anchor_text": "All New Mexico Locations",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/new-mexico/albuquerque-new-mexico",
+          "anchor_text": "Albuquerque",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/office-locations/new-mexico/santa-fe-new-mexico",
+          "anchor_text": "Santa Fe",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/our-difference",
+          "anchor_text": "How We Are Different",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/our-no-fee-promise",
+          "anchor_text": "Our No Fee Promise",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas",
+          "anchor_text": "All Case Types",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/brain-injury/toxic-chemical-exposure",
+          "anchor_text": "Toxic Chemical Exposure",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/car-accidents",
+          "anchor_text": "Car Accidents",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/car-accidents/car-accidents-in-phoenix",
+          "anchor_text": "Read More",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/construction-accidents",
+          "anchor_text": "Construction Accident",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/daycare-injuries/child-abuse",
+          "anchor_text": "Day Care Child Abuse",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/dog-bites",
+          "anchor_text": "Dog Bites",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/motorcycle-accidents",
+          "anchor_text": "Motorcycle Accidents",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/motorcycle-accidents/phoenix-motorcycle-accidents",
+          "anchor_text": "Read More",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/nursing-home-abuse",
+          "anchor_text": "Nursing Home Abuse",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/personal-injury",
+          "anchor_text": "All Personal Injury Case Types",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/personal-injury/birth-injury",
+          "anchor_text": "Birth Injury",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/personal-injury/pharmaceutical-injury",
+          "anchor_text": "Pharmaceutical Injury",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/premises-liability/pool-injuries",
+          "anchor_text": "Swimming Pool Injury",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/premises-liability/trip-and-fall-accidents",
+          "anchor_text": "Slip and Fall",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/product-liability/roundup",
+          "anchor_text": "RoundUp Weed Killer",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/truck-accidents",
+          "anchor_text": "Truck Accidents",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/truck-accidents/phoenix-truck-accidents",
+          "anchor_text": "Read More",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/workplace-accidents",
+          "anchor_text": "Workplace Injuries",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/wrongful-death",
+          "anchor_text": "Wrongful Death",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/practice-areas/wrongful-death/phoenix-wrongful-death",
+          "anchor_text": "Read More",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/privacy-policy",
+          "anchor_text": "Privacy Policy",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/sitemap",
+          "anchor_text": "Sitemap",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/team-members/alexis-breyer",
+          "anchor_text": "Alexis Breyer",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/team-members/mark-breyer",
+          "anchor_text": "Mark Breyer",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/video-library",
+          "anchor_text": "Video Library",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews",
+          "anchor_text": "Client Wins & Reviews",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/2-million",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/auto-accident-settlement",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/h-m-v-element-homes-and-mateo-homes",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/j-l-v-reidy-metal-services",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/j-m-and-p-m-v-american-family-insurance-company-others",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/m-l-v-farmers-insurance",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/passenger-injury-accident",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/premises-liability-case",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/trucking-accident-settlement",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        },
+        {
+          "homepage": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "final_url": "https://husbandandwifelawteam.com/office-locations/arizona/central-phoenix",
+          "url": "https://husbandandwifelawteam.com/wins-and-reviews/wrongful-death-settlement",
+          "anchor_text": "Read Story",
+          "crawled_at": "2026-09-02T11:31:44.387559+00:00"
+        }
+      ]
+    }
+  ]
+}
