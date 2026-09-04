@@ -11,11 +11,11 @@ permissions:
 
 jobs:
   cancel:
-    if: github.event.issue.title == 'CANCEL-QSERVE-ZIP-V5-33626585954'
+    if: github.event.issue.title == 'CANCEL-QSERVE-ZIP-AB-33855458586'
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel active discovery run
+      - name: Cancel duplicate ZIP relaxation benchmark
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run cancel 33626585954 -R addvaluewithai-hub/qserve-leads-places-api-new
+          gh run cancel 33855458586 -R addvaluewithai-hub/qserve-leads-places-api-new
