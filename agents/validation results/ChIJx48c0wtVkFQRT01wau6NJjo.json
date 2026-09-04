@@ -1,0 +1,53 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJx48c0wtVkFQRT01wau6NJjo",
+  "firm": "#1 WA Gun Rights Lawyer – Kertchen Law",
+  "domain": "kertchenlaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: Kertchen Law already separates its core firearms and expungement client needs into focused dedicated pages, including Unlawful Possession, Firearm Rights Restoration, Background Checks, False Swearing, SeaTac Violations, and felony/misdemeanor/juvenile expungement.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The primary navigation is already service-specific. Firearms matters have separate linked destinations and Expungement is split into felony, misdemeanor and juvenile pages. The homepage also focuses strongly on firearm-rights restoration as its own client journey. Other firearm issues mentioned in attorney expertise text, such as protection-order termination or retrieval of confiscated firearms, are narrower issue examples rather than stronger main-service gaps for this campaign. A direct public professional email for Vitaliy Kertchen is visible on the live site, but contact enrichment was not used because the service-page gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Unlawful Possession of a Firearm",
+      "status": "Disqualified",
+      "service_offered_evidence": "Unlawful Possession is a top-level Firearms navigation item and has a focused page explaining possession prohibitions, charge levels and restoration next steps.",
+      "dedicated_page_url": "https://www.kertchenlaw.com/firearms/unlawful-possession-of-a-firearm/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated client-specific destination exists."
+    },
+    {
+      "service_name": "Restoring Firearm Rights",
+      "status": "Disqualified",
+      "service_offered_evidence": "Restoring Firearm Rights is central to the homepage and has its own substantial Washington-specific dedicated page.",
+      "dedicated_page_url": "https://www.kertchenlaw.com/firearms/restoring-firearm-rights/",
+      "validation_method": "live-site homepage + dedicated-page inspection",
+      "notes": "This is already a complete focused client journey."
+    },
+    {
+      "service_name": "Firearm Background Checks",
+      "status": "Disqualified",
+      "service_offered_evidence": "Background Checks is a separate Firearms navigation item and has a dedicated page covering NICS/local checks, denials and next steps.",
+      "dedicated_page_url": "https://www.kertchenlaw.com/firearms/background-checks/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Felony Expungement",
+      "status": "Disqualified",
+      "service_offered_evidence": "Expungement is a primary navigation category and Felony is linked to its own dedicated Washington expungement page.",
+      "dedicated_page_url": "https://www.kertchenlaw.com/expungement/expungement-felony-washington/",
+      "validation_method": "live-site navigation + dedicated-page inspection",
+      "notes": "Dedicated expungement service page exists; misdemeanor and juvenile also have separate destinations."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.kertchenlaw.com/",
+    "https://www.kertchenlaw.com/firearms/unlawful-possession-of-a-firearm/",
+    "https://www.kertchenlaw.com/firearms/restoring-firearm-rights/",
+    "https://www.kertchenlaw.com/firearms/background-checks/",
+    "https://www.kertchenlaw.com/expungement/expungement-felony-washington/"
+  ]
+}
