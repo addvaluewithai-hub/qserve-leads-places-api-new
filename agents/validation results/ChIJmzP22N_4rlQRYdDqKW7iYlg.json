@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJmzP22N_4rlQRYdDqKW7iYlg",
+  "firm": "Peterson Zeyer Law",
+  "domain": "petersonzeyerlaw.com",
+  "final_status": "Not Relevant",
+  "qualified": false,
+  "qualification_reason": "Peterson Zeyer Law is a specialized bankruptcy practice focused on Chapter 7/13 relief and closely related bankruptcy-client needs such as wage garnishment and credit rebuilding. The site does not present several materially different main legal services sharing one general conversation, so there is no campaign-fit separate-service architecture problem.",
+  "campaign_notes": "Live-site review shows the firm works in bankruptcy day-in and day-out and describes itself as a leading Chapter 7/13 filer. Navigation and supporting pages remain within the same bankruptcy client journey. This is a focused niche practice rather than the multi-service consolidated architecture targeted by the campaign. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Practice Architecture",
+      "status": "Not Relevant",
+      "service_offered_evidence": "Homepage, attorney profile and supporting pages consistently center on Chapter 7 and Chapter 13 bankruptcy, garnishment relief and related bankruptcy resources.",
+      "dedicated_page_url": "https://www.petersonzeyerlaw.com/",
+      "validation_method": "live homepage + attorneys page + garnishment page + ICP gate",
+      "notes": "Single primary legal conversation; not a multi-service shared-page opportunity."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.petersonzeyerlaw.com/",
+    "https://www.petersonzeyerlaw.com/attorneys.html",
+    "https://www.petersonzeyerlaw.com/stop-wage-garnishment.html"
+  ]
+}
