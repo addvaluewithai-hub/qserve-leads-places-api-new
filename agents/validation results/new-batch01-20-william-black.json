@@ -1,0 +1,31 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ7S6unaQSK4cRNWFNF-5ICEI",
+  "final_status": "Gap Confirmed - Direct Email Missing",
+  "qualified": false,
+  "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+  "campaign_notes": "Official site is essentially one consolidated page. It explicitly handles car, truck, DUI-related injury/wrongful death, uninsured motorist, motorcycle, catastrophic injury, bicycle, slip-and-fall and dog-bite matters as sections rather than dedicated service destinations. William W. Black is the named attorney/firm decision maker. The only public email found on the official site is Lisa@AccidentLawyersArizona.com, which is not a verified direct decision-maker email.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Wrongful Death",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "Official homepage expressly states the firm is a plaintiffs personal injury and wrongful death law office and includes a full Wrongful Death section.",
+      "dedicated_page_url": null,
+      "validation_method": "Crawl4AI zero-link evidence + official live homepage + domain search",
+      "notes": "Wrongful Death is presented as a section within the consolidated homepage rather than a focused service destination."
+    }
+  ],
+  "contacts": [
+    {
+      "person_name": "William W. Black",
+      "role": "Named firm attorney / decision maker",
+      "email": null,
+      "is_owner": false,
+      "is_decision_maker": true,
+      "is_direct_email": false,
+      "is_publicly_verified": true,
+      "evidence_source": "Official Law Offices of William W. Black, P.C. homepage",
+      "notes": "Official site publishes Lisa@AccidentLawyersArizona.com, not a verified direct email for William W. Black."
+    }
+  ]
+}

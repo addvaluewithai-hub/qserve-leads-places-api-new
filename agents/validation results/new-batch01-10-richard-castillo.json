@@ -1,0 +1,10 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJq6opU2gSK4cR5O85uQXPrB4",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate",
+  "campaign_notes": "Live site explicitly separates Criminal Defense and Civil Litigation into dedicated pages. Personal Injury is grouped under Civil Litigation, but this is an isolated architecture choice on a site that already understands category-specific pages, not the no-separate-pages ICP.",
+  "service_gap_evidence": [],
+  "contacts": []
+}

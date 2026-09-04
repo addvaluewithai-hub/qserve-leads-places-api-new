@@ -1,0 +1,10 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJX1fjfSESK4cRctliDHiNJxs",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_dedicated_site",
+  "campaign_notes": "Primary crawl hit a robot/challenge screen, but live public evidence shows Barber Law Group operates a dedicated professional-license-defense site (phoenix-defense.lawyer) with numerous focused pages such as contractor, pharmacist, psychologist and record-sealing matters. A separate dedicated practice site defeats the campaign gap and proves separate-page maturity.",
+  "service_gap_evidence": [],
+  "contacts": []
+}

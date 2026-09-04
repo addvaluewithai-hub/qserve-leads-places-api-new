@@ -1,0 +1,10 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJL74zCAoRK4cRxk5vFlMj6DA",
+  "final_status": "Needs Review",
+  "qualified": false,
+  "qualification_reason": "architecture_unclear_after_crawl4ai_prescreen",
+  "campaign_notes": "Crawl4AI found only six page-like homepage links and only one architecture signal (/services). The live site could not be independently inspected/indexed well enough to prove whether multiple materially different services are consolidated or already separated. Absence is not proven from crawl evidence alone.",
+  "service_gap_evidence": [],
+  "contacts": []
+}

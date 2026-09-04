@@ -1,0 +1,10 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJzyfEkHgNK4cR8RuXRAHG0VU",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_dedicated_site",
+  "campaign_notes": "The crawled domain yielded zero links, but live verification shows the same Taylor & Gomez practice also uses benjamintaylorlawyer.com with a Practice Areas hub and dedicated service pages such as /practice-areas/civil-rights/. This proves the firm already understands separate-service architecture; the consolidated alternate site is not the campaign ICP.",
+  "service_gap_evidence": [],
+  "contacts": []
+}
