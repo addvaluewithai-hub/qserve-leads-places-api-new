@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJEdrADWstO4gRV5ghTUZuI6s",
-    "name": "Personal Injury Lawyers in Detroit, MI | Mike Morse Injury Law Firm",
-    "website": "https://www.855mikewins.com/detroit-personal-injury-lawyers/?utm_source=GMB&utm_medium=organic&utm_campaign=Detroit",
+    "id": "ChIJzevGAq4LK4cRoOl6cmFDw7w",
+    "name": "Phoenix Car Accident Lawyer | Arizona Injury Firm | $200M+",
+    "website": "https://shapirolawaz.com/?utm_campaign=gmb&utm_medium=local&utm_source=gmb",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:34",
+    "first_seen_at": "2026-09-02 11:12:35",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "855mikewins.com"
+    "website_domain": "shapirolawaz.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
