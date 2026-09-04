@@ -2,15 +2,22 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 20,
-  "lead_id": "ChIJiX7wJoWdToYRNroO6rQC-So",
-  "name": "Dallas Personal Injury Lawyers | Amaro Law Firm",
-  "domain": "amarolawfirm.com",
-  "website": "https://amarolawfirm.com/dallas-personal-injury-lawyers/",
-  "clean_homepage_url_count": 4,
+  "lead_id": "ChIJm_IatG-ZToYR2KcDZR-fdYY",
+  "name": "#1 | Personal Injury Lawyer In Dallas Texas",
+  "domain": "nolanryanlaw.com",
+  "website": "http://www.nolanryanlaw.com/",
+  "clean_homepage_url_count": 11,
   "clean_homepage_urls": [
     "/",
-    "/contact-us",
-    "/dallas-personal-injury-lawyers",
-    "/dallas-truck-accident-lawyer"
+    "/about",
+    "/contact",
+    "/expertise",
+    "/expertise/car-accidents",
+    "/expertise/lyft-uber-accidents",
+    "/expertise/motorcycle-accidents",
+    "/expertise/truck-accidents",
+    "/locations",
+    "/motorcycle-giveaway",
+    "/results"
   ]
 }
