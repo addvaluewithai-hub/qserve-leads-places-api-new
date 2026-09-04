@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJebZ0Y0ndNIgRfpqh0FbR0_Q",
+  "firm": "Fenters Law Firm | Fight Debt Lawsuits Now — Get Legal Help",
+  "domain": "fenterslaw.com",
+  "final_status": "Not Relevant",
+  "qualified": false,
+  "qualification_reason": "Fenters Law Firm is a narrowly focused debt-lawsuit-defense practice rather than a multi-service law firm forcing materially different client types through one general service experience. The site has multiple resources/pages, but they all serve substantially the same debt-defense client journey. There is no broader separate-service-page architecture opportunity for this campaign.",
+  "campaign_notes": "Live-site review completed under the corrected Architecture Maturity ICP. The site focuses on defending debt/credit-card collection lawsuits, including debt-buyer claims, credit-card lawsuits, summons verification and debt-consolidation warnings. Bankruptcy is discussed as an alternative the firm argues against rather than offered as a separate practice. Because the firm does not present several materially different main legal services, it is Not Relevant to a campaign about separating different client conversations. Brian Fenters' direct email is publicly visible on the site, but contact enrichment is not needed because the lead fails the campaign-fit gate.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Practice Architecture",
+      "status": "Not Relevant",
+      "service_offered_evidence": "The live site is centered on debt lawsuit / credit-card collection defense and related resources for the same client journey.",
+      "dedicated_page_url": "https://www.fenterslaw.com/",
+      "validation_method": "live homepage + navigation + debt-defense pages + architecture/ICP gate",
+      "notes": "Single narrow legal conversation rather than multiple materially different main practices sharing a general destination. No campaign-fit architecture gap."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.fenterslaw.com/",
+    "https://www.fenterslaw.com/about/",
+    "https://www.fenterslaw.com/credit-card-lawsuit/",
+    "https://www.fenterslaw.com/debt-defense-not-bankruptcy/"
+  ]
+}
