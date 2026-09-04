@@ -7,84 +7,104 @@
 ## Last Updated
 
 - Date: 2026-09-04
-- Time: 19:57 Africa/Cairo
-- Runner / session: ChatGPT validation runner — architecture-maturity ICP correction
+- Runner / session: ChatGPT validation runner — Crawl4AI-first new-production test
 - Repository / dataset: `addvaluewithai-hub/qserve-leads-places-api-new` / D1 `lawyers-us`
 - Campaign: `lawyers-us`
 
-## Current Position
+## Current Operating Mode
 
-- Total campaign leads: 1830
-- Total finalized in D1 by this runner so far: 18
-- Qualified under corrected ICP: 1
-- Needs Review: 0
-- Disqualified: 17
-- Gap Confirmed - Owner Missing: 0
-- Gap Confirmed - Direct Email Missing: 0
-- Ready for Validation remaining: 1812
-- Current batch: D1 `Ready for Validation` queue
-- Next lead to process: `PT Law – #1 Law Group`
-- Next domain: `ptlawlv.com`
-- Next lead ID: `ChIJKb9kcqfByIARUKxRJW4ESnw`
+Temporarily prioritize **new production leads** over the historical first-1,000 queue so the current Crawl4AI handoff can be tested before historical backfill work.
 
-## Critical ICP Correction
+New-production selection rule:
 
-The campaign is **not** for firms that already understand and broadly implement separate service pages but happen to have one isolated missing service page.
+```text
+campaign_id = lawyers-us
+status = Ready for Validation
+qualified = 0
+qualification_reason = working_set_ready_for_validation
+```
 
-The actual ICP is a firm that has **not yet adopted the separate-service-page concept as a website architecture pattern**.
+The new-production snapshot showed **830 Ready for Validation** leads before this test batch.
 
-Before hunting for a service gap, apply the Architecture Maturity Gate:
+## Crawl4AI-First Validation Flow
 
-> Would a reasonable reviewer say this firm already knows and routinely applies separate service/client-journey pages?
+For new production leads, start from `homepage_link_evidence` before opening the live site.
 
-- If **Yes** -> `Disqualified`, even if one service lacks a page.
-- If **No** -> continue to service-gap validation.
-- If unclear -> `Needs Review`.
+1. Review homepage internal URL paths + anchor text in batches.
+2. Apply the Architecture Maturity Gate from Crawl4AI evidence.
+3. If the homepage links clearly prove a mature separate-service architecture, mark `Disqualified` without owner/email research.
+4. Only open the website deeply when Crawl4AI evidence is sparse, ambiguous, or suggests a shared/general service architecture.
+5. A gap can still only be confirmed after independent live-site double-check.
 
-Strong fit usually means several materially different main services still share the homepage, one broad Services / Practice Areas page, or a one-page site.
+A compact helper snapshot now exists:
 
-## Corrections Applied
+```text
+agents/validation new crawl prescreen.json
+```
 
-### Kimmel & Silverman / lemonlaw.com
+It ranks structural/service-like homepage links for the next 10 new-production leads. This is a pre-screen only, not a final classifier.
 
-- Previous status: `Qualified`
-- Corrected status: `Disqualified`
-- Reason: LemonLaw.com already has deep intentional separate-page architecture across state, manufacturer and warranty/Lemon Law journeys. Dealer Fraud may lack its own page, but that is an isolated content gap inside a mature architecture.
-- D1 correction applied successfully.
+## First New-Production Test Batch
 
-### Tom Fowler Law / tomfowlerlaw.com
+The first six leads through the stop condition were applied to D1 in one commit/workflow run.
 
-- Previous status: `Qualified`
-- Corrected status: `Disqualified`
-- Reason: the site already has dedicated pages across car, truck, motorcycle, bicycle/pedestrian accidents, Workers' Compensation, Wrongful Death, Slip & Fall, Dog Bites and other major services. Medical Malpractice is an isolated missing page, not evidence that the firm lacks the separate-pages concept.
-- D1 correction receipt confirmed at `2026-09-04T16:57:22.421413+00:00`.
+### Disqualified from Crawl4AI architecture evidence
 
-### Seth Rose, Attorney at Law
+1. Castillo Lawyer — `castillolawphoenix.com`
+   - 29 homepage internal links
+   - clear separate pages for Assault, DUI, Drug Defense, Sex Crimes, etc.
 
-- Status remains: `Qualified`
-- This is a historical outreach-ready lead, not a newly discovered lead in the current run.
-- It remains compatible with the corrected ICP because the core practice areas share a general practice presentation rather than a mature service-by-service architecture.
+2. Alcock Law — `alcocklaw.com`
+   - 82 homepage internal links
+   - very mature Criminal Defense / Family / Personal Injury service architecture
 
-## Rule Added to Runner
+3. Shah Law Firm — `arjashahlaw.com`
+   - 64 homepage internal links
+   - separate DUI / criminal-defense pages and geo/service depth
 
-`agents/validation runner.md` now contains a mandatory **Architecture Maturity Gate** before individual service-gap hunting.
+4. Sotelo Law Group — `sotelolawgroup.com`
+   - 25 homepage internal links
+   - dedicated `case-types` pages for Car, Motorcycle, Slip & Fall, Truck, etc.
 
-A Qualified lead must prove both:
+5. Hartley Law — `hartleylawusa.com`
+   - 25 homepage internal links
+   - dedicated pages for Car, Motorcycle, Truck, Medical Malpractice, etc.
 
-1. a meaningful service/client conversation lacks a focused destination, and
-2. the firm as a whole has **not already adopted mature separate-service architecture**.
+No owner/email research was performed for these five because they failed the Architecture Maturity Gate.
 
-An isolated forgotten page on an otherwise mature site is explicitly an anti-pattern and must be Disqualified.
+### Qualified — Owen Law Firm
+
+- Lead ID: `ChIJKb6Hs5wTK4cRlg9qnRRmGgs`
+- Domain: `amyowenlaw.com`
+- Crawl4AI homepage evidence: 8 internal links, zero structural service-page signals
+- Deep validation: official `Areas of Practice` page combines **Personal Injury + Civil Rights** on one shared page
+- Selected first mockup service: **Civil Rights**
+- Dedicated Civil Rights page: none found after navigation + site-restricted search
+- Decision maker: **Amy Owen — Founder & Managing Attorney**
+- Direct public email: **amy@amyowenlaw.com**
+- D1 final status: `Qualified`
+- D1 qualified flag: `1`
+- Outreach draft stored in campaign notes
+
+## What This Test Showed
+
+The Crawl4AI collection itself is doing the intended job for new production leads: homepage rendering + same-domain visible internal link collection is enough to eliminate obvious mature-architecture firms very quickly.
+
+Current finding: **do not add deep crawling to Crawl4AI yet.** The biggest improvement needed was on the Agent 2 presentation/pre-screen layer, not the crawler depth.
+
+The raw Crawl4AI data contains some noise (assets, blog URLs, generic `Learn More` anchors), so the compact pre-screen helper filters/ranks structural links while preserving the full raw evidence in D1.
 
 ## Exact Next Action
 
-> Resume from D1 lead `ChIJKb9kcqfByIARUKxRJW4ESnw`, PT Law (`ptlawlv.com`). PT Law is historically documented as outreach-ready, so live recheck and synchronize it if still valid, but do not count it as a newly discovered Qualified lead. Then continue sequentially until finding a genuinely new Qualified firm that passes the corrected Architecture Maturity Gate — i.e. the firm itself still relies primarily on shared/general service presentation rather than already having a mature separate-page system.
+> Continue in new-production mode from the next unprocessed lead after Owen Law in the tested batch: `landeroslegal.com`, lead ID `ChIJL74zCAoRK4cRxk5vFlMj6DA`. Its Crawl4AI snapshot has only 6 homepage links and zero structural service signals, so it requires a live-site identity/architecture double-check. Then continue 10-by-10 using Crawl4AI pre-screening until the next genuinely new Qualified lead is found.
+
+Historical first-1,000 validation is intentionally deferred for now. Later, decide whether to backfill their `homepage_link_evidence` with Crawl4AI.
 
 ## Handoff Confirmation
 
-- [x] Architecture-maturity ICP correction is documented.
-- [x] Runner was updated with the mandatory gate.
-- [x] Kimmel & Silverman was reclassified in D1.
-- [x] Tom Fowler Law was reclassified in D1.
-- [x] False-positive outreach drafts are no longer part of the current campaign qualification notes.
-- [x] Exact next D1 lead is recorded.
+- [x] Architecture Maturity Gate remains mandatory.
+- [x] New production leads are temporarily prioritized.
+- [x] Crawl4AI-first 10-lead pre-screen snapshot exists.
+- [x] Five mature sites were disqualified from Crawl evidence without unnecessary contact research.
+- [x] Owen Law passed deep validation and was written to D1 as Qualified.
+- [x] Exact next new-production lead is recorded.
