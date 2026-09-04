@@ -1,0 +1,258 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-herz-law",
+      "lead_id": "ChIJ4XWtZheZToYRAHCLuA7MPFk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URLs plus current homepage review show a boutique plaintiff-side injury/tort practice centered on wrongful death, serious injuries, and related victim claims; these are one narrow client journey rather than materially different legal service journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-h-r-chapin",
+      "lead_id": "ChIJ5Z9QuyAnTIYRlLAVefPr6O4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes focused destinations for bankruptcy, business litigation, commercial litigation, construction litigation, creditors rights, mediation, and real-estate litigation. The multi-service architecture is already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-akpabio-law",
+      "lead_id": "ChIJB6lUK5YnTIYRh6TgYdYPILY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation confirmed that the three awkwardly named clean URLs are focused Immigration Law, Family Law, and Personal Injury pages. The firm offers materially different services but already separates them into dedicated destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-hargrave-family-law",
+      "lead_id": "ChIJM6Hir_UnTIYRQkAIBf9iEBg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is overwhelmingly divorce and family-law work, with focused pages for custody, support, prenups, modifications, collaborative divorce, and related family matters. This is one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-lawboss-uvalle-law-firm",
+      "lead_id": "ChIJNW-EOx-ZToYR0Crz6bac4EI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is a personal-injury architecture: motor-vehicle accidents, premises liability, catastrophic/fatal injuries, wrongful death, and city injury pages. These remain one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-my-texas-injury-attorney",
+      "lead_id": "ChIJTxrcmTydToYRGINDzj718CY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL list is dedicated to personal injury and accident subtypes across Texas locations, including car, truck, motorcycle, rideshare, slip-and-fall, dog bite, elder abuse, and wrongful death. This is one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-maison-law-firm",
+      "lead_id": "ChIJeSHPOdriPaMROCJ1w1wVOnU",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_identity_unresolved",
+      "campaign_notes": "The production crawl returned zero clean URLs behind a browser challenge. Current live validation redirects maisonlawfirm.com to an unrelated private WordPress site, so the present firm identity and service architecture cannot be resolved safely.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-heald-law-firm",
+      "lead_id": "ChIJnwHLt-whTIYRU1Kg0XYH0YA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is personal-injury focused, including car, truck, motorcycle, construction, pedestrian/bicyclist, dog bite, slip-and-fall, and injury FAQ content. These are one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-cre-law",
+      "lead_id": "ChIJq9Ur0QwhTIYR_-qRmaMmFUg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site exposes a highly developed set of focused practice destinations for commercial real-estate transactions, funds, syndications, joint ventures, offerings, agreements, and related investment work. The architecture is already mature.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-domingo-garcia-law-firm",
+      "lead_id": "ChIJ0bmG-pGZToYRb-SOknjIm-0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean homepage URL set is dominated by personal-injury, accident, work-injury, wrongful-death, and location variants. The isolated immigration article does not establish a separate current main service journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-montgomery-law",
+      "lead_id": "ChIJ3Q8E5-eQToYRxrmThZeI_Po",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL architecture is centered on personal injury, car/truck/motorcycle accidents, work injury, construction injury, slip-and-fall, and wrongful death. These are one injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-mathur-law-offices",
+      "lead_id": "ChIJD4u0Rg2cToYRG4GVIc_tk8w",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set contains dedicated main-service pages for business law, business litigation, civil litigation, criminal defense, estate planning, family law, immigration, personal injury, and wealth management, with additional focused subpages. Architecture is mature.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-omobitan-law-firm",
+      "lead_id": "ChIJD98yXMudToYRNgVMGgP2pZs",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Current official-site validation shows Immigration, Family Law, and Personal Injury are all actively offered, but the navigation labels for those services resolve into the same general /practice-areas/ destination instead of focused service pages. Ife Omobitan states she started her own law firm, and the official site publishes ife@omobitanlaw.com directly.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official practice-areas page explicitly offers Personal Injury alongside Immigration and Family Law, and the homepage also presents Personal Injury as a practice.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The clean homepage URLs contain only one general /practice-areas path. Live navigation labels Immigration, Family law, and Personal Injury, but those links resolve to the same consolidated practice-areas page; no focused Personal Injury destination is exposed while materially different client journeys share that page."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Ife Omobitan",
+          "role": "Owner / Founder",
+          "email": "ife@omobitanlaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "https://omobitanlaw.com/about/ — states Ife started her own law firm and publishes ife@omobitanlaw.com on the official site.",
+          "notes": "Direct individual email on the official firm website; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Personal Injury",
+        "subject": "A thought on your Personal Injury page",
+        "body": "Hi Ife,\n\nI was looking through Omobitan Law Firm’s site and noticed Immigration, Family Law, and Personal Injury are all presented together on the same Practice Areas page. Those are very different client situations, so a person arriving after an accident currently has to share one general website conversation with immigration and family-law visitors.\n\nA focused Personal Injury page could give that client a clearer path from the first click—what you handle, who you help, what to do next, and why your firm is a fit. It can also give Google a more specific service context and make the site easier for AI systems to understand.\n\nI’d use Personal Injury for the first example because it is a distinct, high-intent journey on the current site.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "14-ward-white",
+      "lead_id": "ChIJHc-dCuCYToYRnJxFGPpHSv8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Business law, estate planning, personal injury, and NIL are materially different services and the clean URL set already exposes focused destinations for them. The architecture is sufficiently separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-jcp-law",
+      "lead_id": "ChIJHzIQTl6cToYRU43AsiReb5w",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The site is an immigration-law practice with focused immigration subservices such as citizenship, residency, and removal defense. Those remain one narrow immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-escobar-lawyers",
+      "lead_id": "ChIJe0P541mcToYRvQnkJChobvA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set contains separate focused destinations for Criminal Law, Family Law, and Personal Injury Law. Those materially different journeys are already architecturally separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-mlf-legal",
+      "lead_id": "ChIJeSOhMIydToYR8bGLKva8tzg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm offers materially different services including personal injury, workers compensation, family law, criminal law, DWI defense, and Social Security disability, with dedicated pages for the major journeys. Architecture is mature.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-mark-a-mcclelland",
+      "lead_id": "ChIJnZ9EU12cToYRBWEFVn37sC4",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The crawl had zero URLs, so the live site was checked. The current official site explicitly presents Criminal Defense-type matters and Immigration Law together on the homepage and one general Services page, without focused service destinations. Mark A. McClelland is the named solo attorney and the official site publishes lawbymark@aol.com directly.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Immigration Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official homepage and Services page explicitly list Immigration Law, including immigration-bond assistance, alongside criminal-defense matters.",
+          "dedicated_page_url": null,
+          "validation_method": "Official live-site validation after zero-link production crawl",
+          "notes": "The site exposes only Home, About, Services, Blog, FAQ, and Contact navigation. Immigration Law and the criminal-defense practices share the homepage/general Services destination; no focused Immigration Law page is present in the live navigation or service architecture."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Mark A. McClelland",
+          "role": "Solo Attorney / Principal",
+          "email": "lawbymark@aol.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "https://markmlaw.com/ — official site names Mark A. McClelland throughout, describes direct personal availability, and publishes lawbymark@aol.com.",
+          "notes": "Direct individual attorney email on the official firm website; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Immigration Law",
+        "subject": "A thought on your Immigration Law page",
+        "body": "Hi Mark,\n\nI was looking through your site and noticed Immigration Law is presented alongside your criminal-defense work on the homepage and general Services page, but it does not have its own focused destination. Those clients arrive with a very different problem and questions from someone facing a drug, assault, theft, or DWI charge.\n\nA dedicated Immigration Law page could give that visitor a clearer journey—what immigration matters you handle, when to contact you, and what the next step looks like—without making them sort through the broader criminal-services conversation. It can also give Google a cleaner service-specific context and make the site easier for AI systems to understand.\n\nI’d use Immigration Law for the first mockup because it is the clearest distinct journey sharing the general page.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "19-manuel-diaz-law-firm",
+      "lead_id": "ChIJxwWPab8gTIYRbJRC47Yypcc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_mature_architecture",
+      "campaign_notes": "The crawl returned zero URLs behind a robot challenge, so the current official site was checked. It offers Criminal Defense, Personal Injury, Family Law, Civil, First Party Claims, and Immigration with dedicated service destinations and many focused subpages. Architecture is mature.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-the-robinson-firm",
+      "lead_id": "ChIJn16LaK2JowARR5wtaWquxfE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_site_single_narrow_journey",
+      "campaign_notes": "The clean URLs were generic, so the current site was checked. It identifies the firm as an accident and injury practice and lists car, truck, motorcycle, bicycle, pedestrian, and dog-bite accidents. These are one narrow personal-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
