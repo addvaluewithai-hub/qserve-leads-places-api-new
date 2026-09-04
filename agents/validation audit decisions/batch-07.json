@@ -1,0 +1,254 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 7,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-mullen-and-mullen",
+      "lead_id": "ChIJb0ob10-ZToYREVKWnUdMZJ8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "Full clean homepage URL review is entirely plaintiff Personal Injury work: car/truck/motorcycle/bicycle/pedestrian/rideshare accidents, dog bites, slip-and-fall, TBI, work accidents and wrongful death. These are variations inside one injury client journey rather than materially different main legal conversations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-bailey-galyen",
+      "lead_id": "ChIJoZFgaCifToYR1EIdiDYKa_I",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean homepage URL set shows mature dedicated destinations across materially different practices including Criminal Defense, Family Law, Injury Law, Social Security Disability, Immigration, Estate Planning, Corporate/Transactional Law, Civil Appeals and Workers' Compensation. Separate client-journey architecture is already dominant.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-1800-lion-law",
+      "lead_id": "ChIJ02oD3WqZToYRFJhbQJ6pF24",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage URL set is Personal Injury/accident work: car and motorcycle crashes, brain injury, wrongful death, damages, insurance and injury geography pages. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-franklin-law-firm",
+      "lead_id": "ChIJ0bmG-pGZToYRopBVLJPjyNA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Personal Injury matters such as car injuries, product liability, slip/trip/fall and back-pain injuries. This is one narrow plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-reyes-law",
+      "lead_id": "ChIJ3XxhQ9OZToYR1p_f3Swcj2A",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full homepage URL set is plaintiff Personal Injury: car, truck, motorcycle, bus, bicycle, pedestrian and rideshare accidents, premises liability and wrongful death. This is one injury client journey despite the number of focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-pumarejo-law",
+      "lead_id": "ChIJ455YKFSZToYR0efH22dXaWg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The clean homepage URLs are all Criminal Defense matters: assault/family violence, drugs, DWI, juvenile defense, murder/manslaughter, sex offenses and theft. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-hindieh-law",
+      "lead_id": "ChIJ6W8Zo86eToYRixNI32mB1LY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive clean URLs are criminal-defense matters: DWI, assault, drugs, family violence, federal defense, white-collar crime, illegal reentry and related crimmigration consequences. The public architecture is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-puente-law",
+      "lead_id": "ChIJ82mAUV-bToYRGA8eIL3o6wc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose dedicated Estate Planning, Federal Criminal Defense, Juvenile Defense, Personal Injury, Real Estate Law and State Criminal Defense destinations. Materially different client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-david-reyna-law",
+      "lead_id": "ChIJ8dKAY46ZToYRpx3yU5o33vc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The full clean homepage URL set is Criminal Defense: drugs, DWI, family violence, sex crimes, theft and robbery. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-rogelio-herrera",
+      "lead_id": "ChIJB77LYiaaToYRS3HVFIZ65jU",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Manual clean-URL review showed only a generic /services destination. Live verification on the official site confirms Family Law, Criminal Law and Personal Injury are three materially different main services, and each homepage service card points to the same shared /services destination rather than a focused client page. The official site identifies Roger Herrera as Owner and publicly lists the name-specific email Law_rogelioherrera@sbcglobal.net. Family Law is selected as the first gap for outreach.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Family Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official homepage explicitly presents Family Law alongside Criminal Law and Personal Injury, and states that the firm handles divorce, child custody and child support matters.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live homepage/navigation verification",
+          "notes": "The Family Law, Criminal Law and Personal Injury homepage cards all resolve to the same generic /services destination. No separate Family Law client destination is used in the current official navigation."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Roger Herrera",
+          "role": "Attorney / Owner",
+          "email": "Law_rogelioherrera@sbcglobal.net",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Law Offices of Rogelio Herrera homepage identifies Roger Herrera as Owner and publishes Law_rogelioherrera@sbcglobal.net in the firm contact information.",
+          "notes": "Name-specific individual email is published directly by the firm and is not inferred from an email pattern."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Family Law",
+        "subject": "A thought on your Family Law page",
+        "body": "Roger,\n\nI was looking through the Law Offices of Rogelio Herrera site and noticed Family Law, Criminal Law, and Personal Injury are all presented through the same general Services page rather than having their own focused client pages.\n\nThose are very different conversations. Someone dealing with divorce, custody, or child support is arriving with very different questions and priorities from someone facing a criminal charge or recovering from an accident.\n\nA dedicated Family Law page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of your practice.\n\nI’m using Family Law as the first mockup because the contrast with Criminal and Personal Injury makes the idea easy to see while keeping the firm’s current positioning intact.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "11-daniel-ramirez-law",
+      "lead_id": "ChIJCfN0LY6ZToYR3EG94GX3shg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The stored crawl evidence was empty, so the current official site was checked live. The firm now operates at reydelaley.com and has distinct dedicated Immigration and Personal Injury destinations, with the Personal Injury page covering its accident/injury hierarchy. The two materially different current main journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-john-bray-law",
+      "lead_id": "ChIJFfvWBSWZToYR_vRHebwZnTE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_immigration_journey",
+      "campaign_notes": "The clean homepage URLs are all Immigration matters: business/work visas, deportation defense, family green cards and waivers, fiance visas, TN visas and related immigration litigation. This is one immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-anderson-law-firm",
+      "lead_id": "ChIJO8ykUC6ZToYRIwxbfenkYME",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete homepage URL set is Personal Injury across Dallas, Austin and Fort Worth: vehicle crashes, child/daycare injuries, dog bites, premises/product liability, workplace injuries and wrongful death. This is one plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-guerrero-law",
+      "lead_id": "ChIJWxJBldibToYRHRUCevgBwAQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose separate Immigration Law and Personal Injury destinations, with additional accident pages under the injury journey. The materially different main services are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-bg-law",
+      "lead_id": "ChIJbUfYqsOZToYRR_l_elcGjwg",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "The clean URL set contains only homepage/attorney/office pages. Live verification confirms the homepage explicitly offers two materially different main services—Immigration and Personal Injury—inside the same homepage experience, with no focused service destinations surfaced. Brenda Garcia founded the firm and is the clear decision maker. The only sufficiently verified public firm email found is generic legal@bglawoffice.com; no direct public individual email for Brenda was verified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official BG Law homepage states that the firm specializes in Immigration and Personal Injury and contains a dedicated Personal Injury section describing accident/negligence representation.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live homepage + site-restricted search",
+          "notes": "Immigration and Personal Injury remain sections in the shared homepage experience. No dedicated Personal Injury destination surfaced in the clean homepage links or official-site search results."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Brenda Garcia",
+          "role": "Founder / Attorney / decision maker",
+          "email": "legal@bglawoffice.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": true,
+          "evidence_source": "Official BG Law homepage and attorney profile identify Brenda Garcia as the founder/attorney and publish only the generic legal@bglawoffice.com contact email; Texas Bar confirms her Dallas practice and Immigration/Personal Injury practice areas.",
+          "notes": "Generic firm inbox only. No direct public individual email for Brenda Garcia was sufficiently verified."
+        }
+      ]
+    },
+    {
+      "slug": "16-garcia-windsor",
+      "lead_id": "ChIJi99wnMqeToYR_kODtwbgFfA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The homepage URL set shows a mature Family Law hierarchy and a separate dedicated Business Law destination. Materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-dfw-injury-lawyers",
+      "lead_id": "ChIJoywd_OKbToYR-TTn9S4lwEc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are plaintiff Personal Injury services and geo variants: car, truck, motorcycle, bicycle, pedestrian, construction, dog bite, premises, TBI, spinal injury and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-bhagat-law",
+      "lead_id": "ChIJwWleiJgnTIYRXOjp2WdrT7E",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live verification confirms the firm practices Family Law and Criminal Defense. The official site has a dedicated /criminal-defense destination and the /practice-areas page is a focused Family Law destination listing divorce, custody, support and related family matters. The two materially different main journeys are already separately presented.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-mark-cohan-law",
+      "lead_id": "ChIJqQ0YA3-eToYR9QKkFI2Ccy0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Crawl evidence was empty, so the official site was reviewed live. Its primary navigation explicitly links separate Personal Injury, Family Law and Wills and Estates service destinations; Family Law and Wills pages resolve normally and the Personal Injury navigation target is /personal-injury. The firm already applies separate client-journey pages across its main services.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-button-law-firm",
+      "lead_id": "ChIJx5Lxqw4uTIYRA389ms7iu0o",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The entire clean homepage URL set is plaintiff Personal Injury/child injury and daycare injury work, including accidents, premises issues, catastrophic injuries and wrongful death. These are variations within one injury client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
