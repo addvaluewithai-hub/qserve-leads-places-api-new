@@ -1,0 +1,206 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-davis-associates",
+      "lead_id": "ChIJreH3g5gnTIYRBO2AtUeaqNo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an immigration-only client journey, with many immigration subtopics but no materially different main legal service family.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-law-offices-of-joel-e-cohen",
+      "lead_id": "ChIJt0utedcjTIYREwR76IMCwfU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation resolved the generic snapshot: the firm offers materially different practices including employment, copyright, trademark, consumer law and personal injury, and provides focused destinations for those practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-curtis-law-group",
+      "lead_id": "ChIJzSmvDiKfToYRU9AYZ0hOsYw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The practice architecture is centered on personal-injury and injury-product claims; the listed practice pages remain within one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-colin-smith-law",
+      "lead_id": "ChIJ0Q9iBMMgTIYRwQiCALZWfhk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation shows the firm focuses on estate planning, probate, guardianship and related fiduciary/estate litigation, which form one closely related estate and legacy client journey rather than materially different main service families.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-burch-law",
+      "lead_id": "ChIJ0yOLJcghTIYRB3Q34C5MWtc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm presents materially different services including estate planning/probate and business law with focused service destinations, so the dominant architecture is already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-law-offices-of-lisa-g-garza",
+      "lead_id": "ChIJ5ReL4-CfToYRgVDnnbAXcV4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete URL set is family-law only, with divorce, custody, support and related subtopics forming one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-duggan-family-law",
+      "lead_id": "ChIJFfAaLMyeToYRGHFtKmp49-Y",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation shows the firm now offers both family/LGBTQ law and a distinct Commercial Financial Litigation practice, with separate focused destinations for those materially different services.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-holmes-firm-pc",
+      "lead_id": "ChIJGZWB5TAhTIYRL86g9VZDwsQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation shows mature multi-practice architecture with separate Real Estate Law, Business Law and Litigation destinations plus focused corporate, IP, finance and securities pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-law-office-of-daniel-clancy",
+      "lead_id": "ChIJMyOdIS2ZToYR4nLa_hy0Y8M",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation resolves the generic snapshot as a criminal-defense practice covering multiple criminal charge types within one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-ciment-law-firm-debt-defenders",
+      "lead_id": "ChIJRR0xviMhTIYRETEiwPmWcvI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation shows bankruptcy, debt-lawsuit defense, debt relief, student-loan assistance and consumer protection are presented as one consolidated debt-resolution and debtor-rights journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-silberman-law-firm",
+      "lead_id": "ChIJRWdkL8ghTIYRaFDhg-QHw10",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL architecture already separates materially different real estate, business, probate, estate planning, litigation and related legal services into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-mcnair-dallas-law",
+      "lead_id": "ChIJXfDgkxkhTIYRWz7aSRNEMnU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site separates its main Estate Planning and Elder Law offerings into focused destinations, with additional dedicated pages for guardianship, Medicaid, long-term care and probate/estate administration.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-margolies-law-office",
+      "lead_id": "ChIJkzkFMMghTIYR6bkIIuEYpic",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The site is tax-resolution focused; audit representation, levies, liens, payroll tax, offers in compromise and related services remain one narrow tax-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-erisa-ltd",
+      "lead_id": "ChIJe9u7FpefToYRqErExWkp3r8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is centered on ERISA short- and long-term disability claims and related disability conditions, constituting one narrow disability-benefits journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-glast-phillips-murray-zopolsky",
+      "lead_id": "ChIJhbqjhtwgTIYRILTR4rKrYhA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site exposes focused destinations for materially different practice areas including family law, estate planning, real estate, tax, employment, litigation, insurance defense, energy/environment and M&A.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-my-dallas-criminal-lawyer",
+      "lead_id": "ChIJpTlD_o0hTIYRoHXJQxdwZYo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation confirms the firm is criminal-defense only; DWI, violent crimes, sex crimes, drugs, theft, juvenile matters and expunctions are all subtypes of one criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-dallas-probate-attorneys",
+      "lead_id": "ChIJr_NymjIhTIYRHuipZgjT1P0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Probate, estate administration, will and trust disputes, guardianship and estate planning are presented as one closely related probate/estate client journey rather than separate materially different service families.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-ragsdale-firm",
+      "lead_id": "ChIJ4S2H5zwmTIYRZKk2cKhQ0Ac",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete URL set is personal-injury focused; accident and injury subtypes remain within one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-akula-associates",
+      "lead_id": "ChIJHU3NevwjTIYR0wHG70urCcs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Employment-based and family-based visas, green cards and related services all remain within one immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-kimberly-griffin-tucker",
+      "lead_id": "ChIJVUftZWMjTIYRLbxLB8x_gpU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete URL set is criminal-defense focused; DWI, drugs, theft, probation matters and record clearing remain one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
