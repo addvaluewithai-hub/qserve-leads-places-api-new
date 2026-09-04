@@ -2,10 +2,12 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 8,
-  "lead_id": "ChIJGZWB5TAhTIYRL86g9VZDwsQ",
-  "name": "Robot Challenge Screen",
-  "domain": "theholmesfirm.com",
-  "website": "http://www.theholmesfirm.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJE2vE2gm1RIYR3Ey7OzXs8Oo",
+  "name": "Coonley Law",
+  "domain": "coonleylaw.com",
+  "website": "https://coonleylaw.com/",
+  "clean_homepage_url_count": 1,
+  "clean_homepage_urls": [
+    "/"
+  ]
 }

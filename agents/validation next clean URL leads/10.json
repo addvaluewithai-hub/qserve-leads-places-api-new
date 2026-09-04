@@ -2,10 +2,13 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 10,
-  "lead_id": "ChIJRR0xviMhTIYRETEiwPmWcvI",
-  "name": "Debt Resolution and Bankruptcy Attorney Texas - Debt Defenders",
-  "domain": "cimentlawfirm.com",
-  "website": "https://cimentlawfirm.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJG3X-KHW1RIYRH9eelkvrbWc",
+  "name": "Law Office of Jessica Bernstein",
+  "domain": "atxcrimdefense.com",
+  "website": "http://www.atxcrimdefense.com/",
+  "clean_homepage_url_count": 2,
+  "clean_homepage_urls": [
+    "/",
+    "/index.php"
+  ]
 }

@@ -2,17 +2,13 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 2,
-  "lead_id": "ChIJt0utedcjTIYREwR76IMCwfU",
-  "name": "Untitled Document",
-  "domain": "joelecohenlaw.com",
-  "website": "http://www.joelecohenlaw.com/",
-  "clean_homepage_url_count": 6,
+  "lead_id": "ChIJ-2km1lO1RIYRinEDrgd2qh4",
+  "name": "HOME | My Site",
+  "domain": "jwalterslawfirm.com",
+  "website": "http://www.jwalterslawfirm.com/",
+  "clean_homepage_url_count": 2,
   "clean_homepage_urls": [
     "/",
-    "/Attorneybio.htm",
-    "/Contactus.htm",
-    "/Disclaimer.htm",
-    "/areasofpractice.htm",
-    "/pageNav"
+    "/map"
   ]
 }
