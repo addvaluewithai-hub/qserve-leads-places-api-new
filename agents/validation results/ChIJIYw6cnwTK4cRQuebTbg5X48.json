@@ -1,0 +1,26 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJIYw6cnwTK4cRQuebTbg5X48",
+  "firm": "Solorzano Law Firm",
+  "domain": "solorzanolawfirm.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Solorzano Law Firm already clearly understands and broadly applies separate service-page architecture. The live navigation links numerous dedicated Personal Injury service pages such as Car Accidents, Brain Injury, Burn Injury, Dog Bites, Motorcycle Accidents, Pedestrian Accidents, Sexual Assault, Slip and Fall, Truck Accidents and Wrongful Death, alongside extensive geographic service-area pages. Although Immigration and Business Law are also offered without comparable main-practice destinations, those are isolated coverage gaps inside an already mature separate-page system, so the firm is not the ICP for this campaign.",
+  "campaign_notes": "Architecture Maturity Gate failed. The corrected campaign ICP does not target a firm merely because one or two practices lack dedicated pages if the site already demonstrates that it knows and routinely implements the concept. Solorzano has substantial service-by-service and geo architecture. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live site explicitly offers Personal Injury, Immigration and Business Law, while its navigation exposes many focused injury-service pages and numerous location pages.",
+      "dedicated_page_url": "https://solorzanolawfirm.com/areas-of-practice-personal-injury/",
+      "validation_method": "live homepage + Areas of Practice + navigation + architecture-maturity gate",
+      "notes": "Immigration and Business could individually use stronger destinations, but the firm already understands the separate-page strategy; this is outside the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://solorzanolawfirm.com/",
+    "https://solorzanolawfirm.com/areas-of-practice-personal-injury/"
+  ]
+}
