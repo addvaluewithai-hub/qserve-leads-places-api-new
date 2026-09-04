@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJKWwM6i4XsocREUL-yQtFLlg",
+  "firm": "Cunningham & Mears",
+  "domain": "cunninghamandmears.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Cunningham & Mears already has mature separate-service architecture across its injury practice. The current site exposes focused destinations for Car Accidents, Trucking Accidents, Motorcycle Accidents, Construction Accidents, Oil Field Injuries, Premises Liability, Product Liability, Wrongful Death, Workers' Compensation and other meaningful services. The firm already understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Current navigation and footer practice structures list many service-specific destinations, and a substantial dedicated Wrongful Death page was independently confirmed. The site also has dedicated attorney/team and office architecture. Contact enrichment skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current site lists distinct practice destinations including Car Accidents, Trucking Accidents, Motorcycle Accidents, Construction Accidents, Premises Liability, Product Liability, Wrongful Death and Workers' Compensation; a focused Wrongful Death page was confirmed.",
+      "dedicated_page_url": "https://www.cunninghamandmears.com/personal-injury/wrongful-death/",
+      "validation_method": "live homepage/footer navigation + dedicated Wrongful Death page + architecture-maturity gate",
+      "notes": "Mature service-by-service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.cunninghamandmears.com/",
+    "https://www.cunninghamandmears.com/attorneys/",
+    "https://www.cunninghamandmears.com/personal-injury/wrongful-death/",
+    "https://www.cunninghamandmears.com/contact-us/"
+  ]
+}
