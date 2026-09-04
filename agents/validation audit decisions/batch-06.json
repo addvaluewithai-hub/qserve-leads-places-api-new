@@ -1,0 +1,207 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 6,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-armstrong-law",
+      "lead_id": "ChIJoXYdxJMhTIYR4T7Q4iKaLZ4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full clean homepage URL set is plaintiff-side injury work: personal injury, car and truck accidents, wrongful death, premises liability, catastrophic injury and a large work-injury/non-subscriber hierarchy. These remain variations within one core injury client journey rather than materially different legal conversations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-line-law-firm",
+      "lead_id": "ChIJvUOuB1SfToYRNKWHMG1xGMY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive homepage links are Personal Injury matters: construction accidents, dog bites, motor vehicle and motorcycle accidents, slip/fall, trucking accidents and wrongful death. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-isenberg-criminal-defense",
+      "lead_id": "ChIJ63DVOSafToYRPuF9sjI3CGA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The full clean homepage URL set is Criminal Defense: assault, domestic violence, drugs, DWI, sex crimes, theft, expunction and criminal-defense geography pages. This is one narrow criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-aleman-law",
+      "lead_id": "ChIJHVm9kt-YToYRs9JlYa-GjgA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The clean homepage URLs are Personal Injury only: auto accidents, premises liability, trucking accidents, work accidents and wrongful death under a general Personal Injury hierarchy. These are one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-roberts-roberts",
+      "lead_id": "ChIJVVVl9yCfToYRH1MMGZ1zoi8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The substantive clean homepage URLs are entirely plaintiff-injury work: personal injury, car, truck and motorcycle accidents, dog bites and related injury content. This is one Personal Injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-morgan-morgan",
+      "lead_id": "ChIJ_VGvttefToYR55_YwillBB0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full homepage URL set shows extremely mature focused-page architecture across materially different practice families including Personal Injury, Employment, ADA rights, breach of contract, construction litigation, Social Security disability, veterans benefits, whistleblower matters and Workers' Compensation. The Architecture Maturity Gate clearly fails.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-karns-law-firm",
+      "lead_id": "ChIJdWXkuw2fToYRoKKMyayNJwU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_military_defense_journey",
+      "campaign_notes": "The complete homepage URL set is Military Defense and closely related military disciplinary/administrative defense: court-martial-type accusations, separation boards, Article 15/NJP, reprimands, record corrections and worldwide military representation. This is one narrow military-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-handlemytickets",
+      "lead_id": "ChIJl3Xo2TWfToYRRQVFoD75qqY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture_across_official_properties",
+      "campaign_notes": "The clean homepage URLs themselves are sparse, so live verification was used. HandleMyTickets is the ticket-focused property for Cephus Richard/Richard Trial Attorneys, while the same attorney and matching firm identity operate a separate official Richard Trial Attorneys property with focused Personal Injury and Wrongful Death presentation. The practice is already deliberately separating materially different client journeys across official properties rather than relying on one consolidated general-service experience.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-thomas-cox",
+      "lead_id": "ChIJ-dDtm8qeToYRkMou98kb9gg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Criminal Defense matters including assault, robbery, fraud, drugs, firearms, murder, sex crimes, theft, probation violations and white-collar crimes. This is one criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-klinck-law",
+      "lead_id": "ChIJ3ww4pEqfToYR-Zv3kf9VG0g",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set directly exposes separate Business/Commercial Litigation, Construction, Criminal Defense, Family Law and Personal Injury destinations, plus focused liability and truck-accident pages. Multiple materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-erin-hendricks-law",
+      "lead_id": "ChIJCwq2eGOfToYRPxIB4wu9Ams",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "Homepage crawl evidence was generic, so the current official site was checked live. The firm explicitly positions Erin Hendricks as a state and federal Criminal Defense lawyer and the practice-area copy remains entirely criminal-law focused. This is one narrow criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-donald-hood-bankruptcy",
+      "lead_id": "ChIJHxV-ggyfToYRkLmkI6ewc4E",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_bankruptcy_journey",
+      "campaign_notes": "The complete homepage URL set is Bankruptcy: Chapter 7, bankruptcy laws and FAQs, qualification questions and bankruptcy geography pages. This is one narrow bankruptcy/debt-relief client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-greenclark-law",
+      "lead_id": "ChIJN_velTCfToYRBVYWgK5gMfU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture_live_verified",
+      "campaign_notes": "Crawl evidence was empty, so the current public site was checked live. The firm now operates at greenclark.law and exposes focused destinations for Federal Criminal Defense, White Collar Defense, DEA Drug Diversion, Plaintiffs Civil Litigation and Personal Injury. Mature multi-practice architecture is explicit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-dunham-jones",
+      "lead_id": "ChIJOe9WbTuZToYRdjnk3g4hdlc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The homepage URL set and current sitemap show a deep Criminal Defense architecture and a separate large Injury Lawyers architecture covering Personal Injury, accidents, premises, products, workplace injury and wrongful death. Two materially different client journeys are already separated at scale.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-barbare-lawyer-domain",
+      "lead_id": "ChIJP0cyLM-jToYRSvGpulRYczM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "current_domain_no_longer_law_firm",
+      "campaign_notes": "The current public domain no longer represents a law firm. Live verification shows barbarelawyer.com serving Vietnamese online gambling/casino content. The current entity/site is outside the campaign target and cannot be validated as a law-firm lead.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-belachew-law",
+      "lead_id": "ChIJR-f5o3OfToYRiBdWtez3DAM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live verification confirms the firm offers two materially different main services—Personal Injury and Estate Planning/Probate—and the homepage clean URL set exposes a dedicated Personal Injury destination and a separate Estates/Wills destination. The core client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-javier-perez-law",
+      "lead_id": "ChIJi8yR_cqfToYR6HJJhRm348k",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean homepage URL set exposes a mature Personal Injury hierarchy alongside separately focused Employment Law destinations for discrimination, retaliation, sexual harassment and unpaid wages/overtime. Materially different plaintiff client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-jeff-king-law",
+      "lead_id": "ChIJpSGzMBaZToYRdbPfTnN4jJE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_military_defense_journey",
+      "campaign_notes": "The substantive clean homepage URLs are Criminal and Military Defense: cyber crimes, drugs, DWI, federal fraud, sex crimes, property crimes, military criminal defense and discharge-upgrade work. These are closely related defense matters within one core defense client journey rather than distinct consumer practice families.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-atwood-mccall",
+      "lead_id": "ChIJG3kI-iifToYRHQ781q6oraU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set directly exposes separate Asset Protection, Business Law, Business Litigation, Employee Benefits, Estate Planning and Family Law destinations. The firm already applies separate-page architecture across materially different client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-toronjo-prosser",
+      "lead_id": "ChIJeUKlb-ifToYRl34yP9Bd6FI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_bankruptcy_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Bankruptcy/debt-relief matters: Chapter 7 and 13, business and personal bankruptcy, foreclosure, credit-card debt, evictions, garnishment and bankruptcy alternatives. This is one bankruptcy client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
