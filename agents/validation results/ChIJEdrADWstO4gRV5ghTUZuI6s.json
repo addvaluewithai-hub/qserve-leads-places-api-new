@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJEdrADWstO4gRV5ghTUZuI6s",
+  "firm": "Mike Morse Injury Law Firm",
+  "domain": "855mikewins.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Mike Morse Injury Law Firm has an extremely mature separate-service architecture. The live site exposes dedicated pages for a large number of meaningful practice areas, including car, truck, motorcycle, rideshare, pedestrian, wrongful death, medical malpractice, workers' compensation, Social Security Disability, nursing-home negligence and many others. The firm clearly understands and applies the separate-client-journey concept at scale and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed immediately. The site has a deep Cases We Handle structure, many dedicated service destinations, numerous offices and a 50+ attorney team. No isolated page opportunity should qualify this firm for a campaign selling separate service pages. Contact enrichment skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current Cases We Handle / Practice Areas architecture lists and links dozens of separate service destinations, including Truck Accidents, Car Accidents, Motorcycle Accidents, Wrongful Death, Medical Malpractice, Workers' Compensation and Social Security Disability.",
+      "dedicated_page_url": "https://www.855mikewins.com/practice-areas/",
+      "validation_method": "live homepage + Practice Areas + dedicated Workers' Compensation page + architecture-maturity gate",
+      "notes": "Highly mature service-by-service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.855mikewins.com/",
+    "https://www.855mikewins.com/practice-areas/",
+    "https://www.855mikewins.com/workers-compensation-lawyers/"
+  ]
+}
