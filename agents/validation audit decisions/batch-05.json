@@ -1,0 +1,233 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 5,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-patrick-mclain",
+      "lead_id": "ChIJMyOdIS2ZToYRwSyOp4jl4SM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "Full clean homepage URL review is overwhelmingly Criminal Defense: assault, drugs, DWI, federal crimes, fraud, sex offenses, violent crimes, white-collar matters and related defense topics. A personal-injury-referrals URL is a referral resource, not evidence that the firm currently offers Personal Injury. This is one narrow criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-copp-law",
+      "lead_id": "ChIJY-36MBaZToYRYhNyqHoqzAw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_business_formation_journey",
+      "campaign_notes": "The clean homepage URLs are centered on Texas LLC/entity formation and maintenance: LLC and series LLC formation, EINs, DBAs, membership transfers, reinstatement, S-corp elections, sub-series and related entity/asset structuring. This is one narrow business-formation client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-tr-johnson",
+      "lead_id": "ChIJx2ptB6uZToYRgtDgM-dv5ts",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set directly exposes separate /criminal-defense and /personal-injury destinations for two materially different client journeys. The firm already understands and applies separate service-page architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-barber-law-firm",
+      "lead_id": "ChIJA_gl-jOZToYR4VVpMg4B7Po",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows a mature injury hierarchy and also a separately surfaced Workers' Compensation destination. The site already separates focused legal client journeys across service and geography, so the Architecture Maturity Gate fails.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-fellman-law",
+      "lead_id": "ChIJL5K-8DOZToYRdHwsQ6OVUzs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Criminal Defense matters such as assault/family violence, drug charges, DWI, theft, pretrial diversion and probation violations. This is one narrow criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-marye-law",
+      "lead_id": "ChIJO8ykUC6ZToYR4dZql6cnvYA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "Crawl exposed only the homepage path, so previously captured live/public evidence was rechecked as supporting evidence. Marye Law is consistently positioned as a Personal Injury practice focused on car, truck, motorcycle, wrongful-death and related injury cases. These are variations within one plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-mrc-tex-law",
+      "lead_id": "ChIJQ6pw392fToYRUFkJ94zkyOY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows dedicated destinations for Business Law/Litigation, Construction Law/Litigation, Divorce, Family Law, Real Estate Law and Wills/Trusts, with focused subpages. Mature multi-practice architecture is explicit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-zinda-law",
+      "lead_id": "ChIJg6RFKQa1RIYRf5gP7VSVQeU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full homepage URL set shows very mature focused-page architecture across a large Personal Injury hierarchy and separately exposes a Dallas Deceptive Trade Practices lawyer destination and other focused non-core legal destinations. This is not a consolidated general-service site.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-shamieh-law",
+      "lead_id": "ChIJi8YyjWacToYRg6BHmem4Pdw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows a broad mature Personal Injury hierarchy plus a separately surfaced /dallas/immigration-lawyer destination. The firm already separates materially different legal conversations into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-kaplan-law-group",
+      "lead_id": "ChIJk9gYV86eToYRkGBUvmxykog",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose separate Business/Commercial Litigation, Creditors' Rights, High-Profile Criminal Defense, Real Estate and Transactional Law destinations. The materially different main journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-jim-adler",
+      "lead_id": "ChIJlU70pSqfToYRDYfPtIUBzxk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The clean homepage URL set is entirely plaintiff-injury work: car, motorcycle, pedestrian, premises, product liability, truck, wrongful death and work-injury matters. The current public positioning is Personal Injury, so this is one narrow plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-david-sheves",
+      "lead_id": "ChIJlYB3Zm6ZToYRQW3w9qaOUPw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set includes a dedicated Criminal Law destination and separate Personal Injury destination(s), despite legacy/copy-style URL slugs. Two materially different main legal journeys are already separated into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-neave-law",
+      "lead_id": "ChIJuwg1ErKfToYReyEsoUNPk3o",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "The full clean homepage URL set is Family Law: divorce, child custody, child support, mediation, property division, protection orders and family-law geography pages. This is one narrow family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-carr-tax-law",
+      "lead_id": "ChIJAzpvgp-ZToYRyRgV7211p1Y",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_tax_journey",
+      "campaign_notes": "All substantive clean homepage URLs belong to one Tax Law journey: IRS audit defense, liens, tax resolution, state tax defense, tax planning and tax preparation. These are tax subservices, not materially different main legal client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-meyer-friedman-reed",
+      "lead_id": "ChIJCSDD2NeYToYRrfidaaESe7M",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Manual full clean-homepage-URL audit plus live verification confirms a corrected-ICP fit. The official homepage explicitly says the firm handles Family Law, Criminal matters and Business matters. The site separately exposes focused Family Law and Personal Injury pages, but no Criminal Law or Business Law destination surfaced in the full homepage URL set or site-restricted search. With two materially different main conversations still left in the general homepage experience, separate-page architecture is not dominant. Daniel J. Meyer is a long-standing partner at Meyer Friedman Reed PLLC. The direct email dmeyer@mfrlaw.net is published on the official site and independently tied to Daniel J. Meyer in a public legal notice.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Criminal Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official homepage explicitly tells prospective clients to call for a Family Law matter, a Criminal matter, a Business matter, or other legal issue.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live homepage + focused service-page checks + site-restricted search",
+          "notes": "Family Law and Personal Injury have focused destinations, while Criminal and Business remain in the general homepage presentation. No focused Criminal Law destination surfaced."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Daniel J. Meyer",
+          "role": "Partner / decision maker",
+          "email": "dmeyer@mfrlaw.net",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Meyer Friedman Reed website contact information + public January 2025 legal notice naming Daniel J. Meyer with dmeyer@mfrlaw.net + current public partner profile",
+          "notes": "Direct individual email is publicly evidenced and not inferred from an email pattern."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Criminal Law",
+        "subject": "A thought on your Criminal Law work",
+        "body": "Daniel,\n\nI was looking through Meyer Friedman Reed’s site and noticed the homepage speaks to Family Law, Criminal matters, and Business matters, while Family Law and Personal Injury have their own focused pages. Criminal Law still lives inside the general homepage conversation.\n\nThat client is arriving with a very different mindset from someone dealing with a divorce or an injury—questions about charges, immediate risk, what happens next, and how quickly they need counsel.\n\nA focused Criminal Law page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of the firm’s work.\n\nI’m using Criminal Law as the first mockup because the contrast with the existing Family Law and Personal Injury pages makes the idea easy to see without changing the firm’s overall positioning.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "16-kastl-law",
+      "lead_id": "ChIJG3kI-iifToYRCiSH7KLwXq4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full clean homepage URL set is Personal Injury: vehicle crashes, industrial accidents, premises liability, products, catastrophic injuries and related injury matters. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-balekian-hayes",
+      "lead_id": "ChIJG3kI-iifToYRfoWEkXN5DMQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "The full clean homepage URL set is Family Law: divorce, child custody, support, enforcement, protection orders and related high-asset/family matters across local geography. This is one family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-nash-law",
+      "lead_id": "ChIJMw_4RlKZToYRo-89K1GvQHM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Full clean homepage URL review shows separate focused Business Partnership Disputes, Complex Commercial Litigation and Contract/Business Torts destinations alongside a mature Personal Injury hierarchy. The firm already separates materially different legal client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-james-bell",
+      "lead_id": "ChIJc2hMgS2ZToYRhZtA-J1VZ_U",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs show distinct dedicated destinations for Bankruptcy Litigation, Business Litigation, Family Law/Divorce, Health Care Law, Law Firm Defense, Native American/Tribal Law, White-Collar Crime and international criminal defense. Mature multi-practice architecture is explicit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-gonzalez-law-group",
+      "lead_id": "ChIJh4z96SUfTIYRVAb5gSBxGwQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set directly exposes a focused Dallas Insurance Attorney destination and a separate Spanish Car Wreck Attorney destination. These represent materially different legal conversations already separated into focused pages, so the Architecture Maturity Gate fails.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
