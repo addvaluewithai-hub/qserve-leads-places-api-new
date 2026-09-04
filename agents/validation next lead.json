@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJvWX_qL_vwIcRPitwFZ5Pw7s",
-    "name": "Speeding Ticket Attorney in Kansas City, MO | Your Traffic Ticket Lawyer, LLC",
-    "website": "https://yourtrafficticketlawyer.com/?utm_source=google-local&utm_medium=organic&utm_campaign=1619",
+    "id": "ChIJJZW2pzALlVQRoxkGceqOay0",
+    "name": "Portland Personal Injury Lawyers | Loomis, California Accident Lawyer Moseley Collins",
+    "website": "https://www.moseleycollins.com/portland-personal-injury-lawyers.html",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:11",
+    "first_seen_at": "2026-09-02 11:12:12",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "yourtrafficticketlawyer.com"
+    "website_domain": "moseleycollins.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
