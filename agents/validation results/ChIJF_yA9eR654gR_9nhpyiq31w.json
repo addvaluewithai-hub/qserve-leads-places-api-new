@@ -1,0 +1,55 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJF_yA9eR654gR_9nhpyiq31w",
+  "firm": "Orlando Criminal Defense Law Firm | The Law Office of Corey I. Cohen & Associates",
+  "domain": "coreycohen.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the live navigation already separates the firm's major criminal-defense client needs into dedicated destinations including DUI, Drug Charges, Domestic Violence, Theft Crimes, Sex Crimes, Violent Crimes, Criminal Traffic, Federal Criminal Defense and White Collar Crimes.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The homepage's Criminal Defense navigation exposes major services as direct links, and the dedicated pages themselves contain extensive service-specific content and further subpages. DUI and Drug Charges were independently inspected; the overall Criminal Defense page also enumerates the broader architecture. The firm therefore fails the Service-Page Gap gate. Founder Corey Cohen is publicly identified, but no email research was pursued because the gap gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "DUI Charges",
+      "status": "Disqualified",
+      "service_offered_evidence": "DUI Charges is a direct homepage navigation item and has a substantial dedicated Orlando DUI Defense page with further DUI subpages.",
+      "dedicated_page_url": "https://www.coreycohen.com/dui-defense/",
+      "validation_method": "live-site homepage navigation + dedicated-page inspection",
+      "notes": "Dedicated client journey exists, including first-time DUI and other subtopics."
+    },
+    {
+      "service_name": "Drug Charges",
+      "status": "Disqualified",
+      "service_offered_evidence": "Drug Charges is a direct homepage navigation item and has a dedicated page with numerous drug-specific subpages.",
+      "dedicated_page_url": "https://www.coreycohen.com/drug-charges/",
+      "validation_method": "live-site homepage navigation + dedicated-page inspection",
+      "notes": "Dedicated page and granular sub-service architecture exist."
+    },
+    {
+      "service_name": "Criminal Defense",
+      "status": "Disqualified",
+      "service_offered_evidence": "Criminal Defense is a primary service and has its own dedicated page describing violent offenses, drug crimes, DUI/DWI, white collar and sex offenses, with linked subpractice architecture.",
+      "dedicated_page_url": "https://www.coreycohen.com/criminal-defense/",
+      "validation_method": "live-site homepage + dedicated-page inspection",
+      "notes": "Substantial parent service page exists."
+    },
+    {
+      "service_name": "Federal Criminal Defense",
+      "status": "Disqualified",
+      "service_offered_evidence": "Federal Criminal Defense is separately listed in the homepage navigation and practice-area architecture.",
+      "dedicated_page_url": "https://www.coreycohen.com/federal-criminal-defense/",
+      "validation_method": "live-site navigation architecture inspection",
+      "notes": "Separate dedicated destination exists."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.coreycohen.com/",
+    "https://www.coreycohen.com/criminal-defense/",
+    "https://www.coreycohen.com/dui-defense/",
+    "https://www.coreycohen.com/dui-defense/first-time-dui-charges/",
+    "https://www.coreycohen.com/drug-charges/",
+    "https://www.coreycohen.com/attorney/corey-i-cohen/",
+    "https://www.coreycohen.com/orlando-fl-office-location/"
+  ]
+}
