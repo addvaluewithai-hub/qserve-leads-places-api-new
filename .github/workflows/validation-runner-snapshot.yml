@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import json, os, urllib.request
+          import json, os, re, urllib.request
           from pathlib import Path
           from urllib.parse import urlparse
 
@@ -103,53 +103,135 @@ jobs:
                   ORDER BY is_decision_maker DESC, is_owner DESC, person_name
               ''', [lead_id])
 
-          batch_out = {
-              'campaign_id': 'lawyers-us', 'selection_rule': out['selection_rule'],
-              'generated_from_current_d1_queue': True, 'leads': batch,
-          }
+          Path('agents/validation next lead.json').write_text(
+              json.dumps(out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8'
+          )
+          Path('agents/validation next batch.json').write_text(
+              json.dumps({
+                  'campaign_id': 'lawyers-us',
+                  'selection_rule': out['selection_rule'],
+                  'generated_from_current_d1_queue': True,
+                  'leads': batch,
+              }, indent=2, ensure_ascii=False)+'\n', encoding='utf-8'
+          )
 
+          # New-production validation pre-screen. Agent 1 has already crawled the homepage.
+          # This view intentionally stays compact: 20 leads, page paths + short anchors only.
           new_where = ready_where + " AND cl.qualification_reason = 'working_set_ready_for_validation' "
-          new_batch = query(base_select + new_where + ordering + ' LIMIT 10', ['lawyers-us'])
-          enriched_new_batch = []
+          new_batch = query(base_select + new_where + ordering + ' LIMIT 20', ['lawyers-us'])
 
-          legal_terms = {
+          service_terms = {
               'criminal','defense','dui','dwi','drug','assault','theft','burglary','sex','domestic','violence',
               'traffic','reckless','speeding','injury','accident','car','truck','motorcycle','wrongful','death',
               'malpractice','workers','comp','slip','fall','premises','immigration','family','divorce','custody',
               'child','support','adoption','bankruptcy','estate','probate','will','trust','business','corporate',
-              'employment','disability','social','security','veteran','maritime','product','liability','expungement'
+              'employment','disability','social','security','veteran','maritime','product','liability','expungement',
+              'civil rights','civil-rights','discrimination','harassment','wage','foreclosure','garnishment','tax',
+              'lemon','dealer','fraud','nursing','birth','pedestrian','rideshare','uber','lyft','dog bite','dog-bite'
           }
-          utility_terms = {
-              'about','contact','blog','news','resource','faq','testimonial','review','result','case-success',
-              'privacy','terms','sitemap','team','attorney','lawyer-profile','location','office','charity','fees'
+          hub_terms = {
+              'practice-areas','practice-area','areas-of-practice','services','service','what-we-do','case-types',
+              'legal-services','our-practice','our-services'
           }
-          asset_exts = ('.png','.jpg','.jpeg','.gif','.svg','.webp','.pdf','.css','.js','.ico')
+          noise_segments = {
+              'blog','blogs','news','article','articles','resource','resources','testimonial','testimonials','review','reviews',
+              'case-results','case-result','case-successes','case-success','case-victories','results','successes',
+              'about','about-us','contact','contact-us','team','attorneys','attorney','lawyers','staff','locations','location',
+              'offices','office','privacy','terms','sitemap','charity','fees','careers','career','events','faqs','faq'
+          }
+          asset_exts = {
+              '.png','.jpg','.jpeg','.gif','.svg','.webp','.avif','.ico','.pdf','.css','.js','.map','.xml','.txt',
+              '.zip','.mp3','.mp4','.webm','.woff','.woff2','.ttf','.eot'
+          }
+          generic_anchors = {'', 'learn more', 'read more', 'more', 'click here', 'view more', 'details'}
+          date_path = re.compile(r'^/\d{4}/\d{1,2}/(?:\d{1,2}/)?')
 
-          def signal_score(link):
-              url = (link.get('url') or '').lower()
-              anchor = (link.get('anchor_text') or '').lower()
-              path = urlparse(url).path.lower()
-              if path.endswith(asset_exts) or '/wp-content/' in path:
-                  return -99
-              text = path.replace('-', ' ').replace('_', ' ') + ' ' + anchor
-              score = sum(2 for term in legal_terms if term in text)
-              score -= sum(2 for term in utility_terms if term in text)
-              if anchor in {'learn more','read more','more','click here',''}:
-                  score -= 1
-              if path.count('/') >= 2:
+          def compact_anchor(value):
+              text = ' '.join(str(value or '').split())
+              if text.lower() in generic_anchors:
+                  return ''
+              return text[:80]
+
+          def page_path(url):
+              path = urlparse(url or '').path or '/'
+              if path != '/':
+                  path = path.rstrip('/')
+              return path
+
+          def is_asset(path):
+              low = path.lower()
+              if '/wp-content/uploads/' in low or '/wp-includes/' in low or '/assets/images/' in low:
+                  return True
+              return Path(low).suffix in asset_exts
+
+          def is_content_noise(path):
+              low = path.lower()
+              if date_path.match(low):
+                  return True
+              parts = {part for part in low.strip('/').split('/') if part}
+              return bool(parts & noise_segments)
+
+          def architecture_score(path, anchor):
+              low_path = path.lower()
+              text = (low_path.replace('-', ' ').replace('_', ' ') + ' ' + anchor.lower())
+              score = 0
+              score += sum(3 for term in service_terms if term in text)
+              score += sum(4 for term in hub_terms if term in low_path)
+              if low_path.count('/') >= 2:
+                  score += 1
+              if anchor and anchor.lower() not in generic_anchors:
                   score += 1
               return score
 
+          compact = []
+          metadata_only = []
           for lead in new_batch:
-              links = query('''
-                  SELECT homepage, final_url, url, anchor_text, crawled_at FROM homepage_link_evidence
+              rows = query('''
+                  SELECT url, anchor_text FROM homepage_link_evidence
                   WHERE campaign_id = ? AND lead_id = ? ORDER BY url
               ''', ['lawyers-us', lead['id']])
-              item = dict(lead)
-              item['homepage_link_count'] = len(links)
-              item['crawl_evidence_available'] = bool(links)
-              item['homepage_links'] = links
-              enriched_new_batch.append(item)
+
+              page_rows = []
+              signals = []
+              seen_paths = set()
+              for row in rows:
+                  path = page_path(row.get('url'))
+                  if path in seen_paths or is_asset(path):
+                      continue
+                  seen_paths.add(path)
+                  anchor = compact_anchor(row.get('anchor_text'))
+                  page_rows.append((path, anchor))
+                  if is_content_noise(path):
+                      continue
+                  score = architecture_score(path, anchor)
+                  if score > 0:
+                      signals.append((score, path, anchor))
+
+              signals.sort(key=lambda item: (-item[0], item[1]))
+              visible = [[path, anchor] for _, path, anchor in signals[:12]]
+              signal_count = len(signals)
+              if signal_count >= 4:
+                  hint = 'likely_mature'
+              elif signal_count <= 1:
+                  hint = 'candidate_deep_check'
+              else:
+                  hint = 'review_links'
+
+              compact.append({
+                  'id': lead['id'],
+                  'name': lead['name'],
+                  'domain': lead['website_domain'],
+                  'website': lead['website'],
+                  'page_link_count': len(page_rows),
+                  'architecture_signal_count': signal_count,
+                  'screen_hint': hint,
+                  'links': visible,
+              })
+              metadata_only.append({
+                  'id': lead['id'], 'name': lead['name'], 'domain': lead['website_domain'],
+                  'website': lead['website'], 'page_link_count': len(page_rows),
+                  'architecture_signal_count': signal_count, 'screen_hint': hint,
+              })
 
           new_ready_count = (query('''
               SELECT COUNT(*) AS count FROM campaign_leads
@@ -157,41 +239,30 @@ jobs:
                 AND qualification_reason = 'working_set_ready_for_validation'
           ''', ['lawyers-us']) or [{'count': 0}])[0]['count']
 
-          new_out = {
-              'campaign_id': 'lawyers-us',
-              'selection_rule': "new production only: status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation'",
-              'new_ready_count': new_ready_count, 'batch_size': len(enriched_new_batch), 'leads': enriched_new_batch,
-          }
-
-          compact = []
-          for item in enriched_new_batch:
-              scored = []
-              for link in item['homepage_links']:
-                  score = signal_score(link)
-                  if score > 0:
-                      scored.append((score, link))
-              scored.sort(key=lambda pair: (-pair[0], pair[1].get('url') or ''))
-              compact.append({
-                  'id': item['id'], 'name': item['name'], 'website': item['website'],
-                  'website_domain': item['website_domain'], 'homepage_link_count': item['homepage_link_count'],
-                  'crawl_evidence_available': item['crawl_evidence_available'],
-                  'structural_signal_count': len(scored),
-                  'top_structural_links': [
-                      {'score': score, 'url': link.get('url'), 'anchor_text': link.get('anchor_text')}
-                      for score, link in scored[:5]
-                  ],
-              })
-          compact_out = {
-              'campaign_id': 'lawyers-us', 'new_ready_count': new_ready_count,
-              'purpose': 'Crawl4AI-first architecture pre-screen. Heuristic only; final gap decisions still require website double-check.',
-              'leads': compact,
-          }
-
-          Path('agents/validation next lead.json').write_text(json.dumps(out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
-          Path('agents/validation next batch.json').write_text(json.dumps(batch_out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
-          Path('agents/validation next new batch.json').write_text(json.dumps(new_out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
-          Path('agents/validation new crawl prescreen.json').write_text(json.dumps(compact_out, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
-          print(json.dumps({'new_ready_count': new_ready_count, 'compact': compact}, indent=2, ensure_ascii=False))
+          Path('agents/validation next new batch.json').write_text(
+              json.dumps({
+                  'campaign_id': 'lawyers-us',
+                  'new_ready_count': new_ready_count,
+                  'batch_size': len(metadata_only),
+                  'selection_rule': "new production only; Crawl4AI homepage evidence already exists",
+                  'leads': metadata_only,
+              }, indent=2, ensure_ascii=False)+'\n', encoding='utf-8'
+          )
+          Path('agents/validation new crawl prescreen.json').write_text(
+              json.dumps({
+                  'campaign_id': 'lawyers-us',
+                  'new_ready_count': new_ready_count,
+                  'batch_size': len(compact),
+                  'format': "links are [path, short_anchor]; assets/date-blog/utility pages omitted from first-pass view",
+                  'important': "screen_hint is heuristic only; candidate gaps still require independent website double-check",
+                  'leads': compact,
+              }, indent=2, ensure_ascii=False)+'\n', encoding='utf-8'
+          )
+          print(json.dumps({
+              'new_ready_count': new_ready_count,
+              'batch_size': len(compact),
+              'prescreen': compact,
+          }, indent=2, ensure_ascii=False))
           PY
 
       - name: Commit snapshots when changed
