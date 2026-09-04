@@ -27,7 +27,7 @@ jobs:
             test -n "${!name}" || { echo "$name is missing"; exit 2; }
           done
 
-      - name: Export next Ready for Validation lead and bounded batch
+      - name: Export validation snapshots
         shell: bash
         run: |
           python3 - <<'PY'
@@ -73,7 +73,7 @@ jobs:
               ['lawyers-us'],
           ) or [{'count': 0}])[0]['count']
 
-          lead_sql = '''
+          base_select = '''
               SELECT
                 l.id, l.name, l.website, l.address, l.phone, l.primary_type,
                 cl.campaign_id, cl.status, cl.qualified, cl.quality_score,
@@ -82,13 +82,16 @@ jobs:
               FROM campaign_leads cl
               JOIN leads l ON l.id = cl.lead_id
               LEFT JOIN lead_domains d ON d.lead_id = cl.lead_id
+          '''
+          ready_where = '''
               WHERE cl.campaign_id = ?
                 AND cl.status = 'Ready for Validation'
                 AND cl.qualified = 0
-              ORDER BY cl.quality_score DESC, cl.first_seen_at ASC, cl.lead_id ASC
           '''
-          leads = query(lead_sql + ' LIMIT 1', ['lawyers-us'])
-          batch = query(lead_sql + ' LIMIT 12', ['lawyers-us'])
+          ordering = ' ORDER BY cl.quality_score DESC, cl.first_seen_at ASC, cl.lead_id ASC '
+
+          leads = query(base_select + ready_where + ordering + ' LIMIT 1', ['lawyers-us'])
+          batch = query(base_select + ready_where + ordering + ' LIMIT 12', ['lawyers-us'])
 
           out = {
               'campaign_id': 'lawyers-us',
@@ -133,13 +136,51 @@ jobs:
               'leads': batch,
           }
 
+          # New-production-only batch: these rows were created by the V2 ZIP builder,
+          # where Crawl4AI runs immediately and homepage_link_evidence should already exist.
+          new_where = ready_where + " AND cl.qualification_reason = 'working_set_ready_for_validation' "
+          new_batch = query(base_select + new_where + ordering + ' LIMIT 10', ['lawyers-us'])
+          enriched_new_batch = []
+          for lead in new_batch:
+              links = query('''
+                  SELECT homepage, final_url, url, anchor_text, crawled_at
+                  FROM homepage_link_evidence
+                  WHERE campaign_id = ? AND lead_id = ?
+                  ORDER BY url
+              ''', ['lawyers-us', lead['id']])
+              item = dict(lead)
+              item['homepage_link_count'] = len(links)
+              item['crawl_evidence_available'] = bool(links)
+              item['homepage_links'] = links
+              enriched_new_batch.append(item)
+
+          new_ready_count = (query('''
+              SELECT COUNT(*) AS count
+              FROM campaign_leads
+              WHERE campaign_id = ?
+                AND status = 'Ready for Validation'
+                AND qualified = 0
+                AND qualification_reason = 'working_set_ready_for_validation'
+          ''', ['lawyers-us']) or [{'count': 0}])[0]['count']
+
+          new_out = {
+              'campaign_id': 'lawyers-us',
+              'selection_rule': "new production only: status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation'",
+              'new_ready_count': new_ready_count,
+              'batch_size': len(enriched_new_batch),
+              'leads': enriched_new_batch,
+          }
+
           Path('agents/validation next lead.json').write_text(
               json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
           )
           Path('agents/validation next batch.json').write_text(
               json.dumps(batch_out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
           )
-          print(json.dumps({'next': out.get('lead'), 'batch': batch, 'counts': counts}, indent=2, ensure_ascii=False))
+          Path('agents/validation next new batch.json').write_text(
+              json.dumps(new_out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+          )
+          print(json.dumps({'next': out.get('lead'), 'new_batch': new_out, 'counts': counts}, indent=2, ensure_ascii=False))
           PY
 
       - name: Commit snapshots when changed
@@ -147,7 +188,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "agents/validation next lead.json" "agents/validation next batch.json"
+          git add "agents/validation next lead.json" "agents/validation next batch.json" "agents/validation next new batch.json"
           if git diff --cached --quiet; then
             echo "Snapshots unchanged."
             exit 0
