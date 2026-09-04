@@ -1,0 +1,63 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJJZW2pzALlVQRoxkGceqOay0",
+  "firm": "Portland Personal Injury Lawyers | Loomis, California Accident Lawyer Moseley Collins",
+  "domain": "moseleycollins.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: Moseley Collins has an extensive service-specific architecture with dedicated pages for major practice areas including Car Accidents, Medical Malpractice, Truck Accidents, Wrongful Death, Birth Injury, Motorcycle Accidents, Slip and Fall and many others.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The live Practice Areas page contains direct links for a large number of major services and many service-specific subpages. Dedicated pages were independently inspected for Car Accidents, Medical Malpractice, Truck/Big Rig Accidents and Wrongful Death. The site's structure already separates different client conversations at a highly granular level, so there is no strong Service-Page Gap opportunity. Decision-maker/email research was skipped because the gap gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Car Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Car Accident is explicitly listed on the Practice Areas page and links to a substantial Sacramento Car Accident Lawyers page with many dedicated car-crash subtopics.",
+      "dedicated_page_url": "https://www.moseleycollins.com/car-accident.html",
+      "validation_method": "live-site Practice Areas + dedicated-page inspection",
+      "notes": "Substantial dedicated page plus numerous subpages for collision types and causes."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Medical Malpractice is explicitly listed on the Practice Areas page and links to its own focused malpractice destination with multiple malpractice-specific subpages.",
+      "dedicated_page_url": "https://www.moseleycollins.com/medical-malpractice.html",
+      "validation_method": "live-site Practice Areas + dedicated-page inspection",
+      "notes": "Dedicated malpractice client journey exists."
+    },
+    {
+      "service_name": "Truck Accident",
+      "status": "Disqualified",
+      "service_offered_evidence": "Truck Accident - Top Big Rig is explicitly listed on the Practice Areas page and links to a dedicated Sacramento Truck Accident Lawyer page.",
+      "dedicated_page_url": "https://www.moseleycollins.com/truck-big-rig-accident.html",
+      "validation_method": "live-site Practice Areas + dedicated-page inspection",
+      "notes": "Dedicated truck/big-rig service destination exists."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "Wrongful Death is explicitly listed on the Practice Areas page and links directly to a dedicated wrongful-death page.",
+      "dedicated_page_url": "https://www.moseleycollins.com/wrongful-death.html",
+      "validation_method": "live-site Practice Areas + dedicated-page inspection",
+      "notes": "Dedicated wrongful-death service destination exists."
+    },
+    {
+      "service_name": "Birth Injury",
+      "status": "Disqualified",
+      "service_offered_evidence": "Birth Injury is a linked Practice Area with multiple dedicated child/birth-injury subtopics on the live site.",
+      "dedicated_page_url": "https://www.moseleycollins.com/birth-injury.html",
+      "validation_method": "live-site Practice Areas architecture inspection",
+      "notes": "Dedicated service architecture is present; no campaign gap."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.moseleycollins.com/",
+    "https://www.moseleycollins.com/areas-of-practice.html",
+    "https://www.moseleycollins.com/sitemap.html",
+    "https://www.moseleycollins.com/car-accident.html",
+    "https://www.moseleycollins.com/medical-malpractice.html",
+    "https://www.moseleycollins.com/truck-big-rig-accident.html",
+    "https://www.moseleycollins.com/wrongful-death.html"
+  ]
+}
