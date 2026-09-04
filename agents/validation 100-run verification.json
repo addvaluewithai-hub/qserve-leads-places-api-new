@@ -1,0 +1,35 @@
+{
+  "campaign_id": "lawyers-us",
+  "verified_result_files": 100,
+  "verified_d1_rows": 100,
+  "missing_from_d1": [],
+  "still_ready_among_100": [],
+  "status_counts": {
+    "Disqualified": 88,
+    "Gap Confirmed - Direct Email Missing": 2,
+    "Needs Review": 2,
+    "Not Relevant": 6,
+    "Qualified": 2
+  },
+  "qualified_count": 2,
+  "qualified_leads": [
+    {
+      "lead_id": "ChIJq4SPGS-ZToYRTYEC5f9S9rY",
+      "name": "Bruce Kaye PLLC",
+      "website_domain": "brucekaye.com",
+      "status": "Qualified",
+      "qualified": 1,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified"
+    },
+    {
+      "lead_id": "ChIJjxRE8t2YToYRFGVqWHfrv4M",
+      "name": "Robot Challenge Screen",
+      "website_domain": "kelleyfirm.com",
+      "status": "Qualified",
+      "qualified": 1,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified"
+    }
+  ],
+  "new_production_ready_remaining": 724,
+  "verification": "PASS"
+}
