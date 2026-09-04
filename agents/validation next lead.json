@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJP7-DrzSaVogRL_WeY5MzlPU",
-    "name": "Larsen Weaver",
-    "website": "https://www.larsenweaver.com/",
+    "id": "ChIJEdrADWstO4gRV5ghTUZuI6s",
+    "name": "Personal Injury Lawyers in Detroit, MI | Mike Morse Injury Law Firm",
+    "website": "https://www.855mikewins.com/detroit-personal-injury-lawyers/?utm_source=GMB&utm_medium=organic&utm_campaign=Detroit",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:33",
+    "first_seen_at": "2026-09-02 11:12:34",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "larsenweaver.com"
+    "website_domain": "855mikewins.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
