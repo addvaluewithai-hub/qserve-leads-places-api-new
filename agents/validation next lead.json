@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJzevGAq4LK4cRoOl6cmFDw7w",
-    "name": "Phoenix Car Accident Lawyer | Arizona Injury Firm | $200M+",
-    "website": "https://shapirolawaz.com/?utm_campaign=gmb&utm_medium=local&utm_source=gmb",
+    "id": "ChIJTTVXjJ7DyIARrm4WpCX7YuA",
+    "name": "Las Vegas Car Accident Lawyer - Millions Recovered | Gina Corena",
+    "website": "https://www.corenalaw.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:35",
+    "first_seen_at": "2026-09-02 11:12:36",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "shapirolawaz.com"
+    "website_domain": "corenalaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
