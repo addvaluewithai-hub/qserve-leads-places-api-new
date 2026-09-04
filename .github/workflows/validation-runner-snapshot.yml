@@ -178,7 +178,7 @@ jobs:
                   'structural_signal_count': len(scored),
                   'top_structural_links': [
                       {'score': score, 'url': link.get('url'), 'anchor_text': link.get('anchor_text')}
-                      for score, link in scored[:15]
+                      for score, link in scored[:5]
                   ],
               })
           compact_out = {
