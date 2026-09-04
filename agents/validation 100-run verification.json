@@ -1,17 +1,18 @@
 {
   "campaign_id": "lawyers-us",
+  "audit_mode": "five sequential batches of 20; manual full clean-homepage-URL review; no scoring/hints/categorization/ranking/truncation",
   "verified_result_files": 100,
   "verified_d1_rows": 100,
   "missing_from_d1": [],
   "still_ready_among_100": [],
   "status_counts": {
-    "Disqualified": 88,
-    "Gap Confirmed - Direct Email Missing": 2,
+    "Disqualified": 68,
+    "Gap Confirmed - Direct Email Missing": 1,
     "Needs Review": 2,
-    "Not Relevant": 6,
-    "Qualified": 2
+    "Not Relevant": 26,
+    "Qualified": 3
   },
-  "qualified_count": 2,
+  "qualified_count": 3,
   "qualified_leads": [
     {
       "lead_id": "ChIJq4SPGS-ZToYRTYEC5f9S9rY",
@@ -25,6 +26,14 @@
       "lead_id": "ChIJjxRE8t2YToYRFGVqWHfrv4M",
       "name": "Robot Challenge Screen",
       "website_domain": "kelleyfirm.com",
+      "status": "Qualified",
+      "qualified": 1,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified"
+    },
+    {
+      "lead_id": "ChIJCSDD2NeYToYRrfidaaESe7M",
+      "name": "Your Lawyers | Dallas, TX | Meyer Friedman Reed PLLC",
+      "website_domain": "meyerandfriedman.com",
       "status": "Qualified",
       "qualified": 1,
       "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified"
