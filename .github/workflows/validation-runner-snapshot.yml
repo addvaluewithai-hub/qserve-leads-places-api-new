@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - ".github/workflows/validation-runner-snapshot.yml"
+      - "agents/validation apply receipt.json"
 
 permissions:
   contents: write
