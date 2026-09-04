@@ -2,15 +2,13 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 2,
-  "lead_id": "ChIJmULPvRZsOkgRiaCaLRArkDo",
-  "name": "Law Office of Alan D. Perez",
-  "domain": "alanperezlaw.com",
-  "website": "http://alanperezlaw.com/",
-  "clean_homepage_url_count": 4,
+  "lead_id": "ChIJH-PoSDEhTIYRALJeg_2WpUs",
+  "name": "Ogundipe Law Group | Personal Injury & Immigration Attorneys in Dallas & Houston, Texas",
+  "domain": "ogundipelaw.com",
+  "website": "https://ogundipelaw.com/",
+  "clean_homepage_url_count": 2,
   "clean_homepage_urls": [
     "/",
-    "/about-us",
-    "/contact-us",
-    "/faq"
+    "/founder.html"
   ]
 }

@@ -2,22 +2,18 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 20,
-  "lead_id": "ChIJm_IatG-ZToYR2KcDZR-fdYY",
-  "name": "#1 | Personal Injury Lawyer In Dallas Texas",
-  "domain": "nolanryanlaw.com",
-  "website": "http://www.nolanryanlaw.com/",
-  "clean_homepage_url_count": 11,
+  "lead_id": "ChIJpX6E1fxxToYRrqLvYpgDG3g",
+  "name": "Adewunmi Law",
+  "domain": "adewunmilaw.com",
+  "website": "http://adewunmilaw.com/",
+  "clean_homepage_url_count": 7,
   "clean_homepage_urls": [
     "/",
-    "/about",
-    "/contact",
-    "/expertise",
-    "/expertise/car-accidents",
-    "/expertise/lyft-uber-accidents",
-    "/expertise/motorcycle-accidents",
-    "/expertise/truck-accidents",
-    "/locations",
-    "/motorcycle-giveaway",
-    "/results"
+    "/client-resources",
+    "/legal-inquiries",
+    "/meet-alex",
+    "/practice-areas-1",
+    "/privacy-policy",
+    "/secure-payments"
   ]
 }
