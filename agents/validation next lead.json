@@ -1,5 +1,13 @@
 {
   "campaign_id": "lawyers-us",
+  "counts": {
+    "Disqualified": 35,
+    "Not Relevant": 4,
+    "Qualified": 4,
+    "Ready for Validation": 1787,
+    "Total": 1830,
+    "QualifiedFlag": 4
+  },
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
     "id": "ChIJYd_39SSLk4cR-iZFlz3yqq8",
