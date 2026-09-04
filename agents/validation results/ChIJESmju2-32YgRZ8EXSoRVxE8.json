@@ -1,0 +1,55 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJESmju2-32YgRZ8EXSoRVxE8",
+  "firm": "Miami Car Accident Lawyer | Personal Injury Attorneys - Jaime Suarez",
+  "domain": "jaime-suarez.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the firm explicitly offers a broad personal-injury case mix but already maintains focused dedicated pages for major services including Wrongful Death, Medical Malpractice, Workplace Accidents and Cruise Ship Accidents, alongside its motor-vehicle practice content.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The homepage explicitly lists Car, Motorcycle, Truck, Slip and Fall, Premises Liability, Medical Malpractice, Wrongful Death, Workplace Injury and other accident services. Independent live/open-web checks found substantial dedicated pages for Wrongful Death, Medical Malpractice, Workplace Accidents and Cruise Ship Accidents. This confirms the firm already builds client-specific destinations for major services, so it is not a strong Service-Page Gap candidate. A direct public email for founding partner Jaime Suarez is visible on the site, but contact enrichment was not used because the gap gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "Wrongful Death is explicitly listed among the firm's common accident cases and has a dedicated Miami Wrongful Death Lawyer page.",
+      "dedicated_page_url": "https://www.jaime-suarez.com/miami-wrongful-death-attorney/",
+      "validation_method": "live/open-web homepage + dedicated-page inspection",
+      "notes": "Substantial dedicated client journey exists."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Medical Malpractice is explicitly offered on the homepage and has a dedicated Miami Medical Malpractice Lawyer page with Florida-specific claim guidance.",
+      "dedicated_page_url": "https://www.jaime-suarez.com/miami-medical-malpractice-attorney/",
+      "validation_method": "live/open-web homepage + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Workplace Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "The homepage states the firm handles accidents at work, and the site has a focused Miami Workplace Accident Attorney page discussing workers' compensation and third-party claims.",
+      "dedicated_page_url": "https://www.jaime-suarez.com/miami-workplace-accident-attorney/",
+      "validation_method": "live/open-web homepage + dedicated-page inspection",
+      "notes": "Dedicated work-injury client journey exists."
+    },
+    {
+      "service_name": "Cruise Ship Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Cruise Ship Accident is explicitly listed among common accident cases and has a dedicated Miami Cruise Ship Accident Attorney page.",
+      "dedicated_page_url": "https://www.jaime-suarez.com/miami-cruise-ship-accident-attorney/",
+      "validation_method": "live/open-web service-page inspection",
+      "notes": "Dedicated service destination exists."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.jaime-suarez.com/",
+    "https://www.jaime-suarez.com/about/jaime-suarez/",
+    "https://www.jaime-suarez.com/miami-wrongful-death-attorney/",
+    "https://www.jaime-suarez.com/miami-medical-malpractice-attorney/",
+    "https://www.jaime-suarez.com/miami-workplace-accident-attorney/",
+    "https://www.jaime-suarez.com/miami-cruise-ship-accident-attorney/",
+    "https://www.jaime-suarez.com/case-results/"
+  ]
+}
