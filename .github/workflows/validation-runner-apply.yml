@@ -1,0 +1,223 @@
+name: Apply validation runner result to D1
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "agents/validation results/*.json"
+
+permissions:
+  contents: write
+
+jobs:
+  apply-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Verify D1 secrets
+        shell: bash
+        run: |
+          for name in CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID; do
+            test -n "${!name}" || { echo "$name is missing"; exit 2; }
+          done
+
+      - name: Apply changed validation result files and refresh next lead
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess, urllib.request
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          account = os.environ['CLOUDFLARE_ACCOUNT_ID']
+          token = os.environ['CLOUDFLARE_API_TOKEN']
+          database = os.environ['D1_DATABASE_ID']
+          endpoint = f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
+
+          def query(sql, params=None):
+              payload = json.dumps({'sql': sql, 'params': params or []}).encode()
+              req = urllib.request.Request(
+                  endpoint,
+                  data=payload,
+                  headers={'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'},
+                  method='POST',
+              )
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  body = json.load(response)
+              if not body.get('success'):
+                  raise SystemExit(json.dumps(body))
+              result = body.get('result') or []
+              return (result[0].get('results') or []) if result else []
+
+          changed = subprocess.check_output(
+              ['git', 'diff', '--name-only', 'HEAD^', 'HEAD', '--', 'agents/validation results/*.json'],
+              text=True,
+          ).splitlines()
+          files = [Path(p) for p in changed if p.endswith('.json')]
+          if not files:
+              raise SystemExit('No validation result JSON changed in triggering commit.')
+
+          receipts = []
+          for path in files:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              campaign_id = data['campaign_id']
+              lead_id = data['lead_id']
+              final_status = data['final_status']
+              qualified = 1 if data.get('qualified') else 0
+              qualification_reason = data.get('qualification_reason', '')
+              campaign_notes = data.get('campaign_notes', '')
+
+              exists = query(
+                  'SELECT lead_id, status, qualified FROM campaign_leads WHERE campaign_id = ? AND lead_id = ?',
+                  [campaign_id, lead_id],
+              )
+              if not exists:
+                  raise SystemExit(f'Campaign lead not found: {campaign_id} / {lead_id}')
+
+              for row in data.get('service_gap_evidence', []):
+                  query('''
+                      INSERT INTO service_gap_evidence (
+                        campaign_id, lead_id, service_name, status,
+                        service_offered_evidence, dedicated_page_url,
+                        validation_method, notes, validated_at
+                      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+                      ON CONFLICT(campaign_id, lead_id, service_name) DO UPDATE SET
+                        status = excluded.status,
+                        service_offered_evidence = excluded.service_offered_evidence,
+                        dedicated_page_url = excluded.dedicated_page_url,
+                        validation_method = excluded.validation_method,
+                        notes = excluded.notes,
+                        validated_at = CURRENT_TIMESTAMP
+                  ''', [
+                      campaign_id, lead_id, row['service_name'], row['status'],
+                      row.get('service_offered_evidence'), row.get('dedicated_page_url'),
+                      row.get('validation_method'), row.get('notes', ''),
+                  ])
+
+              for contact in data.get('contacts', []):
+                  contact_id = contact.get('id') or f"{campaign_id}:{lead_id}:{contact.get('email') or contact['person_name']}"
+                  query('''
+                      INSERT INTO lead_contacts (
+                        id, lead_id, person_name, role, email,
+                        is_owner, is_decision_maker, is_direct_email,
+                        is_publicly_verified, evidence_source, verified_at, notes
+                      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, ?)
+                      ON CONFLICT(id) DO UPDATE SET
+                        person_name = excluded.person_name,
+                        role = excluded.role,
+                        email = excluded.email,
+                        is_owner = excluded.is_owner,
+                        is_decision_maker = excluded.is_decision_maker,
+                        is_direct_email = excluded.is_direct_email,
+                        is_publicly_verified = excluded.is_publicly_verified,
+                        evidence_source = excluded.evidence_source,
+                        verified_at = CURRENT_TIMESTAMP,
+                        notes = excluded.notes
+                  ''', [
+                      contact_id, lead_id, contact['person_name'], contact.get('role'), contact.get('email'),
+                      1 if contact.get('is_owner') else 0,
+                      1 if contact.get('is_decision_maker') else 0,
+                      1 if contact.get('is_direct_email') else 0,
+                      1 if contact.get('is_publicly_verified') else 0,
+                      contact.get('evidence_source'), contact.get('notes', ''),
+                  ])
+
+              draft = data.get('outreach_draft')
+              if draft:
+                  campaign_notes = campaign_notes.rstrip() + '\n\n[OUTREACH_DRAFT_JSON]\n' + json.dumps(draft, ensure_ascii=False, sort_keys=True)
+
+              query('''
+                  UPDATE campaign_leads
+                  SET status = ?, qualified = ?, qualification_reason = ?, notes = ?, crm_updated_at = CURRENT_TIMESTAMP
+                  WHERE campaign_id = ? AND lead_id = ?
+              ''', [final_status, qualified, qualification_reason, campaign_notes, campaign_id, lead_id])
+
+              receipts.append({
+                  'campaign_id': campaign_id,
+                  'lead_id': lead_id,
+                  'status': final_status,
+                  'qualified': qualified,
+                  'source_file': str(path),
+                  'applied_at': datetime.now(timezone.utc).isoformat(),
+              })
+
+          # Refresh the deterministic next Ready for Validation snapshot.
+          leads = query('''
+              SELECT
+                l.id, l.name, l.website, l.address, l.phone, l.primary_type,
+                cl.campaign_id, cl.status, cl.qualified, cl.quality_score,
+                cl.qualification_reason, cl.notes, cl.first_seen_at, cl.last_seen_at,
+                d.website_domain
+              FROM campaign_leads cl
+              JOIN leads l ON l.id = cl.lead_id
+              LEFT JOIN lead_domains d ON d.lead_id = cl.lead_id
+              WHERE cl.campaign_id = ?
+                AND cl.status = 'Ready for Validation'
+                AND cl.qualified = 0
+              ORDER BY cl.quality_score DESC, cl.first_seen_at ASC, cl.lead_id ASC
+              LIMIT 1
+          ''', ['lawyers-us'])
+
+          snapshot = {
+              'campaign_id': 'lawyers-us',
+              'selection_rule': "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
+              'lead': None,
+              'homepage_links': [],
+              'existing_service_gap_evidence': [],
+              'existing_contacts': [],
+          }
+          if leads:
+              lead = leads[0]
+              lead_id = lead['id']
+              snapshot['lead'] = lead
+              snapshot['homepage_links'] = query('''
+                  SELECT homepage, final_url, url, anchor_text, crawled_at
+                  FROM homepage_link_evidence
+                  WHERE campaign_id = ? AND lead_id = ?
+                  ORDER BY url
+              ''', ['lawyers-us', lead_id])
+              snapshot['existing_service_gap_evidence'] = query('''
+                  SELECT service_name, status, service_offered_evidence,
+                         dedicated_page_url, validation_method, notes, validated_at
+                  FROM service_gap_evidence
+                  WHERE campaign_id = ? AND lead_id = ?
+                  ORDER BY service_name
+              ''', ['lawyers-us', lead_id])
+              snapshot['existing_contacts'] = query('''
+                  SELECT id, person_name, role, email, is_owner, is_decision_maker,
+                         is_direct_email, is_publicly_verified, evidence_source,
+                         verified_at, notes
+                  FROM lead_contacts
+                  WHERE lead_id = ?
+                  ORDER BY is_decision_maker DESC, is_owner DESC, person_name
+              ''', [lead_id])
+
+          Path('agents/validation apply receipt.json').write_text(
+              json.dumps({'receipts': receipts}, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+          )
+          Path('agents/validation next lead.json').write_text(
+              json.dumps(snapshot, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+          )
+          print(json.dumps({'receipts': receipts, 'next': snapshot.get('lead')}, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Commit receipt and refreshed snapshot
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "agents/validation apply receipt.json" "agents/validation next lead.json"
+          if git diff --cached --quiet; then
+            echo "No receipt/snapshot changes to commit."
+            exit 0
+          fi
+          git commit -m "Apply validation result and refresh next lead"
+          git push
