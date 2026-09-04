@@ -2,12 +2,18 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 3,
-  "lead_id": "ChIJw4KP4lmcToYRYhU0yUTbNio",
-  "name": "The Gold Standard in family law.  A great divorce attorney and custody lawyer.",
-  "domain": "turnergold.com",
-  "website": "http://www.turnergold.com/",
-  "clean_homepage_url_count": 1,
+  "lead_id": "ChIJyXDjJbWdToYRxyZ_ucMuPz4",
+  "name": "ELSABAN LAW FIRMDallas Immigration Attorney",
+  "domain": "elsabanimmigration.com",
+  "website": "http://elsabanimmigration.com/",
+  "clean_homepage_url_count": 7,
   "clean_homepage_urls": [
-    "/"
+    "/",
+    "/areas-of-practice",
+    "/cart",
+    "/contact-us",
+    "/make-a-payment",
+    "/new-dropdown",
+    "/our-team"
   ]
 }
