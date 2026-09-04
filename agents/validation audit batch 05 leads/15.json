@@ -1,0 +1,17 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 5,
+  "position": 15,
+  "lead_id": "ChIJCSDD2NeYToYRrfidaaESe7M",
+  "name": "Your Lawyers | Dallas, TX | Meyer Friedman Reed PLLC",
+  "domain": "meyerandfriedman.com",
+  "website": "https://www.meyerandfriedman.com/",
+  "clean_homepage_url_count": 4,
+  "clean_homepage_urls": [
+    "/",
+    "/contact-us",
+    "/family-law",
+    "/personal-lawyers"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 5,
+  "position": 12,
+  "lead_id": "ChIJlYB3Zm6ZToYRQW3w9qaOUPw",
+  "name": "Lawyer | David Sheves Law | Dallas",
+  "domain": "sheveslaw.com",
+  "website": "https://www.sheveslaw.com/",
+  "clean_homepage_url_count": 14,
+  "clean_homepage_urls": [
+    "/",
+    "/areas-we-can-serve",
+    "/client-testimonals",
+    "/contact",
+    "/copia-de-about-us",
+    "/copia-de-about-us-1",
+    "/copia-de-criminal-law",
+    "/copia-de-personal-injury",
+    "/copia-de-personal-injury-1",
+    "/copia-de-personal-injury-2",
+    "/our-team",
+    "/personal-injury",
+    "/practice-areas",
+    "/privacy"
+  ]
+}

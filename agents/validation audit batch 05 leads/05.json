@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 5,
+  "position": 5,
+  "lead_id": "ChIJL5K-8DOZToYRdHwsQ6OVUzs",
+  "name": "Top Rated Dallas Criminal Attorney & Defense Lawyer | Fellman Law Office",
+  "domain": "fellmanlawoffice.com",
+  "website": "https://www.fellmanlawoffice.com/",
+  "clean_homepage_url_count": 14,
+  "clean_homepage_urls": [
+    "/",
+    "/attorney-profile",
+    "/contact",
+    "/media",
+    "/media-room",
+    "/practice-areas",
+    "/practice-areas/assault-family-violence",
+    "/practice-areas/drug-charges",
+    "/practice-areas/dwi-dui-driving-while-intoxicated",
+    "/practice-areas/facing-theft-charges-in-the-dfw-area",
+    "/practice-areas/pretrial-diversion-dismissals-for-first-time-offenders",
+    "/practice-areas/probation-violations",
+    "/resources",
+    "/victories"
+  ]
+}

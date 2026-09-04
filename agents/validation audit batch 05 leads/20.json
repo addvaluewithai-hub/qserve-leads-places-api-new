@@ -1,0 +1,16 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 5,
+  "position": 20,
+  "lead_id": "ChIJh4z96SUfTIYRVAb5gSBxGwQ",
+  "name": "Dallas Abogada/ Attorney Reina Gonzalez- Complex Litigation",
+  "domain": "dallastriallaw.com",
+  "website": "https://www.dallastriallaw.com/",
+  "clean_homepage_url_count": 3,
+  "clean_homepage_urls": [
+    "/attorney-profile",
+    "/dallas-insurance-attorney",
+    "/spanishcarwreckattorney"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 5,
+  "position": 6,
+  "lead_id": "ChIJO8ykUC6ZToYR4dZql6cnvYA",
+  "name": "Marye Law Dallas Personal Injury Lawyers – SERIOUS SUITS. POWERFUL RESULTS.",
+  "domain": "maryelaw.com",
+  "website": "https://maryelaw.com/",
+  "clean_homepage_url_count": 1,
+  "clean_homepage_urls": [
+    "/"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 5,
+  "position": 3,
+  "lead_id": "ChIJx2ptB6uZToYRgtDgM-dv5ts",
+  "name": "trjohnsonlaw.com",
+  "domain": "trjohnsonlaw.com",
+  "website": "http://trjohnsonlaw.com/",
+  "clean_homepage_url_count": 6,
+  "clean_homepage_urls": [
+    "/",
+    "/about",
+    "/contact",
+    "/criminal-defense",
+    "/personal-injury",
+    "/practice"
+  ]
+}
