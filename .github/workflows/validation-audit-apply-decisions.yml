@@ -31,23 +31,29 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import json, os, subprocess, urllib.request
+          import json, os, subprocess, time, urllib.request
           from datetime import datetime, timezone
           from pathlib import Path
 
           account=os.environ['CLOUDFLARE_ACCOUNT_ID']; token=os.environ['CLOUDFLARE_API_TOKEN']; database=os.environ['D1_DATABASE_ID']
           endpoint=f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
           def query(sql, params=None):
-              req=urllib.request.Request(endpoint,data=json.dumps({'sql':sql,'params':params or []}).encode(),headers={'Authorization':f'Bearer {token}','Content-Type':'application/json'},method='POST')
-              with urllib.request.urlopen(req,timeout=30) as response: body=json.load(response)
-              if not body.get('success'): raise SystemExit(json.dumps(body))
-              result=body.get('result') or []
-              return (result[0].get('results') or []) if result else []
+              last=None
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(endpoint,data=json.dumps({'sql':sql,'params':params or []}).encode(),headers={'Authorization':f'Bearer {token}','Content-Type':'application/json'},method='POST')
+                      with urllib.request.urlopen(req,timeout=60) as response: body=json.load(response)
+                      if not body.get('success'): raise RuntimeError(json.dumps(body))
+                      result=body.get('result') or []
+                      return (result[0].get('results') or []) if result else []
+                  except Exception as exc:
+                      last=exc
+                      if attempt < 2: time.sleep(2*(attempt+1))
+              raise last
 
           changed=subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD','--','agents/validation audit decisions/*.json'],text=True).splitlines()
           files=[Path(p) for p in changed if p.endswith('.json')]
-          if not files:
-              files=sorted(Path('agents/validation audit decisions').glob('batch-*.json'))[-1:]
+          if not files: files=sorted(Path('agents/validation audit decisions').glob('batch-*.json'))[-1:]
           if not files: raise SystemExit('No audit decision JSON available.')
 
           receipts=[]
@@ -59,28 +65,23 @@ jobs:
               for row in decisions:
                   lead_id=row['lead_id']; status=row['final_status']; qualified=1 if row.get('qualified') else 0
                   reason=row.get('qualification_reason',''); notes=row.get('campaign_notes','')
-                  exists=query('SELECT lead_id FROM campaign_leads WHERE campaign_id=? AND lead_id=?',[campaign_id,lead_id])
-                  if not exists: raise SystemExit(f'Campaign lead not found: {campaign_id}/{lead_id}')
                   for ev in row.get('service_gap_evidence',[]):
                       query('''INSERT INTO service_gap_evidence (campaign_id,lead_id,service_name,status,service_offered_evidence,dedicated_page_url,validation_method,notes,validated_at)
                                VALUES (?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)
                                ON CONFLICT(campaign_id,lead_id,service_name) DO UPDATE SET
-                                 status=excluded.status, service_offered_evidence=excluded.service_offered_evidence,
-                                 dedicated_page_url=excluded.dedicated_page_url, validation_method=excluded.validation_method,
-                                 notes=excluded.notes, validated_at=CURRENT_TIMESTAMP''',
+                                 status=excluded.status,service_offered_evidence=excluded.service_offered_evidence,dedicated_page_url=excluded.dedicated_page_url,
+                                 validation_method=excluded.validation_method,notes=excluded.notes,validated_at=CURRENT_TIMESTAMP''',
                             [campaign_id,lead_id,ev['service_name'],ev['status'],ev.get('service_offered_evidence'),ev.get('dedicated_page_url'),ev.get('validation_method'),ev.get('notes','')])
                   for c in row.get('contacts',[]):
                       cid=c.get('id') or f"{campaign_id}:{lead_id}:{c.get('email') or c['person_name']}"
                       query('''INSERT INTO lead_contacts (id,lead_id,person_name,role,email,is_owner,is_decision_maker,is_direct_email,is_publicly_verified,evidence_source,verified_at,notes)
                                VALUES (?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,?)
-                               ON CONFLICT(id) DO UPDATE SET person_name=excluded.person_name,role=excluded.role,email=excluded.email,
-                                 is_owner=excluded.is_owner,is_decision_maker=excluded.is_decision_maker,is_direct_email=excluded.is_direct_email,
-                                 is_publicly_verified=excluded.is_publicly_verified,evidence_source=excluded.evidence_source,
-                                 verified_at=CURRENT_TIMESTAMP,notes=excluded.notes''',
+                               ON CONFLICT(id) DO UPDATE SET person_name=excluded.person_name,role=excluded.role,email=excluded.email,is_owner=excluded.is_owner,
+                                 is_decision_maker=excluded.is_decision_maker,is_direct_email=excluded.is_direct_email,is_publicly_verified=excluded.is_publicly_verified,
+                                 evidence_source=excluded.evidence_source,verified_at=CURRENT_TIMESTAMP,notes=excluded.notes''',
                             [cid,lead_id,c['person_name'],c.get('role'),c.get('email'),1 if c.get('is_owner') else 0,1 if c.get('is_decision_maker') else 0,1 if c.get('is_direct_email') else 0,1 if c.get('is_publicly_verified') else 0,c.get('evidence_source'),c.get('notes','')])
                   draft=row.get('outreach_draft')
-                  if draft:
-                      notes=notes.rstrip()+'\n\n[OUTREACH_DRAFT_JSON]\n'+json.dumps(draft,ensure_ascii=False,sort_keys=True)
+                  if draft: notes=notes.rstrip()+'\n\n[OUTREACH_DRAFT_JSON]\n'+json.dumps(draft,ensure_ascii=False,sort_keys=True)
                   query('''UPDATE campaign_leads SET status=?,qualified=?,qualification_reason=?,notes=?,crm_updated_at=CURRENT_TIMESTAMP
                            WHERE campaign_id=? AND lead_id=?''',[status,qualified,reason,notes,campaign_id,lead_id])
                   receipts.append({'campaign_id':campaign_id,'lead_id':lead_id,'status':status,'qualified':qualified,'source_file':str(path),'applied_at':datetime.now(timezone.utc).isoformat()})
