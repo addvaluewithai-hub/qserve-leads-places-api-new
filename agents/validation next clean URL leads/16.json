@@ -2,24 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 16,
-  "lead_id": "ChIJ4QeHO_QfTIYRF7WDMs8QLI4",
-  "name": "Dallas Personal Injury Lawyer | Car Accident | Trucking Injury | Ekeh Law Firm",
-  "domain": "ekehlaw.com",
-  "website": "http://www.ekehlaw.com/",
-  "clean_homepage_url_count": 13,
-  "clean_homepage_urls": [
-    "/",
-    "/attorney/ekeh-nnamdi-esq",
-    "/blog",
-    "/contact",
-    "/dallas-personal-injury-law-office",
-    "/denton-personal-injury-law-office",
-    "/disclaimer",
-    "/es",
-    "/motor-vehicle-accidents",
-    "/personal-injury",
-    "/privacy",
-    "/site-map",
-    "/trucking-accidents"
-  ]
+  "lead_id": "ChIJpTlD_o0hTIYRoHXJQxdwZYo",
+  "name": "Robot Challenge Screen",
+  "domain": "mydallascriminallawyer.com",
+  "website": "https://www.mydallascriminallawyer.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
