@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJR-5WBtKk-IgR2oVus7RUpHQ",
+  "firm": "Goings Law Firm, LLC",
+  "domain": "goingslawfirm.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Goings Law Firm already has mature separate-service architecture across its core personal-injury and workers' compensation practices. Its Practice Areas hub provides focused Learn More destinations for Car Accidents, Truck Accidents, Motorcycle Accidents, Workers' Compensation, Wrongful Death, Medical Malpractice, Product Liability, Premises Liability and many other services, alongside substantial county/location architecture. The firm clearly understands the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Business Litigation is also mentioned, but an isolated secondary-practice coverage gap does not qualify a firm whose dominant website pattern already demonstrates service-by-service architecture. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current Practice Areas page links separate service destinations for numerous major matters and the site also has extensive county-specific practice content.",
+      "dedicated_page_url": "https://www.goingslawfirm.com/practice-areas/",
+      "validation_method": "live Practice Areas + homepage discovery + county-page review + architecture-maturity gate",
+      "notes": "Mature service-by-service architecture. Business Litigation does not change campaign fit."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.goingslawfirm.com/",
+    "https://www.goingslawfirm.com/practice-areas/",
+    "https://www.goingslawfirm.com/about/"
+  ]
+}
