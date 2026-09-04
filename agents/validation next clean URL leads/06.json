@@ -2,15 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 6,
-  "lead_id": "ChIJcTLLYDGZToYR56Gu6arLEVo",
-  "name": "davidbowerlawyer.com",
-  "domain": "davidbowerlawyer.com",
-  "website": "http://davidbowerlawyer.com/",
-  "clean_homepage_url_count": 4,
-  "clean_homepage_urls": [
-    "/",
-    "/contact",
-    "/main",
-    "/services"
-  ]
+  "lead_id": "ChIJk9gYV86eToYRAx5Le153HKA",
+  "name": "DNS resolution error | www.timjeffreyatlaw.com | Cloudflare",
+  "domain": "timjeffreyatlaw.com",
+  "website": "http://www.timjeffreyatlaw.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

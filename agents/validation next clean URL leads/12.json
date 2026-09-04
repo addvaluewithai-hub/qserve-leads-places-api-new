@@ -2,23 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 12,
-  "lead_id": "ChIJLSTiPDWZToYRvFoMTplHT1E",
-  "name": "Pipkin Law Firm | Personal Injury Attorney",
-  "domain": "pipkinlawfirm.com",
-  "website": "http://www.pipkinlawfirm.com/",
-  "clean_homepage_url_count": 12,
-  "clean_homepage_urls": [
-    "/",
-    "/about.html",
-    "/autodefect.html",
-    "/bio.html",
-    "/caraccident.html",
-    "/defectiveproduct.html",
-    "/index.html",
-    "/personalinjury.html",
-    "/premiseliability.html",
-    "/rollover.html",
-    "/truckaccident.html",
-    "/wrongfuldeath.html"
-  ]
+  "lead_id": "ChIJt2abzDCZToYR5xIHZewevrE",
+  "name": "One moment, please...",
+  "domain": "lomtl.com",
+  "website": "https://www.lomtl.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
