@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJmWwVVn3W2IgR5g0f_oNj8-A",
-    "name": "Criminal Defense Lawyers in West Palm Beach | Meltzer &amp; Bell, P.A.",
-    "website": "https://www.meltzerandbell.com/",
+    "id": "ChIJ5YwtVkcSK4cRbV4fVdUroVY",
+    "name": "Torgenson Law | Arizona Injury Attorney | Free Case Evaluation",
+    "website": "https://www.torgensonlaw.com/?utm_campaign=gmb",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:52",
+    "first_seen_at": "2026-09-02 11:12:53",
     "last_seen_at": "2026-09-02 11:51:15",
-    "website_domain": "meltzerandbell.com"
+    "website_domain": "torgensonlaw.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],

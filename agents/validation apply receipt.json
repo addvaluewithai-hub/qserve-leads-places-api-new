@@ -2,11 +2,11 @@
   "receipts": [
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJfd-hbQCf7ocRDSmSy41HTqw",
-      "status": "Qualified",
-      "qualified": 1,
-      "source_file": "agents/validation results/ChIJfd-hbQCf7ocRDSmSy41HTqw.json",
-      "applied_at": "2026-09-04T17:13:14.461135+00:00"
+      "lead_id": "ChIJmWwVVn3W2IgR5g0f_oNj8-A",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation results/ChIJmWwVVn3W2IgR5g0f_oNj8-A.json",
+      "applied_at": "2026-09-04T17:14:31.539180+00:00"
     }
   ]
 }
