@@ -1,0 +1,61 @@
+name: Expand validation audit decisions
+
+on:
+  push:
+    paths:
+      - "agents/validation audit decisions/*.json"
+
+permissions:
+  contents: write
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Expand changed audit batch decision files into standard result files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, re, subprocess
+          from pathlib import Path
+
+          changed=subprocess.check_output(
+              ['git','diff','--name-only','HEAD^','HEAD','--','agents/validation audit decisions/*.json'],
+              text=True,
+          ).splitlines()
+          files=[Path(p) for p in changed if p.endswith('.json')]
+          if not files:
+              raise SystemExit('No audit decision JSON changed in triggering commit.')
+
+          written=[]
+          for path in files:
+              data=json.loads(path.read_text(encoding='utf-8'))
+              batch=int(data['batch_number'])
+              decisions=data.get('decisions') or []
+              if len(decisions)!=20:
+                  raise SystemExit(f'{path}: expected 20 decisions, got {len(decisions)}')
+              for i,row in enumerate(decisions,1):
+                  slug=re.sub(r'[^a-z0-9]+','-',str(row.get('slug') or row['lead_id']).lower()).strip('-')[:60]
+                  out=Path('agents/validation results')/f'audit-batch{batch:02d}-{i:02d}-{slug}.json'
+                  payload={k:v for k,v in row.items() if k!='slug'}
+                  payload['campaign_id']=data.get('campaign_id','lawyers-us')
+                  out.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+                  written.append(str(out))
+          print(json.dumps({'written':written},indent=2))
+          PY
+      - name: Commit standard audit result files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "agents/validation results/audit-batch"*.json
+          if git diff --cached --quiet; then
+            echo "No audit result changes."
+            exit 0
+          fi
+          git commit -m "Expand validation audit batch decisions"
+          git push
