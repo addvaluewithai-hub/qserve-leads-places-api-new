@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJmWwVVn3W2IgR5g0f_oNj8-A",
+  "firm": "Meltzer & Bell, P.A.",
+  "domain": "meltzerandbell.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Meltzer & Bell already has highly mature separate-service architecture across its criminal-defense practice. The current site exposes dedicated destinations for DUI, Domestic Violence, Drug Crimes, Federal Charges, Economic Crimes, Homicide, Juvenile matters, Sex Offenses, Theft, Traffic Tickets, Weapons, Probation Violations and many other main and sub-practices. The firm clearly understands and routinely applies the separate-page concept, so it is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed immediately. The site has a deep Practice Areas hierarchy, a large attorney team and multiple offices. An isolated content opportunity would not make this firm a fit for a campaign selling the separate-service-page concept. Contact enrichment was correctly skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current navigation and Practice Areas architecture link distinct pages for DUI, Drug Crimes, Domestic Violence, Federal Charges, Homicide, Sex Offenses, Theft, Traffic Tickets, Weapons and many additional services.",
+      "dedicated_page_url": "https://www.meltzerandbell.com/practice-areas/",
+      "validation_method": "live homepage/navigation + Practice Areas hierarchy + sitemap/domain discovery + architecture-maturity gate",
+      "notes": "Extensive mature service-by-service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.meltzerandbell.com/",
+    "https://www.meltzerandbell.com/practice-areas/",
+    "https://www.meltzerandbell.com/sitemap/"
+  ]
+}
