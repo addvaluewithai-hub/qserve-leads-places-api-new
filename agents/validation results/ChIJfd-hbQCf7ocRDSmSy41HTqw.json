@@ -1,0 +1,60 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJfd-hbQCf7ocRDSmSy41HTqw",
+  "firm": "Ben Lynch Law",
+  "domain": "benlynchlaw.com",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "Historical outreach-ready lead revalidated under the corrected ICP. The live site still presents Employment Law, Personal Injury, Family Law, Criminal Law and Civil Rights as sections within the same main page experience rather than a mature service-by-service architecture. These are materially different client journeys, so Family Law is a strong first mockup example. Attorney and owner Ben Lynch is publicly identified on the official site, which also publishes his direct email ben@benlynchlaw.com.",
+  "campaign_notes": "Historical lead synchronized after live recheck on 2026-09-04. The site explicitly says it specializes in a variety of practice areas and lists five major practices with many subtopics on the same page. This is exactly the corrected campaign pattern: multiple materially different legal clients share a general website conversation. Ben Lynch is identified as attorney and owner, and his direct public email is published repeatedly on the official site. This remains Qualified but does not count as the newly discovered Qualified for the current stop condition.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Family Law",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The official site explicitly lists Family Law as a main practice and enumerates Divorce, Child Custody, Guardianships, Adoption, Child Support and related matters.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + Practice Areas sections + architecture-maturity gate",
+      "notes": "Family Law is a materially different client journey from Employment, Personal Injury, Criminal and Civil Rights, yet it shares the same main page experience. Strong first mockup example."
+    },
+    {
+      "service_name": "Employment Law",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The official site explicitly lists Employment Law and numerous employment matters.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + architecture review",
+      "notes": "Another major practice sharing the same consolidated presentation, confirming the broader structural opportunity."
+    },
+    {
+      "service_name": "Criminal Law",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The official site explicitly lists Criminal Law and numerous criminal matters including OWI, assault, theft and drug crimes.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + architecture review",
+      "notes": "Another distinct client conversation sharing the same consolidated presentation."
+    }
+  ],
+  "contacts": [
+    {
+      "id": "lawyers-us:ChIJfd-hbQCf7ocRDSmSy41HTqw:ben@benlynchlaw.com",
+      "person_name": "Ben Lynch",
+      "role": "Attorney and Owner",
+      "email": "ben@benlynchlaw.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "https://www.benlynchlaw.com/",
+      "notes": "Official site identifies Ben Lynch as attorney and owner and publishes ben@benlynchlaw.com repeatedly."
+    }
+  ],
+  "outreach_draft": {
+    "selected_service": "Family Law",
+    "decision_maker": "Ben Lynch",
+    "email": "ben@benlynchlaw.com",
+    "subject": "A thought on your practice areas",
+    "body": "Ben,\n\nI noticed Employment, Personal Injury, Family, Criminal and Civil Rights all share the same main Practice Areas experience on the site.\n\nThose matters may sit under one firm, but the people looking for them are arriving with very different questions. A parent dealing with custody or divorce needs a very different conversation from someone facing a criminal charge or an employee dealing with discrimination.\n\nDedicated pages for the main practices could:\n- speak directly to that type of client\n- give Google a focused page to crawl and index\n- give AI tools clearer context about each area of the firm’s work\n\nI’m using Family Law as the first mockup example because the difference in client journey is especially easy to show.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  },
+  "source_urls_checked": [
+    "https://www.benlynchlaw.com/"
+  ]
+}
