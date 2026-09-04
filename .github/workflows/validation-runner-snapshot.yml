@@ -59,6 +59,20 @@ jobs:
                   return []
               return result[0].get('results') or []
 
+          counts_rows = query('''
+              SELECT status, COUNT(*) AS count
+              FROM campaign_leads
+              WHERE campaign_id = ?
+              GROUP BY status
+              ORDER BY status
+          ''', ['lawyers-us'])
+          counts = {row['status']: row['count'] for row in counts_rows}
+          counts['Total'] = sum(counts.values())
+          counts['QualifiedFlag'] = (query(
+              'SELECT COUNT(*) AS count FROM campaign_leads WHERE campaign_id = ? AND qualified = 1',
+              ['lawyers-us'],
+          ) or [{'count': 0}])[0]['count']
+
           leads = query('''
               SELECT
                 l.id, l.name, l.website, l.address, l.phone, l.primary_type,
@@ -77,6 +91,7 @@ jobs:
 
           out = {
               'campaign_id': 'lawyers-us',
+              'counts': counts,
               'selection_rule': "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
               'lead': None,
               'homepage_links': [],
