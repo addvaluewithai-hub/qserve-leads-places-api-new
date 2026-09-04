@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJSXCWnHRuAHwRKqDPECFjrZo",
+  "firm": "Blake Goodman, PC",
+  "domain": "debtfreehawaii.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Blake Goodman, PC already has mature separate-service architecture across its debt-relief offerings. The live navigation exposes distinct focused destinations for Chapter 7 Bankruptcy, Chapter 13 Bankruptcy, Debt Settlement, Foreclosure Defense, Tax Resolution, Credit Score Assistance and Wage Garnishment. The firm already understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Although the firm is focused on debt relief, it separates the meaningful solution paths into dedicated client pages and also maintains location-specific architecture. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current Services navigation links separate Chapter 7, Chapter 13, Debt Settlement, Foreclosure Defense, Tax Resolution, Credit Score Assistance and Wage Garnishment pages.",
+      "dedicated_page_url": "https://www.debtfreehawaii.com/services/debt-settlement/",
+      "validation_method": "live homepage/navigation + dedicated service-page review + architecture-maturity gate",
+      "notes": "Mature separate-page architecture across the firm's principal debt-relief solutions. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.debtfreehawaii.com/",
+    "https://www.debtfreehawaii.com/services/debt-settlement/",
+    "https://www.debtfreehawaii.com/services/chapter-7-bankruptcy/",
+    "https://www.debtfreehawaii.com/services/foreclosure-defense/"
+  ]
+}
