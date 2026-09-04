@@ -21,12 +21,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
+
       - name: Verify D1 secrets
         shell: bash
         run: |
           for name in CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN D1_DATABASE_ID; do
             test -n "${!name}" || { echo "$name is missing"; exit 2; }
           done
+
       - name: Apply changed 20-lead manual audit decision batch
         shell: bash
         run: |
@@ -89,12 +91,90 @@ jobs:
           Path('agents/validation audit apply receipt.json').write_text(json.dumps({'receipts':receipts},indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
           print(json.dumps({'applied':len(receipts),'receipts':receipts},indent=2,ensure_ascii=False))
           PY
-      - name: Commit audit receipt
+
+      - name: Refresh next 20 clean URL batch from updated D1
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          account=os.environ['CLOUDFLARE_ACCOUNT_ID']; token=os.environ['CLOUDFLARE_API_TOKEN']; database=os.environ['D1_DATABASE_ID']
+          endpoint=f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
+          def query(sql, params=None):
+              payload=json.dumps({'sql':sql,'params':params or []}).encode(); last=None
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(endpoint,data=payload,headers={'Authorization':f'Bearer {token}','Content-Type':'application/json'},method='POST')
+                      with urllib.request.urlopen(req,timeout=45) as response: body=json.load(response)
+                      if not body.get('success'): raise RuntimeError(json.dumps(body))
+                      result=body.get('result') or []
+                      return (result[0].get('results') or []) if result else []
+                  except Exception as exc:
+                      last=exc
+                      if attempt<2: time.sleep(2*(attempt+1))
+              raise last
+
+          leads=query('''
+              SELECT l.id,l.name,l.website,d.website_domain,cl.quality_score,cl.first_seen_at
+              FROM campaign_leads cl
+              JOIN leads l ON l.id=cl.lead_id
+              LEFT JOIN lead_domains d ON d.lead_id=cl.lead_id
+              WHERE cl.campaign_id=?
+                AND cl.status='Ready for Validation'
+                AND cl.qualified=0
+                AND cl.qualification_reason='working_set_ready_for_validation'
+              ORDER BY cl.quality_score DESC, cl.first_seen_at ASC, cl.lead_id ASC
+              LIMIT 20
+          ''',['lawyers-us'])
+
+          asset_exts={'.png','.jpg','.jpeg','.gif','.svg','.webp','.avif','.ico','.pdf','.css','.js','.map','.xml','.txt','.zip','.mp3','.mp4','.webm','.woff','.woff2','.ttf','.eot'}
+          asset_markers=('/wp-content/uploads/','/wp-includes/','/assets/images/','/images/')
+          def clean_path(url):
+              path=(urlparse(url or '').path or '/').strip()
+              if not path.startswith('/'): path='/'+path
+              low=path.lower()
+              if any(m in low for m in asset_markers): return None
+              if Path(low).suffix.lower() in asset_exts: return None
+              if path!='/' and path.endswith('/'): path=path.rstrip('/')
+              return path
+
+          out=[]
+          for lead in leads:
+              rows=query('''SELECT url FROM homepage_link_evidence WHERE campaign_id=? AND lead_id=? ORDER BY url''',['lawyers-us',lead['id']])
+              seen=set(); paths=[]
+              for row in rows:
+                  path=clean_path(row.get('url'))
+                  if path and path not in seen:
+                      seen.add(path); paths.append(path)
+              out.append({'lead_id':lead['id'],'name':lead.get('name'),'domain':lead.get('website_domain'),'website':lead.get('website'),'clean_homepage_url_count':len(paths),'clean_homepage_urls':paths})
+
+          remaining=(query('''SELECT COUNT(*) AS n FROM campaign_leads WHERE campaign_id=? AND status='Ready for Validation' AND qualified=0 AND qualification_reason='working_set_ready_for_validation' ''',['lawyers-us']) or [{'n':0}])[0]['n']
+          payload={
+              'campaign_id':'lawyers-us','mode':'manual_clean_homepage_urls_only','new_ready_count':remaining,'batch_size':len(out),
+              'selection_rule':'new production Ready for Validation only; 20 sequential leads',
+              'urls_are':'all deduped same-domain page paths collected from rendered homepage; obvious asset/file targets removed only',
+              'important':'No scoring, hints, categorization, ranking, service classification, or truncation. Agent 2 judges architecture manually from these clean URLs; live-check only ambiguous/zero/generic evidence.',
+              'leads':out,
+          }
+          Path('agents/validation next clean URL batch.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          per_dir=Path('agents/validation next clean URL leads'); per_dir.mkdir(parents=True,exist_ok=True)
+          for old in per_dir.glob('*.json'): old.unlink()
+          for i,lead in enumerate(out,1):
+              one={'campaign_id':'lawyers-us','mode':'manual_clean_homepage_urls_only','position':i,**lead}
+              (per_dir/f'{i:02d}.json').write_text(json.dumps(one,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print(json.dumps({'new_ready_count':remaining,'batch_size':len(out),'total_clean_urls':sum(x['clean_homepage_url_count'] for x in out)},indent=2))
+          PY
+
+      - name: Commit audit receipt and refreshed clean URL batch
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "agents/validation audit apply receipt.json"
+          git add "agents/validation audit apply receipt.json" \
+                  "agents/validation next clean URL batch.json" \
+                  "agents/validation next clean URL leads"
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Apply manual validation audit decisions"
+          git commit -m "Apply audit decisions and refresh next clean URL batch"
           git push
