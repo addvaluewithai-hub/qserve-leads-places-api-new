@@ -2,17 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 6,
-  "lead_id": "ChIJGzYRKYMfTIYRdOM0RVPaY1s",
-  "name": "Bretton Gerard Law",
-  "domain": "brettongerardlaw.com",
-  "website": "http://www.brettongerardlaw.com/",
-  "clean_homepage_url_count": 6,
-  "clean_homepage_urls": [
-    "/",
-    "/about",
-    "/contact",
-    "/practice-areas",
-    "/privacy-policy",
-    "/success-stories"
-  ]
+  "lead_id": "ChIJwTZ4uJaZToYRwcoH5aQov7E",
+  "name": "The Law office of B.D. Howard Jr. - Welcome",
+  "domain": "bdhowardjr.com",
+  "website": "http://www.bdhowardjr.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

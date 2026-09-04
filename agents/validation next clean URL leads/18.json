@@ -2,23 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 18,
-  "lead_id": "ChIJk9gYV86eToYRpEQbpBOmmWU",
-  "name": "Traffic Ticket Attorney In Dallas|Criminal Defense Lawyer|Grant St Julian III",
-  "domain": "trafficticketattorneydallas.com",
-  "website": "https://trafficticketattorneydallas.com/",
-  "clean_homepage_url_count": 12,
-  "clean_homepage_urls": [
-    "/",
-    "/2017/08",
-    "/can-a-bail-bondsman-reinstate-someones-probation-or-can-a-lawyer",
-    "/does-an-inmate-have-to-wait-to-be-sentenced-to-have-a-juvenile-parole-hold-lifted-2",
-    "/does-the-fbi-live-scan-show-offenses-from-all-states-or-just-at-the-federal-level-2",
-    "/drug-paraphernalia-citation-in-sealy-tx-2",
-    "/how-can-i-get-my-complete-arrest-from-tom-green-county-san-angelo-to-help-me-get-exonerated-on-an-aggravated-sexual-assault-charge",
-    "/how-long-will-my-husband-have-to-do-in-jail-on-a-12-month-state-jail-sentence-and-four-year-tdcj-sentence-running-concurrent",
-    "/q-a",
-    "/what-happens-if-i-dont-do-the-cec-program-for-shoplifting-dxm-at-wal-mart",
-    "/what-should-i-expect",
-    "/will-it-show-up-on-a-background-check-2"
-  ]
+  "lead_id": "ChIJlWfvDFycToYR1pPcetxbx44",
+  "name": "One moment, please...",
+  "domain": "cantucantulaw.com",
+  "website": "https://cantucantulaw.com/english/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
