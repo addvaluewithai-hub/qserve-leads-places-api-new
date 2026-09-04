@@ -1,0 +1,104 @@
+name: Export remaining 80 validation leads
+
+on:
+  push:
+    paths:
+      - ".github/workflows/validation-runner-export-remaining-80.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  export-batches:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export four compact 20-lead batches
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.request
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          account=os.environ['CLOUDFLARE_ACCOUNT_ID']; token=os.environ['CLOUDFLARE_API_TOKEN']; database=os.environ['D1_DATABASE_ID']
+          endpoint=f'https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{database}/query'
+          def query(sql, params=None):
+              req=urllib.request.Request(endpoint,data=json.dumps({'sql':sql,'params':params or []}).encode(),headers={'Authorization':f'Bearer {token}','Content-Type':'application/json'},method='POST')
+              with urllib.request.urlopen(req,timeout=30) as response: body=json.load(response)
+              if not body.get('success'): raise SystemExit(json.dumps(body))
+              result=body.get('result') or []
+              return (result[0].get('results') or []) if result else []
+
+          leads=query('''
+            SELECT l.id,l.name,l.website,d.website_domain
+            FROM campaign_leads cl
+            JOIN leads l ON l.id=cl.lead_id
+            LEFT JOIN lead_domains d ON d.lead_id=cl.lead_id
+            WHERE cl.campaign_id=? AND cl.status='Ready for Validation' AND cl.qualified=0
+              AND cl.qualification_reason='working_set_ready_for_validation'
+            ORDER BY cl.quality_score DESC,cl.first_seen_at ASC,cl.lead_id ASC
+            LIMIT 80
+          ''',['lawyers-us'])
+
+          service_tokens=set('criminal defense dui dwi drug drugs assault theft burglary sex domestic violence traffic reckless speeding injury injuries accident accidents car truck motorcycle wrongful death malpractice workers comp slip fall premises immigration family divorce custody child support adoption bankruptcy estate probate will trust business corporate employment disability veteran maritime product liability expungement civil rights discrimination harassment wage foreclosure garnishment tax lemon dealer fraud nursing birth pedestrian rideshare uber lyft dog bite litigation securities mergers acquisitions intellectual property homicide appeals felony misdemeanor'.split())
+          service_phrases={'civil rights','social security','workers comp','medical malpractice','personal injury','wrongful death','real estate','estate planning','family law','criminal defense','product liability','premises liability','dog bite','birth injury','white collar'}
+          hubs={'practice-areas','practice-area','areas-of-practice','services','service','what-we-do','case-types','legal-services','our-practice','our-services'}
+          noise={'blog','blogs','news','article','articles','resource','resources','testimonial','testimonials','review','reviews','case-results','case-result','case-successes','case-success','case-victories','results','successes','about','about-us','contact','contact-us','team','attorneys','attorney','lawyers','staff','locations','location','offices','office','privacy','terms','sitemap','charity','fees','careers','career','events','faqs','faq','appointment','appointments','free-resources','free-evaluation','areas-we-serve','client-portal-guide'}
+          asset_exts={'.png','.jpg','.jpeg','.gif','.svg','.webp','.avif','.ico','.pdf','.css','.js','.map','.xml','.txt','.zip','.mp3','.mp4','.webm','.woff','.woff2','.ttf','.eot'}
+          generic={'','learn more','read more','more','click here','view more','details','home','skip to content','skip to main content'}
+          date_path=re.compile(r'^/\d{4}/\d{1,2}/(?:\d{1,2}/)?'); token_re=re.compile(r'[a-z0-9]+')
+
+          def path_of(url):
+              raw=urlparse(url or '').path or '/'; parts=[p for p in raw.split('/') if p]; return '/'+'/'.join(parts) if parts else '/'
+          def anchor_of(v):
+              t=' '.join(str(v or '').split()); return '' if t.lower() in generic else t[:80]
+          def is_asset(p):
+              low=p.lower(); return '/wp-content/uploads/' in low or '/wp-includes/' in low or '/assets/images/' in low or Path(low).suffix in asset_exts
+          def is_noise(p):
+              low=p.lower();
+              if date_path.match(low): return True
+              parts=[x for x in low.strip('/').split('/') if x]
+              return any(x in noise or 'case-result' in x or 'case-success' in x or 'case-victor' in x for x in parts)
+          def score(p,a):
+              parts=[x for x in p.lower().strip('/').split('/') if x]
+              norm=p.lower().replace('-',' ').replace('_',' ')+' '+a.lower(); tokens=set(token_re.findall(norm))
+              sh=len(tokens & service_tokens); ph=sum(1 for x in service_phrases if x in norm); hh=len(set(parts)&hubs)
+              if sh==0 and ph==0 and hh==0: return 0
+              return sh*3+ph*4+hh*5+(1 if len(parts)>=2 else 0)+(1 if a else 0)
+
+          compact=[]
+          for lead in leads:
+              rows=query('SELECT url,anchor_text FROM homepage_link_evidence WHERE campaign_id=? AND lead_id=? ORDER BY url',['lawyers-us',lead['id']])
+              seen=set(); page_rows=[]; signals=[]
+              for row in rows:
+                  p=path_of(row.get('url')); a=anchor_of(row.get('anchor_text'))
+                  if p in seen or is_asset(p): continue
+                  seen.add(p); page_rows.append((p,a))
+                  if is_noise(p): continue
+                  s=score(p,a)
+                  if s>0: signals.append((s,p,a))
+              signals.sort(key=lambda x:(-x[0],x[1])); n=len(signals)
+              hint='crawl_review' if not page_rows else ('likely_mature' if n>=4 else ('candidate_deep_check' if n<=1 else 'review_links'))
+              compact.append({'id':lead['id'],'name':lead['name'],'domain':lead['website_domain'],'website':lead['website'],'page_links':len(page_rows),'signals':n,'hint':hint,'links':[f'{p} | {a}' if a else p for _,p,a in signals[:12]]})
+
+          outdir=Path('agents/validation batches'); outdir.mkdir(parents=True,exist_ok=True)
+          for i in range(4):
+              subset=compact[i*20:(i+1)*20]
+              payload={'campaign_id':'lawyers-us','batch_number':i+2,'batch_size':len(subset),'format':"compact Crawl4AI first-pass; links are 'path | anchor'",'leads':subset}
+              (outdir/f'new-batch-{i+2:02d}.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print(json.dumps({'exported':len(compact),'batches':[len(compact[i*20:(i+1)*20]) for i in range(4)]},indent=2))
+          PY
+      - name: Commit exported batches
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "agents/validation batches/new-batch-02.json" "agents/validation batches/new-batch-03.json" "agents/validation batches/new-batch-04.json" "agents/validation batches/new-batch-05.json"
+          git commit -m "Export next 80 validation leads in 20-lead batches"
+          git push
