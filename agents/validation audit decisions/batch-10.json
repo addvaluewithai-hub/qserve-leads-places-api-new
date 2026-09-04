@@ -1,0 +1,228 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 10,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-grossman-law",
+      "lead_id": "ChIJm1MpQL8gTIYRd7iR1GQmiFo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "Full clean homepage URL review is entirely plaintiff injury/accident work: car, motorcycle and truck accidents, dram-shop claims, fatal work accidents, non-subscriber/workers-compensation matters and wrongful death. These are variations inside one injury client journey rather than materially different main legal conversations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-alan-perez-law",
+      "lead_id": "ChIJmULPvRZsOkgRiaCaLRArkDo",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "The clean homepage URL set contains only homepage/about/contact/FAQ destinations. Live verification on the official site shows materially different offered matters consolidated into the general About/Practice presentation: Criminal Defense, Federal Charges, Juvenile Cases, Non-contested Divorces, Attorney General Hearings and Name Changes. No dedicated divorce/family client destination surfaced in the clean homepage URLs or site-restricted verification. Alan De Jesus Perez founded the firm and is the decision maker. The only sufficiently verified public firm email found is generic info@alanperezlaw.com; no direct public individual email for Alan was verified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Non-contested Divorce",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official Law Office of Alan D. Perez About/Practice page explicitly lists Non-contested Divorces alongside Criminal Defense, Federal Charges, Juvenile Cases, Attorney General Hearings and Name Changes.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live site + site-restricted search",
+          "notes": "The public site exposes only homepage, About, Contact and FAQ destinations in the homepage link architecture. Site-restricted verification surfaced the divorce offering on the shared About/Practice page but no focused divorce service destination."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Alan De Jesus Perez",
+          "role": "Founder / Attorney / decision maker",
+          "email": "info@alanperezlaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Law Office of Alan D. Perez About page states that Alan De Jesus Perez founded the firm; official Contact page publishes info@alanperezlaw.com.",
+          "notes": "Generic firm inbox only. No direct public individual email for Alan De Jesus Perez was sufficiently verified."
+        }
+      ]
+    },
+    {
+      "slug": "03-rogers-legal-dallas",
+      "lead_id": "ChIJpdnsiBifToYRYQoQCIus18w",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The homepage crawl exposed only the root, so current public evidence was checked live. The exact Dallas firm identity is Phillip S. Rogers / Rogers Law Firm at the matching 214-219-9291 phone and Dallas address; current lawyer-directory evidence identifies the practice as Personal Injury. No reliable evidence established multiple materially different main legal client journeys, so this is not a campaign architecture fit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-tyson-law-firm",
+      "lead_id": "ChIJ48gUH2WZToYRhCKYSNOnzOA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean homepage URL set directly exposes separate Criminal Defense, Federal Defense, Family Law and Personal Injury destinations, with a deep Personal Injury hierarchy. Materially different main client journeys are already separated, so the site has made the architectural leap this campaign sells.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-law-office-of-ify-ononogbu",
+      "lead_id": "ChIJe8DWrJ2BToYRz1e9usz3acI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose separate Contract Law, Family Law, Immigration and Personal Injury destinations. These are materially different client journeys and the site already separates them into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-andre-the-lawyer",
+      "lead_id": "ChIJme2YeAibToYRZSnEtf8Rwo4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are plaintiff Personal Injury matters such as vehicle crashes, construction accidents, dog bites, rideshare accidents, sexual-assault injury claims, premises/slip-and-fall, swimming-pool accidents and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-topdog-law",
+      "lead_id": "ChIJr-HHFh2bToYRW1GtldSHtMA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage URL set is plaintiff injury work: birth injury, car/truck accidents, medical malpractice, sexual abuse, slip-and-fall, workers' compensation and wrongful death, repeated across locations. These are variations inside one injury/compensation client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-epstein-family-law",
+      "lead_id": "ChIJDUY1nn-fToYRV3Kv_S5A6lQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "All substantive service URLs are Family Law matters including divorce, custody, child support, alimony, property division, fathers/grandparents rights, modifications and marital agreements. This is one family-law client journey despite the deep service architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-misteli-law",
+      "lead_id": "ChIJV-Db7rGfToYRa9_ykoI7Vm4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes dedicated Estate Planning, Probate and Real Estate destinations. Real Estate is materially different from the estate-planning/probate journey and is already separated, so the site demonstrates separate client-journey architecture across its offered areas.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-calabrese-budner",
+      "lead_id": "ChIJV6fxr0OeToYRG7v1f8luu6Q",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "The full clean homepage architecture is Family Law: divorce, custody, adoption, reproductive technology/surrogacy, paternity, marital agreements and post-divorce matters. These are variations inside one family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-onda-family-law",
+      "lead_id": "ChIJZfjL_EKeToYRS6g78X9ZjdY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "The complete clean URL set is centered on Family Law: divorce, custody, adoption, family violence, marital agreements, mediation/arbitration, property division and family-law appellate work. Appellate pages are procedural extensions of the same family-law matters, not a separate main client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-lindstrom-law",
+      "lead_id": "ChIJ__9vH9gjTIYRcB7_dxUfeX4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs directly expose separate Business Law and Estate Planning destinations. Those materially different main client conversations are already separated into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-dallas-dwi-lawyer-org",
+      "lead_id": "ChIJeW_vDUOeToYR3PZNL_SIPRY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "The clean homepage URLs are DWI/criminal-defense geography and process pages plus probation-violation information. This is one criminal-defense client journey rather than multiple materially different practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-arnold-spencer-law",
+      "lead_id": "ChIJj4p4e6KfToYR9bM-UBN7lUM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_white_collar_criminal_journey",
+      "campaign_notes": "All substantive clean URLs concern federal/white-collar criminal defense and closely related compliance/asset-forfeiture matters: fraud, money laundering, healthcare fraud, securities fraud, tax fraud and seizures. This is one white-collar/federal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-clark-law-group",
+      "lead_id": "ChIJlU70pSqfToYRNKwZgbARaR4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL list shows deep dedicated Family Law/Divorce architecture plus a separate Personal Injury hierarchy. These are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-recovery-law-group",
+      "lead_id": "ChIJx7pn6sMgTIYRFEYOWNlehjQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_bankruptcy_journey",
+      "campaign_notes": "The clean homepage URL set is bankruptcy/debt-relief only: Chapter 7/13, automatic stay, foreclosure, credit-card debt, wage garnishment, medical bills and rebuilding credit. This is one bankruptcy client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-marchand-law",
+      "lead_id": "ChIJyza7pImfToYRxJFLT_ByvX4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs expose dedicated Business Law, Healthcare/Medicaid Fraud, Personal Injury and Whistleblower Cases destinations, with a deep Personal Injury hierarchy. Multiple materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-chad-ruback-appellate",
+      "lead_id": "ChIJSU5c10SeToYRHz4QfwjeyA0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_appellate_journey",
+      "campaign_notes": "The clean homepage URL set is appellate-law only: appeal timing, briefing, results, reviews and appellate educational material. Media interviews on unrelated legal topics are not offered-service evidence. This is one appellate client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-medlin-law-firm",
+      "lead_id": "ChIJdWovxQyZToYR419AkcTZzZo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_criminal_journey",
+      "campaign_notes": "The homepage crawl was blocked/empty, so the official live site was checked. Current official copy states that The Medlin Law Firm focuses entirely on criminal defense and no other type of law, including DWI, drugs, assault/domestic violence, theft, weapons, probation violations and violent crimes. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-nolan-ryan-law",
+      "lead_id": "ChIJm_IatG-ZToYR2KcDZR-fdYY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are plaintiff Personal Injury/vehicle-accident work: car, rideshare, motorcycle and truck accidents. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
