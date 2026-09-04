@@ -1,0 +1,70 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJSQ0Jz9ENIocRzoHnkvA971Q",
+  "firm": "New Mexico Traffic Ticket Lawyer | Albuquerque Speeding Violation Attorney | Glenn Smith Valdez",
+  "domain": "newmexicotrafficticket.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: the firm's traffic-law Services hub links the major offered client needs to dedicated destinations, including Traffic Courts, Commercial Drivers, Warrants & Suspensions, marijuana/drug-paraphernalia tickets and careless/reckless driving. The site also links criminal-defense clients to a separate dedicated criminal-defense website.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The Services page explicitly offers representation for New Mexico traffic-code violations, municipal violations, warrants, license suspensions and more serious criminal offenses. Major traffic client journeys have dedicated pages/sections linked from the live Services hub. The footer directs broader Criminal Defense, Drug Offenses, Domestic Violence and Violent Crimes to a separate dedicated Glenn Smith Valdez criminal-defense website. This architecture already separates materially different client conversations, so the lead fails the service-page gap gate. No decision-maker/email research was needed for qualification, although the owner identity and a direct public professional email are publicly visible from authoritative sources.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Commercial Drivers",
+      "status": "Disqualified",
+      "service_offered_evidence": "Commercial Drivers is explicitly listed in the primary navigation and Services hub as a separate client need.",
+      "dedicated_page_url": "https://www.newmexicotrafficticket.com/commercial-drivers.html",
+      "validation_method": "live-site Services navigation inspection",
+      "notes": "Dedicated destination is linked directly from the Services hub."
+    },
+    {
+      "service_name": "Warrants & Suspensions",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Services page explicitly states the firm handles warrants, license suspensions, license reinstatements and clearances and links a focused Warrants & Suspensions destination.",
+      "dedicated_page_url": "https://www.newmexicotrafficticket.com/warrants-suspensions.html",
+      "validation_method": "live-site Services hub + linked destination inspection",
+      "notes": "This is a materially different driver problem and it already has its own focused destination."
+    },
+    {
+      "service_name": "Traffic Courts",
+      "status": "Disqualified",
+      "service_offered_evidence": "Traffic Courts is a top-level navigation item and the Services hub links court-specific traffic-ticket destinations throughout New Mexico.",
+      "dedicated_page_url": "https://www.newmexicotrafficticket.com/traffic-courts.html",
+      "validation_method": "live-site Services/navigation inspection",
+      "notes": "Dedicated hub exists with multiple court/location-specific subpages."
+    },
+    {
+      "service_name": "Marijuana and Drug Paraphernalia Tickets",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Services hub explicitly lists Marijuana and Drug Paraphernalia Tickets in New Mexico as its own linked service topic.",
+      "dedicated_page_url": "https://www.newmexicotrafficticket.com/marijuana-drug-paraphernalia-tickets-new-mexico.html",
+      "validation_method": "live-site Services hub inspection",
+      "notes": "Separate focused destination is present."
+    },
+    {
+      "service_name": "Careless / Reckless Driving",
+      "status": "Disqualified",
+      "service_offered_evidence": "The Services hub explicitly lists Careless Driving and Reckless Driving in New Mexico and links it as a dedicated topic.",
+      "dedicated_page_url": "https://www.newmexicotrafficticket.com/careless-driving-reckless-driving-new-mexico.html",
+      "validation_method": "live-site Services hub inspection",
+      "notes": "Dedicated focused destination is present."
+    },
+    {
+      "service_name": "Criminal Defense",
+      "status": "Disqualified",
+      "service_offered_evidence": "The traffic site explicitly says the firm handles more serious criminal offenses/matters and its footer links 'Albuquerque Criminal Lawyer Glenn Smith Valdez website' for Criminal Defense, Drug Offenses, Domestic Violence & Violent Crimes.",
+      "dedicated_page_url": "https://www.nmcriminaldefense.com/",
+      "validation_method": "live-site Services text + footer destination review",
+      "notes": "Although this is a separate domain rather than an internal page, it demonstrates that the firm already separates the broader criminal-defense client conversation from the traffic-ticket website; do not pitch a missing criminal-defense experience here."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.newmexicotrafficticket.com/",
+    "https://www.newmexicotrafficticket.com/services.html",
+    "https://www.newmexicotrafficticket.com/contact-us.html",
+    "https://www.newmexicotrafficticket.com/traffic-courts.html",
+    "https://www.newmexicotrafficticket.com/albuquerque-metro-court-warrants.html",
+    "https://www.nmcriminaldefense.com/"
+  ]
+}
