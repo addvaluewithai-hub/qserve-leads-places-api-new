@@ -89,7 +89,22 @@ jobs:
           }
           path=Path(f'agents/validation audit batch {batch:02d} clean urls.json')
           path.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-          print(json.dumps({'batch':batch,'leads':len(out),'total_clean_urls':sum(x['clean_homepage_url_count'] for x in out)},indent=2))
+
+          per_dir=Path(f'agents/validation audit batch {batch:02d} leads')
+          per_dir.mkdir(parents=True,exist_ok=True)
+          for old in per_dir.glob('*.json'):
+              old.unlink()
+          for i,lead in enumerate(out,1):
+              one={
+                  'campaign_id':'lawyers-us',
+                  'audit':'manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation',
+                  'batch_number':batch,
+                  'position':i,
+                  **lead,
+              }
+              (per_dir/f'{i:02d}.json').write_text(json.dumps(one,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+
+          print(json.dumps({'batch':batch,'leads':len(out),'total_clean_urls':sum(x['clean_homepage_url_count'] for x in out),'per_lead_files':len(out)},indent=2))
           PY
       - name: Commit audit batch
         shell: bash
@@ -98,6 +113,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           batch=$(python3 -c "import json; print(int(json.load(open('agents/validation audit request.json'))['batch_number']))")
           file=$(printf 'agents/validation audit batch %02d clean urls.json' "$batch")
-          git add "$file"
+          dir=$(printf 'agents/validation audit batch %02d leads' "$batch")
+          git add "$file" "$dir"
+          if git diff --cached --quiet; then
+            echo "No audit batch changes."
+            exit 0
+          fi
           git commit -m "Export clean URL audit batch $(printf '%02d' "$batch")"
           git push
