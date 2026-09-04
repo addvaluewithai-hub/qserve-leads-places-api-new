@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJSQ0Jz9ENIocRzoHnkvA971Q",
-    "name": "New Mexico Traffic Ticket Lawyer | Albuquerque Speeding Violation Attorney | Glenn Smith Valdez",
-    "website": "https://www.newmexicotrafficticket.com/",
+    "id": "ChIJNbQeoNZPmogR75WqC5fKbSo",
+    "name": "Long &amp; Long Injury Attorneys | Serving Alabama",
+    "website": "https://longandlong.com/?utm_source=gmb&utm_medium=organic&utm_campaign=mobile-gmb",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:09",
+    "first_seen_at": "2026-09-02 11:12:10",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "newmexicotrafficticket.com"
+    "website_domain": "longandlong.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
