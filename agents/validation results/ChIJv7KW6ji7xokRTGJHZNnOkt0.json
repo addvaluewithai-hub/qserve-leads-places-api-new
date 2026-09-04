@@ -1,0 +1,69 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJv7KW6ji7xokRTGJHZNnOkt0",
+  "firm": "Pennsylvania Lemon Law | Free Help & Info for PA Drivers | 1 800 LEMON LAW",
+  "domain": "lemonlaw.com",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "Confirmed meaningful service-page gap for Dealer Fraud: Kimmel & Silverman explicitly states that it handles Dealer Fraud and Spot Delivery cases, but the current LemonLaw.com homepage/navigation and current sitemap contain no dedicated Dealer Fraud service destination. Dealer-fraud material is distributed across disclaimer/resource/blog content instead. Craig Thor Kimmel is publicly identified by the firm's own site as Managing Partner and founding partner, and the official disclaimer publishes his direct professional email, ckimmel@lemonlaw.com.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. LemonLaw.com has a very deep dedicated architecture for Lemon Law itself (state pages, manufacturer pages, Pennsylvania Lemon Law, federal warranty/Magnuson-Moss content), so Lemon Law is not the opportunity. The stronger structural gap is Dealer Fraud. The firm's official disclaimer explicitly says Kimmel & Silverman handles Dealer Fraud, Spot Delivery and commercial claims. Dealer-fraud resources were found in the car-buying quiz, blog/press material and disclaimer, but the current sitemap (last updated 2026-08-28) contains no dedicated Dealer Fraud service page. That creates a materially different client conversation: a consumer alleging dealership deception, financing/spot-delivery pressure or misrepresentation has different questions and next steps from a defective-vehicle/warranty client. Craig Thor Kimmel is the Managing Partner/founding partner and is therefore a realistic decision maker for website/marketing work. His direct public professional email is published on the firm's official disclaimer page. Outreach draft saved with the lead.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Dealer Fraud",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The firm's official disclaimer states that Kimmel & Silverman handles Dealer Fraud cases and also helps clients with spot delivery and commercial claims. The site also publishes dealer-fraud/spot-delivery educational and case material, confirming this is real client work rather than an inferred attorney capability.",
+      "dedicated_page_url": null,
+      "validation_method": "live official homepage/navigation review + current official sitemap inspection + disclaimer/resources/blog review + domain-restricted discovery",
+      "notes": "No dedicated Dealer Fraud service destination was found in the current sitemap or service/navigation architecture. Dealer Fraud appears in the disclaimer and educational/blog/resource content instead. This is a meaningful main consumer-protection service because it involves dealership deception/unfair trade practices and a materially different client journey from Lemon Law or warranty-defect claims."
+    },
+    {
+      "service_name": "Lemon Law",
+      "status": "Disqualified",
+      "service_offered_evidence": "Lemon Law is the site's core service and has extensive dedicated architecture including state-specific and manufacturer-specific destinations, with a substantial Pennsylvania Lemon Law page for this lead.",
+      "dedicated_page_url": "https://www.lemonlaw.com/pennsylvania/",
+      "validation_method": "live homepage/navigation + Pennsylvania page + current sitemap inspection",
+      "notes": "Not a gap. The site's strongest existing architecture is Lemon Law itself."
+    },
+    {
+      "service_name": "Breach of Warranty / Magnuson-Moss",
+      "status": "Disqualified",
+      "service_offered_evidence": "The firm repeatedly and explicitly offers Breach of Warranty / Federal Magnuson-Moss help throughout its state Lemon Law pages and maintains focused Magnuson-Moss educational content linked from the core Lemon Law journey.",
+      "dedicated_page_url": "https://www.lemonlaw.com/blog/the-magnuson-moss-warranty-act-a-hidden-gem-most-consumers-do-not-know-about/",
+      "validation_method": "live Pennsylvania page + homepage + focused Magnuson-Moss content inspection",
+      "notes": "Not selected as the gap because federal warranty remedies are already integrated deeply into the Lemon Law client journey and have focused content. Dealer Fraud is the clearer separate conversation."
+    }
+  ],
+  "contacts": [
+    {
+      "id": "lawyers-us:ChIJv7KW6ji7xokRTGJHZNnOkt0:ckimmel@lemonlaw.com",
+      "person_name": "Craig Thor Kimmel",
+      "role": "Managing Partner / Founding Partner",
+      "email": "ckimmel@lemonlaw.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "https://www.lemonlaw.com/disclaimer/",
+      "notes": "The firm's official disclaimer identifies Craig Thor Kimmel as Managing Partner and publishes ckimmel@lemonlaw.com for questions/comments/suggestions regarding the website. The official attorney/about content also identifies him as a founding partner/principal."
+    }
+  ],
+  "outreach_draft": {
+    "selected_service": "Dealer Fraud",
+    "decision_maker": "Craig Thor Kimmel",
+    "email": "ckimmel@lemonlaw.com",
+    "subject": "A thought on your Dealer Fraud pages",
+    "body": "Craig,\n\nI noticed LemonLaw.com has a really deep structure for Lemon Law—state-by-state and manufacturer-by-manufacturer—but Dealer Fraud, which Kimmel & Silverman says it handles, is still mostly represented through articles and resources rather than its own focused client page.\n\nThat feels like a different conversation from a defective-vehicle or warranty claim. Someone dealing with spot delivery, financing pressure, or dealership misrepresentation is arriving with different questions and needs a clearer path.\n\nA dedicated Dealer Fraud page could:\n- speak directly to that buyer’s situation\n- give Google a focused page to crawl and index\n- give AI tools clearer context around that part of the firm’s work\n\nYou already have useful dealer-fraud material on the site, so I’m using that as the first mockup example.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  },
+  "source_urls_checked": [
+    "https://www.lemonlaw.com/",
+    "https://www.lemonlaw.com/pennsylvania/",
+    "https://www.lemonlaw.com/about/",
+    "https://www.lemonlaw.com/about/our-attorneys/",
+    "https://www.lemonlaw.com/about/why-choose-kimmel-silverman/",
+    "https://www.lemonlaw.com/disclaimer/",
+    "https://www.lemonlaw.com/sitemap/",
+    "https://www.lemonlaw.com/carbuyingquiz-results/",
+    "https://www.lemonlaw.com/blog/recent-repurchases-refunds/",
+    "https://www.lemonlaw.com/blog/the-magnuson-moss-warranty-act-a-hidden-gem-most-consumers-do-not-know-about/"
+  ]
+}
