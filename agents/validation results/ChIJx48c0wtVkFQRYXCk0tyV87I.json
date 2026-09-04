@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJx48c0wtVkFQRYXCk0tyV87I",
+  "firm": "Garguile DUI & Traffic Lawyers",
+  "domain": "mrticketfixer.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Garguile DUI & Traffic Lawyers already has mature separate-service architecture throughout its driving-defense practice. The live navigation separates Traffic Tickets, DUI, Criminal Violations, Non-Moving Violations, CDL/Driving Jobs, Teen Drivers and Expungements, with many dedicated subpages for speeding, negligent driving, HOV violations, DUI process/penalties, reckless driving, racing, hit and run and more. The firm already understands and applies the separate-page concept, so it is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The firm is intentionally narrow in scope, but within that scope it uses a deep service hierarchy and focused pages extensively. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current navigation exposes dedicated Traffic Tickets, DUI, Criminal Violations, Non-Moving Violations, CDL and Teen Driver destinations with numerous nested service pages.",
+      "dedicated_page_url": "https://mrticketfixer.com/",
+      "validation_method": "live homepage/navigation + dedicated DUI content + architecture-maturity gate",
+      "notes": "Deep separate-page architecture within the firm's core niche. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://mrticketfixer.com/",
+    "https://mrticketfixer.com/criminal-defense/dui-defense/how-to-beat-a-dui/",
+    "https://mrticketfixer.com/attorney/antonio-garguile/"
+  ]
+}
