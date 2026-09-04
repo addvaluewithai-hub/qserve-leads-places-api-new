@@ -1,0 +1,27 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJP_tnCkJrYogR39LsbiA93c0",
+  "firm": "Dezenberg & Smith, Attorneys At Law",
+  "domain": "dezlaw.com",
+  "final_status": "Not Relevant",
+  "qualified": false,
+  "qualification_reason": "Dezenberg & Smith explicitly states that bankruptcy is all that the firm does. Chapter 7, Chapter 13, medical debt, credit-card debt, foreclosure prevention, repossession prevention and wage-garnishment relief are all part of the same debt-relief client journey rather than materially different main legal practices sharing one general experience. The firm is therefore not relevant to this multi-service separate-client-journey campaign.",
+  "campaign_notes": "Live-site review completed under the corrected ICP. The attorneys page says the firm limits its practice to Consumer Bankruptcy Law only, and the homepage repeats 'Bankruptcy Is All That We Do.' The site also contains multiple bankruptcy-specific pages, but the primary reason for exclusion is that it does not serve several materially different main legal client conversations. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Practice Architecture",
+      "status": "Not Relevant",
+      "service_offered_evidence": "The official site states that the firm limits its practice to Consumer Bankruptcy Law and that bankruptcy is all it does.",
+      "dedicated_page_url": "https://dezlaw.com/",
+      "validation_method": "live homepage + attorneys page + bankruptcy navigation + ICP gate",
+      "notes": "Single primary legal conversation: consumer bankruptcy/debt relief. Not a multi-service architecture opportunity."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://dezlaw.com/",
+    "https://dezlaw.com/attorneys/",
+    "https://dezlaw.com/bankruptcy/bankruptcy-faqs/"
+  ]
+}
