@@ -1,0 +1,73 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJNbQeoNZPmogR75WqC5fKbSo",
+  "firm": "Long & Long Injury Attorneys | Serving Alabama",
+  "domain": "longandlong.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: Long & Long has an extensive service-specific architecture with dedicated pages for its major advertised case types, including car/truck/motorcycle accidents, slip and fall, medical malpractice, workers' compensation, wrongful death and insurance bad faith.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The firm presents a broad personal-injury case-type inventory, but the major services are not forced to share a single general page. Dedicated service pages were independently verified for Car Accidents, Slip and Fall, Medical Malpractice, Workers' Compensation, Wrongful Death and Insurance Bad Faith, with additional location/service pages across the site. This is the opposite of the structural gap targeted by the campaign. Decision-maker/email research was skipped because the service-page validation gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Car Accidents",
+      "status": "Disqualified",
+      "service_offered_evidence": "Car Accidents is repeatedly listed as a core case type and has a dedicated Mobile car-accident service page.",
+      "dedicated_page_url": "https://longandlong.com/practice-areas/motor-vehicle-accidents/car-accidents/",
+      "validation_method": "live-site service architecture + dedicated-page inspection",
+      "notes": "Substantial dedicated client journey exists."
+    },
+    {
+      "service_name": "Slip and Fall",
+      "status": "Disqualified",
+      "service_offered_evidence": "Slip and Fall is explicitly listed among the firm's case types and has a dedicated Mobile service page.",
+      "dedicated_page_url": "https://longandlong.com/practice-areas/slip-fall/",
+      "validation_method": "live-site case-type inventory + dedicated-page inspection",
+      "notes": "Dedicated page exists with service-specific client messaging and process."
+    },
+    {
+      "service_name": "Medical Malpractice",
+      "status": "Disqualified",
+      "service_offered_evidence": "Medical Malpractice is explicitly offered and has a substantial dedicated Mobile Medical Malpractice Lawyer page.",
+      "dedicated_page_url": "https://longandlong.com/practice-areas/medical-malpractice/",
+      "validation_method": "live-site case-type inventory + dedicated-page inspection",
+      "notes": "Dedicated page includes malpractice-specific eligibility, liability, process and CTA content."
+    },
+    {
+      "service_name": "Workers' Compensation",
+      "status": "Disqualified",
+      "service_offered_evidence": "Workers' Compensation is explicitly listed among major case types and has its own dedicated Mobile page.",
+      "dedicated_page_url": "https://longandlong.com/practice-areas/workers-compensation/",
+      "validation_method": "live-site case-type inventory + dedicated-page inspection",
+      "notes": "Substantial dedicated workers-comp client journey exists."
+    },
+    {
+      "service_name": "Wrongful Death",
+      "status": "Disqualified",
+      "service_offered_evidence": "Wrongful Death is a recurring core case type and dedicated wrongful-death pages exist in the firm's service architecture.",
+      "dedicated_page_url": "https://longandlong.com/practice-areas/wrongful-death-lawyer-gulf-shores/",
+      "validation_method": "live-site case-type inventory + dedicated-page inspection",
+      "notes": "Dedicated service destination exists."
+    },
+    {
+      "service_name": "Insurance Bad Faith",
+      "status": "Disqualified",
+      "service_offered_evidence": "Insurance Bad Faith is explicitly listed as a case type and has a dedicated Mobile Insurance Bad Faith Lawyer page.",
+      "dedicated_page_url": "https://longandlong.com/practice-areas/bad-faith-insurance/",
+      "validation_method": "live-site case-type inventory + dedicated-page inspection",
+      "notes": "Dedicated page contains bad-faith-specific claims, proof, damages and client FAQs."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://longandlong.com/",
+    "https://longandlong.com/attorneys/",
+    "https://longandlong.com/attorneys/earle-w-long/",
+    "https://longandlong.com/practice-areas/motor-vehicle-accidents/car-accidents/",
+    "https://longandlong.com/practice-areas/slip-fall/",
+    "https://longandlong.com/practice-areas/medical-malpractice/",
+    "https://longandlong.com/practice-areas/workers-compensation/",
+    "https://longandlong.com/practice-areas/bad-faith-insurance/",
+    "https://longandlong.com/practice-areas/wrongful-death-lawyer-gulf-shores/"
+  ]
+}
