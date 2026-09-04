@@ -1,0 +1,253 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-norcross-law",
+      "lead_id": "ChIJxSx9fgogTIYRqz4jc5kdaSM",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "Complete clean-homepage URL review plus live validation shows Norcross Law offers materially different legal services beyond real estate, including family law, employment/discrimination, probate/estate planning, personal injury, consumer matters and business work, but many of those unrelated client journeys are consolidated on one broad Civil Cases destination. Family Law is explicitly offered there without a reasonable focused destination in the complete homepage-linked architecture. Chad A. Norcross is the principal/solo decision maker, but no qualifying direct public individual email was verified, so the lead is not Qualified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Family Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official Civil Cases page explicitly offers family-law matters including adoption, child support, child custody, divorce, modifications, parental rights and paternity.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The complete homepage-linked URL set exposes one broad Civil Cases destination for many unrelated main legal journeys. Family Law remains inside that shared destination while the overall non-real-estate architecture is consolidated rather than separated into focused service pages."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Chad A. Norcross",
+          "role": "Principal / Solo Attorney",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": false,
+          "evidence_source": "Official Norcross Law site identifies Chad A. Norcross as the principal attorney; no qualifying direct public individual email was verified after the architecture gate.",
+          "notes": "Decision maker established; direct public personal email missing."
+        }
+      ]
+    },
+    {
+      "slug": "02-walters-law-firm",
+      "lead_id": "ChIJ-2km1lO1RIYRinEDrgd2qh4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation resolves the sparse snapshot as a criminal-defense practice covering criminal charges, juvenile defense, expunctions, tickets, probation matters and jail release within one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-richard-gentry-law",
+      "lead_id": "ChIJ-dRd0gu1RIYRG8KMBcJcirs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is criminal-defense focused; assault, drug crimes, DWI, federal charges and sexual-assault defense remain one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-blackburn-betts",
+      "lead_id": "ChIJ70rXOAu1RIYR1T2EDRlkY7g",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The site is criminal-defense focused; DWI, drugs, assault, theft, gun and white-collar charges are subtypes of one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-kevin-bennett-law",
+      "lead_id": "ChIJ9dZlf3S1RIYR6ERMvUQ9Xrg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Despite many focused criminal subpages, the complete architecture remains one criminal-defense journey spanning DWI, assault, drugs, theft, weapons, sex crimes, expunctions and related defense matters.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-chambers-law",
+      "lead_id": "ChIJA9WAWQu1RIYRxnd_XidV-M0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is criminal-defense only, including DWI, drug possession, family violence, theft, weapons, jail release and license consequences within one defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-charles-medearis",
+      "lead_id": "ChIJC2kJf7m1RIYRFSHKlLyavEE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm offers materially different Criminal Defense, Entertainment Law and Personal Injury services and already gives each a focused practice-area destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-coonley-law",
+      "lead_id": "ChIJE2vE2gm1RIYR3Ey7OzXs8Oo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live research resolves the one-link snapshot as a small-business/corporate practice centered on entity formation, contracts, transactions, business purchases/sales, growth, succession and commercial conflict resolution, which is one business-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-smith-vinson",
+      "lead_id": "ChIJF8Rgf3S1RIYRWD4HTVCpZSs",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site offers materially different Criminal Defense and Personal Injury work and separates them into dedicated focused destinations with their own service subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-jessica-bernstein",
+      "lead_id": "ChIJG3X-KHW1RIYRH9eelkvrbWc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation resolves the sparse snapshot as a criminal-defense-only practice, so the firm remains one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-betty-blackwell",
+      "lead_id": "ChIJGbsGlXS1RIYRWHIZhXqXrAA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation shows the firm is focused on criminal defense, including DWI and domestic-violence matters, which remain one criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-sandra-ritz",
+      "lead_id": "ChIJJ0YH8wy1RIYRyRFBMzIiZYg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation resolves the generic homepage evidence as a criminal-defense practice, so there is no materially different multi-service architecture to qualify.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-amini-conant",
+      "lead_id": "ChIJNTemSQy1RIYR_dW8Itt526w",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The complete clean-homepage URL list exposes only one general /services destination despite the current firm explicitly offering materially different practice groups including corporate/commercial transactions, civil and commercial litigation, real-estate transactions/litigation, M&A and trademark/infringement litigation. Official live-site validation confirms Trademark & Infringement Litigation as a current service but no reasonable focused homepage-linked destination for it, demonstrating a broader consolidated service architecture. Managing Partner Neema Amini is a senior decision maker and the official firm profile publicly lists the direct individual email neema@aminiconant.com.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Trademark & Infringement Litigation",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official Neema Amini profile lists Trademark and Infringement Litigation among the firm's practice areas alongside corporate, commercial litigation, M&A and real-estate work.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The complete homepage-linked architecture contains a general /services destination but no focused destination for Trademark & Infringement Litigation. Multiple materially different client journeys are grouped through the same general services experience, so this is a broader consolidated-architecture gap rather than one forgotten secondary URL."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Neema Amini",
+          "role": "Managing Partner",
+          "email": "neema@aminiconant.com",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Current official Amini & Conant attorney profile for Managing Partner Neema Amini publicly lists neema@aminiconant.com.",
+          "notes": "Direct individual email published by the firm; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Trademark & Infringement Litigation",
+        "subject": "A thought on your Trademark & Infringement Litigation page",
+        "body": "Neema, I was looking through Amini & Conant's current site and noticed the firm handles several very different client needs — corporate and commercial work, litigation, real estate, M&A, and trademark/infringement matters — while the website routes those services through the same general Services experience.\n\nFor someone specifically dealing with a trademark or infringement dispute, a focused page could give that client a much clearer path from the first click: what you handle, when to involve counsel, and why your team is relevant to that situation. It also gives Google a more focused service context and makes the firm's offering easier for AI-driven discovery tools to understand.\n\nI picked Trademark & Infringement Litigation as the first mockup because it's materially different from the transactional work and deserves its own client conversation.\n\nI'm putting together a quick mockup to show you what I mean. I'll send it over in the next couple of days.\n\nIf you'd rather I didn't, just let me know."
+      }
+    },
+    {
+      "slug": "14-haney-law-firm",
+      "lead_id": "ChIJOSsgIQ21RIYRW19mUefnFzw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation shows materially different Estate Planning, Probate and Civil Litigation offerings presented as distinct service destinations rather than one consolidated general-services conversation.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-nunis-associates",
+      "lead_id": "ChIJQY5fUQy1RIYRUvhxIJ2sQ6s",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm serves materially different litigation contexts including business litigation, collections, construction defects, consumer protection and real-estate litigation, and already separates those areas into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-bertolino-llp",
+      "lead_id": "ChIJT1L4qaC1RIYR4NQ8NwTiJXM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation shows the practice is centered on professional and occupational license defense across regulated professions, which is one narrow regulatory-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-zachary-bidner",
+      "lead_id": "ChIJUaznH_G1RIYRwabVvnoz5Gw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation resolves the generic practice-area snapshot as criminal defense, so the firm remains one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-cofer-connelly",
+      "lead_id": "ChIJVVX5KHW1RIYR_end32JqTjU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The complete clean URL set demonstrates mature separation of materially different Criminal Defense, Family Law/Divorce and Personal Injury journeys, with dedicated focused destinations and subpages for each.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-will-mitchell-law",
+      "lead_id": "ChIJW7JESAi1RIYReK6pHVWHwkM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm offers materially different Criminal Defense and Personal Injury services and already separates both into dedicated focused destinations with detailed subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-charlie-roadman-law",
+      "lead_id": "ChIJW8106nS1RIYRA5Cq8ZUw_Sc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL architecture is criminal-defense focused; assault, drugs, theft, warrants, DWI, expunctions and jail-release services remain one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
