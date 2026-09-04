@@ -1,0 +1,56 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ__9vxnNfrIkRG-0nDu6T_qk",
+  "firm": "Raleigh Traffic Ticket Lawyer | Cotten Law Firm",
+  "domain": "cottenfirm.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "No meaningful main-service page gap: Cotten Law Firm has substantial dedicated pages for its core advertised practices, including Traffic Tickets, Criminal Defense, DWI and multiple criminal-defense subcategories. Narrower offense topics are covered within strong parent pages and should not be treated as micro-gaps for this campaign.",
+  "campaign_notes": "Live-site validation completed 2026-09-04. The homepage and About page position Jeremy Cotten's firm around Traffic Tickets and Criminal Defense. Dedicated pages were verified for Traffic Tickets and Criminal Defense, plus dedicated DWI and misdemeanor pages. The firm's architecture is already highly service-specific, so there is no strong structural client-conversation gap for a main service. Decision-maker/email research was skipped because the lead failed the service-page validation gate.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Traffic Tickets",
+      "status": "Disqualified",
+      "service_offered_evidence": "The firm prominently offers traffic-ticket defense and the dedicated Traffic Tickets page is focused entirely on Raleigh/Wake County traffic violations, defenses, penalties and client next steps.",
+      "dedicated_page_url": "https://www.cottenfirm.com/criminal-defense/traffic-tickets/",
+      "validation_method": "live-site homepage/about review + dedicated-page inspection",
+      "notes": "Substantial dedicated parent page. It explicitly covers multiple traffic violations and related defenses, so narrower ticket types are micro-subservices rather than valid campaign gaps."
+    },
+    {
+      "service_name": "Criminal Defense",
+      "status": "Disqualified",
+      "service_offered_evidence": "Jeremy Cotten's attorney profile lists Criminal Defense as a practice area, and the firm has a dedicated Criminal Defense page with service-specific messaging, cases handled, defense strategy and CTA.",
+      "dedicated_page_url": "https://www.cottenfirm.com/criminal-defense/",
+      "validation_method": "live-site attorney profile + dedicated-page inspection",
+      "notes": "A reasonable person would clearly consider this a dedicated Criminal Defense service page."
+    },
+    {
+      "service_name": "DWI Defense",
+      "status": "Disqualified",
+      "service_offered_evidence": "The site advertises DWI Defense as a distinct service and maintains multiple dedicated DWI destinations, including first-offense and multiple-DWI pages.",
+      "dedicated_page_url": "https://www.cottenfirm.com/criminal-defense/dui-dwi-charges/first-dwi/",
+      "validation_method": "live-site service-page inspection",
+      "notes": "The DWI architecture is more granular than required for this campaign; it is not a missing main-service destination."
+    },
+    {
+      "service_name": "Misdemeanor Defense",
+      "status": "Disqualified",
+      "service_offered_evidence": "The site has a dedicated Raleigh Misdemeanor Lawyer page focused specifically on misdemeanor charges and consequences.",
+      "dedicated_page_url": "https://www.cottenfirm.com/criminal-defense/misdemeanors/",
+      "validation_method": "live-site dedicated-page inspection",
+      "notes": "This subcategory also already has its own focused destination, reinforcing that the firm is not a strong service-page-gap candidate."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.cottenfirm.com/",
+    "https://www.cottenfirm.com/about-us/",
+    "https://www.cottenfirm.com/about-us/jeremy-cotten/",
+    "https://www.cottenfirm.com/criminal-defense/",
+    "https://www.cottenfirm.com/criminal-defense/traffic-tickets/",
+    "https://www.cottenfirm.com/criminal-defense/dui-dwi-charges/first-dwi/",
+    "https://www.cottenfirm.com/criminal-defense/dui-dwi-charges/multiple-dwi/",
+    "https://www.cottenfirm.com/criminal-defense/misdemeanors/"
+  ]
+}
