@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJV7TDIQq7-IgRA457rJrT_zk",
-    "name": "Columbia Criminal Defense Attorney - Jeffcoat Criminal Defense Lawyers",
-    "website": "https://carolinadefenselawyers.com/?utm_source=google&utm_medium=organic&utm_campaign=gmbwebsite",
+    "id": "ChIJKWwM6i4XsocREUL-yQtFLlg",
+    "name": "Oklahoma City Personal Injury Attorneys | Cunningham &amp; Mears",
+    "website": "https://www.cunninghamandmears.com/?utm_source=gmb&utm_medium=organic&utm_campaign=OC",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:58",
+    "first_seen_at": "2026-09-02 11:12:59",
     "last_seen_at": "2026-09-02 11:51:15",
-    "website_domain": "carolinadefenselawyers.com"
+    "website_domain": "cunninghamandmears.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
