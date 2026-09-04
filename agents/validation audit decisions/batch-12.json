@@ -1,0 +1,258 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 12,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-leinart-law",
+      "lead_id": "ChIJrYB12XkhTIYRMUJy3EG6tTE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_bankruptcy_journey",
+      "campaign_notes": "The complete clean homepage URL set is bankruptcy/debt-relief work: Chapter 7/13, foreclosure, credit-card debt, wage garnishment, credit repair, loan modification, tax debt and related bankruptcy matters. This is one bankruptcy/debt client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-alford-law-firm",
+      "lead_id": "ChIJu6poGZifToYRl-6LpC4e9hQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs expose dedicated Business Law, Commercial Litigation, Debt Collections, IRS/Tax, Estate Planning and Real Estate destinations. Materially different client journeys are already separated into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-turner-gold",
+      "lead_id": "ChIJw4KP4lmcToYRYhU0yUTbNio",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_family_journey",
+      "campaign_notes": "The homepage crawl exposed only the root, so the current official site was checked live. Turner Law Firm explicitly positions itself as a Family Law firm and lists Divorce, Custody/Adoption and Mediation. These are all within one family-law client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-pyke-balen-moncure",
+      "lead_id": "ChIJzdteZPwYTIYRgfluIJiUMxc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_estate_probate_journey",
+      "campaign_notes": "The full clean URL set is estate/probate/elder-law work: estate planning, probate, guardianship, elder/Medicaid planning, inheritance issues, trusts and will/trust contests. These are closely connected variations within one estate/probate client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-allbee-law-firm",
+      "lead_id": "ChIJDWRjEQuHToYRFEVyadLupeo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are plaintiff Personal Injury matters: car, truck, motorcycle, bicycle and pedestrian accidents, rideshare, dog bites, catastrophic injury and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-bd-howard-jr",
+      "lead_id": "ChIJwTZ4uJaZToYRwcoH5aQov7E",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "The stored homepage crawl was empty, so the firm's current public web presence was checked live. The official B.D. Howard Jr. site lists Criminal Cases, Traffic Tickets, Family Law Matters, Personal Injury and Wrongful Death Cases on the homepage and routes users through one general Practice Areas destination rather than focused pages for the materially different Family, Criminal/Traffic and Injury journeys. Current FindLaw information identifies B.D. Howard Jr. as the sole practitioner and confirms the same multi-practice scope. No direct public individual email could be verified, so the lead stops at Direct Email Missing. Family Law is selected as the first gap.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Family Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official B.D. Howard Jr. homepage explicitly lists Family Law Matters alongside Criminal Cases, Traffic Tickets, Personal Injury and Wrongful Death Cases.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual live official-site review + current public attorney-directory verification",
+          "notes": "The official navigation exposes one general Practice Areas destination rather than focused client pages for the materially different main practices."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "B. D. Howard Jr.",
+          "role": "Sole Practitioner / Owner",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": true,
+          "evidence_source": "Official B.D. Howard Jr. site identifies the attorney and matching firm contact information; current FindLaw profile identifies him as Sole Practitioner at the same Dallas firm.",
+          "notes": "Owner/decision maker verified. No direct public individual email was sufficiently verified."
+        }
+      ]
+    },
+    {
+      "slug": "07-bf-law-group",
+      "lead_id": "ChIJ46jIEtwgTIYRf1NmD6n-2hI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs expose separate Banking & Lending, Litigation, Title and Transactions destinations. Litigation and transactional/title/banking work represent materially different client needs and are already separated into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-mack-injury-attorneys",
+      "lead_id": "ChIJ54qDBdMpTIYRxeW0tHnjtz0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes dedicated Personal Injury/accident pages and a separate Civil Rights destination, as well as mass-tort work. Civil Rights is materially different from the injury client journey and is already separated, so the architecture maturity gate fails.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-sul-lee-law-firm",
+      "lead_id": "ChIJ5x4nuo4nTIYRAsO-YcTcFXQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set shows dedicated Business Law, Business Litigation, Commercial Real Estate, Intellectual Property, IP Litigation and Employer Defense destinations. Separate-page architecture is already dominant across the firm's materially different business-law client needs.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-ohare-koch",
+      "lead_id": "ChIJARcIKSifToYRgzBUMoHiULk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage URL set is plaintiff Personal Injury work: vehicle accidents, catastrophic injury, dog bites, products liability, slip-and-fall, work injuries and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-bonneau-law-firm",
+      "lead_id": "ChIJJ2M_grkuTIYRzYSfw86usVc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The substantive clean homepage URLs are injury work: truck/car crashes, construction accidents, traumatic brain injury, premises liability and general Personal Injury. This is one plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-lauren-the-lawyer",
+      "lead_id": "ChIJPUv4KPonTIYRQg1nOL1zLSg",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "current_offered_service_scope_conflict",
+      "campaign_notes": "The clean homepage architecture is extremely sparse and the current official homepage explicitly displays both Personal Injury and Family Law in the same one-page experience. However, other current public firm/attorney sources emphasize Family Law only, including the firm's booking surface and recent professional profiles. Because the campaign requires confidence that a materially different service is actively offered now, Personal Injury should not be forced into a confirmed gap until this current-scope conflict is resolved.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Needs Review",
+          "service_offered_evidence": "The current official Lauren The Lawyer homepage visibly labels Personal Injury and Family Law, but other current public firm sources describe the practice as Family Law-only.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual clean-homepage-URL audit + current official homepage + current professional/booking-source cross-check",
+          "notes": "Architecture would be a strong fit if Personal Injury is confirmed as an active main practice, but current offered-service evidence is inconsistent."
+        }
+      ],
+      "contacts": []
+    },
+    {
+      "slug": "13-mike-howard-law",
+      "lead_id": "ChIJQfLUSgufToYRGSvP-wAd0IY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Criminal Defense matters including DWI, drugs, domestic violence, federal defense, theft, sex crimes, weapons, probation and record sealing. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-igetyouin-immigration",
+      "lead_id": "ChIJSUa0X3UnTIYRvCEfNUUHDuM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_immigration_journey",
+      "campaign_notes": "The complete clean homepage URL architecture is Immigration Law: employment and business visas, family immigration, citizenship, removal/deportation, waivers and visitor/student visas. This is one immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-len-nary-law",
+      "lead_id": "ChIJWa8wO1MnTIYRwedRthwru6g",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_mature_architecture",
+      "campaign_notes": "The lead title mentions Personal Injury, but current official homepage and Practice Areas pages identify the firm's active primary practices as Bankruptcy and Wills/Trusts only. Those two materially different current client journeys are already separately represented by dedicated bankruptcy destinations and a /wills page. Personal Injury is not treated as currently offered based on the live official evidence, so there is no valid missing-PI gap to pursue.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-moses-knows-the-law",
+      "lead_id": "ChIJXfk6JnudToYRYJ6Hl-sNy6k",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs expose separate bankruptcy, immigration and personal-injury destinations (/bank.html, /immi.html and /injury.html). These are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-legionnaire-law",
+      "lead_id": "ChIJk2KxcLuBToYR8kDEoYP0eGA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set directly exposes separate Criminal Defense, General/Commercial Litigation, Landlord-Tenant Disputes and Transactional Work destinations. Materially different litigation, criminal and transactional client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-cantu-cantu-law",
+      "lead_id": "ChIJlWfvDFycToYR1pPcetxbx44",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "The homepage crawl was blocked, so the official site was reviewed live. Cantu & Cantu explicitly offers Family Law, Criminal Law, Civil Law, Immigration Law, and Business Law/other legal services in one shared single-page experience, with no separate focused service destinations surfaced. Willie Cantu founded the practice and is the Senior Managing Attorney. The official site publishes only the generic info@cantucantulaw.com for Willie, Chris and the firm; no direct public individual email was verified. Immigration Law is selected as the first gap.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Immigration Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official Cantu & Cantu site explicitly lists Immigration Law alongside Family, Criminal, Civil and Business Law, including visas, deportation/removal, appeals, waivers, naturalization/citizenship and asylum/refugee work.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual live official-site review after blocked homepage crawl + site-restricted verification",
+          "notes": "Materially different main practices are presented as sections in the same shared page experience rather than focused service destinations."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Willie Cantu",
+          "role": "Founder / Senior Managing Attorney",
+          "email": "info@cantucantulaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Cantu & Cantu site states Willie Cantu founded the practice and identifies him as Senior Managing Attorney; the site publishes info@cantucantulaw.com for the legal team.",
+          "notes": "Generic firm inbox only. No direct public individual email for Willie Cantu was sufficiently verified."
+        }
+      ]
+    },
+    {
+      "slug": "19-fernandez-fernandez",
+      "lead_id": "ChIJm-deC3UnTIYRWfWq2dBUbDk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_single_narrow_immigration_journey_stale_website",
+      "campaign_notes": "The stored website now resolves to an unrelated business-directory page, so the exact Dallas firm identity was verified independently by matching Fernandez & Fernandez at 3010 LBJ Freeway, Suite 735. Current legal-directory and Best Lawyers evidence identifies Richard E. Fernandez / Fernandez & Fernandez as an Immigration Law practice. No reliable evidence established multiple materially different current client journeys, so the firm is Not Relevant to this architecture campaign; the stored website is stale and should not be treated as firm-site evidence.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-goolsby-law-firm",
+      "lead_id": "ChIJpU5l9bwnTIYRQBM3t0Zzv5g",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Criminal Defense matters such as assault, theft, domestic violence, drugs, DWI, federal defense, fraud, weapons, probation, sex crimes and record sealing. This is one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
