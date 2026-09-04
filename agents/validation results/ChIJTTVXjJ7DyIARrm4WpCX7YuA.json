@@ -1,0 +1,26 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJTTVXjJ7DyIARrm4WpCX7YuA",
+  "firm": "Gina Corena & Associates",
+  "domain": "corenalaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Gina Corena & Associates already has a highly mature separate-service architecture. The live navigation exposes dedicated destinations for Car Accidents, Truck Accidents, Birth Injury, Rideshare Accidents, Motorcycle Accidents, Slip & Fall, Workers' Compensation, Product Liability, Medical Malpractice, Wrongful Death and many other services, plus extensive location-specific service pages. The firm clearly understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed immediately. The site has deep practice-area and geo/service architecture, including nested car-accident subtopics and location-specific Personal Injury/Car/Truck/Motorcycle/Wrongful Death pages. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current navigation links many distinct practice pages, including Car Accidents, Truck Accidents, Workers' Compensation, Medical Malpractice and Wrongful Death, with additional service-specific location pages.",
+      "dedicated_page_url": "https://www.corenalaw.com/",
+      "validation_method": "live homepage/navigation + dedicated Reno Wrongful Death page + architecture-maturity gate",
+      "notes": "Highly mature service-by-service and geo/service architecture. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.corenalaw.com/",
+    "https://www.corenalaw.com/reno/wrongful-death-lawyer/"
+  ]
+}
