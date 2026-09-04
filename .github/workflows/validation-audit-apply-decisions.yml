@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "agents/validation audit decisions/*.json"
+      - ".github/workflows/validation-audit-apply-decisions.yml"
 
 permissions:
   contents: write
@@ -45,7 +46,9 @@ jobs:
 
           changed=subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD','--','agents/validation audit decisions/*.json'],text=True).splitlines()
           files=[Path(p) for p in changed if p.endswith('.json')]
-          if not files: raise SystemExit('No audit decision JSON changed in triggering commit.')
+          if not files:
+              files=sorted(Path('agents/validation audit decisions').glob('batch-*.json'))[-1:]
+          if not files: raise SystemExit('No audit decision JSON available.')
 
           receipts=[]
           for path in files:
