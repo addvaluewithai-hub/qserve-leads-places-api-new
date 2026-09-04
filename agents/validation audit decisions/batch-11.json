@@ -1,0 +1,285 @@
+{
+  "campaign_id": "lawyers-us",
+  "batch_number": 11,
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-garcia-legal-group",
+      "lead_id": "ChIJ61U5PB-ZToYRSh9vg5JZ6JA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The complete clean homepage URL set directly exposes separate Criminal Defense, Family Law, Immigration Law, Personal Injury, and Wills/Estate Planning destinations. Multiple materially different main client journeys are already separated into focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-ogundipe-law-group",
+      "lead_id": "ChIJH-PoSDEhTIYRALJeg_2WpUs",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The clean homepage crawl exposes only the root and founder page. Live verification on the official site confirms two materially different main practices, Personal Injury and Immigration, are both presented inside the same homepage experience rather than through focused service destinations. Site-restricted verification did not surface dedicated Personal Injury or Immigration client pages. The official site identifies Olubiyi Ogundipe as Founder and Principal Attorney and publicly lists the name-specific email Olubiyi@ogundipelaw.com. Immigration is selected as the first outreach gap.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Immigration",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official Ogundipe Law Group homepage explicitly identifies two practice areas: Personal Injury and Immigration, with Immigration services including visa applications, green cards, citizenship, and deportation defense.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live homepage + site-restricted verification",
+          "notes": "Only the root homepage and founder page surfaced in the homepage link architecture. The materially different Personal Injury and Immigration services remain in the shared homepage experience; no focused Immigration destination was found in current official-site verification."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Olubiyi Ogundipe",
+          "role": "Founder / Principal Attorney",
+          "email": "Olubiyi@ogundipelaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Ogundipe Law Group homepage identifies Olubiyi Ogundipe as Founder/Principal Attorney and publicly lists Olubiyi@ogundipelaw.com.",
+          "notes": "Name-specific individual email is published directly by the firm and is not inferred from an email pattern."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Immigration",
+        "subject": "A thought on your Immigration page",
+        "body": "Olubiyi,\n\nI was looking through Ogundipe Law Group’s site and noticed Personal Injury and Immigration are both handled within the same homepage experience rather than having their own focused client pages.\n\nThose are very different conversations. Someone trying to secure a green card or citizenship, or facing deportation, is arriving with very different questions and priorities from someone coming to the firm after an injury.\n\nA dedicated Immigration page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of your practice.\n\nI’m using Immigration as the first mockup because the contrast with Personal Injury makes the idea easy to see while keeping the firm’s current positioning intact.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "03-bryan-fagan-law",
+      "lead_id": "ChIJRxKCJQ4hTIYRleV8qK3EIiQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URL set exposes dedicated Criminal Law, Estate Planning, Family Law, Guardianship, Personal Injury, Probate, Adoption and other focused destinations. Materially different client journeys are already separated across the site.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-greening-law",
+      "lead_id": "ChIJaWNBfOeYToYRc8H4i3JFnVc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The complete clean homepage URL set is plaintiff Personal Injury work: car, truck and motorcycle accidents, birth injury, medical malpractice, premises liability, wrongful death and workers' compensation. These are variations inside one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-didlake-law",
+      "lead_id": "ChIJg74i3fEgTIYRbOBfkz70WVY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean homepage URLs show dedicated injury destinations alongside Consumer Protection and Small Business Representation. Those are materially different main legal conversations and the site already separates them into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-bretton-gerard-law",
+      "lead_id": "ChIJGzYRKYMfTIYRdOM0RVPaY1s",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The clean homepage URL set contains only one general /practice-areas destination. Live official-site verification confirms materially different practices—Commercial Litigation, Real Estate & Construction, Probate & Estate Litigation, Insurance Litigation, and General Matters—are presented together rather than through focused service destinations. Bret Gerard operates the solo practice. The official Success Stories page publicly lists the direct email bret@brettongerardlaw.com with the same firm contact information. Probate & Estate Litigation is selected as the first gap.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Probate & Estate Litigation",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official Bretton Gerard Law site explicitly lists Probate & Estate Litigation alongside Commercial Litigation, Real Estate & Construction, Insurance Litigation and General Matters.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live Practice Areas/About pages + site-restricted verification",
+          "notes": "The current homepage link architecture exposes one general /practice-areas destination, and site verification did not surface focused destinations for the individual materially different practices."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Bretton Craig Gerard",
+          "role": "Solo Attorney / Owner",
+          "email": "bret@brettongerardlaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Bretton Gerard Law Success Stories page publicly lists bret@brettongerardlaw.com with the firm's matching address and phone; official About page and Texas Bar identity confirm Bretton Craig Gerard as the solo attorney.",
+          "notes": "Direct individual email is publicly published by the firm and independently tied to the same solo attorney identity."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Probate & Estate Litigation",
+        "subject": "A thought on your Probate & Estate Litigation page",
+        "body": "Bret,\n\nI was looking through Bretton Gerard Law’s site and noticed Commercial Litigation, Real Estate & Construction, Probate & Estate Litigation, and Insurance Litigation are all presented together under the general Practice Areas experience rather than having focused client pages of their own.\n\nThose are very different conversations. Someone dealing with a will, trust, executor, or fiduciary dispute is arriving with different questions and priorities from someone facing a commercial or insurance dispute.\n\nA dedicated Probate & Estate Litigation page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of your practice.\n\nI’m using Probate & Estate Litigation as the first mockup because the contrast with the commercial and insurance work makes the idea easy to see while keeping the firm’s current positioning intact.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "07-dallas-car-wreck",
+      "lead_id": "ChIJHcIujHKfToYRHnJExuzVmi0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The full clean homepage URL set is accident and plaintiff-injury work, including car, motorcycle and truck accidents, premises liability, insurance issues and related crash scenarios. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-national-injury-lawyers",
+      "lead_id": "ChIJQfLUSgufToYRZIAt4sapAuk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are Personal Injury matters such as vehicle accidents, catastrophic injury, inadequate security, slip-and-fall and wrongful death. This is one plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-warren-abrams",
+      "lead_id": "ChIJRyZj6uefToYRJ24j2KOv358",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_live_check_mature_architecture",
+      "campaign_notes": "The homepage crawl was blocked, so the official site was reviewed live. The current site has an extensive dedicated Criminal Defense service hierarchy and also separately links its materially different civil Wrongful Death service as its own destination. The site already demonstrates mature separate-page architecture, so an isolated service-gap hunt would be outside this campaign's ICP.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-witherite-law-group",
+      "lead_id": "ChIJRyevDiKfToYRxQzx5TBBB90",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The clean homepage URL set is plaintiff Personal Injury and truck/car wreck work, including catastrophic and neurological injuries. These are variations inside one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-fears-law",
+      "lead_id": "ChIJZ9phbj-fToYR4gwCSmlISg4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs directly expose separate Business Law, Estate Planning, Intellectual Property, Personal Injury and marital-agreement destinations. Materially different main client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-1800-truckwreck",
+      "lead_id": "ChIJZfI0VLufToYR1NC343nCJzc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "The clean homepage service architecture is Personal Injury/vehicle-collision work: car wrecks, truck wrecks, catastrophic injury and related client-care pages. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-wyde-associates",
+      "lead_id": "ChIJcfy1Es2eToYRqbWJg8c8oTY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean homepage URLs expose a dedicated Criminal Defense hierarchy and separate accident/injury destinations such as auto, commercial vehicle, rideshare and big-rig injury work. Criminal Defense and Personal Injury are materially different main client journeys and are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-chris-schmiedeke",
+      "lead_id": "ChIJeS1Bc0YhTIYRIqwB2sw0LMk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "All substantive clean URLs are Divorce/Family Law matters including adoption, custody, property division, marital agreements and related divorce services. This is one family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-david-leon-law",
+      "lead_id": "ChIJk9gYV86eToYRJPGVmZS9OYY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set exposes dedicated Business Law, Criminal Law, Estate Planning/Probate, Immigration, Insurance Bad Faith, Personal Injury and Real Estate destinations. Separate-page architecture is already dominant across materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-modern-family-law",
+      "lead_id": "ChIJM2vIYXOfToYR24DXgFUtteY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_family_journey",
+      "campaign_notes": "The substantive service architecture is entirely Family Law: divorce, custody, support and related family-law resources across multiple locations. This is one family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-ed-sampson-law",
+      "lead_id": "ChIJP0clSCWZToYRwjzGwuic8Rg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+      "campaign_notes": "All substantive clean homepage URLs are plaintiff Personal Injury matters, including auto/truck accidents, catastrophic injuries, defective products and wrongful death. This is one injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-grant-st-julian",
+      "lead_id": "ChIJk9gYV86eToYRpEQbpBOmmWU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_criminal_traffic_journey",
+      "campaign_notes": "The public homepage content and linked Q&A material concern traffic tickets and Criminal Defense matters. These are closely related criminal/traffic defense services within one client journey rather than materially different main practices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-moster-law-firm",
+      "lead_id": "ChIJlTNeJ0WfToYRQ2F4oz-gGjQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The 104 clean homepage URLs show mature dedicated destinations across Agriculture, Appeals, Business, Construction, Criminal Defense, Employment, Energy, Entertainment, Estate Planning, Family Law, Intellectual Property, International Law, Landlord-Tenant, Litigation, Probate and other materially different practices. Separate client-journey architecture is already dominant.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-adewunmi-law",
+      "lead_id": "ChIJpX6E1fxxToYRrqLvYpgDG3g",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The clean homepage URL set exposes only one general /practice-areas-1 destination. Live verification confirms three materially different primary practices—Family Law, Commercial Litigation and Business Counsel—are presented together on the same general Practice Areas page rather than through focused service destinations. Alex Adewunmi is the founding partner and managing attorney, and his official profile publicly lists alex@adewunmilaw.com. Family Law is selected as the first outreach gap.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Family Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official Adewunmi Law Practice Areas page explicitly identifies Family Law, Commercial Litigation and Business Counsel as the firm's three primary practice areas.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live Practice Areas and founder-profile verification",
+          "notes": "All three materially different practices remain within one general Practice Areas destination. No focused Family Law client destination surfaced in the homepage architecture or current official-site verification."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Alexander 'Alex' Adewunmi",
+          "role": "Founding Partner / Managing Attorney",
+          "email": "alex@adewunmilaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official Adewunmi Law Meet Alex profile identifies Alex Adewunmi as founding partner/managing attorney and publicly lists alex@adewunmilaw.com.",
+          "notes": "Name-specific individual email is published directly on the official attorney profile."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Family Law",
+        "subject": "A thought on your Family Law page",
+        "body": "Alex,\n\nI was looking through Adewunmi Law’s site and noticed Family Law, Commercial Litigation, and Business Counsel are all presented together on the same general Practice Areas page rather than having focused client pages of their own.\n\nThose are very different conversations. Someone dealing with a divorce, custody, or another family matter is arriving with very different questions and priorities from a business owner dealing with a commercial dispute or ongoing counsel needs.\n\nA dedicated Family Law page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of your practice.\n\nI’m using Family Law as the first mockup because the contrast with the business work makes the idea easy to see while keeping the firm’s current positioning intact.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    }
+  ]
+}
