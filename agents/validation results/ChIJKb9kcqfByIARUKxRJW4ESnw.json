@@ -1,0 +1,64 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJKb9kcqfByIARUKxRJW4ESnw",
+  "firm": "PT Law – #1 Law Group",
+  "domain": "ptlawlv.com",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "PT Law passes the corrected Architecture Maturity Gate: the live site still relies on one general Practice Areas destination for materially different Personal Injury, Criminal Defense and Immigration Law client journeys rather than a mature service-by-service page system. Immigration Law is selected as the first mockup example. Owner/lead attorney Pengxiang (Calvin) Tian is publicly identified by the official site, and his direct professional email calvin@ptlawlv.com is publicly published in recent federal court filings.",
+  "campaign_notes": "Historical outreach-ready lead synchronized under the corrected 2026-09-04 ICP. Live navigation was rechecked. The main menu exposes one Practice Areas page, and that page combines Personal Injury, Criminal Defense and Immigration Law rather than routing each main practice to a focused client destination. This is a broad consolidated-architecture problem, not an isolated forgotten page. Immigration is a strong first mockup because its client questions and process are materially different from accident victims and criminal-defense clients. Pengxiang (Calvin) Tian is identified on the official team page as Owner/Lead Attorney. Recent 2026 federal court filings publicly list Calvin@ptlawlv.com for Pengxiang Tian, Esq., PT LAW.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Immigration Law",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The official homepage says the team focuses on Personal Injury, Immigration and Criminal Defense. The general Practice Areas page includes an Immigration Law section and the homepage lists family petitions, work/investment visas, green cards and work permits.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + main navigation + general Practice Areas page + domain-restricted discovery + architecture-maturity gate",
+      "notes": "The dominant architecture is consolidated rather than mature service-by-service. Immigration is a meaningful main practice and materially different client conversation, making it a strong first mockup example."
+    },
+    {
+      "service_name": "Criminal Defense",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The homepage explicitly says PT Law focuses on Criminal Defense and lists DUI, Traffic Tickets, Battery and Domestic Violence under that practice.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + Practice Areas architecture review",
+      "notes": "Another main practice sharing the same general website experience; evidence that the issue is broader than one missing page."
+    },
+    {
+      "service_name": "Personal Injury",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "The homepage and Practice Areas page explicitly offer Personal Injury and multiple accident/injury matters.",
+      "dedicated_page_url": null,
+      "validation_method": "live homepage + Practice Areas architecture review",
+      "notes": "The general Practice Areas page contains substantial accident content but remains the same shared destination used alongside other materially different practices."
+    }
+  ],
+  "contacts": [
+    {
+      "id": "lawyers-us:ChIJKb9kcqfByIARUKxRJW4ESnw:calvin@ptlawlv.com",
+      "person_name": "Pengxiang (Calvin) Tian",
+      "role": "Owner / Lead Attorney",
+      "email": "calvin@ptlawlv.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "https://law.justia.com/cases/federal/district-courts/nevada/nvdce/2%3A2024cv00658/167962/34/",
+      "notes": "Official PT Law team page identifies Pengxiang (Calvin) Tian as Owner/Lead Attorney. A 2026 federal court filing publicly lists Pengxiang Tian, Esq., PT LAW, with Calvin@ptlawlv.com."
+    }
+  ],
+  "outreach_draft": {
+    "selected_service": "Immigration Law",
+    "decision_maker": "Pengxiang (Calvin) Tian",
+    "email": "calvin@ptlawlv.com",
+    "subject": "A thought on your practice pages",
+    "body": "Calvin,\n\nI noticed PT Law handles three very different kinds of matters—personal injury, criminal defense and immigration—but they still share the same general Practice Areas experience on the site.\n\nThose clients are arriving with completely different questions. Someone trying to understand an immigration path needs a different conversation from someone dealing with a car accident or a criminal charge.\n\nDedicated pages for each main practice could:\n- speak directly to that type of client\n- give Google a focused page to crawl and index\n- give AI tools clearer context about each part of the firm’s work\n\nImmigration already has useful substance on the site, so I’m using that as the first mockup example—not because it is the only practice that could benefit.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  },
+  "source_urls_checked": [
+    "https://ptlawlv.com/",
+    "https://ptlawlv.com/practice-areas/",
+    "https://ptlawlv.com/meet-the-team/",
+    "https://ptlawlv.com/about-us/",
+    "https://law.justia.com/cases/federal/district-courts/nevada/nvdce/2%3A2024cv00658/167962/34/"
+  ]
+}
