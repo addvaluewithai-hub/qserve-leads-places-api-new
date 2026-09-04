@@ -2,10 +2,14 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJP0cyLM-jToYRSvGpulRYczM",
-  "name": "U888 Jfalas ✅️ U88 - Link Trang Chủ U888.Com Chính Hãng 2026",
-  "domain": "barbarelawyer.com",
-  "website": "http://www.barbarelawyer.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJbUfYqsOZToYRR_l_elcGjwg",
+  "name": "BG Law",
+  "domain": "bglawoffice.com",
+  "website": "https://www.bglawoffice.com/",
+  "clean_homepage_url_count": 3,
+  "clean_homepage_urls": [
+    "/",
+    "/attorney",
+    "/office"
+  ]
 }

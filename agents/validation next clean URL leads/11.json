@@ -2,17 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 11,
-  "lead_id": "ChIJCwq2eGOfToYRPxIB4wu9Ams",
-  "name": "Home | Erin Hendricks Law",
-  "domain": "erinhendrickslaw.com",
-  "website": "http://erinhendrickslaw.com/",
-  "clean_homepage_url_count": 6,
-  "clean_homepage_urls": [
-    "/",
-    "/about-erin",
-    "/contact",
-    "/espanol",
-    "/our-approach",
-    "/practice-areas"
-  ]
+  "lead_id": "ChIJCfN0LY6ZToYR3EG94GX3shg",
+  "name": "Inicio - El Rey de la Ley",
+  "domain": "danielramirezlaw.com",
+  "website": "https://danielramirezlaw.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
