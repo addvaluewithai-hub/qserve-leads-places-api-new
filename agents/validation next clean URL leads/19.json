@@ -1,0 +1,26 @@
+{
+  "campaign_id": "lawyers-us",
+  "mode": "manual_clean_homepage_urls_only",
+  "position": 19,
+  "lead_id": "ChIJG3kI-iifToYRHQ781q6oraU",
+  "name": "ATWOOD & McCALL - Family Office Legal Services",
+  "domain": "atwoodmccall.com",
+  "website": "http://atwoodmccall.com/",
+  "clean_homepage_url_count": 14,
+  "clean_homepage_urls": [
+    "/",
+    "/about",
+    "/attorneys",
+    "/contact-us",
+    "/feed",
+    "/payment",
+    "/practices",
+    "/practices/asset-protection",
+    "/practices/business-law",
+    "/practices/business-litigation",
+    "/practices/employee-benefits",
+    "/practices/estate-planning",
+    "/practices/family-law",
+    "/testimonials"
+  ]
+}

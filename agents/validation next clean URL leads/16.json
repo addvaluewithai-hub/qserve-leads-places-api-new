@@ -1,0 +1,24 @@
+{
+  "campaign_id": "lawyers-us",
+  "mode": "manual_clean_homepage_urls_only",
+  "position": 16,
+  "lead_id": "ChIJR-f5o3OfToYRiBdWtez3DAM",
+  "name": "The Law Office of Ruthe Belachew, PLLC",
+  "domain": "belachewlaw.com",
+  "website": "https://www.belachewlaw.com/",
+  "clean_homepage_url_count": 12,
+  "clean_homepage_urls": [
+    "/",
+    "/about-1",
+    "/attorney-profile",
+    "/blog",
+    "/cart",
+    "/contact-us-1",
+    "/estates-wills",
+    "/home-1-2-1",
+    "/home-amharic",
+    "/new-dropdown",
+    "/our-legal-practice",
+    "/personal-injury"
+  ]
+}

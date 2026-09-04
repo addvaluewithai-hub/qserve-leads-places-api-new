@@ -1,0 +1,26 @@
+{
+  "campaign_id": "lawyers-us",
+  "mode": "manual_clean_homepage_urls_only",
+  "position": 2,
+  "lead_id": "ChIJvUOuB1SfToYRNKWHMG1xGMY",
+  "name": "Personalized Legal Solutions | The Line Law Firm – Compassionate support & fierce advocacy for personal injury, trucking accidents, motor vehicle accidents & wrongful death. Contact our Dallas, TX attorneys for a free consultation.",
+  "domain": "linelawfirm.com",
+  "website": "http://linelawfirm.com/",
+  "clean_homepage_url_count": 14,
+  "clean_homepage_urls": [
+    "/",
+    "/about-us",
+    "/blog-page",
+    "/construction-accidents",
+    "/contact",
+    "/dog-bites",
+    "/motor-vehicle-accidents",
+    "/motorcycle-accidents",
+    "/personal-injury",
+    "/practice-areas",
+    "/privacypolicy",
+    "/slip-fall",
+    "/trucking-accidents",
+    "/wrongful-death"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "campaign_id": "lawyers-us",
+  "mode": "manual_clean_homepage_urls_only",
+  "position": 4,
+  "lead_id": "ChIJHVm9kt-YToYRs9JlYa-GjgA",
+  "name": "Law Firm in Texas",
+  "domain": "alemanlaw.com",
+  "website": "https://www.alemanlaw.com/",
+  "clean_homepage_url_count": 17,
+  "clean_homepage_urls": [
+    "/",
+    "/about-the-attorney",
+    "/accessibility-statement",
+    "/contact-us",
+    "/espanol",
+    "/practice-areas",
+    "/practice-areas/auto-accidents",
+    "/practice-areas/personal-injury",
+    "/practice-areas/premises-liability",
+    "/practice-areas/trucking-accidents",
+    "/practice-areas/work-accidents",
+    "/practice-areas/wrongful-death",
+    "/privacy-policy",
+    "/results",
+    "/reviews",
+    "/sitemap",
+    "/who-we-are"
+  ]
+}

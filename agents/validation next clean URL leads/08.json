@@ -1,0 +1,17 @@
+{
+  "campaign_id": "lawyers-us",
+  "mode": "manual_clean_homepage_urls_only",
+  "position": 8,
+  "lead_id": "ChIJl3Xo2TWfToYRRQVFoD75qqY",
+  "name": "HandleMyTickets.com",
+  "domain": "handlemytickets.com",
+  "website": "https://www.handlemytickets.com/",
+  "clean_homepage_url_count": 5,
+  "clean_homepage_urls": [
+    "/",
+    "/about-us",
+    "/contact-us",
+    "/pay-fees",
+    "/testimonials"
+  ]
+}

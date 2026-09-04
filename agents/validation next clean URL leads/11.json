@@ -1,0 +1,18 @@
+{
+  "campaign_id": "lawyers-us",
+  "mode": "manual_clean_homepage_urls_only",
+  "position": 11,
+  "lead_id": "ChIJCwq2eGOfToYRPxIB4wu9Ams",
+  "name": "Home | Erin Hendricks Law",
+  "domain": "erinhendrickslaw.com",
+  "website": "http://erinhendrickslaw.com/",
+  "clean_homepage_url_count": 6,
+  "clean_homepage_urls": [
+    "/",
+    "/about-erin",
+    "/contact",
+    "/espanol",
+    "/our-approach",
+    "/practice-areas"
+  ]
+}
