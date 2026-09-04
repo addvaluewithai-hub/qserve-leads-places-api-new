@@ -1,13 +1,14 @@
 {
   "campaign_id": "lawyers-us",
-  "version": 2,
+  "version": 3,
   "description": "State-prioritized ZIP coverage plan. ZIP rows are generated from pgeocode/GeoNames into D1; D1 is the dynamic coverage source of truth.",
   "zip_source": {
     "provider": "pgeocode",
     "country": "us",
     "notes": [
       "ZIP centroid/place-name data is used only to construct a search viewport and management queue.",
-      "Accepted Google results must still report addressComponents postal_code equal to the target ZIP."
+      "The target ZIP is a coverage seed, not an exact-address gate. Exact returned postal-code counts remain diagnostic only.",
+      "Accepted Google results must be returned inside the configured restricted search area and pass campaign quality, website, crawler-confirmation, and global dedupe rules."
     ]
   },
   "selection_policy": {
@@ -18,8 +19,9 @@
     "max_pages_per_zip": 3,
     "page_size": 20,
     "first_page_pagination_raw_floor": 20,
-    "first_page_pagination_exact_zip_floor": 5,
-    "location_restriction_half_span_km": 25.0,
+    "first_page_pagination_exact_zip_floor": 1,
+    "exact_zip_floor_is_diagnostic_only": true,
+    "location_restriction_half_span_km": 10.0,
     "monthly_enterprise_request_budget": 900
   },
   "phases": [
