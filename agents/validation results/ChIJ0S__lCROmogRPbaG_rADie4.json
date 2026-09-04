@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ0S__lCROmogRPbaG_rADie4",
+  "firm": "Moore Law Firm",
+  "domain": "moorelawfirm-al.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Moore Law Firm already has highly mature separate-service architecture across a broad range of injury and benefits matters. The live site exposes focused destinations for auto accidents, tractor-trailer and truck accidents, motorcycle accidents, wrongful death, workers' compensation, Social Security Disability, Maritime/Jones Act, product liability, medical malpractice, nursing-home abuse and many other services. The firm clearly understands and applies the separate-page concept and is outside the campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed strongly. The Areas of Practice hub lists a wide range of separate services, and substantial dedicated Wrongful Death and 18-Wheeler pages were independently confirmed. These include materially different client journeys such as Workers' Compensation, Social Security Disability and Maritime claims, demonstrating the concept is already understood. Contact enrichment skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The current Areas of Practice structure includes separate Auto Accidents, Truck Accidents, Motorcycle Accidents, Wrongful Death, Workers' Compensation, Social Security Disability, Maritime/Jones Act, Product Liability, Medical Malpractice and other focused matters.",
+      "dedicated_page_url": "https://www.moorelawfirm-al.com/areas-of-practice/",
+      "validation_method": "live Areas of Practice hub + dedicated Wrongful Death and truck pages + architecture-maturity gate",
+      "notes": "Highly mature service-by-service architecture across materially different client journeys. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.moorelawfirm-al.com/",
+    "https://www.moorelawfirm-al.com/areas-of-practice/",
+    "https://www.moorelawfirm-al.com/areas-of-practice/wrongful-death/",
+    "https://www.moorelawfirm-al.com/18-wheeler-accidents/"
+  ]
+}
