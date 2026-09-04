@@ -1,0 +1,19 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJI3NUmgMTK4cRWSzW9QpHkuc",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_service_pages_present",
+  "campaign_notes": "Crawl4AI-first architecture pre-screen. Homepage exposed 25 internal links and 9 structural/service signals. Dedicated case-type destinations already exist for the firm's core injury services. No owner/email research performed because the Architecture Maturity Gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Architecture Maturity Gate",
+      "status": "Disqualified",
+      "service_offered_evidence": "Crawl4AI homepage-link evidence shows the firm already uses multiple distinct service/practice destinations.",
+      "dedicated_page_url": "https://www.sotelolawgroup.com/case-types/car-accidents",
+      "validation_method": "crawl4ai_homepage_links_architecture_prescreen",
+      "notes": "Representative separate destinations: https://www.sotelolawgroup.com/case-types/car-accidents; https://www.sotelolawgroup.com/case-types/motorcycle-accidents; https://www.sotelolawgroup.com/case-types/slip-and-fall-accidents; https://www.sotelolawgroup.com/case-types/truck-accidents"
+    }
+  ],
+  "contacts": []
+}

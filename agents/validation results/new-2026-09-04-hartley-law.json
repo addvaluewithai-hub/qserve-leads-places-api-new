@@ -1,0 +1,19 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJIXJtnsUud04R7v4ympmhFR8",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_service_pages_present",
+  "campaign_notes": "Crawl4AI-first architecture pre-screen. Homepage exposed 25 internal links and 10 structural/service signals. Dedicated service pages are already present for core injury matters, including Medical Malpractice. No owner/email research performed because the Architecture Maturity Gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Architecture Maturity Gate",
+      "status": "Disqualified",
+      "service_offered_evidence": "Crawl4AI homepage-link evidence shows the firm already uses multiple distinct service/practice destinations.",
+      "dedicated_page_url": "https://hartleylawusa.com/arizona-car-accident-lawyer",
+      "validation_method": "crawl4ai_homepage_links_architecture_prescreen",
+      "notes": "Representative separate destinations: https://hartleylawusa.com/arizona-car-accident-lawyer; https://hartleylawusa.com/arizona-motorcycle-accident-lawyer; https://hartleylawusa.com/arizona-truck-accident-lawyer; https://hartleylawusa.com/arizona-medical-malpractice-lawyer"
+    }
+  ],
+  "contacts": []
+}

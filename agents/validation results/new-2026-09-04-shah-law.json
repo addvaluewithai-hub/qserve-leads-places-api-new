@@ -1,0 +1,19 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJE9JefyESK4cRENqVZ5rvAv4",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_service_pages_present",
+  "campaign_notes": "Crawl4AI-first architecture pre-screen. Homepage exposed 64 internal links and 42 structural/service signals. Separate-page thinking is already established across DUI and criminal-defense topics, with additional geo/service depth. No owner/email research performed because the Architecture Maturity Gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Architecture Maturity Gate",
+      "status": "Disqualified",
+      "service_offered_evidence": "Crawl4AI homepage-link evidence shows the firm already uses multiple distinct service/practice destinations.",
+      "dedicated_page_url": "https://arjashahlaw.com/arizona-dui-child-in-car",
+      "validation_method": "crawl4ai_homepage_links_architecture_prescreen",
+      "notes": "Representative separate destinations: https://arjashahlaw.com/arizona-dui-child-in-car; https://arjashahlaw.com/assault-and-battery-defense-phoenix; https://arjashahlaw.com/domestic-violence-defense-attorney; https://arjashahlaw.com/felony-aggravated-dui-defense"
+    }
+  ],
+  "contacts": []
+}

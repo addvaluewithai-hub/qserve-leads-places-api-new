@@ -1,0 +1,38 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJKb6Hs5wTK4cRlg9qnRRmGgs",
+  "final_status": "Qualified",
+  "qualified": true,
+  "qualification_reason": "architecture_gap_confirmed_civil_rights_shared_page + verified_founder_managing_attorney + direct_public_email",
+  "campaign_notes": "Crawl4AI-first flow: homepage produced only 8 internal links and zero structural service-page signals, so the lead advanced to deep validation. Official Areas of Practice page (/menu) combines Personal Injury and Civil Rights on one shared page. Site navigation and site-restricted search did not surface a dedicated Civil Rights service page. Architecture Maturity Gate passes: the site does not show a mature service-by-service page system. Selected first mockup service: Civil Rights. Amy Owen is publicly identified as Founder & Managing Attorney / CEO & Managing Attorney, and amy@amyowenlaw.com is published on the official site.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Civil Rights",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "Official Areas of Practice page explicitly presents Civil Rights alongside Personal Injury; official team page describes Amy Owen's personal injury and civil rights practice.",
+      "dedicated_page_url": null,
+      "validation_method": "crawl4ai_homepage_links + official_site_double_check + site_restricted_search",
+      "notes": "Crawl4AI evidence: 8 homepage internal links and zero structural service-page signals. Official shared page: https://www.amyowenlaw.com/menu. Official homepage/team evidence: https://www.amyowenlaw.com/ and https://www.amyowenlaw.com/our-staff. No dedicated Civil Rights service destination found after navigation and site-restricted search."
+    }
+  ],
+  "contacts": [
+    {
+      "person_name": "Amy Owen",
+      "role": "Founder & Managing Attorney",
+      "email": "amy@amyowenlaw.com",
+      "is_owner": true,
+      "is_decision_maker": true,
+      "is_direct_email": true,
+      "is_publicly_verified": true,
+      "evidence_source": "https://www.amyowenlaw.com/",
+      "notes": "Official homepage identifies Amy Owen as Founder & Managing Attorney and publishes amy@amyowenlaw.com; official team page identifies her as CEO & Managing Attorney."
+    }
+  ],
+  "outreach_draft": {
+    "selected_service": "Civil Rights",
+    "decision_maker": "Amy Owen",
+    "email": "amy@amyowenlaw.com",
+    "subject": "A thought on your Areas of Practice page",
+    "body": "Amy,\n\nI was looking through Owen Law Firm’s site and noticed Personal Injury and Civil Rights are both explained on the same Areas of Practice page rather than having their own dedicated client pages.\n\nThose are very different conversations. Someone dealing with a serious civil-rights violation is arriving with questions about discrimination, evidence, government or institutional conduct, and what to do next—not the same mindset as someone coming in after an accident.\n\nA dedicated Civil Rights page could speak directly to that person, give Google a focused page to crawl and index, and give AI tools clearer context around that part of your practice.\n\nI’m using Civil Rights as the first mockup because the contrast with Personal Injury makes the idea easy to see while keeping the brand intact.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+  }
+}

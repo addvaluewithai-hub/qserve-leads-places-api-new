@@ -1,0 +1,19 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJDf2anCESK4cRwz4SOd3pBhk",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_service_pages_present",
+  "campaign_notes": "Crawl4AI-first architecture pre-screen. Homepage exposed 82 internal links and 69 structural/service signals. Very mature multi-practice architecture spanning Criminal Defense, Family Law and Personal Injury with deep service pages. No owner/email research performed because the Architecture Maturity Gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Architecture Maturity Gate",
+      "status": "Disqualified",
+      "service_offered_evidence": "Crawl4AI homepage-link evidence shows the firm already uses multiple distinct service/practice destinations.",
+      "dedicated_page_url": "https://www.alcocklaw.com/criminal-defense/domestic-violence-lawyers-phoenix-az",
+      "validation_method": "crawl4ai_homepage_links_architecture_prescreen",
+      "notes": "Representative separate destinations: https://www.alcocklaw.com/criminal-defense/domestic-violence-lawyers-phoenix-az; https://www.alcocklaw.com/criminal-defense/aggravated-dui-lawyers-phoenix-az; https://www.alcocklaw.com/family-lawyers/child-custody-lawyers-phoenix-az; https://www.alcocklaw.com/personal-injury/car-accidents-lawyers-phoenix-az"
+    }
+  ],
+  "contacts": []
+}

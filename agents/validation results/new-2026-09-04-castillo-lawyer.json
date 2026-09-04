@@ -1,0 +1,19 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ124JfkESK4cRM_FJdj2I4_8",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "architecture_maturity_gate_separate_service_pages_present",
+  "campaign_notes": "Crawl4AI-first architecture pre-screen. Homepage exposed 29 internal links and 11 structural/service signals. Separate pages are already present for Assault, DUI, Drug Defense, Sex Crimes and related criminal matters. No owner/email research performed because the Architecture Maturity Gate failed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Architecture Maturity Gate",
+      "status": "Disqualified",
+      "service_offered_evidence": "Crawl4AI homepage-link evidence shows the firm already uses multiple distinct service/practice destinations.",
+      "dedicated_page_url": "https://castillolawphoenix.com/assault-defense-lawyer-in-phoenix-az",
+      "validation_method": "crawl4ai_homepage_links_architecture_prescreen",
+      "notes": "Representative separate destinations: https://castillolawphoenix.com/assault-defense-lawyer-in-phoenix-az; https://castillolawphoenix.com/dui-lawyer-in-phoenix-az; https://castillolawphoenix.com/drug-lawyer-in-phoenix; https://castillolawphoenix.com/sex-crime-defense-lawyer-in-phoenix-az"
+    }
+  ],
+  "contacts": []
+}
