@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJkanyvojDwogRH4dFaGHOm4A",
-    "name": "Dan Newlin Injury Attorneys | $$ Billions Recovered",
-    "website": "https://www.newlinlaw.com/",
+    "id": "ChIJF_yA9eR654gR_9nhpyiq31w",
+    "name": "Orlando Criminal Defense Law Firm | The Law Office of Corey I. Cohen &amp; Associates",
+    "website": "https://www.coreycohen.com/?npcmp=dir:local:4138363:32803",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:15",
+    "first_seen_at": "2026-09-02 11:12:16",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "newlinlaw.com"
+    "website_domain": "coreycohen.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
