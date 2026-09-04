@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJYd_39SSLk4cR-iZFlz3yqq8",
+  "firm": "Berry Law",
+  "domain": "jsberrylaw.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Berry Law already understands and applies separate client-journey architecture across its materially different practices. The current site has dedicated Military/Veterans Law content and focused Personal Injury destinations, with further location/service depth. The firm clearly knows the separate-page concept and is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Berry Law explicitly serves Veterans Disability/Military Law and Personal Injury clients, and those journeys are already represented through separate focused destinations rather than being trapped in one general services page. The firm also has a large multi-attorney, multi-office structure. Contact enrichment skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The official site has a dedicated Military Law / Veterans Disability destination and focused Personal Injury pages such as its Lincoln Personal Injury page, while the firm describes its expansion from criminal defense into personal injury and military law.",
+      "dedicated_page_url": "https://jsberrylaw.com/military-law/",
+      "validation_method": "live site/domain discovery + dedicated Military Law and Personal Injury destinations + architecture-maturity gate",
+      "notes": "Materially different client journeys are already separated. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://jsberrylaw.com/",
+    "https://jsberrylaw.com/military-law/",
+    "https://jsberrylaw.com/personal-injury-lawyer/nebraska/lincoln/",
+    "https://jsberrylaw.com/attorneys/"
+  ]
+}
