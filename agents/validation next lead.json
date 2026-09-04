@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJtQwI6NWk-IgRAQhzrbE4SJE",
-    "name": "Personal Injury Attorneys in Columbia, South Carolina | Jeffcoat Lawyers",
-    "website": "https://scinjurylawfirm.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=columbia",
+    "id": "ChIJSQ0Jz9ENIocRzoHnkvA971Q",
+    "name": "New Mexico Traffic Ticket Lawyer | Albuquerque Speeding Violation Attorney | Glenn Smith Valdez",
+    "website": "https://www.newmexicotrafficticket.com/",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:08",
+    "first_seen_at": "2026-09-02 11:12:09",
     "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "scinjurylawfirm.com"
+    "website_domain": "newmexicotrafficticket.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
