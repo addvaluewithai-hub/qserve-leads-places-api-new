@@ -2,23 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJHzIQTl6cToYRU43AsiReb5w",
-  "name": "Home | JCP Law",
-  "domain": "theimmigrationlawyers.com",
-  "website": "http://www.theimmigrationlawyers.com/",
-  "clean_homepage_url_count": 12,
-  "clean_homepage_urls": [
-    "/",
-    "/about-jcp",
-    "/citizenship",
-    "/contact-us",
-    "/es",
-    "/faq",
-    "/helpful-links",
-    "/other-services",
-    "/privacy-policy",
-    "/removal-defense",
-    "/residency",
-    "/terms-of-service"
-  ]
+  "lead_id": "ChIJqYBvSschTIYR20fxVSwtXTg",
+  "name": "One moment, please...",
+  "domain": "gofflawdfw.com",
+  "website": "http://gofflawdfw.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

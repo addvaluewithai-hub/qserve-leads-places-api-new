@@ -2,10 +2,21 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 19,
-  "lead_id": "ChIJxwWPab8gTIYRbJRC47Yypcc",
-  "name": "Robot Challenge Screen",
-  "domain": "diazlf.com",
-  "website": "http://www.diazlf.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJYZbK9T2ZToYRLyIfF3zN7Ig",
+  "name": "Exceptional Criminal Defense Law Office in Dallas, TX",
+  "domain": "idefenddfw.com",
+  "website": "http://www.idefenddfw.com/",
+  "clean_homepage_url_count": 10,
+  "clean_homepage_urls": [
+    "/",
+    "/about",
+    "/case-results",
+    "/contact",
+    "/expunctions-nondisclosures",
+    "/federal-criminal-appeals-habeas-writs",
+    "/federal-criminal-defense",
+    "/juvenile-law",
+    "/texas-criminal-appeals-habeas-writ",
+    "/texas-criminal-defense"
+  ]
 }

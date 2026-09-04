@@ -2,20 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 3,
-  "lead_id": "ChIJB6lUK5YnTIYRh6TgYdYPILY",
-  "name": "Akpabio Law - Family, Personal Injury, and Immigration Attorney",
-  "domain": "akpabiolaw.com",
-  "website": "http://www.akpabiolaw.com/",
-  "clean_homepage_url_count": 9,
-  "clean_homepage_urls": [
-    "/",
-    "/about-us",
-    "/contact",
-    "/faqs",
-    "/schedule-a-consultation",
-    "/service-areas",
-    "/service-areas/immigration-law",
-    "/service-areas/immigration-law-2",
-    "/service-areas/immigration-law-3"
-  ]
+  "lead_id": "ChIJAQBAOOgfTIYRryT-MqjAZis",
+  "name": "Robot Challenge Screen",
+  "domain": "garzalawfirmtx.com",
+  "website": "https://garzalawfirmtx.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
