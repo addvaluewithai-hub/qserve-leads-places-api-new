@@ -1,0 +1,28 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJV7TDIQq7-IgRA457rJrT_zk",
+  "firm": "Jeffcoat Criminal Defense Lawyers",
+  "domain": "carolinadefenselawyers.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Jeffcoat Criminal Defense Lawyers already has mature separate-service architecture throughout its criminal-defense practice. The current site exposes distinct focused destinations for Drug Crimes, DUI, Domestic Violence, Expungement, Misdemeanor, Professional License Defense, Sex Crimes, Violent Crimes and additional criminal matters. The firm already understands and routinely applies the separate-page concept, so it is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. The Practice Areas hub lists many distinct criminal-defense categories, and dedicated pages were independently confirmed for Drug Crimes and Domestic Violence, with additional deep supporting content. Contact enrichment was skipped.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "The live Practice Areas structure separates Child Abuse, Domestic Battery, Domestic Violence, Drug Crimes, DUI, Expungement, Misdemeanor, Professional License, Sex Crimes, Stalking and Violent Crimes; dedicated service pages exist for multiple categories.",
+      "dedicated_page_url": "https://carolinadefenselawyers.com/practice-areas/",
+      "validation_method": "live Practice Areas hub + dedicated Drug Crimes and Domestic Violence pages + architecture-maturity gate",
+      "notes": "Mature service-by-service architecture within the firm's core criminal-defense niche. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://carolinadefenselawyers.com/",
+    "https://carolinadefenselawyers.com/practice-areas/",
+    "https://carolinadefenselawyers.com/columbia-drug-crimes-lawyer/",
+    "https://carolinadefenselawyers.com/columbia-criminal-domestic-violence/domestic-violence-laws-in-south-carolina/"
+  ]
+}
