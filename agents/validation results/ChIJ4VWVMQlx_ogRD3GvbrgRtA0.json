@@ -1,0 +1,26 @@
+{
+  "campaign_id": "lawyers-us",
+  "lead_id": "ChIJ4VWVMQlx_ogRD3GvbrgRtA0",
+  "firm": "Drennan Law Firm",
+  "domain": "drennanlawfirm1.com",
+  "final_status": "Disqualified",
+  "qualified": false,
+  "qualification_reason": "Drennan Law Firm already uses separate service pages across its core advertised practice architecture. The live navigation exposes distinct destinations for DUI, Traffic Violations, Drug Crimes, Criminal Defense, Professional License Defense and Injury Law, with additional nested drug-crime content. The firm therefore already understands the separate-page concept and is outside this campaign ICP.",
+  "campaign_notes": "Architecture Maturity Gate failed. Attorney bios mention some personal experience in other areas, but the runner does not infer firm practice areas from individual background. The explicitly marketed core practices already have focused destinations. No contact enrichment performed.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Overall Service Architecture",
+      "status": "Disqualified",
+      "service_offered_evidence": "Current navigation links separate DUI, Traffic Violations, Drug Crimes, Criminal Defense, Professional License Defense and Injury Law pages; Drug Crimes also has nested dedicated subpages.",
+      "dedicated_page_url": "https://www.drennanlawfirm1.com/",
+      "validation_method": "live homepage/navigation + Traffic Violations page + architecture-maturity gate",
+      "notes": "Separate-service thinking is already implemented across the core marketed practices. Not the campaign ICP."
+    }
+  ],
+  "contacts": [],
+  "outreach_draft": null,
+  "source_urls_checked": [
+    "https://www.drennanlawfirm1.com/",
+    "https://www.drennanlawfirm1.com/traffic-violations/"
+  ]
+}
