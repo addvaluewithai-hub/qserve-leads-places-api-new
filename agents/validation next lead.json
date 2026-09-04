@@ -2,9 +2,9 @@
   "campaign_id": "lawyers-us",
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJ4VWVMQlx_ogRD3GvbrgRtA0",
-    "name": "Top DUI &amp; Criminal Defense Lawyer | Charleston, Mt. Pleasant | Drennan Law Firm",
-    "website": "https://www.drennanlawfirm1.com/?npcmp=dir:local:4367335:29464",
+    "id": "ChIJR-5WBtKk-IgR2oVus7RUpHQ",
+    "name": "Personal Injury Law Firm in Columbia, SC | Free consultation",
+    "website": "https://www.goingslawfirm.com/?utm_source=GMB&utm_medium=organic&utm_campaign=Columbia",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -14,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:40",
-    "last_seen_at": "2026-09-02 11:51:14",
-    "website_domain": "drennanlawfirm1.com"
+    "first_seen_at": "2026-09-02 11:12:41",
+    "last_seen_at": "2026-09-02 11:51:15",
+    "website_domain": "goingslawfirm.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
