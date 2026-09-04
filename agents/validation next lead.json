@@ -1,18 +1,10 @@
 {
   "campaign_id": "lawyers-us",
-  "counts": {
-    "Disqualified": 35,
-    "Not Relevant": 4,
-    "Qualified": 4,
-    "Ready for Validation": 1787,
-    "Total": 1830,
-    "QualifiedFlag": 4
-  },
   "selection_rule": "status='Ready for Validation' AND qualified=0; quality_score DESC, first_seen_at ASC, lead_id ASC",
   "lead": {
-    "id": "ChIJYd_39SSLk4cR-iZFlz3yqq8",
-    "name": "Personal Injury and VA Claims Lawyers in NE | Berry Law",
-    "website": "https://jsberrylaw.com/",
+    "id": "ChIJV7TDIQq7-IgRA457rJrT_zk",
+    "name": "Columbia Criminal Defense Attorney - Jeffcoat Criminal Defense Lawyers",
+    "website": "https://carolinadefenselawyers.com/?utm_source=google&utm_medium=organic&utm_campaign=gmbwebsite",
     "address": null,
     "phone": null,
     "primary_type": null,
@@ -22,9 +14,9 @@
     "quality_score": 0,
     "qualification_reason": "historical_working_set_ready_for_validation",
     "notes": "",
-    "first_seen_at": "2026-09-02 11:12:56",
+    "first_seen_at": "2026-09-02 11:12:58",
     "last_seen_at": "2026-09-02 11:51:15",
-    "website_domain": "jsberrylaw.com"
+    "website_domain": "carolinadefenselawyers.com"
   },
   "homepage_links": [],
   "existing_service_gap_evidence": [],
