@@ -1,0 +1,12 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 4,
+  "position": 16,
+  "lead_id": "ChIJbeVIAz0mTIYR2ckLtq15mpQ",
+  "name": "Robot Challenge Screen",
+  "domain": "attlaw.com",
+  "website": "https://attlaw.com/dallas/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
+}

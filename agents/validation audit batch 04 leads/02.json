@@ -1,0 +1,30 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 4,
+  "position": 2,
+  "lead_id": "ChIJi2_HIVmcToYRq-FEZ_g9k_Y",
+  "name": "Home | Corbett & Corbett LLP",
+  "domain": "corbettfirm.com",
+  "website": "http://www.corbettfirm.com/",
+  "clean_homepage_url_count": 17,
+  "clean_homepage_urls": [
+    "/civil-rights-cases",
+    "/consultation",
+    "/dallas-car-accident-lawyers",
+    "/dallas-car-wreck-lawyer-7",
+    "/dallas-criminal-lawyer",
+    "/dallas-family-law-attorneys",
+    "/dallas-truck-accident-attorneys",
+    "/",
+    "/about",
+    "/attorney-augustus-corbett",
+    "/attorney-chloe-corbett",
+    "/black-criminal-defense-lawyers-dallas",
+    "/black-dallas-personal-injury-lawyers",
+    "/blog",
+    "/contact",
+    "/dallas-truck-accident-lawyer",
+    "/dallas-wrongful-death-lawyer"
+  ]
+}

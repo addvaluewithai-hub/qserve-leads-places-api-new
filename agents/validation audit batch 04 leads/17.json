@@ -1,0 +1,12 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 4,
+  "position": 17,
+  "lead_id": "ChIJjxRE8t2YToYRFGVqWHfrv4M",
+  "name": "Robot Challenge Screen",
+  "domain": "kelleyfirm.com",
+  "website": "https://www.kelleyfirm.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
+}

@@ -1,0 +1,32 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 4,
+  "position": 3,
+  "lead_id": "ChIJjSJ_LY6ZToYRvt2ZOXReNkc",
+  "name": "Le & Le Attorneys and Counselors at Law",
+  "domain": "leandlelaw.com",
+  "website": "http://www.leandlelaw.com/",
+  "clean_homepage_url_count": 19,
+  "clean_homepage_urls": [
+    "/",
+    "/attorneys",
+    "/contact",
+    "/disclaimer",
+    "/family-law",
+    "/family-law/child-custody",
+    "/family-law/divorce",
+    "/family-law/modifications",
+    "/immigration",
+    "/immigration/family-immigration",
+    "/immigration/humanitarian-immigration",
+    "/immigration/waivers",
+    "/lawyers/diana-le",
+    "/lawyers/vienna-le",
+    "/personal-injury",
+    "/personal-injury/car-accidents",
+    "/personal-injury/truck-accidents",
+    "/personal-injury/wrongful-death",
+    "/privacy-policy"
+  ]
+}

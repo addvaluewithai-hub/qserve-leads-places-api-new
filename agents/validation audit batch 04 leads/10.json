@@ -1,0 +1,12 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit": "manual clean-homepage-URL review only; no scoring, hints, categorization, ranking, or truncation",
+  "batch_number": 4,
+  "position": 10,
+  "lead_id": "ChIJsebk5x-ZToYRDsWuSaxZ0Iw",
+  "name": "Checking your browser...",
+  "domain": "gregglawdallas.com",
+  "website": "https://www.gregglawdallas.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
+}
