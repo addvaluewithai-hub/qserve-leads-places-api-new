@@ -2,18 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 12,
-  "lead_id": "ChIJJ0YH8wy1RIYRyRFBMzIiZYg",
-  "name": "Home - Law Office Of Sandra C Ritz",
-  "domain": "attyritz.com",
-  "website": "http://www.attyritz.com/",
-  "clean_homepage_url_count": 7,
-  "clean_homepage_urls": [
-    "/",
-    "/contact-us",
-    "/faq",
-    "/forms-and-resources",
-    "/helpful-links",
-    "/location",
-    "/team"
-  ]
+  "lead_id": "ChIJ08ryvnS1RIYRSR_-WMjnf2A",
+  "name": "Robot Challenge Screen",
+  "domain": "harronlaw.com",
+  "website": "http://harronlaw.com/criminal-defense-attorney-austin/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

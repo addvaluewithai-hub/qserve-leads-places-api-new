@@ -2,13 +2,18 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 10,
-  "lead_id": "ChIJG3X-KHW1RIYRH9eelkvrbWc",
-  "name": "Law Office of Jessica Bernstein",
-  "domain": "atxcrimdefense.com",
-  "website": "http://www.atxcrimdefense.com/",
-  "clean_homepage_url_count": 2,
+  "lead_id": "ChIJvd70fgu1RIYR3zkWXUuw19s",
+  "name": "Michaela D. Cuellar Attorney at Law - Criminal Law, Jail Release",
+  "domain": "ontiveroslawoffice.com",
+  "website": "http://www.ontiveroslawoffice.com/",
+  "clean_homepage_url_count": 7,
   "clean_homepage_urls": [
     "/",
-    "/index.php"
+    "/attorney-profile",
+    "/contact-us",
+    "/espa%C3%B1ol",
+    "/m/account",
+    "/m/create-account",
+    "/services-offered-1"
   ]
 }
