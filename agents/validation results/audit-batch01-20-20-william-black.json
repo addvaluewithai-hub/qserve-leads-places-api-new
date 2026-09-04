@@ -1,0 +1,31 @@
+{
+  "lead_id": "ChIJ7S6unaQSK4cRNWFNF-5ICEI",
+  "final_status": "Not Relevant",
+  "qualified": false,
+  "qualification_reason": "manual_clean_url_audit_single_narrow_pi_journey",
+  "campaign_notes": "Manual clean-URL audit corrected the prior classification. Live homepage verification shows a consolidated plaintiffs' personal-injury/wrongful-death practice covering car, truck, motorcycle, bicycle, dog-bite, premises-liability and related injury matters. These are variations within one narrow PI client journey, not multiple materially different main service conversations.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Wrongful Death",
+      "status": "Not Relevant",
+      "service_offered_evidence": "Official homepage describes a plaintiffs' personal injury and wrongful death practice and lists injury matter types on the consolidated page.",
+      "dedicated_page_url": null,
+      "validation_method": "Manual full clean-homepage-URL audit + official live homepage",
+      "notes": "Prior Gap Confirmed status is superseded. Wrongful death and the listed accident/injury matters fall within one narrow PI client journey."
+    }
+  ],
+  "contacts": [
+    {
+      "person_name": "William W. Black",
+      "role": "Named firm attorney / decision maker",
+      "email": null,
+      "is_owner": false,
+      "is_decision_maker": true,
+      "is_direct_email": false,
+      "is_publicly_verified": true,
+      "evidence_source": "Official Law Offices of William W. Black, P.C. homepage",
+      "notes": "Contact evidence retained, but lead is Not Relevant under the corrected client-journey gate."
+    }
+  ],
+  "campaign_id": "lawyers-us"
+}

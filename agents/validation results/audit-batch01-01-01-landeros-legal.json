@@ -1,0 +1,10 @@
+{
+  "lead_id": "ChIJL74zCAoRK4cRxk5vFlMj6DA",
+  "final_status": "Needs Review",
+  "qualified": false,
+  "qualification_reason": "manual_clean_url_audit_needs_live_confirmation",
+  "campaign_notes": "Manual clean-URL audit: homepage exposes only generic /services plus about/contact/appointment/resource pages. External public data indicates Landeros Legal Group offers estate planning, asset protection, and business-law work, but the exact landeroslegal.com service presentation could not be independently fetched/verified. Architecture remains promising but ambiguous, so no gap is confirmed.",
+  "service_gap_evidence": [],
+  "contacts": [],
+  "campaign_id": "lawyers-us"
+}

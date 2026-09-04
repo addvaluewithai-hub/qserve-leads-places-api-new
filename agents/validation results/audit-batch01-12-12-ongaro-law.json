@@ -1,0 +1,31 @@
+{
+  "lead_id": "ChIJv6NE1RQSK4cRoX5eHacHt0k",
+  "final_status": "Gap Confirmed - Direct Email Missing",
+  "qualified": false,
+  "qualification_reason": "manual_clean_url_audit_gap_confirmed_direct_email_missing",
+  "campaign_notes": "Manual clean-URL audit plus live-site verification confirms a strong architecture gap: one shared /practice-areas destination combines Immigration, Personal Injury, Criminal Defense, and Divorce/Child Custody. Salvador Ongaro is Managing Partner/CEO. Official site publishes only generic info@ongarolaw.com; a directory-listed personal-looking address was not sufficiently corroborated.",
+  "service_gap_evidence": [
+    {
+      "service_name": "Immigration",
+      "status": "Gap Confirmed",
+      "service_offered_evidence": "Official homepage and Practice Areas page explicitly offer Immigration alongside Personal Injury, Criminal Defense, and Divorce/Child Custody.",
+      "dedicated_page_url": null,
+      "validation_method": "Manual full clean-homepage-URL audit + official live homepage/Practice Areas page + site search",
+      "notes": "All materially different service lines are consolidated into the shared /practice-areas destination; no focused Immigration destination surfaced."
+    }
+  ],
+  "contacts": [
+    {
+      "person_name": "Salvador Ongaro",
+      "role": "Managing Partner / CEO",
+      "email": null,
+      "is_owner": false,
+      "is_decision_maker": true,
+      "is_direct_email": false,
+      "is_publicly_verified": true,
+      "evidence_source": "Official Salvador Ongaro profile and firm homepage",
+      "notes": "Official site publishes generic info@ongarolaw.com only. A directory-listed songaro@ongarolaw.com was not sufficiently corroborated."
+    }
+  ],
+  "campaign_id": "lawyers-us"
+}
