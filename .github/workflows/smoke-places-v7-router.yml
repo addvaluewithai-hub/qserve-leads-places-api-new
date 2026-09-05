@@ -1,0 +1,34 @@
+name: Smoke Places V7 quota router
+
+on:
+  push:
+    branches:
+      - experiment/places-pro-openweb-benchmark
+    paths:
+      - ".github/workflows/smoke-places-v7-router.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: smoke-places-v7-router
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install requests
+        run: pip install requests
+      - name: Compile V7 router
+        run: python -m py_compile scripts/places_v7_router.py scripts/smoke_places_v7_router.py
+      - name: Run forced quota-switch smoke test
+        run: PYTHONPATH=scripts python scripts/smoke_places_v7_router.py
