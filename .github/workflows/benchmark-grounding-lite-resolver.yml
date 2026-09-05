@@ -1,0 +1,36 @@
+name: Benchmark Pro plus Grounding Lite resolver
+
+on:
+  push:
+    branches:
+      - experiment/places-pro-openweb-benchmark
+    paths:
+      - ".github/workflows/benchmark-grounding-lite-resolver.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run existing Grounding Lite benchmark
+        run: python scripts/benchmark_lawyer_discovery.py
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grounding-lite-lawyer-discovery-benchmark
+          path: out/lawyer-discovery-benchmark/
+          if-no-files-found: warn
+          retention-days: 7
