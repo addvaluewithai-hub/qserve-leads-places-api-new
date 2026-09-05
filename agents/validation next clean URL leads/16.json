@@ -2,20 +2,21 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 16,
-  "lead_id": "ChIJqz6noWPGQIYRGggqVjLKwjM",
-  "name": "Law Offices of Stefanie M Gonzalez |",
-  "domain": "smgonzalez.com",
-  "website": "http://www.smgonzalez.com/",
-  "clean_homepage_url_count": 9,
+  "lead_id": "ChIJ3aQnjpPDQIYRabzTnASfHvo",
+  "name": "Mathew Law Firm",
+  "domain": "mathewimmigrationlaw.com",
+  "website": "http://www.mathewimmigrationlaw.com/",
+  "clean_homepage_url_count": 10,
   "clean_homepage_urls": [
     "/",
-    "/about",
-    "/cases",
-    "/contact",
-    "/in-the-news",
+    "/attorney",
+    "/contact-us",
+    "/contact-us-1",
+    "/home-2",
+    "/new-index",
+    "/new-page-1",
     "/resources",
-    "/testimonials",
-    "/what-we-do",
-    "/who-we-are"
+    "/resources-1",
+    "/useful-tips-1"
   ]
 }
