@@ -1,0 +1,45 @@
+name: Probe Google usage API auth
+
+on:
+  push:
+    branches:
+      - experiment/places-pro-openweb-benchmark
+    paths:
+      - .github/workflows/probe-google-usage-auth.yml
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - name: Probe management APIs without exposing key
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, urllib.parse, urllib.request, urllib.error
+
+          key = os.environ.get('GOOGLE_API_KEY')
+          if not key:
+              raise SystemExit('GOOGLE_API_KEY missing')
+
+          def probe(label, url):
+              req = urllib.request.Request(url, headers={'Accept': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      body = r.read().decode('utf-8', 'replace')
+                      print(json.dumps({'probe': label, 'status': r.status, 'body': body[:1200]}, indent=2))
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode('utf-8', 'replace')
+                  # never print the secret if an upstream echoes it
+                  body = body.replace(key, '<redacted>')
+                  print(json.dumps({'probe': label, 'status': e.code, 'body': body[:1200]}, indent=2))
+              except Exception as e:
+                  print(json.dumps({'probe': label, 'error': f'{type(e).__name__}: {e}'}, indent=2))
+
+          q = urllib.parse.quote(key, safe='')
+          probe('api_keys_lookup_key_without_oauth', f'https://apikeys.googleapis.com/v2/keys:lookupKey?keyString={q}')
+          probe('service_usage_with_api_key', f'https://serviceusage.googleapis.com/v1beta1/projects/-/services/places.googleapis.com/consumerQuotaMetrics?view=FULL&key={q}')
+          probe('cloud_monitoring_with_api_key', f'https://monitoring.googleapis.com/v3/projects/-/timeSeries?filter=metric.type%3D%22serviceruntime.googleapis.com%2Fapi%2Frequest_count%22&interval.startTime=2026-09-01T00%3A00%3A00Z&interval.endTime=2026-10-01T00%3A00%3A00Z&view=HEADERS&key={q}')
+          PY
