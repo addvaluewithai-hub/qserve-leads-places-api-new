@@ -228,7 +228,6 @@ def ensure_batch(query, campaign_id: str, batch_id: str, target: int) -> dict:
            (id,campaign_id,target_domains,status,notes) VALUES (?,?,?,'active',?)""",
         [batch_id, campaign_id, int(target), "V8 Aggregate batch; adopts V7 pre-cancel discoveries for batch 1."],
     )
-    # One-time/idempotent adoption of V7 discoveries. These providers only exist in the V7 experiment.
     placeholders = ",".join("?" for _ in V7_PROVIDERS)
     query(
         f"""
@@ -631,7 +630,6 @@ def main() -> None:
             stop_reason="aggregate_tile_queue_exhausted"; break
         last_tile={k:tile.get(k) for k in ["id","state_code","depth","south","west","north","east"]}
 
-        # Google caps custom-area size at 2e12 m^2. Pre-split without spending a request.
         if bbox_area_m2(tile) > 1.8e12:
             split_tile(query,tile,"pre_split_area_guard")
             write_checkpoint(out_dir,query,args.batch_id,budgets,run_accepted,last_tile)
@@ -645,7 +643,6 @@ def main() -> None:
             msg=f"{type(exc).__name__}: {exc}"
             query("UPDATE aggregate_tiles_v8 SET status='failed',last_error=?,updated_at=CURRENT_TIMESTAMP WHERE id=?",[msg[:1200],tile["id"]])
             write_checkpoint(out_dir,query,args.batch_id,budgets,run_accepted,last_tile,"aggregate_error")
-            # SERVICE_DISABLED / auth/config errors should stop globally, not burn the queue.
             if "SERVICE_DISABLED" in msg or "PERMISSION_DENIED" in msg or "403" in msg:
                 stop_reason="aggregate_service_unavailable"; break
             continue
@@ -672,7 +669,6 @@ def main() -> None:
             continue
 
         needed=int(batch_state(query,args.batch_id)["remaining_domains"])
-        # A little headroom covers same-domain duplicates without resolving the whole leaf unnecessarily.
         candidates=fresh[:min(len(fresh),needed+20)]
         resolved=[]
 
@@ -681,7 +677,7 @@ def main() -> None:
             ground_ids=candidates[:n]
             ledger.reserve(budgets["grounding"],n,f"tile={tile['id']};state={tile['state_code']};place_id_resolution")
             ground_results=parallel(grounding_one,key,ground_ids,args.workers)
-            canary_ok,canary_failed=update_canary(query,args.batch_id,ground_results,canary_attempt_target,canary_min_success)
+            _,canary_failed=update_canary(query,args.batch_id,ground_results,canary_attempt_target,canary_min_success)
             for r in ground_results:
                 if r.get("ok") and r.get("domain") and not blocked_domain(r.get("domain")):
                     resolved.append(r)
@@ -693,7 +689,6 @@ def main() -> None:
                 break
             candidates=candidates[n:]
 
-        # Enterprise fallback starts only after Grounding's internal free guard is exhausted.
         if candidates and budgets["grounding"].remaining <= 0 and budgets["details"].remaining > 0:
             n=min(len(candidates),budgets["details"].remaining)
             detail_ids=candidates[:n]
@@ -721,7 +716,16 @@ def main() -> None:
 
         query("UPDATE aggregate_tiles_v8 SET status='leaf_complete',net_new_domains=?,updated_at=CURRENT_TIMESTAMP WHERE id=?",[new_here,tile["id"]])
         write_checkpoint(out_dir,query,args.batch_id,budgets,run_accepted,last_tile)
-        print(json.dumps({"tile":last_tile,"count":count,"ids":len(ids),"fresh_ids":len(fresh),"new_domains":new_here,"batch":batch_state(query,args.batch_id),"budgets":{k:b.remaining for k,b in budgets.items()}},flush=True)
+        log_payload={
+            "tile":last_tile,
+            "count":count,
+            "ids":len(ids),
+            "fresh_ids":len(fresh),
+            "new_domains":new_here,
+            "batch":batch_state(query,args.batch_id),
+            "budgets":{k:b.remaining for k,b in budgets.items()},
+        }
+        print(json.dumps(log_payload),flush=True)
 
         if budgets["grounding"].remaining <= 0 and budgets["details"].remaining <= 0 and batch_state(query,args.batch_id)["remaining_domains"] > 0:
             stop_reason="domain_resolution_free_guards_exhausted"; break
