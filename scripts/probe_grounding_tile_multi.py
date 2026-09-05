@@ -15,16 +15,26 @@ def dom(u):
 
 def main():
     key=os.environ['GOOGLE_API_KEY']
+    excluded=[
+      "DM Cantor",
+      "Community Legal Services",
+      "Kelly Law Team Phoenix",
+      "Outreach Legal",
+      "Curry Pearson & Wooten PLC",
+    ]
+    q=("Return 5 MORE law firms in downtown Phoenix, Arizona, different from these excluded firms: "
+       + "; ".join(excluded)
+       + ". Include the official website for every law firm you return. Do not return any excluded firm.")
     body={
-      "jsonrpc":"2.0","id":"tile-phoenix-10","method":"tools/call",
+      "jsonrpc":"2.0","id":"tile-phoenix-next5","method":"tools/call",
       "params":{"name":"search_places","arguments":{
-        "textQuery":"Return 10 law firms in downtown Phoenix, Arizona if at least 10 are available. Include the official website for every law firm you return. Prefer distinct firms, not duplicate offices.",
+        "textQuery":q,
         "locationBias":{"circle":{"center":{"latitude":33.4484,"longitude":-112.0740},"radiusMeters":1750}},
         "languageCode":"en","regionCode":"US"
       }}
     }
     r=requests.post(URL,headers={"X-Goog-Api-Key":key,"Content-Type":"application/json","Accept":"application/json, text/event-stream"},json=body,timeout=120)
-    print(json.dumps({"http":r.status_code,"grounding_requests":1},indent=2))
+    print(json.dumps({"http":r.status_code,"grounding_requests":1,"excluded":excluded},indent=2))
     if r.status_code!=200:
         print(r.text[:5000]); return
     p=r.json(); s=((p.get('result') or {}).get('structuredContent') or {})
