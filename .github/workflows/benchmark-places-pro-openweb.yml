@@ -33,14 +33,14 @@ jobs:
       - name: Install benchmark dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Run isolated benchmark
-        run: python scripts/benchmark_places_pro_openweb.py
+      - name: Run isolated benchmark v2
+        run: python scripts/benchmark_places_pro_openweb_v2.py
 
       - name: Upload benchmark artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: places-pro-openweb-benchmark
-          path: out/places-pro-openweb-benchmark/
+          name: places-pro-openweb-benchmark-v2
+          path: out/places-pro-openweb-benchmark-v2/
           if-no-files-found: warn
           retention-days: 7
