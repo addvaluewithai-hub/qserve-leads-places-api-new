@@ -1,0 +1,227 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-pusch-wynne-injury-lawyers",
+      "lead_id": "ChIJrcgHyWu_QIYRc-dvPVomtno",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL architecture includes plaintiff injury work plus materially different insurance/property-claim services, with distinct focused destinations such as commercial claims, residential claims and insurance lawyer alongside accident and injury pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-filis-law-firm",
+      "lead_id": "ChIJ-Qnc8O3FQIYRn5SIxSLyoVc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Family Law, Estate Planning, Probate/Estates, disability/special-needs planning and guardianship work are already represented by focused destinations rather than one consolidated services conversation.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-jerry-michael-acosta-associates",
+      "lead_id": "ChIJ4Zg2Ga3AQIYRvtGcVCbIYm8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Juvenile/criminal defense and Personal Injury are materially different legal journeys and both already have dedicated focused destinations in the clean URL architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-nielsen-law-firm",
+      "lead_id": "ChIJ82IbHfLGQIYR6QstsYIjN28",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URLs are one plaintiff Personal Injury journey with car, truck, rideshare and work-injury subtypes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-houston-black-personal-injury-lawyer",
+      "lead_id": "ChIJA5fCAprHQIYRl4IgQoUF7Og",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Despite the very large URL count, the site is one narrow Personal Injury journey repeated across locations and accident/injury subtypes such as car, truck, motorcycle, pedestrian, premises liability and wrongful death.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-integrity-law",
+      "lead_id": "ChIJBe6UmbHDQIYRv_YWi-Zv030",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Business, Estate Planning, Family Law/Probate, Personal Injury and Real Estate are materially different main services and each already has its own focused service destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-law-office-of-isaias-torres",
+      "lead_id": "ChIJFUQZb_7GQIYRC7FmShXOUp4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "All substantive practice URLs are Immigration-specific, including humanitarian relief, citizenship, deportation/removal, family-based immigration and nonimmigrant visas, which remain one narrow legal journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-mendiola-law-firm",
+      "lead_id": "ChIJGV84_8LBQIYRyPgBtMG5ojQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Civil Litigation, Criminal Defense, Family Law, Immigration and Personal Injury are materially different main services and the clean URL architecture already separates each into a focused destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-mccreary-law-office",
+      "lead_id": "ChIJO2cOU5e_QIYRuQi2Gyt3UkI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set centers on the closely related Estate Planning, Probate, guardianship, elder-law and special-needs planning family, which is one narrow estate/probate planning journey for this ICP.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-barcus-arenas",
+      "lead_id": "ChIJZc6kPA7HQIYRJNU9sK10_zk",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Insurance-claim litigation and Personal Injury are materially different journeys and the architecture already exposes focused destinations for insurance disputes and a dedicated Houston personal-injury page.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-phipps-garza-law-firm",
+      "lead_id": "ChIJ_fUcUoW9QIYRAx0cwafsYbI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_validation_single_narrow_journey",
+      "campaign_notes": "The production title referenced Business Litigation but the clean URL set did not. Official live-site validation resolved the inconsistency: the current navigation, homepage, practice areas and service copy present the firm as a Personal Injury/accident practice, so the current architecture is one narrow injury journey rather than a real multi-practice gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-law-office-of-tony-e-parada",
+      "lead_id": "ChIJf1u-ef3GQIYRukrD-RM374E",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is Immigration-only, including adjustment, asylum, bond, cancellation, citizenship, deportation defense, immigration/crime, TPS and waivers.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-vasquez-law-group",
+      "lead_id": "ChIJjZ1D47fGQIYRYqOfyjUxwQw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Bankruptcy and Personal Injury are materially different main legal journeys and both already have dedicated focused destinations (/bankruptcy and /personal-injury).",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-sanchez-law-firm",
+      "lead_id": "ChIJk7kkJju_QIYRr29UL-0oOfE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Business Disputes, Consumer Disputes, Criminal Defense and Estate Planning/Probate are materially different services and each is already represented by a focused destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-kuteyi-law-group",
+      "lead_id": "ChIJpWuHG_jHQIYRDGOX32jGjKE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Family Law and Immigration are materially different legal journeys and both already have dedicated focused service pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-law-offices-of-stefanie-m-gonzalez",
+      "lead_id": "ChIJqz6noWPGQIYRGggqVjLKwjM",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_missing",
+      "campaign_notes": "The clean links were generic, so the official live site was validated. It explicitly offers Family Law and Personal Injury as materially different main services, but both are presented together on the same general What We Do destination rather than separate focused client journeys. Official bio evidence identifies Stefanie M. Gonzalez as the attorney who opened and runs her own law office. The site publishes only generic info@smgonzalez.com, and no direct public verified personal email for Stefanie was found, so the architecture gap is confirmed but the lead is not Qualified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official homepage and What We Do page explicitly state that the firm represents personal injury clients and list Personal Injury as one of its two main practice areas.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Family Law and Personal Injury are materially different client journeys, but both resolve to and are fully described on the same general /what-we-do/ page; the current navigation does not provide a reasonable separate focused destination for Personal Injury, so the site remains consolidated rather than mature."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Stefanie M. Gonzalez",
+          "role": "Owner / Founder",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": false,
+          "evidence_source": "Official firm Who We Are page states that Gonzalez returned to Houston and opened her own law office; current official contact surfaces publish only the generic info@smgonzalez.com address.",
+          "notes": "Decision maker established; no direct public verified personal email found and no email pattern was guessed."
+        }
+      ]
+    },
+    {
+      "slug": "17-defense-law-houston",
+      "lead_id": "ChIJyfJIeNKXQIYRRx_-AHaEcyY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is Criminal Defense and parole/criminal subtopics, including assault, theft, drugs, DWI, expungement, felonies, murder, parole and white-collar defense, which remain one narrow criminal-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-gibson-hill-pc",
+      "lead_id": "ChIJ4-kH-jTDQIYRHeFcx2uzmAQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The large clean URL architecture is still one plaintiff Personal Injury journey across locations and injury subtypes such as vehicle, nursing-home, offshore, oil-field, workplace, brain/spinal injury and wrongful death.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-tj-solo-law",
+      "lead_id": "ChIJAWjCtJu_QIYR7f8QidOHdJY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Estate Planning, Personal Injury and Criminal Law/Parole are materially different main services and are already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-havens-associates",
+      "lead_id": "ChIJRa29MsrBQIYRbXx_lf0t2QI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site combines plaintiff injury work with materially different Business Litigation and insurance bad-faith claims, and already provides dedicated focused destinations for those separate service journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
