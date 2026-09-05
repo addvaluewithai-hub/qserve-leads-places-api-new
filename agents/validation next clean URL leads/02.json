@@ -2,10 +2,20 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 2,
-  "lead_id": "ChIJG3rwPSa_QIYRVPizt469kM4",
-  "name": "Reconnect Your Domain | Wix.com",
-  "domain": "mitchelloffices.com",
-  "website": "https://www.mitchelloffices.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJ4ScRlRvBQIYRmxoI_bAb8WI",
+  "name": "Employment Law | Texas | Law Office of H. Julian Frachtman",
+  "domain": "julianfrachtmanlaw.com",
+  "website": "https://www.julianfrachtmanlaw.com/",
+  "clean_homepage_url_count": 9,
+  "clean_homepage_urls": [
+    "/",
+    "/about-4",
+    "/about-8",
+    "/contact-3",
+    "/copy-of-employment-law",
+    "/copy-of-employment-law-1",
+    "/copy-of-personal-injury",
+    "/general-4-3",
+    "/services-7"
+  ]
 }
