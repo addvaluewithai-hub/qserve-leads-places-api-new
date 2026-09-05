@@ -3,7 +3,8 @@ name: Places V8 Aggregate smoke
 on:
   push:
     paths:
-      - "scripts/probe_places_aggregate_v8.py"
+      - "scripts/probe_places_aggregate_v8_probridge.py"
+      - "scripts/build_lawyers_v8_aggregate_probridge.py"
       - ".github/workflows/places-v8-aggregate-smoke.yml"
       - "triggers/v8-aggregate-smoke.txt"
 
@@ -25,8 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
+      - run: pip install requests pgeocode tldextract
       - name: Compile before calls
-        run: python -m py_compile scripts/probe_places_aggregate_v8.py
-      - name: Probe Aggregate plus Place-ID Grounding
-        run: python scripts/probe_places_aggregate_v8.py
+        run: python -m py_compile scripts/build_lawyers_v8_aggregate.py scripts/build_lawyers_v8_aggregate_probridge.py scripts/probe_places_aggregate_v8_probridge.py scripts/zip_manager.py scripts/d1_helpers.py
+      - name: Probe Aggregate + Place Details Pro + Grounding
+        run: python scripts/probe_places_aggregate_v8_probridge.py
