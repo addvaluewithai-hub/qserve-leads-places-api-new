@@ -1,0 +1,32 @@
+name: Grounding Multi10 One Request Probe
+
+on:
+  push:
+    paths:
+      - "scripts/probe_grounding_multi10_one_request.py"
+      - ".github/workflows/grounding-multi10-one-request.yml"
+      - "triggers/grounding-multi10-one-request.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: grounding-multi10-one-request
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Compile probe
+        run: python -m py_compile scripts/probe_grounding_multi10_one_request.py
+      - name: Send 10 businesses in exactly one Grounding request
+        run: python scripts/probe_grounding_multi10_one_request.py
