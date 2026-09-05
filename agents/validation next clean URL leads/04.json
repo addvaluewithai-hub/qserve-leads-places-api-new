@@ -2,10 +2,24 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 4,
-  "lead_id": "ChIJcXvxm26_QIYR3bG4VW6RlaE",
-  "name": "Austin & Houston Criminal Defense Attorneys | Adamo & Adamo Law Firm",
-  "domain": "adamolawfirm.com",
-  "website": "https://adamolawfirm.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJJ2Uz4TTNQIYR68HAGJeIDeU",
+  "name": "Houston DWI Lawyer & Criminal Defense Attorney | KVM Law Firm",
+  "domain": "kvmlawfirm.com",
+  "website": "http://kvmlawfirm.com/",
+  "clean_homepage_url_count": 13,
+  "clean_homepage_urls": [
+    "/",
+    "/about",
+    "/about-attorney",
+    "/bac-calculator",
+    "/contact",
+    "/criminal-defense",
+    "/disclaimer",
+    "/dwi-defense",
+    "/es",
+    "/jail-risk-assessment",
+    "/personal-injury-lawyer-texas",
+    "/privacy-policy",
+    "/texas-criminal-penalty-estimator"
+  ]
 }
