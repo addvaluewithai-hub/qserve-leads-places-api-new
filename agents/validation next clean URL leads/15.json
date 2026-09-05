@@ -2,14 +2,25 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJLxCm0tzJQIYRXC8KGZsJIYA",
-  "name": "Home | Luis Baez Law Office",
-  "domain": "thebaezfirm.com",
-  "website": "https://www.thebaezfirm.com/",
-  "clean_homepage_url_count": 3,
+  "lead_id": "ChIJ8b-_Uaq_QIYRu15znh2d2-Q",
+  "name": "Texas Criminal Defense Attorney | L. Garza Law Firm PLLC",
+  "domain": "lgarzalawfirm.com",
+  "website": "https://lgarzalawfirm.com/",
+  "clean_homepage_url_count": 14,
   "clean_homepage_urls": [
     "/",
-    "/blank",
-    "/search"
+    "/about",
+    "/attorney/garza-luis",
+    "/blog",
+    "/contact",
+    "/disclaimer",
+    "/federal-crimes",
+    "/houston-criminal-defense-law-office",
+    "/in-the-news",
+    "/privacy",
+    "/site-map",
+    "/testimonials",
+    "/texas-criminal-defense",
+    "/violent-crimes"
   ]
 }
