@@ -1,0 +1,63 @@
+name: Import V8 Batch 1 Crawl Evidence to D1
+
+on:
+  push:
+    branches:
+      - "run/places-v8-aggregate-batch1"
+    paths:
+      - "triggers/import-v8-batch1-crawl-evidence.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: lawyers-us-v8-crawl-d1-handoff
+  cancel-in-progress: false
+
+jobs:
+  handoff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile importer
+        run: python -m py_compile scripts/import_crawl4ai_evidence_to_d1.py scripts/d1_helpers.py
+      - name: Download latest successful Batch 1 Crawl4AI evidence
+        run: |
+          CRAWL_RUN="$(gh run list \
+            --repo "$GITHUB_REPOSITORY" \
+            --workflow crawl-v8-batch1-evidence.yml \
+            --branch "$GITHUB_REF_NAME" \
+            --status success \
+            --limit 1 \
+            --json databaseId \
+            --jq '.[0].databaseId')"
+          test -n "$CRAWL_RUN"
+          echo "Using Crawl4AI run $CRAWL_RUN"
+          mkdir -p input/crawl
+          gh run download "$CRAWL_RUN" --repo "$GITHUB_REPOSITORY" --dir input/crawl
+          EVIDENCE="$(find input/crawl -name homepage_links.json -print -quit)"
+          test -n "$EVIDENCE"
+          echo "EVIDENCE=$EVIDENCE" >> "$GITHUB_ENV"
+      - name: Promote successfully crawled leads to Ready for Validation
+        run: |
+          python scripts/import_crawl4ai_evidence_to_d1.py \
+            --campaign lawyers-us \
+            --input "$EVIDENCE" \
+            --report out/v8-batch1-crawl-import-report.json
+      - name: Upload handoff report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v8-batch1-crawl-d1-handoff-${{ github.run_id }}
+          path: out/v8-batch1-crawl-import-report.json
+          if-no-files-found: warn
