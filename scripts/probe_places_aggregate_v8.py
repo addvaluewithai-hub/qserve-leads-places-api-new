@@ -41,9 +41,9 @@ def extract_urls(text: str) -> list[str]:
     return out
 
 
-def aggregate(key: str, lat: float, lng: float, radius: int) -> dict:
-    body = {
-        "insights": ["INSIGHT_COUNT", "INSIGHT_PLACES"],
+def agg_body(lat: float, lng: float, radius: int, insights: list[str]) -> dict:
+    return {
+        "insights": insights,
         "filter": {
             "locationFilter": {"circle": {"latLng": {"latitude": lat, "longitude": lng}, "radius": radius}},
             "typeFilter": {"includedTypes": ["lawyer"]},
@@ -51,12 +51,31 @@ def aggregate(key: str, lat: float, lng: float, radius: int) -> dict:
             "ratingFilter": {"minRating": 4.0, "maxRating": 5.0},
         },
     }
-    r = requests.post(AGG_URL, headers={"X-Goog-Api-Key": key, "Content-Type": "application/json"}, json=body, timeout=60)
+
+
+def aggregate(key: str, lat: float, lng: float, radius: int, insights: list[str]) -> dict:
+    r = requests.post(
+        AGG_URL,
+        headers={"X-Goog-Api-Key": key, "Content-Type": "application/json"},
+        json=agg_body(lat, lng, radius, insights),
+        timeout=60,
+    )
     try:
         payload = r.json() if r.content else {}
     except Exception:
-        payload = {"raw": r.text[:1500]}
+        payload = {"raw": r.text[:1000]}
     return {"http": r.status_code, "payload": payload}
+
+
+def parse_ids(payload: dict) -> list[str]:
+    ids=[]
+    for x in payload.get("placeInsights") or []:
+        p=str(x.get("place") or "")
+        if p.startswith("places/"):
+            p=p.split("/",1)[1]
+        if p and p not in ids:
+            ids.append(p)
+    return ids
 
 
 def grounding(key: str, place_id: str) -> dict:
@@ -81,26 +100,52 @@ def main() -> None:
     if not key:
         raise SystemExit("GOOGLE_API_KEY missing")
     report=[]
-    for name,lat,lng,radius in TESTS:
-        a=aggregate(key,lat,lng,radius)
-        payload=a.get("payload") or {}
+    for name,lat,lng,start_radius in TESTS:
+        radius=start_radius
+        count_calls=0
+        count=None
+        count_error=None
+        while radius >= 250:
+            a=aggregate(key,lat,lng,radius,["INSIGHT_COUNT"])
+            count_calls += 1
+            if a["http"] != 200:
+                count_error=a["payload"]
+                break
+            count=int((a["payload"] or {}).get("count") or 0)
+            if count <= 100:
+                break
+            radius=max(250,int(radius/2))
         ids=[]
-        for x in payload.get("placeInsights") or []:
-            p=str(x.get("place") or "")
-            if p.startswith("places/"):
-                p=p.split("/",1)[1]
-            if p:
-                ids.append(p)
-        row={"market":name,"aggregate_http":a["http"],"count":int(payload.get("count") or 0),"place_ids_returned":len(ids),"grounding":[]}
-        if a["http"] != 200:
-            row["aggregate_error"] = payload
+        places_http=None
+        places_error=None
+        if count is not None and 0 < count <= 100:
+            p=aggregate(key,lat,lng,radius,["INSIGHT_PLACES"])
+            places_http=p["http"]
+            if p["http"] == 200:
+                ids=parse_ids(p["payload"] or {})
+            else:
+                places_error=p["payload"]
+        row={
+            "market":name,
+            "count_http": 200 if count is not None and count_error is None else None,
+            "count_calls":count_calls,
+            "final_radius_m":radius,
+            "count":count,
+            "places_http":places_http,
+            "place_ids_returned":len(ids),
+            "grounding":[],
+        }
+        if count_error:
+            row["count_error"]=count_error
+        if places_error:
+            row["places_error"]=places_error
         for pid in ids[:2]:
             row["grounding"].append({"place_id":pid,**grounding(key,pid)})
         report.append(row)
         print(json.dumps(row,ensure_ascii=False),flush=True)
     print(json.dumps({"report":report},indent=2))
-    if any(r["aggregate_http"] != 200 for r in report):
-        raise SystemExit("Aggregate API smoke failed")
+    if any(r.get("count") is None or r.get("places_http") != 200 or not r.get("place_ids_returned") for r in report):
+        raise SystemExit("Aggregate count->places smoke failed")
     tested=[g for r in report for g in r["grounding"]]
     if not tested or not all(g.get("ok") for g in tested):
         raise SystemExit("Place-ID Grounding smoke failed")
