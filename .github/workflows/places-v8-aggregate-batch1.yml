@@ -1,0 +1,51 @@
+name: Lawyers V8 Aggregate Batch 1 - 2000 total
+
+on:
+  push:
+    paths:
+      - "triggers/start-v8-aggregate-batch1.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lawyers-discovery-production
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install V8 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pgeocode tldextract
+      - name: Compile V8 before API calls
+        run: python -m py_compile scripts/build_lawyers_v8_aggregate.py scripts/probe_places_aggregate_v8.py scripts/zip_manager.py scripts/d1_helpers.py
+      - name: Preflight Aggregate and Place-ID Grounding
+        run: python scripts/probe_places_aggregate_v8.py
+      - name: Build V8 batch 1 to 2000 total domains
+        run: |
+          python scripts/build_lawyers_v8_aggregate.py \
+            --campaign lawyers-us \
+            --batch-id lawyers-us:v8-batch-01-of-09 \
+            --target 2000 \
+            --workers 8 \
+            --out-dir out/lawyers-us-v8-batch1-2000
+      - name: Upload V8 checkpoint artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-us-v8-aggregate-batch1-2000-${{ github.run_number }}
+          path: out/lawyers-us-v8-batch1-2000/
+          if-no-files-found: warn
