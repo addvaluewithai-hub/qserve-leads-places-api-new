@@ -1,0 +1,5 @@
+Start V8 Aggregate Batch 1 to a persistent total of 2000 domains.
+Architecture: Places Aggregate count-first -> recursive geographic split -> global Place ID dedupe -> Place Details Pro context bridge -> Maps Grounding Lite official domain with same Place ID -> global domain dedupe -> Ready for Crawl Evidence.
+Zero-paid internal guards: Aggregate 4800, Place Details Pro 4800, Grounding Lite 9500, Place Details Enterprise 900 fallback only after Pro/Grounding exhaustion.
+Preserve and adopt V7 discoveries already collected before cancellation; do not restart from zero.
+Triggered 2026-09-05 after Aggregate service enablement and successful Pro-bridge smoke.
