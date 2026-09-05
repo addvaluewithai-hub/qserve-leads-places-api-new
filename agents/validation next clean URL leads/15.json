@@ -2,19 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJKer_8jg1W4YRB8_yxurC1w8",
-  "name": "Bustos Family Law PLLC | Bustos Law PLLC",
-  "domain": "bustosfamilylaw.com",
-  "website": "https://bustosfamilylaw.com/",
-  "clean_homepage_url_count": 8,
-  "clean_homepage_urls": [
-    "/contact-us",
-    "/",
-    "/1812-2",
-    "/about-us",
-    "/elder-law",
-    "/estate-planning-services",
-    "/texas-divorce-attorneys-flat-fee-pricing",
-    "/texas-prenup"
-  ]
+  "lead_id": "ChIJdXVjCclKW4YR4XGEH7J_gHY",
+  "name": "Robot Challenge Screen",
+  "domain": "hoestenbachlawgroup.com",
+  "website": "https://hoestenbachlawgroup.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

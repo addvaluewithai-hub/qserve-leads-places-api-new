@@ -2,20 +2,19 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 11,
-  "lead_id": "ChIJTcgkKZpLW4YRuJbxEJCGEPs",
-  "name": "Sanchez Law | Personal Injury Law | Personal Injury Lawyers | Austin, TX",
-  "domain": "sanchezlawtx.com",
-  "website": "https://sanchezlawtx.com/",
-  "clean_homepage_url_count": 9,
+  "lead_id": "ChIJUfQPcfy0RIYRvRbNmX0kwug",
+  "name": "jdwlawoffice.com",
+  "domain": "jdwlawoffice.com",
+  "website": "http://www.jdwlawoffice.com/",
+  "clean_homepage_url_count": 8,
   "clean_homepage_urls": [
     "/",
     "/about",
-    "/attorneys",
+    "/blog",
     "/contact",
-    "/news/austins-top-attorneys-for-2023",
-    "/practice-areas",
-    "/privacy-policy",
-    "/reviews",
-    "/terms-of-service"
+    "/directions",
+    "/events",
+    "/newsletter-1",
+    "/services"
   ]
 }
