@@ -2,21 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 10,
-  "lead_id": "ChIJB3_pc_7GQIYRNKXwZMYxfgU",
-  "name": "Fridie Law, PLLC | Trusted Legal Services in Houston, TX",
-  "domain": "fridielaw.com",
-  "website": "http://www.fridielaw.com/",
-  "clean_homepage_url_count": 10,
-  "clean_homepage_urls": [
-    "/",
-    "/about-us",
-    "/blogs",
-    "/breaking-barriers-in-criminal-defense",
-    "/contact-us",
-    "/criminal-defense-representation-services",
-    "/defending-landowners-rights-in-texas",
-    "/empowering-accident-victims-in-houston",
-    "/personal-injury-representation-services",
-    "/property-law-services"
-  ]
+  "lead_id": "ChIJBxPzqQijQIYRjOS2lfepIqY",
+  "name": "Reconnect Your Domain | Wix.com",
+  "domain": "eltejanolaw.com",
+  "website": "http://www.eltejanolaw.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
