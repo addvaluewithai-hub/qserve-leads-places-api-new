@@ -2,10 +2,23 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 1,
-  "lead_id": "ChIJRXm-c4u0RIYRKJE-p4Q79HA",
-  "name": "One moment, please...",
-  "domain": "thestewartlawfirm.net",
-  "website": "https://thestewartlawfirm.net/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJwUe0-n21RIYRGbtxd4vkm2Q",
+  "name": "Home | Greenway Law Firm | Austin, TX - Greenway Law Firm",
+  "domain": "greenwaylawfirm.com",
+  "website": "https://www.greenwaylawfirm.com/",
+  "clean_homepage_url_count": 12,
+  "clean_homepage_urls": [
+    "/",
+    "/about-us",
+    "/areas-we-serve",
+    "/blog",
+    "/contact-us",
+    "/our-legal-services",
+    "/our-legal-services/bicycle-collisions",
+    "/our-legal-services/boating-collisions",
+    "/our-legal-services/motor-vehicle-collision",
+    "/our-legal-services/trucking-wrecks",
+    "/privacy-policy",
+    "/reviews"
+  ]
 }
