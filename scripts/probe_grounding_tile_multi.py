@@ -16,9 +16,9 @@ def dom(u):
 def main():
     key=os.environ['GOOGLE_API_KEY']
     body={
-      "jsonrpc":"2.0","id":"tile-phoenix","method":"tools/call",
+      "jsonrpc":"2.0","id":"tile-phoenix-10","method":"tools/call",
       "params":{"name":"search_places","arguments":{
-        "textQuery":"Law firms in downtown Phoenix, Arizona. Include the official website for each law firm you return.",
+        "textQuery":"Return 10 law firms in downtown Phoenix, Arizona if at least 10 are available. Include the official website for every law firm you return. Prefer distinct firms, not duplicate offices.",
         "locationBias":{"circle":{"center":{"latitude":33.4484,"longitude":-112.0740},"radiusMeters":1750}},
         "languageCode":"en","regionCode":"US"
       }}
