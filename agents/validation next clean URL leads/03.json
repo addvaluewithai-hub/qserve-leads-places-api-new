@@ -2,10 +2,17 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 3,
-  "lead_id": "ChIJvQwzuAm1RIYRay8a2gvniL4",
-  "name": "One moment, please...",
-  "domain": "sutliffstout.com",
-  "website": "https://www.sutliffstout.com/austin-personal-injury-lawyer/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJF2r7ukW0RIYRuksxmW4TtY0",
+  "name": "Law Offices of Gerald M. Gonzales, P.C | Immigration | Criminal | Civil",
+  "domain": "gonzaleslawoffice.com",
+  "website": "https://gonzaleslawoffice.com/",
+  "clean_homepage_url_count": 6,
+  "clean_homepage_urls": [
+    "/contactenos",
+    "/",
+    "/service/deportacion",
+    "/service/inmigracion-basada-en-familia",
+    "/service/ley-criminal",
+    "/service/ley-familiar"
+  ]
 }

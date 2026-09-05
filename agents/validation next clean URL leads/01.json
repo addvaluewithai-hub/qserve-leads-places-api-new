@@ -2,23 +2,16 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 1,
-  "lead_id": "ChIJwUe0-n21RIYRGbtxd4vkm2Q",
-  "name": "Home | Greenway Law Firm | Austin, TX - Greenway Law Firm",
-  "domain": "greenwaylawfirm.com",
-  "website": "https://www.greenwaylawfirm.com/",
-  "clean_homepage_url_count": 12,
+  "lead_id": "ChIJ_ZEt9805W4YRgb-urfk2Wts",
+  "name": "Groom Law Firm, P.C. - EXPERIENCED COUNSEL. FRESH APPROACH.",
+  "domain": "groomlaw.com",
+  "website": "http://www.groomlaw.com/",
+  "clean_homepage_url_count": 5,
   "clean_homepage_urls": [
     "/",
-    "/about-us",
-    "/areas-we-serve",
-    "/blog",
-    "/contact-us",
-    "/our-legal-services",
-    "/our-legal-services/bicycle-collisions",
-    "/our-legal-services/boating-collisions",
-    "/our-legal-services/motor-vehicle-collision",
-    "/our-legal-services/trucking-wrecks",
-    "/privacy-policy",
-    "/reviews"
+    "/clients",
+    "/contact",
+    "/team",
+    "/termsofuse"
   ]
 }
