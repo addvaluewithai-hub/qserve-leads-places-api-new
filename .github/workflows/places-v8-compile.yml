@@ -1,0 +1,21 @@
+name: Places V8 compile guard
+
+on:
+  push:
+    paths:
+      - "scripts/build_lawyers_v8_aggregate.py"
+      - ".github/workflows/places-v8-compile.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pgeocode tldextract
+      - run: python -m py_compile scripts/build_lawyers_v8_aggregate.py scripts/zip_manager.py scripts/d1_helpers.py
