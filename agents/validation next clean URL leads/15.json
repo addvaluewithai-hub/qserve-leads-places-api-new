@@ -2,20 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJM3Ysn_3GQIYRnerA90lnCjA",
-  "name": "JBY Lawfirm",
-  "domain": "jbylawfirm.com",
-  "website": "http://www.jbylawfirm.com/",
-  "clean_homepage_url_count": 9,
-  "clean_homepage_urls": [
-    "/",
-    "/%C3%A1reas-de-pr%C3%A1ctica",
-    "/about-the-firm",
-    "/acerca-de-la-firma-1",
-    "/conozca-a-los-abogados",
-    "/form",
-    "/inicio",
-    "/meet-the-attorneys-1",
-    "/practice-areas"
-  ]
+  "lead_id": "ChIJ0TIvu4O4QIYRPRUVfCbqc28",
+  "name": "Welcome",
+  "domain": "thedavilalawfirm.com",
+  "website": "https://thedavilalawfirm.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

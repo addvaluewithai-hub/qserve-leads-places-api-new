@@ -2,10 +2,14 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 5,
-  "lead_id": "ChIJ4ctfdwnDQIYR8OWL4HkQslM",
-  "name": "Robot Challenge Screen",
-  "domain": "houstondivorcesource.com",
-  "website": "https://houstondivorcesource.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJ50d_ZCbHQIYRdcnakP_2UEQ",
+  "name": "The Law Offices of Jason S. Hegedus",
+  "domain": "personalinjuryhegalaw.com",
+  "website": "https://personalinjuryhegalaw.com/",
+  "clean_homepage_url_count": 3,
+  "clean_homepage_urls": [
+    "/",
+    "/legal-disclaimer",
+    "/privacy-policy"
+  ]
 }

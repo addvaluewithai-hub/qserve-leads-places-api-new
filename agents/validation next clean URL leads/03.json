@@ -2,10 +2,26 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 3,
-  "lead_id": "ChIJ85IaGUDBQIYRe3QXQHVQQjY",
-  "name": "Personal Injury Attorney Houston, TX | Longoria Law Firm | Free Review",
-  "domain": "longorialaw.com",
-  "website": "https://www.longorialaw.com/personal-injury-attorney-houston-tx/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJzXMAT-DHQIYRzRDlxKROmhA",
+  "name": "Houston Criminal Defense Attorney | Timothy M. Donahue",
+  "domain": "timothymdonahue.com",
+  "website": "https://www.timothymdonahue.com/",
+  "clean_homepage_url_count": 15,
+  "clean_homepage_urls": [
+    "/",
+    "/blog",
+    "/case-results",
+    "/contact",
+    "/docs/anti-spam",
+    "/docs/privacy-policy",
+    "/docs/terms-of-use",
+    "/family-based-adjustment",
+    "/home",
+    "/houston",
+    "/offenses-against-property",
+    "/offenses-against-the-person",
+    "/practice-area",
+    "/practice-area/driving-while-intoxicated",
+    "/practice-area/drug-crimes"
+  ]
 }
