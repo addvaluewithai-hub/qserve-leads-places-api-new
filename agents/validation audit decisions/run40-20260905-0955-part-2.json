@@ -1,0 +1,232 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-kennyperezlaw",
+      "lead_id": "ChIJq6pqCgzBQIYRg914MVrcEc8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a personal-injury-focused practice. Vehicle, premises, catastrophic injury, dog bite, and wrongful-death pages are injury subtypes within one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-gildelawfirm",
+      "lead_id": "ChIJr51xi8jAQIYROc5W5QwR5SQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a plaintiff-side injury/tort practice. Auto, workplace, defective products, mass torts, sexual-abuse civil claims, and wrongful-death matters remain within one injury/civil-harm client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-spaglaw",
+      "lead_id": "ChIJsXz4azC_QIYRIKilm49sbWA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an injury practice centered on maritime, offshore, aviation, and personal-injury claims. These remain accident/injury client journeys rather than materially different main legal service families.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-thao-tran-rymaps",
+      "lead_id": "ChIJuwFT786_QIYRGCxVITnRXeo",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "manual_live_validation_domain_identity_unresolved",
+      "campaign_notes": "The production website is a third-party business-directory URL with zero same-domain homepage evidence. Public references identify The Law Office of Thao T. Tran as a Houston family-law practice, but no current official firm-site architecture could be resolved confidently enough for this campaign audit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-bettercalljg",
+      "lead_id": "ChIJzf5vXiW_QIYRhKpWmQA41ok",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different Criminal Defense and Personal Injury journeys and already separates them into focused top-level practice destinations with supporting subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-abogado-inmigracion-deportacion",
+      "lead_id": "ChIJ1aVGFRy_QIYRh5-4Tu1qgv4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL evidence and business identity show an immigration-focused practice, with ICE, immigration forms, visa bulletin, and services content remaining within one narrow immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-ilionsky",
+      "lead_id": "ChIJ2xJB_Ri_QIYRgq_4kHwSt5Y",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different Immigration, Family Law, Business Law, Estate Law, and Litigation journeys and already provides focused destinations for those main services.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-charlesargento",
+      "lead_id": "ChIJAeNUgdXDQIYRz9ERV-JFEAc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a large personal-injury practice. Accident, malpractice, product, maritime, industrial, mass-tort, premises, and wrongful-death pages remain within one plaintiff injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-metzelaw",
+      "lead_id": "ChIJMxRpS5-_QIYR2ysPS2kxXXM",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Manual clean-URL review showed criminal-defense pages and a separate Personal Injury page but no focused Oil & Gas service destination despite the current official homepage explicitly positioning Marc A. Metze as a Criminal Defense & Oil and Gas Attorney. Live validation confirmed Oil & Gas work is currently offered, including corporate structuring, refinery contract negotiations, joint ventures, regulatory matters, and OILTA escrow services, but this service is presented through the homepage and attorney profile rather than a reasonable focused client destination. Marc A. Metze is the named solo attorney/decision maker and his direct public email attorneymmetze@yahoo.com is published on the official site.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Oil & Gas Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official homepage states 'EXPERIENCED CRIMINAL DEFENSE & OIL AND GAS ATTORNEY IN HOUSTON, TX,' and Marc A. Metze's official profile describes oil-and-gas corporate structuring, refinery contract negotiations, joint ventures, regulatory matters, and OILTA escrow services.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The clean homepage URL set contains no focused Oil & Gas service destination. The service is materially different from criminal defense and personal injury, yet it remains folded into the homepage/attorney-profile architecture, showing a broader consolidated service-conversation gap rather than an isolated forgotten secondary URL."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Marc A. Metze",
+          "role": "Solo Attorney / Principal",
+          "email": "attorneymmetze@yahoo.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official metzelaw.com homepage and Marc A. Metze attorney profile publish attorneymmetze@yahoo.com directly with his name and firm contact information.",
+          "notes": "Direct individual email published by the official firm website; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Oil & Gas Law",
+        "subject": "A thought on your Oil & Gas work",
+        "body": "Marc, I noticed your site clearly positions you for both criminal defense and oil & gas work, and your profile goes into meaningful energy-side services like refinery contracts, joint ventures, regulatory matters, and OILTA escrow support. Right now, though, an oil & gas client is still entering largely through the same general website conversation as a criminal-defense visitor instead of getting a focused destination built around those business needs. A dedicated Oil & Gas Law page could give that client a much clearer path from the first click, while also giving Google and AI systems a cleaner context for what you handle in the energy sector. I’d use Oil & Gas Law as the first mockup because it’s materially different from the criminal-defense side and already has strong service detail to build from. I’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "10-gonzalezlawgroup",
+      "lead_id": "ChIJUxfQ4beXQIYRxK7k6bFRilw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different Business Transactions, Criminal Defense, Estate Planning/Probate, Family Law, Immigration, and Personal Injury journeys and already separates them into focused destinations with extensive subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-trinidadzamora",
+      "lead_id": "ChIJq_irK1HBQIYRK5GP_dIEOqQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Criminal Defense, Personal Injury, and Immigration services with focused destinations for each, so the relevant architecture is already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-pitoniaklaw",
+      "lead_id": "ChIJuxgOPl_CQIYRl7JGrd0lZ8I",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an extensive but narrow criminal-defense architecture. DWI, assault, fraud, gun, homicide, sex-crime, theft, white-collar, and related pages remain within one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-houston-dwi-lawyer",
+      "lead_id": "ChIJ08Zfn5zAQIYRzA5dHVfoOUs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_validation_single_narrow_journey",
+      "campaign_notes": "The clean snapshot had zero links, so the current business identity was validated live. Public current sources tie houston-dwi.lawyer to The Law Offices of Clyde W. Burleson, P.C., a DWI/DUI and closely related criminal-defense practice, which remains one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-danielwilliamslaw",
+      "lead_id": "ChIJ2ScyaE6_QIYR-fk5ZjvkU5U",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different Employment Law, Immigration, and Personal Injury journeys and already separates them into focused practice-area destinations with dedicated supporting pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-attorneystevelee",
+      "lead_id": "ChIJ2Sp2mXC-QIYRY8ACTnezmOc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an auto-accident/personal-injury practice focused on vehicle and roadway accident subtypes within one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-gustinlaw",
+      "lead_id": "ChIJ56pitq3BQIYRJ9ngm0fy7LU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Although much of the site is personal injury, the clean URL set also shows materially different first-party insurance/property claim work such as homeowners, hailstorm, wind, fire, and commercial claims. Those services already have focused destinations, so the multi-journey architecture is mature for this campaign.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-thesparkslawfirm",
+      "lead_id": "ChIJ5xrTzJXAQIYRkywmyi0kLHY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site presents materially different Criminal Defense and Personal Injury services and already provides a focused Personal Injury destination alongside extensive focused criminal-defense destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-pmrlaw",
+      "lead_id": "ChIJ6eMHrfPAQIYRhi4bonTN8Xw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a personal-injury practice with car, truck, motorcycle, construction, defective product, premises, workplace, and wrongful-death subtypes within one injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-robertsmarkland",
+      "lead_id": "ChIJ6z_I-Ze_QIYRFBxF4RmczI4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The main clean architecture is personal injury, including aviation, vehicle, product, medical, maritime, workplace, premises, wildfire, and wrongful-death matters. Insurance bad-faith references appear as informational/article content rather than a clearly established separate main service, so the firm remains one primary injury journey for this audit.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-nmwlawfirm",
+      "lead_id": "ChIJAQBAmqjAQIYRHpT6-LkLpos",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a personal-injury practice focused on car, truck, motorcycle, rideshare, construction, catastrophic injury, slip-and-fall, and wrongful-death matters within one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
