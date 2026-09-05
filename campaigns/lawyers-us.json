@@ -13,7 +13,7 @@
     "qualified_after_discovery": false
   },
   "google": {
-    "engine": "places_v8_aggregate_grounding_place_details_fallback",
+    "engine": "places_v8_aggregate_place_details_pro_grounding_enterprise_fallback",
     "included_type": "lawyer",
     "region_code": "US",
     "language_code": "en",
@@ -23,6 +23,7 @@
     "aggregate_recursive_split_above_count": 100,
     "aggregate_national_breadth_first": true,
     "aggregate_state_bbox_padding_degrees": 0.12,
+    "use_place_details_pro_as_grounding_context_bridge": true,
     "use_grounding_lite": true,
     "grounding_requires_same_place_id": true,
     "use_open_web_resolver": false,
@@ -32,6 +33,7 @@
     "use_review_text": false,
     "zero_paid_mode": true,
     "monthly_places_aggregate_request_budget": 4800,
+    "monthly_place_details_pro_request_budget": 4800,
     "monthly_grounding_lite_request_budget": 9500,
     "monthly_place_details_enterprise_request_budget": 900,
     "grounding_place_id_canary_attempts": 10,
@@ -73,6 +75,7 @@
     "persist_place_id": true,
     "persist_google_rating_or_review_count": false,
     "persist_google_website_uri": false,
+    "place_details_pro_name_address_are_transient": true,
     "place_details_website_uri_is_transient_fallback_seed": true,
     "terms_review_required_before_production_outreach": true
   }
