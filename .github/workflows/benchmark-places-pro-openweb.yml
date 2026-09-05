@@ -1,0 +1,46 @@
+name: Benchmark Places Pro open-web resolver
+
+on:
+  push:
+    branches:
+      - experiment/places-pro-openweb-benchmark
+    paths:
+      - ".github/workflows/benchmark-places-pro-openweb.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: places-pro-openweb-benchmark
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - name: Checkout experiment branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install benchmark dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run isolated benchmark
+        run: python scripts/benchmark_places_pro_openweb.py
+
+      - name: Upload benchmark artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: places-pro-openweb-benchmark
+          path: out/places-pro-openweb-benchmark/
+          if-no-files-found: warn
+          retention-days: 7
