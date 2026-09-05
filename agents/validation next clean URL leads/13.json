@@ -2,13 +2,17 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 13,
-  "lead_id": "ChIJjQWwscPHQIYReBfOCD4rIdI",
-  "name": "Mitchell Leonard Law PC",
-  "domain": "mleonardlaw.com",
-  "website": "https://mleonardlaw.com/",
-  "clean_homepage_url_count": 2,
+  "lead_id": "ChIJzcjnriS8QIYR7NEDFZQCilA",
+  "name": "Israel B. García, Jr. | Attorney / Abogado | Former Judge 2020-2024",
+  "domain": "garcialaw.com",
+  "website": "http://garcialaw.com/",
+  "clean_homepage_url_count": 6,
   "clean_homepage_urls": [
     "/",
-    "/cart"
+    "/accidents",
+    "/es",
+    "/locations",
+    "/media",
+    "/traffic-tickets"
   ]
 }

@@ -2,17 +2,19 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 16,
-  "lead_id": "ChIJGaOCITa_QIYR63TW_34_4b0",
-  "name": "The Corrigan Law Firm – Houston Office: (713) 224-3222",
-  "domain": "ticketdan.com",
-  "website": "http://houston.ticketdan.com/",
-  "clean_homepage_url_count": 6,
+  "lead_id": "ChIJFXIuFqmiQIYREKp-qqZ5bdg",
+  "name": "Law office Of Daniel Corno Of Pasadena, Tx : Contact",
+  "domain": "cornofamilylaw.com",
+  "website": "http://www.cornofamilylaw.com/contact.html",
+  "clean_homepage_url_count": 8,
   "clean_homepage_urls": [
-    "/",
-    "/contact",
-    "/contact-us",
-    "/forms",
-    "/legal",
-    "/our-practice"
+    "/attorney.html",
+    "/contact.html",
+    "/home.html",
+    "/practice-areas.html",
+    "/privacy-policy-for-sms-communications-.html",
+    "/privacy-policy.html",
+    "/terms-and-conditions-for-sms-communications.html",
+    "/what-news.html"
   ]
 }

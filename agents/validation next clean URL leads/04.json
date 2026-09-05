@@ -2,10 +2,17 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 4,
-  "lead_id": "ChIJ1cBZXFjHQIYRownoGOzvatY",
-  "name": "Home | Perezlf",
-  "domain": "perezlf.com",
-  "website": "http://www.perezlf.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJfWuY0ffFQIYRE2oC75H0euo",
+  "name": "DWI Criminal Assault | Houston Trial Attorney | United States",
+  "domain": "houstonstrialattorney.com",
+  "website": "http://houstonstrialattorney.com/",
+  "clean_homepage_url_count": 6,
+  "clean_homepage_urls": [
+    "/",
+    "/about",
+    "/contact",
+    "/personal-injury",
+    "/personal-injury-1",
+    "/practices"
+  ]
 }

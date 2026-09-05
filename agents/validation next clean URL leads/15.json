@@ -2,10 +2,24 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJ0TIvu4O4QIYRPRUVfCbqc28",
-  "name": "Welcome",
-  "domain": "thedavilalawfirm.com",
-  "website": "https://thedavilalawfirm.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJEeDpNCiWQIYREqpS5dTvmc4",
+  "name": "Law Offices Of Jason Castaneda | Law Firm",
+  "domain": "castanedalegal.com",
+  "website": "https://castanedalegal.com/",
+  "clean_homepage_url_count": 13,
+  "clean_homepage_urls": [
+    "/",
+    "/about-us",
+    "/about-us/blog",
+    "/about-us/testimonials",
+    "/contact-us",
+    "/faq",
+    "/legal-services",
+    "/practice-areas",
+    "/practice-areas/civil-litigation",
+    "/practice-areas/criminal-law",
+    "/practice-areas/personal-injury",
+    "/practice-areas/service-areas",
+    "/when-to-hire-a-lawyer"
+  ]
 }
