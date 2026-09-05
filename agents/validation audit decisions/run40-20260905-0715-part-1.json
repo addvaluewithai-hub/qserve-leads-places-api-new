@@ -1,0 +1,258 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-groom-law-firm-pc",
+      "lead_id": "ChIJ_ZEt9805W4YRgb-urfk2Wts",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Complete clean homepage URL review showed no focused service destinations. Live validation confirmed Groom Law Firm explicitly offers Estate Planning & Probate, Business Law / M&A, Real Estate, Litigation and Tax Law on the homepage, with materially different client journeys sharing one consolidated website conversation. David Groom is identified on the current site as Managing Attorney. A Texas e-filing service record publicly ties dgroom@groomlaw.com directly to David Groom; the address was not guessed.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Estate Planning & Probate",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "Current Groom Law Firm homepage explicitly lists Estate Planning & Probate as a practice area alongside Business Law / M&A, Real Estate, Litigation and Tax Law.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The clean homepage link set contains only home, clients, contact, team and terms. Live navigation/homepage review shows multiple materially different main services presented together without reasonable focused service destinations, so this is a broader consolidated-architecture gap rather than an isolated missing page."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "David Groom",
+          "role": "Managing Attorney",
+          "email": "dgroom@groomlaw.com",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Current firm site identifies David Groom as Managing Attorney; public Texas e-filing service record lists David Groom with dgroom@groomlaw.com.",
+          "notes": "Direct individual email tied publicly to David Groom; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Estate Planning & Probate",
+        "subject": "A thought on your Estate Planning & Probate page",
+        "body": "David, I was looking through Groom Law Firm’s current site and noticed that Estate Planning & Probate, Business Law, Real Estate, Litigation and Tax Law are all presented together on the main website conversation rather than through separate focused service destinations. Those clients arrive with very different questions and intent. A dedicated Estate Planning & Probate page could give that audience a much clearer path from first visit to consultation, with the right issues, proof and next steps in one place. It would also create a cleaner focused context for Google and for AI systems trying to understand exactly what the firm offers. I’d start with Estate Planning & Probate because it is a distinct consumer journey from the firm’s business and real-estate work and makes the architectural opportunity easy to see. I’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "02-lawofficeofkg",
+      "lead_id": "ChIJtTNSX7nOWBQRaxzz26e5m9I",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows materially different Family Law and Personal Injury services already separated into focused destinations (/family-law-attorney and /personal-injury-lawyer).",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-law-offices-of-gerald-m-gonzales-pc",
+      "lead_id": "ChIJF2r7ukW0RIYRuksxmW4TtY0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows Immigration, Criminal Law and Family Law already separated into focused service destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-the-martinez-law-firm",
+      "lead_id": "ChIJL-_gKlm0RIYRUmfiwB4cgYQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Personal Injury-focused firm; the many accident and injury subpages remain one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-alonso-and-alonso-attorneys-at-law",
+      "lead_id": "ChIJQS-63t61RIYRbHXaAUxNeQs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review is overwhelmingly Immigration-focused, with immigration subtypes and bilingual/location variants representing one narrow immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-michael-g-murray-pa",
+      "lead_id": "ChIJf_JB2he1RIYRr3rmq1Dvy6Y",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URL evidence was empty due to a robot screen, so the live site was checked. The current site is focused exclusively on immigration matters such as citizenship, family immigration, visas, waivers, asylum and related immigration relief; this is one narrow immigration journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-villarreal-begum-law-firm",
+      "lead_id": "ChIJqXGXup21RIYR6uk0Jy4LtVY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Personal Injury firm with many injury and accident subtype/location pages; these remain one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-law-offices-of-richard-pena-pc",
+      "lead_id": "ChIJw86UuoS0RIYRmHhl8UOrZuo",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows Personal Injury and Workers' Compensation already separated into distinct focused destinations and supporting content.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-herrman-and-herrman-pllc",
+      "lead_id": "ChIJ65a6MLO1RIYRP-mxZNQTMGM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Personal Injury practice with extensive injury, vehicle-accident, malpractice and wrongful-death subpages that remain within one narrow plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-thomas-j-henry-law",
+      "lead_id": "ChIJ38d49oJLW4YRvHh4NgArX_M",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review is centered on Personal Injury and mass-tort/injury claims; the service set is one narrow plaintiff-injury client journey rather than materially different legal journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-sanchez-law-tx",
+      "lead_id": "ChIJTcgkKZpLW4YRuJbxEJCGEPs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URLs were generic, so the live homepage and Practice Areas page were checked. The current firm is expressly Personal Injury-focused and lists accident/injury subtypes only, so it is one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-mark-kinzler-immigration",
+      "lead_id": "ChIJfQ1xNKe1RIYR_7jE_HlEgR4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows Immigration and Personal Injury presented as materially different offerings with separate focused destinations (/our-services-immigration and /services-personal-injury-1).",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-trey-porter-law",
+      "lead_id": "ChIJ-1ePeqe1RIYRhWlzwHfmsK4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URL evidence was empty due to a challenge screen, so the live Austin page was checked. It is a focused DWI/criminal-defense offering centered on intoxication offenses and closely related license/record consequences, one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-lorenz-and-lorenz",
+      "lead_id": "ChIJF1DEtpJKW4YREvKHu4t5lIE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Personal Injury-only architecture with accident, negligence and injury subtype pages; this remains one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-bustos-family-law-pllc",
+      "lead_id": "ChIJKer_8jg1W4YRB8_yxurC1w8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows distinct Family Law, Elder Law and Estate Planning offerings already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-blazier-christensen-browder-and-virr-pc",
+      "lead_id": "ChIJPWLoDgm1RIYRZgOcJL5Mt-o",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows mature separation across Business/Commercial, Construction, Estate Planning, Intellectual Property, Litigation, Real Estate and Tax services, each with focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-gammon-law-office",
+      "lead_id": "ChIJ_7fOtjK1RIYRiyZbo1ojvbE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows materially different Business Law, Commercial Litigation, Personal Injury, Real Estate/Foreclosure and Construction Law already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-mike-massey-law",
+      "lead_id": "ChIJa8w2Czk1W4YR2CNswlPebiA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows Estate Planning/Probate and Personal Injury as materially different journeys with dedicated focused destinations and substantial supporting subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-dow-law-firm",
+      "lead_id": "ChIJb3Zaos1LW4YRuUIC5_2NVSs",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows the dominant Personal Injury architecture plus a materially different Eminent Domain service already given its own focused destination, so this is not a consolidated-gap site.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-will-sutton-law",
+      "lead_id": "ChIJd0BRs5Q3W4YRfPADZ7asV1I",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The clean homepage evidence was generic, so live validation was required. The current homepage explicitly offers Personal Injury and Employment Law, while the current Practice Areas page combines injury matters, Civil Rights, Employment Discrimination, Sexual Harassment, Wrongful Termination, Overtime Pay, Breach of Contract and Construction Defects on one shared destination with consultation links rather than focused service pages. Will Sutton is identified on the current site as Principal Attorney. Public court/e-filing material ties will@willsuttonlaw.com directly to William/Will Sutton; the address was not guessed.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Employment Discrimination",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "Current Will Sutton Law Practice Areas page explicitly offers Employment Discrimination, and the homepage states that the firm practices Employment Law alongside Personal Injury.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Employment, injury, civil-rights and contract/construction clients are materially different journeys yet are consolidated on the same Practice Areas page. The Employment Discrimination section links to consultation rather than a reasonable focused service destination, and the overall architecture remains consolidated."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Will Sutton",
+          "role": "Principal Attorney",
+          "email": "will@willsuttonlaw.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Current firm site identifies Will Sutton as Principal Attorney; public court/e-filing records list William Sutton with will@willsuttonlaw.com.",
+          "notes": "Direct individual email tied publicly to Will Sutton; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Employment Discrimination",
+        "subject": "A thought on your Employment Discrimination page",
+        "body": "Will, I was reviewing the current Sutton Law Firm site and noticed that personal-injury matters, employment discrimination, sexual harassment, wrongful termination, civil-rights claims and contract/construction disputes all share the same general Practice Areas destination. Those are materially different clients arriving with different concerns, evidence and next steps. A focused Employment Discrimination page could give that client a clearer journey from the moment they land on the site, with the relevant situations, proof and consultation path in one place. It would also create cleaner focused context for Google and for AI systems interpreting what the firm handles. I’d use Employment Discrimination as the first mockup because it is clearly offered today and is especially distinct from the injury work that otherwise dominates the site. I’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    }
+  ]
+}
