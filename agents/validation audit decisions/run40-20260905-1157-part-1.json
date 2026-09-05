@@ -1,0 +1,274 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-jerome-o-fjeld-pllc",
+      "lead_id": "ChIJgfnhFUTCQIYRdMygY0uF-tk",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows materially different services including Personal Injury, Divorce, DWI, and Immigration already separated into focused destinations such as /houston-divorce-lawyers, /houston-dwi-lawyer, and /houston-immigration-lawyer, so the site has already made the separate-service architecture leap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-hollingsworth-law-firm",
+      "lead_id": "ChIJkwJBw7zHQIYRH4MP44MMwlI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is overwhelmingly one injury/accident client journey: vehicle crashes, maritime/offshore injuries, industrial injuries, premises claims, medical malpractice and related injury subtypes. The large URL count does not change the narrow Personal Injury architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-timothy-m-donahue",
+      "lead_id": "ChIJzXMAT-DHQIYRzRDlxKROmhA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean URL review plus limited live validation shows distinct criminal-defense and immigration offerings already represented by focused destinations, including criminal offense/DWI pages and the dedicated Family-Based Adjustment page. The homepage also mentions Personal Injury, but a single weaker secondary service on an otherwise separated multi-practice structure is not the broader architecture gap targeted by this campaign.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-paul-a-perez-law-firm-pllc",
+      "lead_id": "ChIJ1cBZXFjHQIYRownoGOzvatY",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_missing",
+      "campaign_notes": "The zero-link production snapshot required live validation. The current firm site explicitly presents materially different Real Estate/Title and Personal Injury services together through the homepage/shared Practice Areas experience, with no reasonable focused service destination found. Paul A. Perez is the named attorney/firm principal, but the public perezlaw1@gmail.com address is presented as a firm contact rather than being unambiguously tied as a direct personal email to Paul, so it is not accepted as a verified direct decision-maker email.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official firm site explicitly lists Personal Injury Law alongside Real Estate & Title Company and describes representation for motor-vehicle and workplace injury claims.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The current architecture keeps Personal Injury and the materially different real-estate/title service in the homepage/shared Practice Areas conversation rather than separate focused client journeys."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Paul A. Perez",
+          "role": "Owner / Named Attorney",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": false,
+          "evidence_source": "Official current firm site identifies Paul A. Perez as the attorney and names the firm Paul A. Perez Law Firm PLLC.",
+          "notes": "A firm Gmail address is public, but it is not unambiguously established as Paul's direct individual email, so no email is persisted as verified."
+        }
+      ]
+    },
+    {
+      "slug": "05-law-offices-of-jason-s-hegedus",
+      "lead_id": "ChIJ50d_ZCbHQIYRdcnakP_2UEQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The generic clean URL snapshot required live validation. The current site describes only Personal Injury/consumer product liability and injury matters such as car, truck, motorcycle, rideshare and wrongful-death claims. This remains one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-kishinevsky-law-firm",
+      "lead_id": "ChIJAzYFn8vDQIYRMzcan7DypIA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows a broad set of accident, premises, product, worksite and wrongful-death pages that all remain within the Personal Injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-gregory-law-pllc",
+      "lead_id": "ChIJSzJ-QAnHQIYRHYNRthsupJI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is a single Family Law journey with focused subtopics such as divorce, custody, adoption, enforcement and modification.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-rodriguez-law-office",
+      "lead_id": "ChIJUY2BHr7CQIYR3WtyeZlQjBw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is an Immigration journey: asylum, citizenship, employment/family green cards, military immigration, visas, removal defense and crimmigration are all immigration-centered client needs.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-hurtintexas-law-firm",
+      "lead_id": "ChIJX8BdoZ7HQIYRKKCWu5FAJ48",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URLs show Personal Injury and accident/injury subtypes, including work and oil-rig/refinery accidents. These are one injury client journey rather than materially different main legal services.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-armstrong-lee-baker-llp",
+      "lead_id": "ChIJZb8qOvDGQIYR17yQymj2a3A",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set covers Personal Injury, work injury, non-subscriber injury, oilfield and maritime injury matters. Despite many focused pages, these are all injury-compensation journeys rather than materially different main legal conversations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-jd-law-firm",
+      "lead_id": "ChIJbx7fvYDBQIYRsjC2fVmZUiE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The generic clean URL evidence required live validation. The current site explicitly says it specializes in injury and accident-related cases; all listed practices, including vehicle crashes, premises claims, work/refinery injuries, construction accidents and traumatic brain injury, remain one Personal Injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-firouzbakht-law-firm",
+      "lead_id": "ChIJg4x6thLHQIYR5H3JuQTym-I",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is devoted to Personal Injury and its accident/injury subtypes, including vehicle crashes, apartment violence, wrongful death and related claims.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-mitchell-leonard-law-pc",
+      "lead_id": "ChIJjQWwscPHQIYReBfOCD4rIdI",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The two-link clean snapshot required live validation. The current official one-page site explicitly offers both Criminal Defense and Personal Injury, two materially different client journeys, but provides no reasonable focused destination for Personal Injury or Criminal Defense. Mitchell Leonard is the named attorney/principal and the official site publicly lists Mitchell.LeonardLaw@gmail.com directly in its Contact section. Architecture gap and direct decision-maker email are therefore verified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official homepage explicitly states 'Criminal Defense | Personal Injury'.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The site is effectively a single page. Criminal Defense and Personal Injury are materially different main client journeys but neither receives a focused destination, demonstrating a consolidated architecture gap."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Mitchell Leonard",
+          "role": "Solo Attorney / Principal",
+          "email": "Mitchell.LeonardLaw@gmail.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official current firm homepage identifies Mitchell Leonard as the attorney and publishes Mitchell.LeonardLaw@gmail.com in the Contact section.",
+          "notes": "Direct individual email published on the official firm site; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Personal Injury",
+        "subject": "A thought on your Personal Injury page",
+        "body": "Hi Mitchell,\n\nI was looking through your current site and noticed that Criminal Defense and Personal Injury are both presented on the same one-page experience. Those are very different clients with different questions, urgency, and proof points, so someone arriving after an injury is sharing the same general website conversation as someone facing a criminal charge.\n\nA focused Personal Injury page could give injury clients a clearer path to the cases you handle, what working with you looks like, and the next step to take. It would also give Google a more focused service context and make the site easier for AI systems to interpret when people ask specifically about injury representation.\n\nPersonal Injury seems like the best first mockup because it is already explicitly offered but has no dedicated destination today.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "14-law-offices-francisco-g-medina",
+      "lead_id": "ChIJrfgx8AvHQIYRC4VAJ7yKewU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The complete clean URL set shows materially different Personal Injury/Auto Accident and Public Finance services, with Public Finance already receiving its own focused /practice-areas/public-finance destination and injury services separately organized under dedicated practice paths. This is mature separation rather than a shared-general architecture gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-davila-law-firm",
+      "lead_id": "ChIJ0TIvu4O4QIYRPRUVfCbqc28",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The zero-link snapshot required live validation. The current site identifies the firm as dedicated Personal Injury attorneys and lists car accidents, truck accidents and slip-and-fall matters; this is one narrow injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-corrigan-law-firm",
+      "lead_id": "ChIJGaOCITa_QIYR63TW_34_4b0",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_missing",
+      "campaign_notes": "The generic clean URL set required live validation. The current homepage and single Our Practice page explicitly combine traffic tickets, warrants, criminal law, driver-license matters and materially different motor-vehicle/injury cases in one general practice conversation without focused service destinations. Dan Corrigan is identified on the official homepage as founder. The only official public email found is houston@ticketdan.com, a generic office address, so no verified direct personal decision-maker email is available.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Personal Injury / Motor Vehicle Accident Cases",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official homepage states the firm handles motor vehicle accident cases and other injury or death cases, while the Our Practice page also lists criminal/traffic/license services.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Materially different criminal/traffic and injury clients share the homepage and one general Our Practice destination; no reasonable focused injury destination is present."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Dan Corrigan",
+          "role": "Founder",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": false,
+          "evidence_source": "Official current firm homepage identifies Dan Corrigan as founder.",
+          "notes": "Official site publishes only the generic houston@ticketdan.com office email, which is not acceptable as a direct decision-maker email."
+        }
+      ]
+    },
+    {
+      "slug": "17-anne-e-kennedy-attorney-at-law",
+      "lead_id": "ChIJI2ozPVfHQIYRCzwVTMVj9fs",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set shows materially different Family Law, Immigration and Criminal Defense services already separated into dedicated /family-law, /immigration and /criminal-defense destinations, with further focused subpages beneath the first two.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-eric-benavides",
+      "lead_id": "ChIJOcNZZyW_QIYRR9hwWSw2NjE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is one Criminal Defense journey spanning DWI, drug, assault, sex crimes, theft, probation, record sealing and related criminal matters.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-chavana-law-pllc",
+      "lead_id": "ChIJPcvrjHy3QIYRxdGq36NJM_Q",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Real Estate, Criminal, Family, Consumer, Personal Injury and Small Business services already separated into focused destinations such as /real-estate, /criminal-law, /family-law-attorney-houston, /houston-consumer-lawyer, /personal-injury and /small-business-lawyer.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-adame-garza",
+      "lead_id": "ChIJTVf3rmDHQIYR0sEmvDrD5gI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set remains a Personal Injury journey, with vehicle and workplace accident subtypes including construction, industrial, oilfield and refinery injuries.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
