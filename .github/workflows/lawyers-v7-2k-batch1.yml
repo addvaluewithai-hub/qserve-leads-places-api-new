@@ -1,0 +1,58 @@
+name: Lawyers V7 Batch 1 - 2000 net-new
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - run/places-v7-2k-batch1
+    paths:
+      - run-controls/lawyers-v7-batch1.trigger
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lawyers-us-v7-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install V7 discovery dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pgeocode tldextract
+
+      - name: Compile V7 runner before any API calls
+        run: |
+          python -m py_compile scripts/places_v7_router.py scripts/build_lawyers_v7_batch.py scripts/zip_manager.py scripts/d1_helpers.py
+
+      - name: Discover first 2000 net-new domains
+        run: |
+          python scripts/build_lawyers_v7_batch.py \
+            --campaign lawyers-us \
+            --target 2000 \
+            --max-zips 5000 \
+            --batch-label v7-18k-batch-01-of-09 \
+            --out-dir out/lawyers-us-v7-batch1-2000
+
+      - name: Upload batch checkpoint artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lawyers-us-v7-batch1-2000-${{ github.run_number }}
+          path: out/lawyers-us-v7-batch1-2000/
+          if-no-files-found: warn
