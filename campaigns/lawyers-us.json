@@ -8,22 +8,28 @@
     "target_net_new_domains_per_run": 1000,
     "historical_seed_expected_domains": 1000,
     "dedupe_scope": "global_business",
-    "status_after_discovery": "Ready for Validation",
+    "status_after_discovery": "Ready for Crawl Evidence",
     "qualified_after_discovery": false
   },
   "google": {
-    "engine": "places_text_search_enterprise",
+    "engine": "places_v7_pro_grounding_enterprise_fallback",
     "included_type": "lawyer",
     "strict_type_filtering": true,
     "region_code": "US",
     "language_code": "en",
     "query_template": "lawyer in {zip_code}",
-    "field_mask": [
+    "pro_field_mask": [
       "places.id",
-      "places.addressComponents",
+      "places.displayName",
+      "places.formattedAddress",
       "places.businessStatus",
-      "places.rating",
-      "places.userRatingCount",
+      "nextPageToken"
+    ],
+    "enterprise_fallback_field_mask": [
+      "places.id",
+      "places.displayName",
+      "places.formattedAddress",
+      "places.businessStatus",
       "places.websiteUri",
       "nextPageToken"
     ],
@@ -31,32 +37,40 @@
     "page_size": 20,
     "max_pages_per_zip": 3,
     "paginate_if_first_page_raw_count_at_least": 20,
-    "paginate_if_first_page_exact_zip_count_at_least": 1,
     "zip_location_restriction_half_span_km": 10.0,
     "exact_postal_code_required": false,
     "zip_is_coverage_seed_not_address_gate": true,
+    "use_grounding_lite": true,
+    "use_open_web_resolver": false,
     "use_place_details_enterprise": false,
-    "use_grounding_lite": false,
     "use_review_text": false,
-    "monthly_enterprise_request_budget": 900
+    "zero_paid_mode": true,
+    "monthly_text_search_pro_request_budget": 4800,
+    "monthly_grounding_lite_request_budget": 9500,
+    "monthly_enterprise_request_budget": 900,
+    "grounding_requires_same_place_id": true,
+    "enterprise_fallback_when_grounding_budget_exhausted": true,
+    "enterprise_fallback_when_grounding_unresolved": true
   },
   "quality": {
     "allowed_business_statuses": ["OPERATIONAL"],
     "min_rating": 4.0,
-    "min_reviews": 20,
-    "require_official_website_seed": true,
-    "require_crawler_confirmed_domain": true,
+    "minimum_review_count_gate_enabled": false,
+    "require_resolved_official_domain": true,
     "dedupe_by_place_id": true,
     "dedupe_by_domain": true
   },
   "crawl": {
     "engine": "crawl4ai",
+    "stage": "post_discovery_evidence_enrichment",
+    "input_status": "Ready for Crawl Evidence",
+    "output_status": "Ready for Validation",
     "mode": "homepage_links_only",
     "same_domain_only": true,
     "follow_links": false,
     "classification": false,
     "default_workers": 4,
-    "website_seed_is_transient": true
+    "run_inside_discovery": false
   },
   "qualification": {
     "gap_double_check_required": true,
@@ -74,6 +88,7 @@
     "persist_place_id": true,
     "persist_google_rating_or_review_count": false,
     "persist_google_website_uri": false,
+    "enterprise_website_uri_is_transient_fallback_seed": true,
     "terms_review_required_before_production_outreach": true
   }
 }
