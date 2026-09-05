@@ -2,10 +2,16 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 14,
-  "lead_id": "ChIJL94hyWW_QIYRF3c3HV12DP8",
-  "name": "Soliz Law Firm - Houston Wrongful Death & Injury Lawyers",
-  "domain": "thesolizlawfirm.com",
-  "website": "https://thesolizlawfirm.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJW5KWbv-3QIYRs9xJCLsrnLw",
+  "name": "Maurer Law Firm- Personal Injury Attorneys -",
+  "domain": "maurerinjurylaw.com",
+  "website": "http://maurerinjurylaw.com/",
+  "clean_homepage_url_count": 5,
+  "clean_homepage_urls": [
+    "/",
+    "/about",
+    "/blog",
+    "/contact-us",
+    "/practice-areas"
+  ]
 }

@@ -2,25 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 2,
-  "lead_id": "ChIJ671LL4ekQIYRCjOjdVD_LiI",
-  "name": "Houston Family Law Attorney | Hinojosa Law Office, P.C.",
-  "domain": "hinojosalawoffice.com",
-  "website": "https://hinojosalawoffice.com/",
-  "clean_homepage_url_count": 14,
-  "clean_homepage_urls": [
-    "/",
-    "/contact",
-    "/houston-child-custody-lawyer",
-    "/houston-child-support-lawyer",
-    "/houston-divorce-lawyer",
-    "/houston-family-law-modification-lawyer",
-    "/houston-guardianship-lawyer",
-    "/houston-property-division-lawyer",
-    "/houston-protective-order-lawyer",
-    "/houston-spousal-support-lawyer",
-    "/monica-hinojosa-houston-family-law-attorney",
-    "/service/family-law",
-    "/service/faq-your-questions-answered",
-    "/service/personal-injury"
-  ]
+  "lead_id": "ChIJk2b2xP2cQIYR_byYnEt3Puw",
+  "name": "Checking your browser...",
+  "domain": "carwreckfirm.com",
+  "website": "http://carwreckfirm.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
