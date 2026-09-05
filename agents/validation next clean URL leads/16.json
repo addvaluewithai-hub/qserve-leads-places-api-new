@@ -2,17 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 16,
-  "lead_id": "ChIJDxYkdM6cSWgRggjpmHKXve4",
-  "name": "Alihossini Law Group | Houston Personal Injury Lawyer | No Win, No Fee",
-  "domain": "alihossinilawgroup.com",
-  "website": "https://www.alihossinilawgroup.com/",
-  "clean_homepage_url_count": 6,
-  "clean_homepage_urls": [
-    "/",
-    "/about-alg",
-    "/areas-of-practice",
-    "/blog",
-    "/contact-us",
-    "/privacy"
-  ]
+  "lead_id": "ChIJ4Zg2Ga3AQIYRHOZxqXO6JOc",
+  "name": "Robot Challenge Screen",
+  "domain": "vondohlenlaw.com",
+  "website": "https://vondohlenlaw.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }
