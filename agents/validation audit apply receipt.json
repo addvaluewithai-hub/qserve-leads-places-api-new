@@ -2,163 +2,163 @@
   "receipts": [
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJ_ZEt9805W4YRgb-urfk2Wts",
+      "lead_id": "ChIJn_oaYtekFIERZOiK3T61e3w",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:25.347544+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJpdDrPKG1RIYRV4tSxbmTVC0",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:25.520574+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ-4AAvAy1RIYR2s0X5ow74FU",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:25.693417+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ-ckWo6C1RIYRFVA8rE2AFOk",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:25.888126+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ1SENmnS1RIYRw34Kt9R_UWs",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:26.126332+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ5cmf2Qu1RIYR1TiZWSCu_GA",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:26.305241+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ6QfXk9-1RIYR-kTF3R1IPVA",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:26.477533+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJIxmC2Qu1RIYRdxVHRoXFW8w",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:26.648138+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJP-ZUGkFLW4YRVxEbhm9ereE",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:26.847046+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJQ2y8tZtKW4YRlkh3Bor4mlA",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:27.022919+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJUfQPcfy0RIYRvRbNmX0kwug",
       "status": "Qualified",
       "qualified": 1,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:26.311298+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:27.604806+00:00"
     },
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJtTNSX7nOWBQRaxzz26e5m9I",
+      "lead_id": "ChIJX3h8Fs1KW4YRRD3p5Ape0P4",
       "status": "Disqualified",
       "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:26.839446+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:27.784732+00:00"
     },
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJF2r7ukW0RIYRuksxmW4TtY0",
+      "lead_id": "ChIJYZxStJtKW4YRkhwumCtKsPE",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:27.969665+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJ_ahhEiE1W4YRW9BzoK-g8rM",
+      "status": "Not Relevant",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:28.136033+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJdXVjCclKW4YR4XGEH7J_gHY",
       "status": "Disqualified",
       "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:27.352300+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:28.320812+00:00"
     },
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJL-_gKlm0RIYRUmfiwB4cgYQ",
+      "lead_id": "ChIJi6hWMTK1RIYRwwMU6BF1ptQ",
       "status": "Not Relevant",
       "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:27.587925+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:28.500041+00:00"
     },
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJQS-63t61RIYRbHXaAUxNeQs",
-      "status": "Not Relevant",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:27.818762+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJf_JB2he1RIYRr3rmq1Dvy6Y",
-      "status": "Not Relevant",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:28.039468+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJqXGXup21RIYR6uk0Jy4LtVY",
-      "status": "Not Relevant",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:28.331386+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJw86UuoS0RIYRmHhl8UOrZuo",
+      "lead_id": "ChIJifhe2he1RIYR3D44ILRYnLA",
       "status": "Disqualified",
       "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:28.840151+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:28.680677+00:00"
     },
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJ65a6MLO1RIYRP-mxZNQTMGM",
+      "lead_id": "ChIJjVLFEng1W4YR8xYTvsm8lto",
       "status": "Not Relevant",
       "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:29.015412+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:28.856807+00:00"
     },
     {
       "campaign_id": "lawyers-us",
-      "lead_id": "ChIJ38d49oJLW4YRvHh4NgArX_M",
+      "lead_id": "ChIJk29_MT41W4YRmPfd1tq-ubI",
+      "status": "Disqualified",
+      "qualified": 0,
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:29.036663+00:00"
+    },
+    {
+      "campaign_id": "lawyers-us",
+      "lead_id": "ChIJo7Z2RTK1RIYRPs_PxQl8Tug",
       "status": "Not Relevant",
       "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:29.191635+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJTcgkKZpLW4YRuJbxEJCGEPs",
-      "status": "Not Relevant",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:29.769153+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJfQ1xNKe1RIYR_7jE_HlEgR4",
-      "status": "Disqualified",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:29.970383+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJ-1ePeqe1RIYRhWlzwHfmsK4",
-      "status": "Not Relevant",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:30.141012+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJF1DEtpJKW4YREvKHu4t5lIE",
-      "status": "Not Relevant",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:30.315055+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJKer_8jg1W4YRB8_yxurC1w8",
-      "status": "Disqualified",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:30.476040+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJPWLoDgm1RIYRZgOcJL5Mt-o",
-      "status": "Disqualified",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:30.640961+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJ_7fOtjK1RIYRiyZbo1ojvbE",
-      "status": "Disqualified",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:30.824734+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJa8w2Czk1W4YR2CNswlPebiA",
-      "status": "Disqualified",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:30.994895+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJb3Zaos1LW4YRuUIC5_2NVSs",
-      "status": "Disqualified",
-      "qualified": 0,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:31.166194+00:00"
-    },
-    {
-      "campaign_id": "lawyers-us",
-      "lead_id": "ChIJd0BRs5Q3W4YRfPADZ7asV1I",
-      "status": "Qualified",
-      "qualified": 1,
-      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-1.json",
-      "applied_at": "2026-09-05T04:17:31.694764+00:00"
+      "source_file": "agents/validation audit decisions/run40-20260905-0715-part-2.json",
+      "applied_at": "2026-09-05T04:20:29.222079+00:00"
     }
   ]
 }

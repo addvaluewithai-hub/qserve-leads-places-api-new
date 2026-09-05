@@ -2,10 +2,14 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 15,
-  "lead_id": "ChIJdXVjCclKW4YR4XGEH7J_gHY",
-  "name": "Robot Challenge Screen",
-  "domain": "hoestenbachlawgroup.com",
-  "website": "https://hoestenbachlawgroup.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJLxCm0tzJQIYRXC8KGZsJIYA",
+  "name": "Home | Luis Baez Law Office",
+  "domain": "thebaezfirm.com",
+  "website": "https://www.thebaezfirm.com/",
+  "clean_homepage_url_count": 3,
+  "clean_homepage_urls": [
+    "/",
+    "/blank",
+    "/search"
+  ]
 }
