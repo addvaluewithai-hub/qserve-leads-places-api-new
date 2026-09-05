@@ -1,0 +1,206 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-greenway-law-firm",
+      "lead_id": "ChIJwUe0-n21RIYRGbtxd4vkm2Q",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow personal-injury/accident client journey with bicycle, boating, motor-vehicle and trucking collision subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-tully-rinckey",
+      "lead_id": "ChIJwxgjSgzLRIYRS-AgHgbiVYY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows a mature multi-practice architecture with distinct focused destinations for business, criminal, employment, estate planning, family, immigration, litigation, personal injury, real estate and numerous other services.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-sutliff-stout",
+      "lead_id": "ChIJvQwzuAm1RIYRay8a2gvniL4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation was required because the clean snapshot had zero links; the current site is focused on personal-injury and accident claims, with injury subtypes remaining one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-archuleta-veterans-medical-malpractice",
+      "lead_id": "ChIJ3blAjpI5W4YRykWoN0DJ-H0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow federal-tort/medical-malpractice injury claimant journey centered on VA and military medical negligence, FTCA claims and related injury subtypes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-thrash-carroll-sanchez-estate-planning",
+      "lead_id": "ChIJD2tEn9k5W4YRlExhkBb3IrE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows estate planning alongside materially distinct business formation and probate/administration offerings, already represented by focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-willie-dasher-law",
+      "lead_id": "ChIJTSCZIiRLW4YReT4qLNGSgKY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation was required because the clean snapshot had zero links; the current site centers on divorce, child custody, child support and family law, all within one narrow family-law client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-david-j-lopez-law",
+      "lead_id": "ChIJVVVVVQq1RIYRCdZnLW5MVXo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow personal-injury journey with accident, premises-liability, workplace-injury, mass-tort and wrongful-death subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-glen-larson-law",
+      "lead_id": "ChIJpT3IzilKW4YRF4j4Phpjefs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one dominant personal-injury/product-liability claimant journey despite the very large number of accident, injury and mass-tort subtype pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-diana-buss-law",
+      "lead_id": "ChIJ-Zhw46O1RIYRm-qOy5R3gdc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation was required because the clean snapshot was blocked by a robot challenge; the current practice is criminal defense, including DWI, assault, drug, theft, property-crime and expunction matters within one narrow journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-butler-injury-law",
+      "lead_id": "ChIJc07fWWtLW4YRNIhVdRS8HMo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation was required because the clean snapshot was browser-challenged; the current site focuses on personal injury, including vehicle, catastrophic-injury, brain-injury and wrongful-death matters within one narrow claimant journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-braun-gresham",
+      "lead_id": "ChIJj-DIq4FGW4YR7pyH2sLU-IM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows materially different asset protection, banking, business, eminent domain, estate planning, litigation, property tax, real estate and renewable-energy services already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-dorothy-butler-law-firm",
+      "lead_id": "ChIJk72YI4RBW4YRV_STUOSAfe4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows bankruptcy, business/employment, criminal defense, estate planning, tax law and tax preparation already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-texas-estate-plans",
+      "lead_id": "ChIJlyVPLoNHW4YRfB2xxdRrNsM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow estate-planning client journey covering wills, trusts, asset protection, guardianship and probate-avoidance planning.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-kelly-mcmahan-law",
+      "lead_id": "ChIJ3fTh6ZEyW4YR_SXMFlOsgvE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow traffic/Class C defense journey covering traffic tickets, warrants and occupational driver's licenses.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-coleman-business-law",
+      "lead_id": "ChIJ57btVco3W4YRKCik2_yxRv0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow business-law journey, including mediation of business disputes, rather than multiple materially different legal client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-texas-injury-accident-lawyers",
+      "lead_id": "ChIJAQAk91I_W4YR0c1ZQu7wpWA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation was required because the clean snapshot had zero links; the current site is an Austin personal-injury and accident practice, representing one narrow injury claimant journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-gc-peters-law",
+      "lead_id": "ChIJG22Oe8AZnlQRPgxDhmRgBoo",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows materially different corporate, elder law, estate planning, family law, health law and probate services already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-margaglione-law",
+      "lead_id": "ChIJGfsokLg-W4YRjhwBA7E720U",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows the family-law journey alongside a materially different wills-and-trusts offering, with the estate-planning service already separated into a focused destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-rieder-law",
+      "lead_id": "ChIJK4ko3805W4YR3RZsSJ8_3yA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation was required because the clean snapshot had zero links; current service evidence centers on estate planning, wills, trusts, asset protection, guardianship and trust/probate administration, all within one estate-planning client family. Historical attorney-biography experience was not treated as a current service offering.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-thomas-law-firm",
+      "lead_id": "ChIJRW5rfFo3W4YRL9zN8lAW60w",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows materially different business law, criminal defense, estate planning, personal injury and real-estate services already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
