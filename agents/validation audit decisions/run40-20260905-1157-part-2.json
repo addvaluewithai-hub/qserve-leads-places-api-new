@@ -1,0 +1,253 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-abogado-balderas",
+      "lead_id": "ChIJTa6B5MC4QIYRpjDdLBCaJm4",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_site_identity_unresolved",
+      "campaign_notes": "The refreshed production snapshot is an index-style page with only / and /cgi-bin. Live research did not reliably resolve the current official site identity or practice architecture for abogadobalderas.com, so the material facts needed for a safe architecture decision remain unresolved.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-terry-thweatt-pc",
+      "lead_id": "ChIJa4T8V_zAQIYRptp-Oycq-rg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set shows materially different Commercial Litigation and DUI services alongside injury work, each already represented by focused destinations such as /practice_areas/commercial-litigation.cfm and /practice_areas/houston-dui-lawyer.cfm, while the injury practices are separately organized under their own focused pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-agur-law",
+      "lead_id": "ChIJc696XiW_QIYRe9cfWc2hMys",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is a single Personal Injury journey made up of accident and injury subtypes such as automobile, bicycle, boat, bus, motorcycle, trucking and CRPS matters.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-houstons-trial-attorney",
+      "lead_id": "ChIJfWuY0ffFQIYRE2oC75H0euo",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean URLs plus limited live validation show Criminal Law and Personal Injury as materially different services with separate focused destinations linked directly from the Practices navigation. Although the criminal destination uses an unusual /personal-injury URL path, it is a distinct current page for Criminal Law, so the client journeys are already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-paul-morgan-law-office-pllc",
+      "lead_id": "ChIJVVXZoy-_QIYRlCmwSaMOAQ8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set is one Criminal Defense journey spanning assault, drugs, federal cases, post-conviction, sex crimes, theft, violent crimes and related defense matters.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-morgan-legal-group-injuredcase",
+      "lead_id": "ChIJVebRwR-_QIYRbNfydSVG_i4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The robot-challenge snapshot required live validation. The current injuredcase.com site is The Morgan Legal Group and presents Personal Injury/accident work such as vehicle, workplace, industrial, offshore, burn and wrongful-death matters. These remain one injury-compensation client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-spears-law-practice",
+      "lead_id": "ChIJsxwiTLbFQIYRqB-6rXJvwF0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The snapshot contains unrelated spam-like URLs, so the live site was checked for identity. The current law-firm site is still active, and the clean architecture includes separate focused destinations for Business Law, Civil Rights, Contract/Consumer Law, Criminal Law, Estate Planning, Family Law and Personal Injury. The unrelated content does not create the campaign's consolidated-service gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-chavez-rodriguez-law-firm",
+      "lead_id": "ChIJCZLQPx-YQIYRQ-dViyFokqg",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_site_identity_unresolved",
+      "campaign_notes": "The production website is a poi.place subdomain with zero clean same-domain links. Live results resolve only third-party/aggregator-style pages rather than a reliable current official firm website, so the domain identity and current architecture cannot be established confidently.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-ruben-restrepo-law",
+      "lead_id": "ChIJG2wEZHS_QIYR-_AYJJaB6Qw",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Criminal Defense/DWI and Immigration Law services already separated into focused destinations including /criminal-defense, /dwi and /immigration-law.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-martinez-law-houston",
+      "lead_id": "ChIJZcrJKIu_QIYR0xX1H_zyASA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is one Criminal Defense/DWI journey, with many focused pages for DWI, assault, drugs, domestic violence, sex crimes, theft, violent crimes and related defense matters.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-roberts-criminal-law",
+      "lead_id": "ChIJaf63J77AQIYRKTKt1MFEQPg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The full clean URL set remains a Criminal Defense/white-collar defense journey, including assault, domestic violence, murder, robbery, drug charges, DWI, white-collar crimes and corporate investigations tied to criminal-defense work.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-luis-ruiz-law",
+      "lead_id": "ChIJoedJGkXBQIYRDA0bwaZM6dk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is one Immigration journey with family-based petitions, U visas, VAWA and waivers as immigration subservices.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-israel-b-garcia-jr",
+      "lead_id": "ChIJzcjnriS8QIYR7NEDFZQCilA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different accident/injury and traffic-ticket services already separated into focused /accidents and /traffic-tickets destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-jackeline-gonzalez-attorney-at-law",
+      "lead_id": "ChIJBddmUJWZQIYRN956HaPnj8c",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows multiple materially different services already separated into focused destinations for Criminal Defense, Business Law, Immigration, Personal Injury, Family Law and Estate Planning.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-law-offices-of-jason-castaneda",
+      "lead_id": "ChIJEeDpNCiWQIYREqpS5dTvmc4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Civil Litigation, Criminal Law and Personal Injury services already separated into dedicated practice-area destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-law-office-of-daniel-corno",
+      "lead_id": "ChIJFXIuFqmiQIYREKp-qqZ5bdg",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_missing",
+      "campaign_notes": "The generic clean URL structure required live validation. The current official site explicitly offers Criminal Defense, Family Law, Family-Based Immigration and Traffic Ticket Defense, but keeps them together on the homepage and one general Practice Areas page rather than providing focused service destinations. Daniel Corno is the named attorney and practice owner. The public corno-family-law Gmail addresses are practice-branded rather than unambiguously direct individual emails, so no verified direct personal decision-maker email is accepted.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Immigration",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official site explicitly offers employment and family-based immigration, residency, citizenship, bonds, deportation proceedings and appeals alongside Family Law, Criminal Defense and Traffic work.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Multiple materially different client journeys are consolidated into the homepage and a single general Practice Areas page; no reasonable focused Immigration destination is present."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Daniel Corno",
+          "role": "Owner / Solo Attorney",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": false,
+          "evidence_source": "Official current site identifies the practice as Law Office of Daniel Corno; public business material also identifies Daniel Jason Corno as owner.",
+          "notes": "The official site publishes corno-family-law Gmail contact addresses, but they are practice-branded and are not accepted as verified direct personal email for Daniel."
+        }
+      ]
+    },
+    {
+      "slug": "17-alexander-law-firm",
+      "lead_id": "ChIJG4OPGciXQIYR_RHEGsfUYpg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The full clean URL set includes the materially different Commercial Litigation service as its own /cases/commercial_litigation destination alongside separately organized Personal Injury, medical-malpractice, product-liability and accident matters. The distinct non-injury service is already given a focused destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-enrique-ramirez-law-pc",
+      "lead_id": "ChIJLdK0M4a9QIYRRjt7yRWn4EY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Criminal Defense, Immigration Law and Personal Injury services already separated into dedicated /criminal-defense, /immigration-law and /personal-injury destinations, with further focused subpages beneath the criminal and injury sections.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-cevallos-law-firm-pc",
+      "lead_id": "ChIJbQ0WRwu9QIYRtpzKnabjV2U",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The generic clean URL set required live validation. The current official Practice Areas page combines materially different Family Law, Immigration Law, Removal Defense/Federal Litigation, and estate-related services such as wills, probate, deeds and guardianship in one shared destination, with no reasonable focused service pages in the current architecture. The official About page identifies Lorie Cevallos as a named attorney, and the official Contact page directly publishes Lorie@cevalloslaw.net. The architecture gap and direct public decision-maker email are verified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Estate Planning / Probate",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The current official Practice Areas page explicitly lists wills, small-estate affidavits, probate proceedings, deeds, guardianship and powers of attorney in addition to Family Law and Immigration/Removal Defense.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Estate/probate clients, family-law clients and immigration/removal clients all share one general Practice Areas destination. No reasonable focused Estate Planning/Probate page exists in the current site structure."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Lorie Cevallos",
+          "role": "Named Attorney / Senior Decision Maker",
+          "email": "Lorie@cevalloslaw.net",
+          "is_owner": false,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official current About page identifies Lorie Cevallos as an attorney; official Contact page explicitly publishes Lorie@cevalloslaw.net for assistance.",
+          "notes": "Direct individual email published on the official firm site; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Estate Planning / Probate",
+        "subject": "A thought on your Estate Planning / Probate page",
+        "body": "Hi Lorie,\n\nI was reviewing the current Cevallos Law Firm site and noticed that Family Law, Immigration, removal/federal litigation, and estate-related services such as wills and probate all share one general Practice Areas page. Those clients arrive with very different goals and questions, so they are currently entering the same broad website conversation.\n\nA focused Estate Planning / Probate page could give those clients a clearer explanation of the matters you handle, who the service is for, and the next step to take. It would also create a more focused service context for Google and make the firm’s offering easier for AI systems to understand when someone is specifically looking for wills or probate help.\n\nEstate Planning / Probate seems like a useful first mockup because the service is explicitly offered today but has no dedicated destination.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "20-tiecia-ayers-law",
+      "lead_id": "ChIJgZjKCZXDQIYRrVY5rJ6yFPY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL set is one Personal Injury journey with vehicle accidents, pedestrian accidents, traumatic brain injury, truck accidents and rideshare accidents as injury subtypes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
