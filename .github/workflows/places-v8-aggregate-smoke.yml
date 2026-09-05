@@ -1,0 +1,32 @@
+name: Places V8 Aggregate smoke
+
+on:
+  push:
+    paths:
+      - "scripts/probe_places_aggregate_v8.py"
+      - ".github/workflows/places-v8-aggregate-smoke.yml"
+      - "triggers/v8-aggregate-smoke.txt"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lawyers-v8-aggregate-smoke
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Compile before calls
+        run: python -m py_compile scripts/probe_places_aggregate_v8.py
+      - name: Probe Aggregate plus Place-ID Grounding
+        run: python scripts/probe_places_aggregate_v8.py
