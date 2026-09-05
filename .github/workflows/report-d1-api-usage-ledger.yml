@@ -1,0 +1,42 @@
+name: Report D1 API usage ledger
+
+on:
+  push:
+    branches:
+      - experiment/places-pro-openweb-benchmark
+    paths:
+      - .github/workflows/report-d1-api-usage-ledger.yml
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read current-month usage ledger
+        shell: bash
+        run: |
+          PYTHONPATH=scripts python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from d1_helpers import make_query_client, result_rows
+          q = make_query_client()
+          month = datetime.now(timezone.utc).strftime('%Y-%m')
+          rows = result_rows(q('''
+            SELECT sku, COALESCE(SUM(request_count),0) AS requests,
+                   COUNT(*) AS ledger_rows,
+                   MIN(created_at) AS first_seen,
+                   MAX(created_at) AS last_seen
+            FROM api_usage_ledger
+            WHERE usage_month=?
+            GROUP BY sku
+            ORDER BY sku
+          ''', [month]))
+          print(json.dumps({'month': month, 'usage': rows}, indent=2))
+          PY
