@@ -1,0 +1,227 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-perdue-kidd",
+      "lead_id": "ChIJVe-jFKjAQIYR6QLLbIvtS4U",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a dominant Personal Injury/civil-injury journey with accident, malpractice, product, abuse and injury subtypes rather than materially separate client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-crady-jewett-mcculley-houren",
+      "lead_id": "ChIJVe-jFKjAQIYR_DBNbEbw-Mc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Multiple materially different services including bankruptcy, business, litigation, employment, estate planning, real estate, tax and IP already have focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-merritt-merritt",
+      "lead_id": "ChIJ_Uh3QLvBQIYRMv9cSppX8b0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete URL set is overwhelmingly a Personal Injury/accident architecture across locations and injury subtypes; an isolated DUI-oriented URL does not establish a broader multi-practice architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-the-leffler-firm",
+      "lead_id": "ChIJaf63J77AQIYRM0ync6FxNIs",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows a Criminal Defense-only journey with focused offense subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-capitaine-law-firm",
+      "lead_id": "ChIJbZtXZyW_QIYRcmZO5EOfxH8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows a Criminal Defense-only journey despite multiple offense-specific pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-feldman-feldman",
+      "lead_id": "ChIJdYxl4uTAQIYR0muurwWHOnc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm offers materially different business, commercial litigation, employment, election/governmental, appellate and real-estate matters and already separates them into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-badders-law-firm",
+      "lead_id": "ChIJg5wmnd3BQIYRkKJH1v2HgsU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one Personal Injury journey with accident and catastrophic-injury subtypes plus location pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-madrid-law-firm",
+      "lead_id": "ChIJp1HxZTC_QIYRfy4XyMpMeHk",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Criminal Defense and Personal Injury are materially different services and the clean URL set already exposes focused destinations for both, including criminal-law and lesiones-personales pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-castillo-atkinson-law-firm",
+      "lead_id": "ChIJr_fYVSfDQIYRBh0uA0argf0",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Immigration and Personal Injury are materially distinct and already separated into dedicated English and Spanish destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-houston-employment-lawyer",
+      "lead_id": "ChIJJe1y1GbHQIYRwL2WYf9Jg2g",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Available clean evidence is limited to Employment Law and discrimination claims, constituting one narrow employment client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-r-todd-bennett",
+      "lead_id": "ChIJTxmqVDq_QIYR_xkb8IEm3_Q",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows a Criminal Defense-only architecture with offense and procedure subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-houston-heights-bankruptcy",
+      "lead_id": "ChIJpX2vQHe4QIYRGFS_bsZVuQc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The site is a Bankruptcy-only journey covering Chapter 7, Chapter 13, foreclosure and related debt issues.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-nguyen-law-firm",
+      "lead_id": "ChIJe3685ia_QIYRDgQfdyQC5hg",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows a Personal Injury-only journey with accident, premises, mass-tort and injury subtypes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-pma-law-firm",
+      "lead_id": "ChIJ-4rG7bfGQIYRL3fo4hAuEZ0",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "live_site_identity_or_architecture_unresolved",
+      "campaign_notes": "Clean evidence is generic and the current domain could not be resolved confidently through live validation to establish the present service architecture; no qualification was forced.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-universal-law-group",
+      "lead_id": "ChIJ0XFeQ8bcQIYRd17eTiQGj-Y",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Criminal Defense, Family Law, Personal Injury, Civil Litigation and Appellate matters are materially different and already have focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-mathew-law-firm",
+      "lead_id": "ChIJ3aQnjpPDQIYRabzTnASfHvo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation confirms the firm is dedicated to Immigration and Nationality Law, including employment and family immigration subtypes, so it remains one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-the-clark-law-firm",
+      "lead_id": "ChIJJaxHD2LEQIYRUvyQ8WJyXds",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Family Law, Civil Litigation and Probate are materially distinct and each is represented by a focused destination in the clean URL set.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-ab-law",
+      "lead_id": "ChIJM2rtQ1rFQIYRcPoR1oAPots",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation resolves the challenge page and shows Business Law, Estate Planning and Legal Advisory Services as separate navigation destinations, establishing mature architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-simmons-fletcher",
+      "lead_id": "ChIJY-XynJbEQIYRTd1dqfbdEVQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete URL set is a broad Personal Injury/civil-injury journey spanning accidents, malpractice, premises, products, workplace injuries and related injury subtypes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-gomez-law",
+      "lead_id": "ChIJp0zm_YPFQIYRj6MD8bPFMvc",
+      "final_status": "Gap Confirmed - Direct Email Missing",
+      "qualified": false,
+      "qualification_reason": "architecture_gap_confirmed_direct_email_missing",
+      "campaign_notes": "Official live-site validation shows materially different Immigration, Family Law, Personal Injury, Estate Planning, Business/Real Estate, Intellectual Property and Mediation services consolidated on one shared Services page. Family Law is explicitly offered and has no separate focused destination in the current navigation. Sandra Gomez is identified by the official site as Founder and Managing Attorney. Public research did not verify a direct individual email for her, so the lead is not Qualified.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Family Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "The official current Services page explicitly presents Family Law and lists divorce, spousal support, child support, child custody, visitation, property division, CPS, paternity, adoption and marital agreements.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Family Law shares the same /services destination with multiple materially different main practices, and the current site navigation exposes a shared Practice Areas destination rather than separate focused service journeys."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Sandra Gomez",
+          "role": "Founder / Managing Attorney",
+          "email": null,
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": false,
+          "is_publicly_verified": false,
+          "evidence_source": "Official Gomez Law About page identifies Sandra Gomez as Founder and Managing Attorney.",
+          "notes": "Decision maker verified; no qualifying direct public individual email found."
+        }
+      ]
+    }
+  ]
+}
