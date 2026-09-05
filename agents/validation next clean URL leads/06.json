@@ -2,10 +2,17 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 6,
-  "lead_id": "ChIJVebRwR-_QIYRbNfydSVG_i4",
-  "name": "Robot Challenge Screen",
-  "domain": "injuredcase.com",
-  "website": "https://injuredcase.com/",
-  "clean_homepage_url_count": 0,
-  "clean_homepage_urls": []
+  "lead_id": "ChIJWVfKWXe-QIYRIujsKPh6qoQ",
+  "name": "Houston Bilingual Criminal Defense Attorney Rigoberto Rodriguez",
+  "domain": "rigobertolaw.com",
+  "website": "http://rigobertolaw.com/",
+  "clean_homepage_url_count": 6,
+  "clean_homepage_urls": [
+    "/",
+    "/areas-practice",
+    "/contact-houston-lawyer",
+    "/courthouse-directions",
+    "/location",
+    "/you-have-rights/themis-greek-goddess-scales-of-justice"
+  ]
 }
