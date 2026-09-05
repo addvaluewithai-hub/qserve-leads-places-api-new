@@ -52,7 +52,11 @@ def aggregate(key: str, lat: float, lng: float, radius: int) -> dict:
         },
     }
     r = requests.post(AGG_URL, headers={"X-Goog-Api-Key": key, "Content-Type": "application/json"}, json=body, timeout=60)
-    return {"http": r.status_code, "payload": (r.json() if r.content else {})}
+    try:
+        payload = r.json() if r.content else {}
+    except Exception:
+        payload = {"raw": r.text[:1500]}
+    return {"http": r.status_code, "payload": payload}
 
 
 def grounding(key: str, place_id: str) -> dict:
@@ -88,6 +92,8 @@ def main() -> None:
             if p:
                 ids.append(p)
         row={"market":name,"aggregate_http":a["http"],"count":int(payload.get("count") or 0),"place_ids_returned":len(ids),"grounding":[]}
+        if a["http"] != 200:
+            row["aggregate_error"] = payload
         for pid in ids[:2]:
             row["grounding"].append({"place_id":pid,**grounding(key,pid)})
         report.append(row)
