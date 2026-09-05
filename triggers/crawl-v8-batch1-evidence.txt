@@ -1,0 +1,5 @@
+Run Crawl4AI evidence collection for the completed V8 Batch 1 artifact only.
+Source discovery run: 33957953107
+Source artifact: lawyers-us-v8-aggregate-batch1-2000-1
+Scope: all accepted-this-run domains in that artifact (1133 expected).
+Do not run discovery. Do not start Batch 2. Do not touch validators.
