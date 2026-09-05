@@ -1,0 +1,26 @@
+name: Grounding JSON-RPC Batch10 Probe
+
+on:
+  push:
+    paths:
+      - ".github/workflows/grounding-jsonrpc-batch10-probe.yml"
+      - "scripts/probe_grounding_jsonrpc_batch10.py"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python -m py_compile scripts/probe_grounding_jsonrpc_batch10.py
+      - name: Send 10 tools/call messages in one JSON-RPC batch HTTP POST
+        run: python scripts/probe_grounding_jsonrpc_batch10.py
