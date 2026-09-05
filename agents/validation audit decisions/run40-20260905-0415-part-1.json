@@ -1,0 +1,232 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-the-stewart-law-firm",
+      "lead_id": "ChIJRXm-c4u0RIYRKJE-p4Q79HA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Live validation shows a plaintiff personal-injury firm focused on accident and injury claims; the zero-link snapshot was a crawl/challenge artifact rather than evidence of multiple materially different client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-shaw-cowart",
+      "lead_id": "ChIJHfewg3G1RIYRUlq7iTjOJ3Y",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows materially different litigation services, including business/commercial, employment, oil-and-gas and injury matters, already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-personal-injury-group",
+      "lead_id": "ChIJh_bmNczLRIYRIL3VipF5Kds",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow personal-injury journey with accident and wrongful-death subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-baker-law-group",
+      "lead_id": "ChIJl2Sj_A7LRIYRenkTtSDz7w8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows a mature multi-practice architecture with separate destinations for business, civil litigation, construction, criminal, employment, estate planning, family, probate and real estate.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-jason-wright-law",
+      "lead_id": "ChIJtZ9R7ePKRIYRX-Wz7GOAOrM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow family-law client journey with divorce, custody, support and related family-law subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-djc-law",
+      "lead_id": "ChIJP6rZxuozW4YRO_jS9RcRGlg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows the dominant injury architecture plus a distinct consumer-law service already separated into its own focused destination, so there is no consolidated multi-service gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-smith-family-law",
+      "lead_id": "ChIJVY4pAQ_NRIYR2hqIREpu2ys",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation of the zero-link snapshot shows family law and estate planning/wills-and-trusts are both explicitly offered and already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-loar-pllc",
+      "lead_id": "ChIJ5_OUSa41W4YR41c-YoeDZU4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows the dominant personal-injury journey plus a distinct condemnation service already separated into its own focused destination, so the site does not present a consolidated multi-service architecture gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-ilana-tanner",
+      "lead_id": "ChIJHcB1Swu1RIYRjm7tO5rzk4w",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow family-law journey; CPS, domestic abuse, custody, divorce and related pages remain within that family-law client family.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-powers-kerr-rashidi",
+      "lead_id": "ChIJv5fL_QTLRIYRrE73pOre33I",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow family-law client journey centered on divorce, custody, support, adoption and agreements.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-daves-law-firm",
+      "lead_id": "ChIJ-5qqMBrLRIYRWaXM_W--hRc",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows materially different estate planning, probate and real-estate services already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-goranson-bain-ausley",
+      "lead_id": "ChIJ2weT0-XKRIYRMMdynPubX70",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow family-law journey despite many detailed divorce, custody, support and related subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-levine-wenholz-smith",
+      "lead_id": "ChIJ462kmObKRIYR5pnlLLvqb5s",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows personal injury alongside civil/commercial litigation and construction-defect matters, with the materially different services already represented by focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-levine-law-firm",
+      "lead_id": "ChIJPWLoDgm1RIYROTQ0cyP1N1Y",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "Live validation was required because the clean snapshot had zero links. The current official site explicitly offers sexual harassment alongside injury services on the homepage, but no reasonable focused sexual-harassment destination was found while the site remains consolidated around the general homepage/legal-services experience. Jeremy Levine is the firm founder/lead attorney and the official contact page publicly lists jeremy@LevineAustin.com.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Sexual Harassment",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "Current official homepage lists SEXUAL HARASSMENT under 'WE CAN HELP YOU WITH' alongside motor vehicle accidents, slip-and-fall accidents and workplace injuries.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "The zero-link clean snapshot required live validation. Sexual harassment is materially different from the firm's injury journeys, is explicitly offered on the current homepage, and no reasonable focused destination was found while the site remains consolidated around general homepage/legal-services content."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Jeremy Levine",
+          "role": "Founder / Lead Attorney",
+          "email": "jeremy@LevineAustin.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Official firm About page identifies Jeremy Levine as the attorney who founded Levine Injury Law in 2007; official firm Contact page publicly lists jeremy@LevineAustin.com.",
+          "notes": "Direct individual email published by the firm; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Sexual Harassment",
+        "subject": "A thought on your Sexual Harassment page",
+        "body": "Hi Jeremy,\n\nI noticed Levine Injury Law’s current site presents motor-vehicle accidents, slip-and-falls, workplace injuries, and sexual harassment together in the same general website conversation, while sexual harassment does not appear to have its own focused destination.\n\nThat matters because someone dealing with workplace sexual harassment arrives with a very different problem, urgency, and set of questions than an accident client. A dedicated page would give that person a clearer path from the moment they land on the site, while also creating more focused context for Google and for AI systems trying to understand exactly what the firm handles.\n\nI’d use sexual harassment as the first mockup because it is explicitly offered today yet is the clearest materially different journey still sharing the broader homepage experience.\n\nI’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "15-guajardo-injury-law",
+      "lead_id": "ChIJY3F4JinLRIYReqL-zibnRoM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow personal-injury client journey with accident, premises-liability and injury subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-hembree-bell",
+      "lead_id": "ChIJYfPOHe7LRIYRW4POh_JDbsg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows family law plus materially different probate and estate-planning services, each with focused destinations including probate, wills-and-trusts and power-of-attorney pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-applewhite-law-firm",
+      "lead_id": "ChIJ_2HiuofLRIYR6tudUTVIXcU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow personal-injury journey with accident and injury subtype pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-deyerle-silva-smith",
+      "lead_id": "ChIJl55OwxzLRIYR1jxml_tJKU8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean URL review shows family law alongside distinct jury/trial consulting and pre-litigation strategy offerings, already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-kirker-davis",
+      "lead_id": "ChIJlzetK1_LRIYRfGu3bFAXPPM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Live validation of the zero-link snapshot shows divorce/family law, business litigation, business formation, estate planning and trial consulting all explicitly separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-loewy-law-firm",
+      "lead_id": "ChIJna_pMga1RIYRojVCu3JrVLU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean URL review shows one narrow personal-injury client journey with accident, premises-liability, catastrophic-injury and related injury subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
