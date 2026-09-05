@@ -2,16 +2,10 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 20,
-  "lead_id": "ChIJvVLgZTC_QIYRHtPZv0zJS44",
-  "name": "theleonardfirm.com",
-  "domain": "theleonardfirm.com",
-  "website": "http://www.theleonardfirm.com/",
-  "clean_homepage_url_count": 5,
-  "clean_homepage_urls": [
-    "/",
-    "/about",
-    "/contact-us",
-    "/practice-areas",
-    "/search"
-  ]
+  "lead_id": "ChIJZaqXzfPAQIYRsh75eVJ7kqY",
+  "name": "Robot Challenge Screen",
+  "domain": "bayleylawtx.com",
+  "website": "https://www.bayleylawtx.com/",
+  "clean_homepage_url_count": 0,
+  "clean_homepage_urls": []
 }

@@ -2,12 +2,26 @@
   "campaign_id": "lawyers-us",
   "mode": "manual_clean_homepage_urls_only",
   "position": 2,
-  "lead_id": "ChIJE_UvOuzHQIYRFr_D5R1cdI8",
-  "name": "DWI Defense Lawyer Stephen Stewart | Houston",
-  "domain": "onlydwi.com",
-  "website": "http://onlydwi.com/",
-  "clean_homepage_url_count": 1,
+  "lead_id": "ChIJ-2nGaR2_QIYRS-xWI1PHo94",
+  "name": "Houston Criminal Defense & Injury Lawyer | Roque Law Firm",
+  "domain": "roque-law-firm.com",
+  "website": "https://roque-law-firm.com/",
+  "clean_homepage_url_count": 15,
   "clean_homepage_urls": [
-    "/"
+    "/",
+    "/about",
+    "/attorney",
+    "/case-results",
+    "/contact",
+    "/contact-us",
+    "/criminal-defense",
+    "/es/casa",
+    "/espanol",
+    "/feed",
+    "/houston-car-accident-lawyer",
+    "/houston-truck-accident-lawyer",
+    "/personal-injury",
+    "/personal-injury-lawyer",
+    "/practice-area"
   ]
 }
