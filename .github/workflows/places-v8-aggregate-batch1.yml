@@ -31,12 +31,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pgeocode tldextract
       - name: Compile V8 before API calls
-        run: python -m py_compile scripts/build_lawyers_v8_aggregate.py scripts/probe_places_aggregate_v8.py scripts/zip_manager.py scripts/d1_helpers.py
+        run: python -m py_compile scripts/build_lawyers_v8_aggregate.py scripts/build_lawyers_v8_aggregate_countfirst.py scripts/probe_places_aggregate_v8.py scripts/zip_manager.py scripts/d1_helpers.py
       - name: Preflight Aggregate and Place-ID Grounding
         run: python scripts/probe_places_aggregate_v8.py
       - name: Build V8 batch 1 to 2000 total domains
         run: |
-          python scripts/build_lawyers_v8_aggregate.py \
+          python scripts/build_lawyers_v8_aggregate_countfirst.py \
             --campaign lawyers-us \
             --batch-id lawyers-us:v8-batch-01-of-09 \
             --target 2000 \
