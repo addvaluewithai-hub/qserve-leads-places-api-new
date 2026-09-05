@@ -1,0 +1,206 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-ngwololaw",
+      "lead_id": "ChIJNeh42y-_QIYRLiC4NRJERaE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a narrow criminal-defense journey, with DWI, assault, federal, expunction, and white-collar pages remaining within the same criminal-defense client family.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-topekandtopek",
+      "lead_id": "ChIJQb3LxDy_QIYRvqd3Tgq1RqI",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "manual_live_validation_domain_identity_unresolved",
+      "campaign_notes": "Clean evidence contains only /lander. Live validation redirects the listed firm domain to a site-no-longer-active destination, so the current law-firm identity and architecture cannot be resolved safely.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-thedanielslawfirm",
+      "lead_id": "ChIJR6TbbGK_QIYR3KrIXp31vKA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a family-law/divorce-focused journey with custody, support, property division, modifications, protective orders, and marital agreements all within one narrow family-law client family.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-simmonslawfirm",
+      "lead_id": "ChIJSSiWhS-_QIYRMVOOhUmZ4tU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_live_validation_single_narrow_journey",
+      "campaign_notes": "The clean snapshot had zero links, so the current official site was checked live. It now redirects to hhsattorney.com and presents the firm as a criminal-defense practice with DWI, drug, assault, theft, white-collar, and appeals services, all within one narrow criminal-defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-attorneyrobertwoods",
+      "lead_id": "ChIJWX2jXRW_QIYRIQe7YBgTbGY",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a personal-injury-focused journey. Accident, malpractice, abuse, workplace, burn, mesh, and wrongful-death pages are injury subtypes rather than materially different main legal journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-devenerelaw",
+      "lead_id": "ChIJWbLqfMa_QIYR17GaAwSMwnU",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different legal journeys and already separates them into focused destinations, including family law, business/corporate governance, entertainment, intellectual property, nonprofit, probate/estate planning, and real-estate transactions.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-dougmurphylaw",
+      "lead_id": "ChIJWc6NWCW_QIYR3bA8v-OEKzA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an extensive but narrow criminal-defense/DWI architecture. The many offense and DWI subpages remain within the same criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-waltermartinlaw",
+      "lead_id": "ChIJZ71fH1THQIYRtRkuLt309Jg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Personal Injury and Estate Planning journeys already separated into focused destinations, so the site has made the architectural separation relevant to this campaign.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-pauldoylelaw",
+      "lead_id": "ChIJa0oElDq_QIYRWQPyVauFLTk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a criminal-defense practice with dedicated pages for offense types such as DWI, drugs, fraud, federal crime, sex offenses, weapons, and juvenile defense, all within one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-txattorneys",
+      "lead_id": "ChIJa0oElDq_QIYRqDw_7CNxTqg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm presents materially different Personal Injury, Civil Litigation, Commercial Litigation, and Criminal Defense journeys and already gives these focused destinations, indicating mature architecture rather than a consolidated-services gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-houston-criminalattorney",
+      "lead_id": "ChIJc696XiW_QIYR_k5Z-O8CXqM",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set explicitly includes materially different Criminal Defense and Immigration Law services, each with its own focused destination, so the relevant architecture is already separated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-nguyenandmaliklaw",
+      "lead_id": "ChIJfeOxujfdQIYRNXThqHA9Awo",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different Family Law, Estate Planning/Wills, Personal Injury, and Real Estate Litigation journeys and already separates them into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-mcmillanfirm",
+      "lead_id": "ChIJg9x0ZzC_QIYRqAO0ndRb2B4",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a personal-injury practice. Motor-vehicle collisions, maritime injury, defective drugs, premises, workplace injury, explosions, and wrongful death are injury subtypes within one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-houstoncriminalattorneylawfirm",
+      "lead_id": "ChIJgVj364zAQIYRTOA351gcqXs",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The clean URL set shows materially different Criminal Defense and Personal Injury journeys, with dedicated criminal practice pages plus dedicated Houston, Austin, and Dallas personal-injury destinations. This is not a shared-general-page architecture gap.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-mukerjilaw",
+      "lead_id": "ChIJhRUyaWq_QIYR8zymmlt4acw",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a large but narrow Personal Injury architecture. Location pages and accident/injury subtypes remain within one personal-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-adleylawfirm",
+      "lead_id": "ChIJjeG3_kvBQIYRhslFdVxp_TI",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a personal-injury-focused practice with car, truck, bicycle, motorcycle, pedestrian, premises, retail, construction, oilfield, and wrongful-death subtypes within one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-justincharrislaw",
+      "lead_id": "ChIJk7kkJju_QIYRilhvCag_ZEc",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a criminal-defense practice focused on assault, DWI, drug offenses, and general criminal defense, all within one narrow legal journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-houstoncriminallaw",
+      "lead_id": "ChIJnw5dZSW_QIYR0Z-vgnOuxmE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a broad criminal-defense site with offense, federal, DWI, fraud, sex-crime, theft, and violent-crime pages that remain within one criminal-defense client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-houstonlawyer",
+      "lead_id": "ChIJo2KTqju_QIYRFlSQCxdWMSk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a criminal-defense practice; assault, DWI, homicide, juvenile, drugs, federal, sex-crime, weapons, white-collar, and related pages are all criminal-defense subjourneys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-thelarsonlawoffice",
+      "lead_id": "ChIJp1HxZTC_QIYR1JutnjPT2Sg",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves materially different Family Law, Business Law, Estate Planning, Probate, and Wills/Trusts journeys and already provides focused destinations for those services, indicating mature separated architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
