@@ -1,0 +1,232 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-williams-caputo",
+      "lead_id": "ChIJn_oaYtekFIERZOiK3T61e3w",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URL evidence was empty due to a challenge screen, so the live site was checked. The current firm presents itself as a nationwide Personal Injury practice, with injury, accident and wrongful-death matters forming one narrow plaintiff-injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-texas-will-attorney",
+      "lead_id": "ChIJpdDrPKG1RIYRV4tSxbmTVC0",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an estate-planning/probate practice centered on wills, trusts, powers of attorney, living wills and probate; these are one narrow estate-planning and succession journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-law-office-of-andrew-heilala",
+      "lead_id": "ChIJ-4AAvAy1RIYR2s0X5ow74FU",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Personal Injury practice with accident, negligence, premises-liability and wrongful-death subpages, all within one narrow injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-coldwell-bowes",
+      "lead_id": "ChIJ-ckWo6C1RIYRFVA8rE2AFOk",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Divorce and Family Law practice whose custody, property-division and marital-agreement pages remain one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-bollier-ciccone-stinson-law",
+      "lead_id": "ChIJ1SENmnS1RIYRw34Kt9R_UWs",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows materially different Business Law, Construction Law, Family Law and Real Estate Law client journeys already separated into focused practice-area destinations with supporting subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-keates-law-firm",
+      "lead_id": "ChIJ5cmf2Qu1RIYR1TiZWSCu_GA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URL evidence was empty due to a challenge screen, so the live site was checked. The current firm is focused on criminal defense, including DWI and closely related criminal charges, which is one narrow defense journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-kimbrough-legal",
+      "lead_id": "ChIJ6QfXk9-1RIYR-kTF3R1IPVA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Family Law practice with divorce, custody, support, marital-agreement, paternity and related subpages; these remain one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-ben-carrasco-law",
+      "lead_id": "ChIJIxmC2Qu1RIYRdxVHRoXFW8w",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URL evidence was empty due to a challenge screen, so the live site was checked. The current site is focused on divorce, child custody and related family-law disputes, one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-henington-lewis-law-firm-pllc",
+      "lead_id": "ChIJP-ZUGkFLW4YRVxEbhm9ereE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows Estate Planning/Probate and materially distinct Civil/Fiduciary Litigation offerings already represented through focused destinations, including civil litigation, fiduciary litigation, probate litigation and estate-planning pages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-winckler-harvey-mcconnell-llp",
+      "lead_id": "ChIJQ2y8tZtKW4YRlkh3Bor4mlA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a plaintiff Personal Injury/Medical Malpractice practice with birth injury, brain injury, truck wreck and wrongful-death matters forming one narrow injury/medical-negligence journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-law-office-of-jennifer-d-ward",
+      "lead_id": "ChIJUfQPcfy0RIYRvRbNmX0kwug",
+      "final_status": "Qualified",
+      "qualified": true,
+      "qualification_reason": "architecture_gap_confirmed_direct_dm_email_verified",
+      "campaign_notes": "The clean homepage evidence was generic, so live validation was required. The current site explicitly offers Trademark Law, Small Business & Non-Profit Law, and Employment Law, but those materially different client journeys are consolidated on a single general Services destination rather than separated into focused service pages. Jennifer D. Ward is identified by the firm as Principal Attorney and founder. Travis County Women Lawyers' Association publicly lists jennifer@jdwlawoffice.com for Jennifer Ward, directly tying the firm-domain email to the decision maker; the address was not guessed.",
+      "service_gap_evidence": [
+        {
+          "service_name": "Employment Law",
+          "status": "Gap Confirmed",
+          "service_offered_evidence": "Current Law Office of Jennifer D. Ward Services page explicitly offers Employment Law alongside Trademark Law and Small Business & Non-Profit Law.",
+          "dedicated_page_url": null,
+          "validation_method": "Manual full clean-homepage-URL audit + official live-site validation",
+          "notes": "Trademark, small-business/non-profit and employment clients are materially different journeys, yet all are presented on one general /services destination without reasonable focused service pages. The dominant architecture therefore remains consolidated rather than mature."
+        }
+      ],
+      "contacts": [
+        {
+          "person_name": "Jennifer D. Ward",
+          "role": "Principal Attorney / Founder",
+          "email": "jennifer@jdwlawoffice.com",
+          "is_owner": true,
+          "is_decision_maker": true,
+          "is_direct_email": true,
+          "is_publicly_verified": true,
+          "evidence_source": "Current firm site identifies Jennifer D. Ward as Principal Attorney/founder; Travis County Women Lawyers' Association publicly lists Jennifer Ward at jennifer@jdwlawoffice.com.",
+          "notes": "Direct individual firm-domain email tied publicly to Jennifer Ward; not guessed."
+        }
+      ],
+      "outreach_draft": {
+        "selected_service": "Employment Law",
+        "subject": "A thought on your Employment Law page",
+        "body": "Jennifer, I was reviewing your current site and noticed that Employment Law, Trademark Law, and Small Business & Non-Profit Law all share the same general Services page. Those clients arrive with very different questions, urgency, and reasons for choosing counsel. A focused Employment Law page could give employees and employers a clearer journey from the moment they land on the site, with the relevant situations, guidance and next step in one place. It would also give Google a more focused service context and make it easier for AI systems to understand that part of the practice distinctly. I’d use Employment Law as the first mockup because it is clearly offered today and represents a very different client conversation from trademark and business counsel. I’m putting together a quick mockup to show you what I mean. I’ll send it over in the next couple of days.\n\nIf you’d rather I didn’t, just let me know."
+      }
+    },
+    {
+      "slug": "12-ml-firm",
+      "lead_id": "ChIJX3h8Fs1KW4YRRD3p5Ape0P4",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows distinct focused destinations for Auto Wreck, Drunk Drivers, Legal Malpractice, Medical Malpractice, Products Liability and Truck Wreck. Where the practice spans materially different claim types, the site already separates them architecturally.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-evans-reilley",
+      "lead_id": "ChIJYZxStJtKW4YRkhwumCtKsPE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Texas Personal Injury practice with vehicle accidents, work injuries, slip-and-fall and wrongful-death subpages, all within one narrow plaintiff-injury journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-nickerson-law-group",
+      "lead_id": "ChIJ_ahhEiE1W4YRW9BzoK-g8rM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows an Estate Planning and Probate practice centered on estate planning, asset protection, trusts, special-needs planning and estate administration; this is one narrow succession-planning journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-hoestenbach-law-group",
+      "lead_id": "ChIJdXVjCclKW4YR4XGEH7J_gHY",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Clean URL evidence was empty due to a robot screen, so the live site was checked. The current site offers materially different Personal Injury, Estate Planning & Probate, Fire Litigation, Eminent Domain, Criminal Defense, Business & Corporate, Real Estate and Construction matters and already separates them into focused service destinations and subpages.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-evans-family-law-group",
+      "lead_id": "ChIJi6hWMTK1RIYRwwMU6BF1ptQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Clean URL evidence was empty due to a challenge screen, so the live site was checked. The current firm focuses on divorce, child custody/support, spousal support, agreements and mediation, which remain one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-law-offices-of-jason-s-coomer-pllc",
+      "lead_id": "ChIJifhe2he1RIYR3D44ILRYnLA",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows materially different Business Litigation, Real Estate/Probate, Injury, Whistleblower, Energy, Product Defect and related matters already separated into focused destinations; the architecture is mature rather than consolidated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-amy-gehm",
+      "lead_id": "ChIJjVLFEng1W4YR8xYTvsm8lto",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Divorce/Family Law practice centered on divorce litigation, collaborative law and complex marital-property issues; these remain one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-az-law-firm",
+      "lead_id": "ChIJk29_MT41W4YRmPfd1tq-ubI",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows a broad multi-practice firm whose Administrative, Business, Civil Rights, Consumer, Criminal, Employment, Family, Immigration, Personal Injury, Real Estate, Wills/Probate and other materially different services already each have focused /our-practices destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-bryant-colletti-kaplan-kinsler-de-la-reza-llp",
+      "lead_id": "ChIJo7Z2RTK1RIYRPs_PxQl8Tug",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Complete clean homepage URL review shows a Divorce and Family Law practice with collaborative/litigated divorce, custody, marital agreements and mediation subpages, all within one narrow family-law journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
