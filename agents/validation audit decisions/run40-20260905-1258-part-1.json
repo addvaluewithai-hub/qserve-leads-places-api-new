@@ -1,0 +1,206 @@
+{
+  "campaign_id": "lawyers-us",
+  "audit_mode": "manual_clean_homepage_urls_only",
+  "decisions": [
+    {
+      "slug": "01-law-office-of-david-nguyen-pc",
+      "lead_id": "ChIJlcAWtKnCQIYRLU9RWRBgEX8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Complete clean homepage URL review shows materially different Family Law, Immigration, and Wills/Estate Planning journeys already separated into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "02-ijlaw",
+      "lead_id": "ChIJq6rqLfDGQIYRWvzsQ0sLkow",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Family Law and Immigration are materially different main services and each already has its own focused practice-area destination.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "03-perrier-law",
+      "lead_id": "ChIJw6caGV3MQIYRhq61t0DAHio",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set is limited to the closely related Probate and Estate Planning client journey, with probate and estate-planning subpages inside that narrow practice family.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "04-essex-law-firm",
+      "lead_id": "ChIJzdb_s6xKR4YRoGng0epq5KE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site serves Family Law plus Estate Planning/Probate and already provides focused destinations for the materially different service families, including estate planning, probate, wills, and family law.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "05-vaquerano-law-firm",
+      "lead_id": "ChIJnc0UJpeiQIYRd9RRTu27hj8",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Business formation/corporate work, estate planning, family law, consultation services, and structured contracts are already separated into focused destinations in both English and Spanish architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "06-law-office-of-elsa-soto",
+      "lead_id": "ChIJLSR7Tx7DQIYRBfbIcam4NXo",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean URL set was generic, so the official live site was checked. It currently presents Family Based Immigration, Humanitarian Based Immigration, and Immigration Court Representation, all within one narrow Immigration client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "07-pm-law-firm",
+      "lead_id": "ChIJu-Zyt62zQIYRKxvTDwUiq2M",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL review is a Personal Injury practice with accident and injury subtypes such as car, truck, motorcycle, bicycle, burns, bad-faith injury claims, slip-and-fall, TBI, and wrongful death.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "08-ardoin-law-firm",
+      "lead_id": "ChIJ4dHd4umZQIYR6Xt3ne7yJlA",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The clean architecture is limited to bodily injury, negligence, car accidents, and related accident guidance, which is one narrow Personal Injury client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "09-the-hughes-law-firm",
+      "lead_id": "ChIJ9RihG8iXQIYR1P1EYLmmbcE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Personal Injury, premises liability, workplace accidents, and wrongful death all sit within one narrow plaintiff injury journey rather than materially different legal client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "10-el-tejano-law",
+      "lead_id": "ChIJBxPzqQijQIYRjOS2lfepIqY",
+      "final_status": "Needs Review",
+      "qualified": false,
+      "qualification_reason": "manual_live_validation_domain_identity_unresolved",
+      "campaign_notes": "The production snapshot has zero clean links and identifies the site as a Wix reconnect page. Live/search validation did not resolve the current eltejanolaw.com firm identity and architecture confidently enough for a safe qualification decision.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "11-molina-law-firm",
+      "lead_id": "ChIJE3zbZcKZQIYR8_wbOElyyxM",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The extensive clean URL set is still one Personal Injury/plaintiff-injury journey, with accident, work injury, medical malpractice, product, maritime, premises, and wrongful-death subtypes.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "12-rashid-law-firm",
+      "lead_id": "ChIJHdDET5-XQIYR8ZjK-xzlYu8",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "All substantive clean URLs are Bankruptcy-specific, including bankruptcy attorney, case results, documents, lawyer, and payment pages, so this is one narrow client journey.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "13-guzman-law-firm",
+      "lead_id": "ChIJWU8GcCuWQIYRTVxGKbbsW_E",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The complete clean URL architecture is Bankruptcy-only, with Chapter 7, Chapter 13, tax debt, foreclosure, garnishment, medical-bill and small-business bankruptcy subtopics inside one narrow practice family.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "14-ghuneim-law-firm",
+      "lead_id": "ChIJh9SPKu2YQIYROs1cx1mLGIE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The practice architecture is plaintiff Personal Injury, with focused accident/injury subtypes such as car, construction, medical malpractice, maritime, refinery, truck, workplace, slip-and-fall, and wrongful death.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "15-williams-hart-boundas",
+      "lead_id": "ChIJjwPjctKXQIYRv5WmCGVwKhQ",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "Catastrophic injury, mass torts, workplace, maritime, oilfield, product liability, plant explosions, transportation accidents, and wrongful death remain within the firm's broad plaintiff injury/tort journey rather than separate materially different client journeys.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "16-ceja-law-firm",
+      "lead_id": "ChIJn7LDUFmZQIYRZD724D_w750",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The Spanish-language clean URL set is entirely accident and Personal Injury work, including vehicle, work, rideshare, bicycle, motorcycle, drunk-driving, hit-and-run and wrongful-death claims.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "17-g-mesa-law-firm",
+      "lead_id": "ChIJsUrV1GS-QIYREx68E23tMoE",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "Criminal Law, Family Law, Immigration, and Personal Injury are materially different main services and each already has its own focused practice destination in the site architecture.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "18-west-and-west",
+      "lead_id": "ChIJ-9yoaE-YQIYRMkqQKOjyASk",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The firm covers materially different Personal Injury, Estate Planning, Probate, Business, Real Estate, Elder Law and related services, and the clean URL architecture already separates these into focused destinations.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "19-diener-law",
+      "lead_id": "ChIJ76DVRdmZQIYRLIyy-_VA2pQ",
+      "final_status": "Disqualified",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_mature_architecture",
+      "campaign_notes": "The site exposes materially different Immigration, Personal Injury, and Workers' Compensation services with distinct focused destinations, so the dominant architecture is already separated rather than consolidated.",
+      "service_gap_evidence": [],
+      "contacts": []
+    },
+    {
+      "slug": "20-dolman-law-group-houston",
+      "lead_id": "ChIJd0zDtRC9QIYRd47-GlPEktE",
+      "final_status": "Not Relevant",
+      "qualified": false,
+      "qualification_reason": "manual_clean_url_audit_single_narrow_journey",
+      "campaign_notes": "The Houston entry and broader clean URL set remain within plaintiff injury/tort representation, including Personal Injury, accidents, mass torts, abuse claims, nursing-home abuse, product liability and wrongful death; these are not separate materially different main legal journeys for this ICP.",
+      "service_gap_evidence": [],
+      "contacts": []
+    }
+  ]
+}
