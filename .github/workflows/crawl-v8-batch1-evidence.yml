@@ -1,0 +1,71 @@
+name: Crawl V8 Batch 1 Evidence
+
+on:
+  push:
+    branches:
+      - "run/places-v8-aggregate-batch1"
+    paths:
+      - "triggers/crawl-v8-batch1-evidence.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: lawyers-us-crawl-v8-batch1-evidence
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Crawl4AI
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-crawl.txt
+          crawl4ai-setup
+      - name: Compile crawl helpers and D1 low-read runner
+        run: |
+          python -m py_compile \
+            scripts/crawl_working_set_homepages.py \
+            scripts/crawl_working_set_homepages_parallel.py \
+            scripts/v8_artifact_to_crawl_csv.py \
+            scripts/import_crawl4ai_evidence_to_d1.py \
+            scripts/build_lawyers_v8_aggregate_probridge_lean.py
+      - name: Download completed V8 Batch 1 discovery artifact
+        run: |
+          mkdir -p input/v8-batch1
+          gh run download 33957953107 \
+            --repo "$GITHUB_REPOSITORY" \
+            --name lawyers-us-v8-aggregate-batch1-2000-1 \
+            --dir input/v8-batch1
+          find input/v8-batch1 -maxdepth 2 -type f -print
+      - name: Build Crawl4AI working set from accepted V8 domains
+        run: |
+          ACCEPTED="$(find input/v8-batch1 -name accepted-this-run.jsonl -print -quit)"
+          test -n "$ACCEPTED"
+          python scripts/v8_artifact_to_crawl_csv.py \
+            --input "$ACCEPTED" \
+            --output input/v8-batch1/crawl-working-set.csv
+      - name: Crawl all V8 Batch 1 domains from the completed artifact
+        run: |
+          python scripts/crawl_working_set_homepages_parallel.py \
+            --input input/v8-batch1/crawl-working-set.csv \
+            --out-dir out/v8-batch1-crawl-evidence \
+            --start 0 \
+            --limit 2000 \
+            --workers 8
+      - name: Upload Crawl4AI evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v8-batch1-crawl-evidence-${{ github.run_id }}
+          path: out/v8-batch1-crawl-evidence/
+          if-no-files-found: warn
